@@ -13,6 +13,15 @@
 # MhdpWeapons処理実行
     # function ..............
 
+# スニーク時処理実行
+    # function ..............
+
+# ジャンプ時処理実行
+    # function ..............
+
+# ノックバック処理実行
+    # function ..............
+
 # 終了
     scoreboard players reset #mhdp_temp_time
     scoreboard players set @s MhdpUsedCoas 0
