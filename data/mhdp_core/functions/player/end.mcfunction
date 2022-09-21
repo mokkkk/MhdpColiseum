@@ -9,4 +9,3 @@
 # スニーク状態リセット
     tag @s remove PlySneakStart
     tag @s remove PlySneakEnd
-    

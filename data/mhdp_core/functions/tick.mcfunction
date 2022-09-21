@@ -8,4 +8,4 @@
     execute store result storage mh_dp:status Time int 1 run time query gametime
 
 # Player用処理
-    function mhdp_core:player/
+    execute as @a at @s run function mhdp_core:player/

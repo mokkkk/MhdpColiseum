@@ -11,4 +11,4 @@
     execute if entity @s[scores={MhdpUsedCoas=1..}] run tag @s add PlyUsedCoas
 
 # スニーク状態取得
-    function mhdp_core:player/sneak/
+    function mhdp_core:player/sneak/get

@@ -10,6 +10,7 @@
         scoreboard objectives add MhdpJump minecraft.custom:minecraft.jump
         scoreboard objectives add MhdpTDamage dummy
         scoreboard objectives add MhdpTAvoid dummy
+        scoreboard objectives add MhdpTSneakAvoid dummy
 
     # モンスター処理用
         scoreboard objectives add AsaMatrix dummy

@@ -3,7 +3,10 @@
 # declare用
 
 # tag
-    #declare tag T_PlyUsedCoas プレイヤーがニンジン棒を使用した
+    #declare tag PlyUsedCoas プレイヤーがニンジン棒を使用した
+    #declare tag PlySneakStart プレイヤーがスニークを開始した
+    #declare tag PlySneakCurrent プレイヤーがスニーク中である
+    #declare tag PlySneakEnd プレイヤーがスニークを解除した
 
 # storage
     #declare storage mh_dp:status MHDP各種ステータス保存用
