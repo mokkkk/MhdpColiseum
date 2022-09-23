@@ -4,10 +4,10 @@
 
 
 # 2連続でスニークした
-    execute if entity @s[scores={MhdpTSneakAvoid=1..}] run function mhdp_core:player/sneak/avoid/start
+    execute if entity @s[scores={MhdpTSneakInterval=1..}] run function mhdp_core:player/sneak/avoid/start
 
-# スニークタイマーリセット
-    execute if entity @s[tag=!PlyStartSneakAvoid] run scoreboard players set @s MhdpTSneakAvoid 7
+# 初回のスニーク
+    execute unless entity @s[scores={MhdpTSneakInterval=1..}] run function mhdp_core:player/sneak/avoid/pre
 
 # 終了
     tag @s remove PlyStartSneakAvoid

@@ -1,5 +1,6 @@
 {
     "values": [
-        "mhdp_core:load"
+        "mhdp_core:load",
+        "oh_my_dat:sys/load"
     ]
 }

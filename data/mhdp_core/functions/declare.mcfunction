@@ -16,3 +16,5 @@
     #declare objective MhdpJump プレイヤージャンプ検知に使用
     #declare objective MhdpTDamage プレイヤーダメージ後の無敵時間に使用
     #declare objective MhdpTAvoid プレイヤー回避無敵時間に使用
+    #declare objective MhdpTSneakInterval プレイヤー連続スニーク検知用
+
