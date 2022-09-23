@@ -14,7 +14,7 @@
 # スニーク開始時処理実行
     execute if entity @s[tag=PlySneakStart] run function mhdp_core:player/sneak/
     # 移動回避処理
-        execute if entity @s[tag=]
+        execute if entity @s[tag=PlySneakAvoidFunc] run function mhdp_core:player/sneak/avoid/main
 
 # ノックバック処理実行
     # function ..............

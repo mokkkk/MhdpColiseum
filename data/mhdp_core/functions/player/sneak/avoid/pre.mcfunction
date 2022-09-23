@@ -9,5 +9,3 @@
     function oh_my_dat:please
     data remove storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].PlayerData.Action.SneakPos0
     data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].PlayerData.Action.SneakPos0 set from entity @s Pos
-
-say 1回目スニーク
