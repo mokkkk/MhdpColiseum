@@ -2,7 +2,7 @@
 #
 # プレイヤー処理実行前にデータの取得・初期化を行う
 
-# データ取得処理
+# アイテムデータ取得
     function oh_my_dat:please
     execute store result score #mhdp_temp_time MhdpCore run data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].PlayerData.Time set from storage mh_dp:status Time
     execute if score #mhdp_temp_time MhdpCore matches 1.. run function mhdp_core:player/data/get
@@ -12,3 +12,6 @@
 
 # スニーク状態取得
     function mhdp_core:player/sneak/get
+
+# エンダーアイ使用状態取得
+    function mhdp_core:player/item/ender_eye/get

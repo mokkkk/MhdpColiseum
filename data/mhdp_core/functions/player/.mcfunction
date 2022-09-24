@@ -2,11 +2,11 @@
 #
 # 各プレイヤーが毎tick実行する処理
 
-# 初期実行処理
+# 初期実行処理（状態取得）
     function mhdp_core:player/pre
 
 # MhdpWeapons処理実行
-    # function ..............
+    function mhdp_weapons:tick/
 
 # ジャンプ時処理実行
     execute if entity @s[scores={MhdpJump=1..}] run function mhdp_core:player/jump/

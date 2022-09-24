@@ -7,6 +7,9 @@
     #declare tag PlySneakStart プレイヤーがスニークを開始した
     #declare tag PlySneakCurrent プレイヤーがスニーク中である
     #declare tag PlySneakEnd プレイヤーがスニークを解除した
+    #declare tag PlyUsingEyeStart プレイヤーがエンダーアイを使用開始した
+    #declare tag PlyUsingEyeCurrent プレイヤーがエンダーアイ使用中
+    #declare tag PlyUsingEyeEnd プレイヤーがエンダーアイ使用を解除した
 
     #declare tag PlySneakAvoidFunc プレイヤースニーク回避実行中
 
