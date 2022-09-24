@@ -10,7 +10,7 @@
     scoreboard players set @s MhdpFuncSneakAvoid 25
 
 # 無敵時間設定
-    scoreboard players set @s MhdpTAvoid 7
+    scoreboard players set @s MhdpTAvoid 5
     # スキル処理
         # 回避本能
             execute if entity @s[tag=CharmNarga,scores={MhdpHealth=..6}] run scoreboard players set @s MhdpTAvoid 7
@@ -36,11 +36,7 @@
         execute store success score #mhdp_temp_success MhdpCore as @e[type=marker,tag=SneakAvoidStand0,tag=Start] run data modify entity @s Pos set from entity @p Pos
         execute unless score #mhdp_temp_success MhdpCore matches 1.. rotated ~ 0 as @e[type=marker,tag=SneakAvoidStand0,tag=Start] run tp @s ~ ~ ~ ~ ~
 
-# 演出
-    effect give @s slowness 1 2 true
-
 # 終了
-    # kill @e[type=marker,tag=SneakAvoidStand0,tag=Start]
     tag @e[type=marker,tag=SneakAvoidStand0,tag=Start] remove Start
     kill @e[type=marker,tag=SneakAvoidStand1,tag=Start]
     scoreboard players reset #mhdp_temp_success
