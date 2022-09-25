@@ -1,18 +1,17 @@
-#> mhdp_weapons:tick/
+#> mhdp_weapons:core/sheathe
 #
-# 毎tick実行される処理
-#
-# @within tag/function minecraft:tick
+# 納刀検知用
 
-# 各Player用処理
-    # function mhdp_weapons:player/
+# A:オフハンドに納刀フラグMHDP武器がある
+    execute if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].PlayerData.Item.OffHand.tag{MhdpWeapon:1b} run tag @s add FlagA
 
-# 抜刀
+# B:メインハンドが空である
+    execute unless data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].PlayerData.Item.MainHand run tag @s add FlagB
 
-# 納刀
+# A && Bの場合，納刀成功
+# その他の条件は強制納刀が実行されるので，考慮しない
+    execute if entity @s[tag=FlagA,tag=FlagB] run function mhdp_weapons:core/sheathe_success
 
-# 強制納刀
-
-# エンダーアイ使用
-    execute if entity @s[tag=PlyUsingEyeStart] run say エンダーアイ使用開始
-    execute if entity @s[tag=PlyUsingEyeEnd] run say エンダーアイ使用終了
+# 終了
+    tag @s remove FlagA
+    tag @s remove FlagB

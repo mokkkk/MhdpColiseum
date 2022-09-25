@@ -10,7 +10,7 @@
 
 # A && Bの場合，抜刀成功
     # ここの文言を考える
-    execute if entity @s[tag=FlagA,tag=FlagB] run say 抜刀
+    execute if entity @s[tag=FlagA,tag=FlagB] run function mhdp_weapons:core/draw_success
 
 # A && !Bの場合，アイテムを戻し，警告文表示
     execute if entity @s[tag=FlagA,tag=!FlagB] run function mhdp_weapons:core/draw_fail
