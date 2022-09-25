@@ -15,6 +15,10 @@
         data modify storage mhdp_core:temp Temp.IsDrawing set value 1b
     item modify entity @s weapon.mainhand mhdp_core:weapon/change_draw
 
+# 武器ステータス更新
+    data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].PlayerData.Item.MainHand.tag set from storage mhdp_core:temp Temp
+    data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].PlayerData.Item.MainHand.tag.CustomModelData set from storage mhdp_core:temp Temp.CustomModelData
+
 # 演出
     playsound item.armor.equip_iron master @a ~ ~ ~ 1 1
 

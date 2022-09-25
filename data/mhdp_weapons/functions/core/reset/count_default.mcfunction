@@ -22,4 +22,7 @@
     item replace entity @s weapon.offhand from block 0 0 0 container.0
 
 # 終了
+    data remove block 0 0 0 Items[{Slot:0b}]
+
+# 終了
     data remove storage mhdp_core:temp Temp

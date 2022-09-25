@@ -25,10 +25,14 @@
 # 退避した武器データをオフハンドにコピー
     item replace entity @s weapon.offhand from block 0 0 0 container.0
 
+# 武器ステータス更新
+    data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].PlayerData.Item.OffHand.tag set from storage mhdp_core:temp Temp
+    data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].PlayerData.Item.OffHand.tag.CustomModelData set from storage mhdp_core:temp Temp.CustomModelData
+
 # 警告文表示
     # ここの文言を考える
     say メインハンドが空じゃないと抜刀できないよ
 
 # 終了
     data remove storage mhdp_core:temp Temp
-    data remove block 0 0 0 Items
+    data remove block 0 0 0 Items[{Slot:0b}]

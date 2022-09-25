@@ -13,6 +13,10 @@
         data modify storage mhdp_core:temp Temp.IsDrawing set value 0b
     item modify entity @s weapon.offhand mhdp_core:weapon/change_draw
 
+# 武器ステータス更新
+    data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].PlayerData.Item.OffHand.tag set from storage mhdp_core:temp Temp
+    data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].PlayerData.Item.OffHand.tag.CustomModelData set from storage mhdp_core:temp Temp.CustomModelData
+
 # 武器に応じた移動速度低下付与
 
 

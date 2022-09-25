@@ -24,4 +24,4 @@
 
 # item置き換え用
     forceload add -1 -1 1 1
-    setblock 0 0 0 shulker_box
+    setblock 0 0 0 lime_shulker_box
