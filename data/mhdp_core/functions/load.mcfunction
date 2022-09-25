@@ -16,3 +16,7 @@
 
     # モンスター処理用
         scoreboard objectives add AsaMatrix dummy
+
+# item置き換え用
+    forceload add -1 -1 1 1
+    setblock 0 0 0 shulker_box

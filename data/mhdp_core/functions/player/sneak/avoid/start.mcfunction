@@ -3,7 +3,6 @@
 # プレイヤースニーク検知用に実行する処理
 
 # タグ付与
-    tag @s add PlySneakAvoidStart
     tag @s add PlySneakAvoidFunc
 
 # 処理用スコア設定
