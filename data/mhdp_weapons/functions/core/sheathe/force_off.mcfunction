@@ -1,4 +1,4 @@
-#> mhdp_weapons:core/sheathe_force_off
+#> mhdp_weapons:core/sheathe/force_off
 #
 # 強制納刀用オフハンドアイテムの移動
 

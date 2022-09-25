@@ -1,4 +1,4 @@
-#> mhdp_weapons:core/sheathe_success
+#> mhdp_weapons:core/sheathe/success
 #
 # 納刀成功時
 

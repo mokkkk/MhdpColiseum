@@ -2,14 +2,12 @@
 #
 # 武器増殖対策
 
-# どこかにある武器を消去
-    clear @s ender_eye{MhdpWeapon:1b} 64
+# オフハンドに武器が２本来た場合
+    execute if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].PlayerData.Item.OffHand{Count:2b} run tag @s add IsOffHand2
+    execute if entity @s[tag=IsOffHand2] run function mhdp_weapons:core/reset/count_off
 
-# shulker_boxに武器データをコピー
-    data modify block 0 0 0 Items set value [{Slot:0b,id:"minecraft:stone",Count:1b}]
-    data modify block 0 0 0 Items[{Slot:0b}].id set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].PlayerData.Item.MainWeapon.id
-    data modify block 0 0 0 Items[{Slot:0b}].Count set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].PlayerData.Item.MainWeapon.Count
-    data modify block 0 0 0 Items[{Slot:0b}].tag set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].PlayerData.Item.MainWeapon.tag
+# それ以外の場合
+    execute unless entity @s[tag=IsOffHand2] run function mhdp_weapons:core/reset/count_default
 
-# 退避した武器データをオフハンドにコピー
-    item replace entity @s weapon.offhand from block 0 0 0 container.0
+# 終了
+    tag @s remove IsOffHand2

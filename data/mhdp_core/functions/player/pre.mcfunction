@@ -14,4 +14,5 @@
     function mhdp_core:player/sneak/get
 
 # エンダーアイ使用状態取得
+    execute if entity @s[scores={MhdpDropEnderEye=1..}] run tag @s add PlyDroppedEnderEye
     function mhdp_core:player/item/ender_eye/get

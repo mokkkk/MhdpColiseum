@@ -10,6 +10,7 @@
     #declare tag PlyUsingEyeStart プレイヤーがエンダーアイを使用開始した
     #declare tag PlyUsingEyeCurrent プレイヤーがエンダーアイ使用中
     #declare tag PlyUsingEyeEnd プレイヤーがエンダーアイ使用を解除した
+    #declare tag PlyDroppedEnderEye プレイヤーがエンダーアイを投げ捨てた
 
     #declare tag PlySneakAvoidFunc プレイヤースニーク回避実行中
 
@@ -20,8 +21,9 @@
 
 # objective
     #declare objective MhdpPlayerUid プレイヤーUID
-    #declare objective MhdpUsedCoas プレイヤーニンジン棒クリック検知に使用
-    #declare objective MhdpJump プレイヤージャンプ検知に使用
+    #declare objective MhdpUsedCoas プレイヤーニンジン棒クリック検知
+    #declare objective MhdpJump プレイヤージャンプ検知
+    #declare objective MhdpDropEnderEye プレイヤーエンダーアイ投げ捨て検知
     #declare objective MhdpTDamage プレイヤーダメージ後の無敵時間に使用
     #declare objective MhdpTAvoid プレイヤー回避無敵時間に使用
     #declare objective MhdpTSneakInterval プレイヤー連続スニーク検知用

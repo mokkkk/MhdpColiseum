@@ -1,4 +1,4 @@
-#> mhdp_weapons:core/draw_success
+#> mhdp_weapons:core/draw/success
 #
 # 抜刀成功時
 

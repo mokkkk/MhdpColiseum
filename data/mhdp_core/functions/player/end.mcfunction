@@ -11,5 +11,7 @@
     tag @s remove PlySneakEnd
 
 # エンダーアイ使用状態リセット
+    scoreboard players set @s MhdpDropEnderEye 0
+    tag @s remove PlyDroppedEnderEye
     tag @s remove PlyUsingEyeStart
     tag @s remove PlyUsingEyeEnd

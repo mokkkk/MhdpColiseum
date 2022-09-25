@@ -1,4 +1,4 @@
-#> mhdp_weapons:core/sheathe
+#> mhdp_weapons:core/sheathe/
 #
 # 納刀検知用
 
@@ -10,7 +10,7 @@
 
 # A && Bの場合，納刀成功
 # その他の条件は強制納刀が実行されるので，考慮しない
-    execute if entity @s[tag=FlagA,tag=FlagB] run function mhdp_weapons:core/sheathe_success
+    execute if entity @s[tag=FlagA,tag=FlagB] run function mhdp_weapons:core/sheathe/success
 
 # 終了
     tag @s remove FlagA

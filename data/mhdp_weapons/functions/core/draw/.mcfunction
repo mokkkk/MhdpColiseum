@@ -1,4 +1,4 @@
-#> mhdp_weapons:core/draw
+#> mhdp_weapons:core/draw/
 #
 # 抜刀検知用
 
@@ -10,10 +10,10 @@
 
 # A && Bの場合，抜刀成功
     # ここの文言を考える
-    execute if entity @s[tag=FlagA,tag=FlagB] run function mhdp_weapons:core/draw_success
+    execute if entity @s[tag=FlagA,tag=FlagB] run function mhdp_weapons:core/draw/success
 
 # A && !Bの場合，アイテムを戻し，警告文表示
-    execute if entity @s[tag=FlagA,tag=!FlagB] run function mhdp_weapons:core/draw_fail
+    execute if entity @s[tag=FlagA,tag=!FlagB] run function mhdp_weapons:core/draw/fail
 
 # 終了
     tag @s remove FlagA
