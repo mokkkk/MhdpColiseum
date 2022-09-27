@@ -19,8 +19,7 @@
     data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].PlayerData.Item.MainHand.tag set from storage mhdp_core:temp Temp
 
 # サブ武器が存在する武器種の場合
-# 今はテストなので必ず実行する
-    function mhdp_weapons:core/draw/sub/
+    # function mhdp_weapons:core/draw/sub/
 
 # 演出
     playsound item.armor.equip_iron master @a ~ ~ ~ 1 1

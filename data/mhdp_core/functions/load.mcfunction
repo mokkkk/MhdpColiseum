@@ -19,6 +19,11 @@
     # プレイヤー行動用
         scoreboard objectives add MhdpFuncSneakAvoid dummy
 
+    # 武器処理用
+        scoreboard objectives add MhdpWeaponExt dummy
+        scoreboard objectives add MhdpWeaponCharge dummy
+        scoreboard objectives add MhdpWeaponTimer dummy
+
     # モンスター処理用
         scoreboard objectives add AsaMatrix dummy
 

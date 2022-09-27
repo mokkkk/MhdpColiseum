@@ -9,6 +9,7 @@
 # スニーク状態リセット
     tag @s remove PlySneakStart
     tag @s remove PlySneakEnd
+    tag @s remove PlySneakDouble
 
 # エンダーアイ使用状態リセット
     scoreboard players set @s MhdpDropEnderEye 0

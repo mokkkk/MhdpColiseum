@@ -5,16 +5,17 @@
 # 初期実行処理（状態取得）
     function mhdp_core:player/pre
 
+# スニーク開始時処理実行
+    execute if entity @s[tag=PlySneakStart] run function mhdp_core:player/sneak/
+
 # MhdpWeapons処理実行
     function mhdp_weapons:tick/
 
 # ジャンプ時処理実行
     execute if entity @s[scores={MhdpJump=1..}] run function mhdp_core:player/jump/
 
-# スニーク開始時処理実行
-    execute if entity @s[tag=PlySneakStart] run function mhdp_core:player/sneak/
-    # 移動回避処理
-        execute if entity @s[tag=PlySneakAvoidFunc] run function mhdp_core:player/sneak/avoid/main
+# 移動回避処理
+        execute if entity @s[tag=!PlySneakAvoidLock,tag=PlySneakAvoidFunc] run function mhdp_core:player/sneak/avoid/main
 
 # ノックバック処理実行
     # function ..............
