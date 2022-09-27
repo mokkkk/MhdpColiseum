@@ -2,9 +2,6 @@
 #
 # 納刀成功時
 
-# 抜刀中タグ消去
-    tag @s remove PlyWeaponDrawing
-
 # 武器ステータス変更
     data modify storage mhdp_core:temp Temp set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].PlayerData.Item.MainWeapon.tag
     # Cmd計算
@@ -19,9 +16,15 @@
 
 # 武器に応じた移動速度低下付与
 
+# サブ武器ありの場合：サブ武器消去
+    clear @s ender_eye{MhdpWeaponSub:1b} 64
 
 # 演出
     playsound item.armor.equip_iron master @a ~ ~ ~ 1 0.7
+
+# 抜刀中タグ消去
+    tag @s remove PlyWeaponDrawing
+    tag @s remove PlyWeaponDrawingSub
 
 # 終了
     scoreboard players reset #mhdp_temp_cmd

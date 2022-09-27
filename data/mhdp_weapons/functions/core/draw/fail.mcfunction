@@ -27,7 +27,6 @@
 
 # 武器ステータス更新
     data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].PlayerData.Item.OffHand.tag set from storage mhdp_core:temp Temp
-    data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].PlayerData.Item.OffHand.tag.CustomModelData set from storage mhdp_core:temp Temp.CustomModelData
 
 # 警告文表示
     # ここの文言を考える

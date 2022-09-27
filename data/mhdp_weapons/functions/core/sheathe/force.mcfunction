@@ -2,9 +2,6 @@
 #
 # メインハンドに武器を持っていないとき，強制納刀
 
-# 抜刀中タグ消去
-    tag @s remove PlyWeaponDrawing
-
 # shulker_box処理用アイテム補充
     data modify block 0 0 0 Items set value [{Slot:0b,id:"minecraft:stone",Count:1b}]
 
@@ -14,7 +11,7 @@
     clear @s ender_eye{MhdpWeaponSub:1b} 64
     
 # オフハンドにアイテムがある場合：アイテムをメインハンドにコピー
-    execute if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].PlayerData.Item.OffHand run function mhdp_weapons:core/sheathe/force_off
+    execute if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].PlayerData.Item.OffHand unless data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].PlayerData.Item.OffHand.tag{MhdpWeaponSub:1b} run function mhdp_weapons:core/sheathe/force_off
 
 # shulker_boxに武器データをコピー
     data modify block 0 0 0 Items set value [{Slot:0b,id:"minecraft:stone",Count:1b}]
@@ -32,7 +29,6 @@
 
 # 武器ステータス更新
     data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].PlayerData.Item.OffHand.tag set from storage mhdp_core:temp Temp
-    data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].PlayerData.Item.OffHand.tag.CustomModelData set from storage mhdp_core:temp Temp.CustomModelData
 
 # 警告文表示
     # ここの文言を考える
@@ -41,6 +37,10 @@
 # 演出
     playsound item.armor.equip_iron master @a ~ ~ ~ 1 0.7
 
+# 抜刀中タグ消去
+    tag @s remove PlyWeaponDrawing
+    tag @s remove PlyWeaponDrawingSub
+    
 # 終了
     data remove storage mhdp_core:temp Temp
     data remove block 0 0 0 Items[{Slot:0b}]
