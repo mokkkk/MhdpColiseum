@@ -14,7 +14,8 @@
     data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].PlayerData.Item.OffHand.tag set from storage mhdp_core:temp Temp
     data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].PlayerData.Item.OffHand.tag.CustomModelData set from storage mhdp_core:temp Temp.CustomModelData
 
-# 武器に応じた移動速度低下付与
+# 武器に応じた納刀処理
+    function mhdp_weapons:core/sheathe/weapon
 
 # サブ武器ありの場合：サブ武器消去
     clear @s ender_eye{MhdpWeaponSub:1b} 64

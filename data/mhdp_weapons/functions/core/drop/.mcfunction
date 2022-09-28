@@ -2,6 +2,9 @@
 #
 # 武器投げ捨て時
 
+# 抜刀中の場合，納刀処理実行
+    execute if entity @s[tag=PlyWeaponDrawing] run function mhdp_weapons:core/sheathe/weapon
+
 # 抜刀中の場合，納刀中に変更
     execute if entity @s[tag=PlyWeaponDrawing] run playsound item.armor.equip_iron master @a ~ ~ ~ 1 0.7
     execute if entity @s[tag=PlyWeaponDrawing] run tag @s remove PlyWeaponDrawing

@@ -12,5 +12,3 @@
 
 # 終了
     tag @s remove IsOffHand2
-
-say check

@@ -4,12 +4,14 @@
 #
 
 # スコア消去
+     scoreboard players set @s MhdpWeaponCharge 0
+     scoreboard players set @s MhdpWeaponTimer 0
 
 # タグ消去
      tag @s remove WpnBowCharge
      tag @s remove WpnBowShot
      tag @s remove WpnBowHShot
-     tag @s remove WpnBowStep
+     tag @s remove WpnBowCStep
      tag @s remove WpnBowCharge1
      tag @s remove WpnBowCharge2
      tag @s remove WpnBowCharge3

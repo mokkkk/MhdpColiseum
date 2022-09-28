@@ -3,7 +3,7 @@
 # 弓：溜め
 
 # 引き絞りモーション
-    execute if entity @s[scores={MhdpWeaponTimer=..4}] run scoreboard players add @s MhdpWeaponTimer 1
+    execute if entity @s[scores={MhdpWeaponTimer=..4}] run function mhdp_weapons:weapon/bow/0_charge/animation
 
 # 溜めスコア増加
     execute if entity @s[tag=!SklBowChargePlus,scores={MhdpWeaponCharge=..600}] run function mhdp_weapons:weapon/bow/0_charge/main_charge

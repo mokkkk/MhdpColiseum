@@ -30,6 +30,9 @@
 # 武器ステータス更新
     data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].PlayerData.Item.OffHand.tag set from storage mhdp_core:temp Temp
 
+# 武器に応じた納刀処理
+    function mhdp_weapons:core/sheathe/weapon
+
 # 警告文表示
     # ここの文言を考える
     say 強制納刀
