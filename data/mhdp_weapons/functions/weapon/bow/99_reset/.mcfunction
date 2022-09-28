@@ -8,6 +8,7 @@
 # タグ消去
      tag @s remove WpnBowCharge
      tag @s remove WpnBowShot
+     tag @s remove WpnBowHShot
      tag @s remove WpnBowStep
      tag @s remove WpnBowCharge1
      tag @s remove WpnBowCharge2
@@ -17,7 +18,11 @@
 # スニーク回避ロック解除
      tag @s remove PlySneakAvoidLock
 
-# チャージステップリセット
+# 移動速度リセット
+     effect clear @s speed
+     effect clear @s slowness
+
+# チャージステップ中断
      tag @s add Target
      execute as @e[type=marker,tag=SneakAvoidStand0] if score @s MhdpPlayerUid = @a[tag=Target,limit=1,sort=nearest] MhdpPlayerUid run tag @s add Rotater
      tag @s remove Target
