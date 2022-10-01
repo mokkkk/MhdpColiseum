@@ -2,7 +2,7 @@
 #
 # 弓：溜め
 
-# 引き絞りモーション
+# 武器アニメーション
     execute if entity @s[scores={MhdpWeaponTimer=..4}] run function mhdp_weapons:weapon/bow/0_charge/animation
 
 # 溜めスコア増加

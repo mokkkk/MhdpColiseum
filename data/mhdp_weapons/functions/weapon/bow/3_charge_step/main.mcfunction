@@ -10,6 +10,10 @@
 # タイマー増加
     scoreboard players add @s MhdpWeaponTimer 1
 
+# 武器アニメーション
+    execute if entity @s[scores={MhdpWeaponTimer=1}] run function mhdp_weapons:weapon/bow/3_charge_step/animation_0
+    execute if entity @s[scores={MhdpWeaponTimer=8}] run function mhdp_weapons:weapon/bow/3_charge_step/animation_1
+
 # 移動
     execute rotated as @e[type=marker,tag=SneakAvoidStand0,tag=Rotater] rotated ~ 0 run function mhdp_core:player/sneak/avoid/main_move
 
