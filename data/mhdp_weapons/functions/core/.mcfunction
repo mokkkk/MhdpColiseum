@@ -24,6 +24,8 @@
     execute if entity @s[tag=PlyWeaponDrawing] unless data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].PlayerData.Item.MainHand.tag{MhdpWeapon:1b} unless data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].PlayerData.Item.OffHand.tag{MhdpWeapon:1b} run function mhdp_weapons:core/sheathe/force
 # 強制納刀（サブ武器がオフハンドにない）
     execute if entity @s[tag=PlyWeaponDrawingSub] unless data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].PlayerData.Item.OffHand.tag{MhdpWeaponSub:1b} unless data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].PlayerData.Item.OffHand.tag{MhdpWeapon:1b} run function mhdp_weapons:core/sheathe/force
+# 強制納刀（オフハンドが空じゃない）
+    execute if entity @s[tag=PlyWeaponDrawing,tag=!PlyWeaponDrawingSub] if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].PlayerData.Item.OffHand run function mhdp_weapons:core/sheathe/force
 
 # 非抜刀中，オフハンド監視
     execute if entity @s[tag=!PlyWeaponDrawing] run function mhdp_weapons:core/check/

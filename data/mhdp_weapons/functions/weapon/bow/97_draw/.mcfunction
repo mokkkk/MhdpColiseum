@@ -1,12 +1,9 @@
-#> mhdp_weapons:weapon/bow/0_charge/change_shot
+#> mhdp_weapons:weapon/bow/97_draw/
 #
-# 弓：溜め → 射撃
+# 弓の抜刀処理
+#
 
-# タグ消去
-    tag @s remove WpnBowCharge
-
-# 集中力が負の値の場合，0に戻す
-    execute if entity @s[scores={MhdpWeaponExt=..-1}] run scoreboard players set @s MhdpWeaponExt 0
+# サブ武器抜刀
 
 # 武器ステータス変更
     data modify storage mhdp_core:temp Temp set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].PlayerData.Item.MainWeapon.tag
@@ -17,10 +14,8 @@
     # Attribute削除
         data modify storage mhdp_core:temp Temp.AttributeModifiers set value []
     item modify entity @s weapon.mainhand mhdp_core:const/bow/default
-# 終了
-    scoreboard players reset #mhdp_temp_cmd
-    data remove storage mhdp_core:temp Temp
 
+# リセット処理
+     function mhdp_weapons:weapon/bow/99_reset/
 
-# 行動開始
-    function mhdp_weapons:weapon/bow/1_shot/start
+say 弓抜刀処理
