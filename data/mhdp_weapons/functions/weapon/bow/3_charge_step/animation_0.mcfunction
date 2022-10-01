@@ -10,7 +10,7 @@
         execute store result storage mhdp_core:temp Temp.CustomModelData int 1 run scoreboard players get #mhdp_temp_cmd MhdpCore
     # Attribute削除
         data modify storage mhdp_core:temp Temp.AttributeModifiers set value []
-    item modify entity @s weapon.mainhand mhdp_core:const/bow/while_animation
+    item modify entity @s weapon.mainhand mhdp_core:const/bow/default
 
 # 終了
     scoreboard players reset #mhdp_temp_cmd
