@@ -19,7 +19,7 @@
 ## 立ち → 右クリック長押し
 ## 射撃 → 右クリック長押し
 ## チャージステップ → 右クリック長押し
-    execute if entity @s[tag=IsDrawing,tag=!WpnBowShot,tag=!WpnBowHShot,tag=!WpnBowCharge,tag=!WpnBowCStep,tag=PlyUsingEyeCurrent] run function mhdp_weapons:weapon/bow/0_charge/start
+    execute if entity @s[tag=IsDrawing,tag=!WpnBowShot,tag=!WpnBowHShot,tag=!WpnBowCharge,tag=!WpnBowCStep,tag=!PlySneakAvoidFunc,tag=PlyUsingEyeCurrent] run function mhdp_weapons:weapon/bow/0_charge/start
     execute if entity @s[tag=IsDrawing,tag=WpnBowCharge] run function mhdp_weapons:weapon/bow/0_charge/main
 
 # 1_射撃：
@@ -31,8 +31,8 @@
     execute if entity @s[tag=IsDrawing,tag=WpnBowHShot] run function mhdp_weapons:weapon/bow/2_hard_shot/main
 
 # 3_チャージステップ：
-## 溜め → 2回スニーク
-## 射撃 → 2回スニーク
+## 溜め → ジャンプ
+## 射撃 → ジャンプ
     execute if entity @s[tag=IsDrawing,tag=WpnBowCStep] run function mhdp_weapons:weapon/bow/3_charge_step/main
 
 # 終了

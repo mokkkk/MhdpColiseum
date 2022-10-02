@@ -6,7 +6,7 @@
     function mhdp_core:player/pre
 
 # スニーク開始時処理実行
-    execute if entity @s[tag=PlySneakStart] run function mhdp_core:player/sneak/
+    # execute if entity @s[tag=PlySneakStart] run function mhdp_core:player/sneak/
 
 # MhdpWeapons処理実行
     function mhdp_weapons:tick/

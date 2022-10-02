@@ -3,8 +3,11 @@
 # プレイヤージャンプ時に実行する処理
 
 
-# ダッシュジャンプ時
-    execute if predicate mhdp_core:player/stat/sprint run function mhdp_core:player/jump/sprint
+# ダッシュ中ジャンプ時
+    execute if entity @s[tag=!PlySneakCurrent] if predicate mhdp_core:player/stat/sprint run function mhdp_core:player/jump/sprint
+
+# スニーク中ジャンプ時
+    execute if entity @s[tag=PlySneakCurrent] unless entity @s[tag=PlySneakAvoidFunc] run function mhdp_core:player/sneak/avoid/start
 
 # 終了
     scoreboard players set @s MhdpJump 0

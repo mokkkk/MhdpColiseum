@@ -9,7 +9,7 @@
     data modify block 0 0 0 Items[{Slot:0b}].tag set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].PlayerData.Item.OffHand.tag
 
 # オフハンドをメインハンドにコピー
-    item replace entity @s weapon.mainhand from block 0 0 0 container.0
+    execute unless entity @s[tag=FlagB] run item replace entity @s weapon.mainhand from block 0 0 0 container.0
 
 # shulker_boxに武器データをコピー
     data modify block 0 0 0 Items set value [{Slot:0b,id:"minecraft:stone",Count:1b}]
@@ -30,7 +30,8 @@
 
 # 警告文表示
     # ここの文言を考える
-    say メインハンドが空じゃないと抜刀できないよ
+    execute unless entity @s[tag=FlagB] run say メインハンドが空じゃないと抜刀できないよ
+    execute unless entity @s[tag=FlagC] run say 回避中は抜刀できないよ
 
 # 終了
     data remove storage mhdp_core:temp Temp

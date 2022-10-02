@@ -29,5 +29,5 @@
         execute if entity @s[scores={MhdpWeaponExt=..0,MhdpWeaponTimer=5..}] run function mhdp_weapons:weapon/bow/0_charge/change_shot
     # 右クリックを解除したとき，射撃に移行
         execute if entity @s[tag=!PlyUsingEyeCurrent,scores={MhdpWeaponExt=1..,MhdpWeaponTimer=5..}] run function mhdp_weapons:weapon/bow/0_charge/change_shot
-    # 2回スニークしたとき，チャージステップに移行
-        execute if entity @s[tag=PlySneakDouble,scores={MhdpWeaponExt=1..,MhdpWeaponTimer=5..}] run function mhdp_weapons:weapon/bow/0_charge/change_charge_step
+    # ジャンプしたとき，チャージステップに移行
+        execute if entity @s[scores={MhdpJump=1..,MhdpWeaponExt=1..,MhdpWeaponTimer=5..}] run function mhdp_weapons:weapon/bow/0_charge/change_charge_step
