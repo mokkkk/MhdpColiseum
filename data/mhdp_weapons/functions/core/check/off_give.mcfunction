@@ -16,5 +16,3 @@
 # 終了
     data remove storage mhdp_core:temp Temp2
     data remove block 0 0 0 Items[{Slot:0b}]
-
-say give
