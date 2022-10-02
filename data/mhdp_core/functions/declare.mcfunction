@@ -19,6 +19,8 @@
     #declare tag PlyWeaponDrawing プレイヤー武器抜刀中
     #declare tag PlyWeaponDrawingSub プレイヤーサブ武器抜刀中
 
+    #declare tag PlyWpnBow 所持武器判定用タグ（弓）
+
 # storage
     #declare storage mh_dp:status MHDP各種ステータス保存用
 
