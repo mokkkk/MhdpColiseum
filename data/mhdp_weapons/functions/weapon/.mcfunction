@@ -4,4 +4,4 @@
 
 # ID
     # 1:弓
-        function mhdp_weapons:weapon/bow/
+        execute if entity @s[tag=PlyWpnBow] run function mhdp_weapons:weapon/bow/

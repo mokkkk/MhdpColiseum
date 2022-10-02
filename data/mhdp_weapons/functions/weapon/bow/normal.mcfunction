@@ -12,28 +12,31 @@
 #declare tag WpnBowCharge3 弓溜め段階管理用
 #declare tag WpnBowCharge4 弓溜め段階管理用
 
-# 96_常時実行：
-    function mhdp_weapons:weapon/bow/96_tick/
+# 0_常時実行：
+    function mhdp_weapons:weapon/bow/0_tick/
 
-# 0_溜め：
+# 1_抜刀攻撃（溜め）：
+    execute if entity @s[tag=!IsDrawing,tag=!PlySneakAvoidFunc,tag=PlyUsingEyeStart] run function mhdp_weapons:weapon/bow/1_draw_act/start
+
+# 2_溜め：
 ## 立ち → 右クリック長押し
 ## 射撃 → 右クリック長押し
 ## チャージステップ → 右クリック長押し
-    execute if entity @s[tag=IsDrawing,tag=!WpnBowShot,tag=!WpnBowHShot,tag=!WpnBowCharge,tag=!WpnBowCStep,tag=!PlySneakAvoidFunc,tag=PlyUsingEyeCurrent] run function mhdp_weapons:weapon/bow/0_charge/start
-    execute if entity @s[tag=IsDrawing,tag=WpnBowCharge] run function mhdp_weapons:weapon/bow/0_charge/main
+    execute if entity @s[tag=IsDrawing,tag=!WpnBowShot,tag=!WpnBowHShot,tag=!WpnBowCharge,tag=!WpnBowCStep,tag=!PlySneakAvoidFunc,tag=PlyUsingEyeCurrent] run function mhdp_weapons:weapon/bow/2_charge/start
+    execute if entity @s[tag=IsDrawing,tag=WpnBowCharge] run function mhdp_weapons:weapon/bow/2_charge/main
 
-# 1_射撃：
+# 3_射撃：
 ## 溜め → 右クリック離す
-    execute if entity @s[tag=IsDrawing,tag=WpnBowShot] run function mhdp_weapons:weapon/bow/1_shot/main
+    execute if entity @s[tag=IsDrawing,tag=WpnBowShot] run function mhdp_weapons:weapon/bow/3_shot/main
 
-# 2_剛射：
+# 4_剛射：
 ## 射撃 → スニーク+右クリック
-    execute if entity @s[tag=IsDrawing,tag=WpnBowHShot] run function mhdp_weapons:weapon/bow/2_hard_shot/main
+    execute if entity @s[tag=IsDrawing,tag=WpnBowHShot] run function mhdp_weapons:weapon/bow/4_hard_shot/main
 
-# 3_チャージステップ：
+# 5_チャージステップ：
 ## 溜め → ジャンプ
 ## 射撃 → ジャンプ
-    execute if entity @s[tag=IsDrawing,tag=WpnBowCStep] run function mhdp_weapons:weapon/bow/3_charge_step/main
+    execute if entity @s[tag=IsDrawing,tag=WpnBowCStep] run function mhdp_weapons:weapon/bow/5_charge_step/main
 
 # 終了
     tag @s remove IsDrawing
