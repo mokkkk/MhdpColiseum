@@ -30,4 +30,4 @@
     # 右クリック中の場合，溜めに移行
         execute if entity @s[tag=PlyUsingEyeCurrent] run function mhdp_weapons:weapon/bow/2_charge/start_combo_cstep
     # 右クリック中じゃない場合，射撃に移行
-        execute if entity @s[tag=!PlyUsingEyeCurrent] run function mhdp_weapons:weapon/bow/3_shot/start
+        execute if entity @s[tag=!PlyUsingEyeCurrent] at @s run function mhdp_weapons:weapon/bow/3_shot/start
