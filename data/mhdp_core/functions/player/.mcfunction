@@ -8,8 +8,8 @@
 # スニーク開始時処理実行
     # execute if entity @s[tag=PlySneakStart] run function mhdp_core:player/sneak/
 
-# MhdpWeapons処理実行
-    function mhdp_weapons:tick/
+# MhdpWeapons処理実行（クエスト中のみ）
+    execute if entity @s[tag=PlyQuest] run function mhdp_weapons:tick/
 
 # ジャンプ時処理実行
     execute if entity @s[scores={MhdpJump=1..}] run function mhdp_core:player/jump/

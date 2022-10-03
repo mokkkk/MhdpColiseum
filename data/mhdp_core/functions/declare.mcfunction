@@ -16,10 +16,11 @@
     #declare tag PlySneakAvoidFunc プレイヤースニーク回避実行中
     #declare tag PlySneakAvoidLock プレイヤースニーク回避ロック中
 
-    #declare tag PlyWeaponDrawing プレイヤー武器抜刀中
-    #declare tag PlyWeaponDrawingSub プレイヤーサブ武器抜刀中
-
-    #declare tag PlyWpnBow 所持武器判定用タグ（弓）
+    # クエスト・武器処理関連
+        #declare tag PlyQuest クエスト中判定用タグ
+        #declare tag PlyWpnBow 所持武器判定用タグ（弓）
+        #declare tag PlyWeaponDrawing プレイヤー武器抜刀中
+        #declare tag PlyWeaponDrawingSub プレイヤーサブ武器抜刀中
 
 # storage
     #declare storage mh_dp:status MHDP各種ステータス保存用
