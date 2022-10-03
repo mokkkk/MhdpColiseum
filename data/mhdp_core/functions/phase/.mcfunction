@@ -6,15 +6,18 @@
 
 
 # 1_クエスト受注
-    function mhdp_core:phase/1_quest_received/
+    execute if data storage mh_dp:status GameStatus{Phase:1} run function mhdp_core:phase/1_quest_received/
 
-# 2_クエスト
+# 2_クエスト出発待機
+    execute if data storage mh_dp:status GameStatus{Phase:2} run function mhdp_core:phase/2_quest_wait/
 
-
-# 3_クエストクリア
-
-
-# 4_クエスト失敗
+# 3_クエスト
 
 
-# 5_ムービー
+# 4_クエストクリア
+
+
+# 5_クエスト失敗
+
+
+# 6_ムービー

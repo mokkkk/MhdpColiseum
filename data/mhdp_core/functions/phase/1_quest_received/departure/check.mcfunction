@@ -18,7 +18,7 @@
     execute unless entity @a[tag=!Check0,tag=!Check1,tag=!Check2,tag=!Check3] run function mhdp_core:phase/1_quest_received/departure/error
 
 # 全条件に引っかからなかった場合，クエスト開始処理起動
-    execute unless entity @a[tag=Check0] unless entity @a[tag=Check1] unless entity @a[tag=Check2] unless entity @a[tag=Check3] run function mhdp_core:phase/1_quest_received/start_quest/
+    execute unless entity @a[tag=Check0] unless entity @a[tag=Check1] unless entity @a[tag=Check2] unless entity @a[tag=Check3] run function mhdp_core:phase/1_quest_received/departure/start
 
 # 終了
     tag @a remove Check0

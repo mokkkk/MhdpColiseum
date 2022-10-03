@@ -1,4 +1,4 @@
-#> mhdp_core:phase/1_quest_received/start_quest/quests/0
+#> mhdp_core:phase/2_quest_wait/start_quest/quests/0
 #
 # テスト用クエスト
 
