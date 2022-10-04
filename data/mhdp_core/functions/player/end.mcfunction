@@ -16,3 +16,6 @@
     tag @s remove PlyDroppedEnderEye
     tag @s remove PlyUsingEyeStart
     tag @s remove PlyUsingEyeEnd
+
+# 進捗状況リセット
+    advancement revoke @s only mhdp_core:player/villager_trade/quest_normal

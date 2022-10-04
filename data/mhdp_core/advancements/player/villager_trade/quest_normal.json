@@ -1,0 +1,16 @@
+{
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:villager_trade",
+      "conditions": {
+        "item": {
+          "items": [
+            "minecraft:paper"
+          ],
+          "count": 1,
+          "nbt": "{MhdpQuest:1}"
+        }
+      }
+    }
+  }
+}
