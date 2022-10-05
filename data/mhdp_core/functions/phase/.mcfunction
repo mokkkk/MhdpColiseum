@@ -3,7 +3,7 @@
 # Phase毎の分岐処理
 
 # 0_クエスト未受注
-
+    # 特別な処理は無い予定
 
 # 1_クエスト受注後
     execute if data storage mh_dp:status GameStatus{Phase:1} run function mhdp_core:phase/1_quest_received/

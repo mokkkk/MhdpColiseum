@@ -5,7 +5,7 @@
 # プレイヤーUID割り当て
     # function ...
 
-# プレイヤーの武器をstickからender_eyeに変更し，オフハンドにセット
+# プレイヤーの武器をオフハンドにセット
     # function ...
 
 # プレイヤーの特殊装具をstickからcarrot_on_a_stickに変更

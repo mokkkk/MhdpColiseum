@@ -1,6 +1,6 @@
 #> mhdp_core:phase/2_quest_wait/
 #
-# Phase1_クエスト受注
+# Phase2_クエスト出発待機
 
 # タイマー増加
     scoreboard players add #mhdp_quest_timer MhdpCore 1
@@ -11,5 +11,5 @@
 
 # 出発ファンファーレを鳴らす
 
-# クエスト出発
+# 2秒後にクエスト出発
     execute if score #mhdp_quest_timer MhdpCore matches 40.. run function mhdp_core:phase/2_quest_wait/start_quest/
