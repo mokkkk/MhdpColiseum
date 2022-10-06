@@ -3,12 +3,14 @@
 # Phase1_クエスト受注 クエスト開始処理
 
 # プレイヤーUID割り当て
-    # function ...
+    scoreboard players set #mhdp_temp_uid MhdpCore 0
+    execute as @a[sort=arbitrary] run function mhdp_core:phase/2_quest_wait/start_quest/setup/uid
+    scoreboard players reset #mhdp_temp_uid
 
 # プレイヤーの武器をオフハンドにセット
-    # function ...
+    execute as @a run function mhdp_core:phase/2_quest_wait/start_quest/setup/weapon
 
-# プレイヤーの特殊装具をstickからcarrot_on_a_stickに変更
+# プレイヤーの特殊装具をstickからcarrot_on_a_stickに変更(TO DO)
     # function ...
 
 # クエスト独自処理実行
