@@ -3,8 +3,8 @@
 # 村人の配置処理 クエスト発注者
 
 # 既存の村人削除
-    tp @e[type=wandering_trader,tag=VlgMerchant] ~ 0 ~
-    kill @e[type=wandering_trader,tag=VlgMerchant]
+    tp @e[type=wandering_trader,tag=VlgMerchant,tag=VlgQuestNormal] ~ 0 ~
+    kill @e[type=wandering_trader,tag=VlgMerchant,tag=VlgQuestNormal]
 
 # 召喚
     summon wandering_trader 161 62 2 {DespawnDelay:0,Silent:1b,Invulnerable:1b,Tags:["VlgMerchant","VlgQuestNormal"],CustomName:'{"text":"クエスト受付(ノーマル)"}',Attributes:[{Name:"generic.knockback_resistance",Base:1},{Name:"generic.movement_speed",Base:0}],Offers:{Recipes:[{maxUses:1,buy:{id:"minecraft:air",Count:1b},sell:{id:"minecraft:air",Count:1b}}]}}

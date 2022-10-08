@@ -34,5 +34,10 @@
     scoreboard players operation #mhdp_quest_timer MhdpCore *= #mhdp_sec_temp MhdpCore
     scoreboard players reset #mhdp_sec_temp
 
+# 乙数初期化
+    scoreboard players set #mhdp_quest_death_count MhdpCore 3
+    # 報酬金保険発動時
+        execute if entity @a[tag=CatSklInsurance] run scoreboard players set #mhdp_quest_death_count MhdpCore 4
+
 # モンスターを配置
     # function ...

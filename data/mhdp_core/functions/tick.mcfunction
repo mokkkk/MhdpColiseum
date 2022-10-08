@@ -12,3 +12,6 @@
 
 # Player用処理
     execute as @a at @s run function mhdp_core:player/
+
+# Monster用処理
+

@@ -7,6 +7,6 @@
 
 # Phase変更
     execute unless data storage mh_dp:status GameStatus{Movie:1b} run function mhdp_core:phase/2_quest_wait/start_quest/phase_quest
-    execute if data storage mh_dp:status GameStatus{Movie:1b} run data modify storage mh_dp:status GameStatus.Phase set value 6
+    # execute if data storage mh_dp:status GameStatus{Movie:1b} run data modify storage mh_dp:status GameStatus.Phase set value 6
 
 say 出発

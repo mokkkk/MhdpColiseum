@@ -12,10 +12,10 @@
     execute if data storage mh_dp:status GameStatus{Phase:2} run function mhdp_core:phase/2_quest_wait/
 
 # 3_クエスト
-
+    execute if data storage mh_dp:status GameStatus{Phase:3} run function mhdp_core:phase/3_quest/
 
 # 4_クエストクリア
-
+    execute if data storage mh_dp:status GameStatus{Phase:4} run function mhdp_core:phase/4_quest_cleared/
 
 # 5_クエスト失敗
 
