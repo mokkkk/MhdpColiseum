@@ -19,3 +19,6 @@
 
 # 進捗状況リセット
     advancement revoke @s only mhdp_core:player/villager_trade/quest_normal
+    advancement revoke @s only mhdp_core:player/inventory_changed/main
+    advancement revoke @s only mhdp_core:player/inventory_changed/off
+    advancement revoke @s only mhdp_core:player/inventory_changed/other
