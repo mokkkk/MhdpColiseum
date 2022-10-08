@@ -20,6 +20,7 @@
 
 # プレイヤーを移動
     tp @a 168 61 21
+    spawnpoint @a 168 61 21
 
 # MhdpWeapons処理用タグ削除
     tag @a remove PlyQuest

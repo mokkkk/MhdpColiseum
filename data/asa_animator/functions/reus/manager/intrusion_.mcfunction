@@ -1,6 +1,9 @@
 
 # パーツ召喚
-    execute positioned ~ ~ ~ run function asa_animator:reus/summon
+    execute positioned ~ ~50 ~ run function asa_animator:reus/summon
+
+# 召喚時アニメーション再生
+    tag @e[type=armor_stand,tag=ReusRoot] add AnmSummon
 
 # 当たり判定召喚
     execute positioned ~ ~-50 ~ run function asa_animator:reus/manager/health/summon

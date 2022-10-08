@@ -14,4 +14,4 @@
     execute as @a at @s run function mhdp_core:player/
 
 # Monster用処理
-
+    execute as @e[type=armor_stand,tag=MonsterRoot] run function mhdp_core:monster/

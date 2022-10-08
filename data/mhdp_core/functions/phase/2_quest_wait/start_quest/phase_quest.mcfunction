@@ -40,4 +40,4 @@
         execute if entity @a[tag=CatSklInsurance] run scoreboard players set #mhdp_quest_death_count MhdpCore 4
 
 # モンスターを配置
-    # function ...
+    function mhdp_core:phase/2_quest_wait/start_quest/setup/monsters/
