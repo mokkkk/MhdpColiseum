@@ -29,10 +29,12 @@
     tag @a remove PlyWeaponDrawingSub
 
 # モンスター消去処理
-    # function ...
+    execute as @e[type=armor_stand,tag=MonsterRoot] run function mhdp_core:phase/4_quest_cleared/back_home/setup/despawn_monster
 
 # 報酬チェストコピー
     # function ...
 
 # 村人再配置
     function mhdp_core:phase/0_village/villager/
+
+
