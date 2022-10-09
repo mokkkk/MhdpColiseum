@@ -32,7 +32,7 @@ execute if entity @s[scores={AsaMatrix=14}] positioned ^ ^1 ^5 run function asa_
 execute if entity @s[scores={AsaMatrix=23..27}] run function asa_animator:reus/manager/rotate
 execute if entity @s[scores={AsaMatrix=34}] positioned ^ ^1 ^5 run function asa_animator:reus/anim/bite/events/damage
 
-execute if entity @s[scores={AsaMatrix=1..5}] at @s if block ~ ~-0.2 ~ #asa_animator:no_collision at @s run function asa_animator:zinogre/manager/check_ground
+execute if entity @s[scores={AsaMatrix=1..5}] at @s if block ~ ~-0.2 ~ #asa_animator:no_collision at @s run function asa_animator:general/check_ground
 execute if entity @s[scores={AsaMatrix=1..5}] at @s unless block ~ ~ ~ #asa_animator:no_collision at @s run tp @s ~ ~0.1 ~ ~ ~
-execute if entity @s[scores={AsaMatrix=23..27}] at @s if block ~ ~-0.2 ~ #asa_animator:no_collision at @s run function asa_animator:zinogre/manager/check_ground
+execute if entity @s[scores={AsaMatrix=23..27}] at @s if block ~ ~-0.2 ~ #asa_animator:no_collision at @s run function asa_animator:general/check_ground
 execute if entity @s[scores={AsaMatrix=23..27}] at @s unless block ~ ~ ~ #asa_animator:no_collision at @s run tp @s ~ ~0.1 ~ ~ ~

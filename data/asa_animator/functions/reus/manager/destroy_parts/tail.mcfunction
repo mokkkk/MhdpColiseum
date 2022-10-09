@@ -16,7 +16,7 @@ scoreboard players set @s AsaMatrix 0
 # 尻尾設置
     summon armor_stand ~ ~ ~ {Marker:1b,Invisible:1b,Tags:["MonsterShot","MonsterTail","ReusTail"],ArmorItems:[{},{},{},{id:"minecraft:barrier",Count:1b,tag:{CustomModelData:10013,Rotate:[0f,0f,0f]}}],Pose:{Head:[15f,0f,0f]}}
     execute as @e[type=armor_stand,tag=MonsterTail,tag=ReusTail,limit=1] at @e[type=armor_stand,tag=ReusParts,tag=Tail3,limit=1] run tp @s ~ ~3 ~ ~ ~
-    execute as @e[type=armor_stand,tag=MonsterTail,tag=ReusTail,limit=1] at @s run function asa_animator:zinogre/manager/check_ground
+    execute as @e[type=armor_stand,tag=MonsterTail,tag=ReusTail,limit=1] at @s run function asa_animator:general/check_ground
     execute as @e[type=armor_stand,tag=MonsterTail,tag=ReusTail,limit=1] at @s run tp @s ~ ~-1.1 ~
     execute as @e[type=armor_stand,tag=MonsterTail,tag=ReusTail,limit=1] run data modify entity @s Pose.Head[0] set value 0.0f
 

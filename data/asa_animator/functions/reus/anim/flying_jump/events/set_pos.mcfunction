@@ -2,7 +2,7 @@
 # 地上にmarkerセット
 summon marker ~ ~ ~ {Tags:["ReusMovePos"]}
 execute rotated ~ 0 as @e[tag=ReusAttackTarget] positioned as @s run tp @e[type=marker,tag=ReusMovePos] ~ ~ ~
-execute as @e[type=marker,tag=ReusMovePos,limit=1] at @s align y positioned ~ ~ ~ run function asa_animator:zinogre/manager/check_ground
+execute as @e[type=marker,tag=ReusMovePos,limit=1] at @s align y positioned ~ ~ ~ run function asa_animator:general/check_ground
 
 # ポジション差分取得
 data merge storage mhdp: {PosTemp:[], MarkerPosTemp:[]}

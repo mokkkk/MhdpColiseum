@@ -36,5 +36,3 @@
 
 # 村人再配置
     function mhdp_core:phase/0_village/villager/
-
-

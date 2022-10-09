@@ -61,8 +61,6 @@
   	"minecraft:strider",
   	"minecraft:trader_llama",
   	"minecraft:tropical_fish",
-  	"minecraft:turtle",
-  	"minecraft:wandering_trader",
-	"minecraft:player"
+  	"minecraft:turtle"
   ]
 }

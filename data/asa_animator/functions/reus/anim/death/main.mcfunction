@@ -24,5 +24,5 @@ function asa_animator:reus/model
 execute unless entity @s[tag=DestroyHead] if entity @s[scores={AsaMatrix=41}] run data modify entity @e[type=armor_stand,tag=ReusParts,tag=HeadU,limit=1] ArmorItems[3].tag.CustomModelData set value 10038
 execute if entity @s[tag=DestroyHead] if entity @s[scores={AsaMatrix=41}] run data modify entity @e[type=armor_stand,tag=ReusParts,tag=HeadU,limit=1] ArmorItems[3].tag.CustomModelData set value 10120
 
-execute if entity @s[scores={AsaMatrix=1..40}] at @s if block ~ ~-0.2 ~ #asa_animator:no_collision at @s run function asa_animator:zinogre/manager/check_ground
+execute if entity @s[scores={AsaMatrix=1..40}] at @s if block ~ ~-0.2 ~ #asa_animator:no_collision at @s run function asa_animator:general/check_ground
 execute if entity @s[scores={AsaMatrix=1..40}] at @s unless block ~ ~ ~ #asa_animator:no_collision at @s run tp @s ~ ~0.1 ~ ~ ~

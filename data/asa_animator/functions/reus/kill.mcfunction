@@ -1,5 +1,6 @@
 kill @e[type=armor_stand,tag=ReusRoot]
 kill @e[type=armor_stand,tag=ReusParts]
+kill @s[type=armor_stand,tag=MonsterShot,tag=ReusBreath]
 scoreboard players reset #mhdp_reus_head_damage
 scoreboard players reset #mhdp_reus_body_damage
 scoreboard players reset #mhdp_reus_tail_damage

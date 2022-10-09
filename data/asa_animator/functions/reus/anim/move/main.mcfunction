@@ -17,7 +17,7 @@ function asa_animator:reus/model
 function asa_animator:reus/manager/rotate
 
 # 高度調整
-execute at @s if block ~ ~-0.2 ~ #asa_animator:no_collision at @s run function asa_animator:zinogre/manager/check_ground
+execute at @s if block ~ ~-0.2 ~ #asa_animator:no_collision at @s run function asa_animator:general/check_ground
 execute at @s unless block ~ ~ ~ #asa_animator:no_collision at @s run tp @s ~ ~0.1 ~ ~ ~
 
 # 敵に十分近づいた場合，噛みつきに遷移

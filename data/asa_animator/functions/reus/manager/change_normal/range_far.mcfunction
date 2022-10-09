@@ -11,6 +11,8 @@
     execute if entity @e[type=item,nbt={Item:{tag:{Act:2}}}] run tag @s add AnmFly
 # ハード：FJB
     execute if entity @e[type=item,nbt={Item:{tag:{Act:3}}}] run tag @s add AnmHardFjb
+# 移動
+    execute if entity @e[type=item,nbt={Item:{tag:{Act:4}}}] run tag @s add AnmMove
 
 # 終了
     tag @s remove IsHard

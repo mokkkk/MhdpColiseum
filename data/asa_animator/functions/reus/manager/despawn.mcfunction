@@ -1,7 +1,4 @@
 
-# メッセージ
-tellraw @a {"text": "【火竜は居なくなった】"}
-
 # タグ消去
 tag @e[tag=ReusTarget] remove ReusTarget
 tag @e[tag=ReusAttackTarget] remove ReusAttackTarget

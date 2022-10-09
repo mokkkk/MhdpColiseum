@@ -20,7 +20,10 @@
         scoreboard players operation #mhdp_const_temp_0 AsaMatrix += #mhdp_const_temp_1 AsaMatrix
         scoreboard players operation #mhdp_reus_health AsaMatrix *= #mhdp_const_temp_0 AsaMatrix
     # 代入
-        execute store result score #mhdp_reus_head_damage AsaMatrix store result score #mhdp_reus_body_damage AsaMatrix store result score #mhdp_reus_tail_damage AsaMatrix store result score #mhdp_reus_anger_damage_max AsaMatrix store result score #mhdp_reus_flying_damage_max AsaMatrix store result score #mhdp_reus_anger_damage_max AsaMatrix run scoreboard players operation #mhdp_reus_health AsaMatrix /= #asam_const_100 AsaMatrix
+        execute store result score #mhdp_reus_health_half AsaMatrix store result score #mhdp_reus_head_damage AsaMatrix store result score #mhdp_reus_body_damage AsaMatrix store result score #mhdp_reus_tail_damage AsaMatrix store result score #mhdp_reus_anger_damage_max AsaMatrix store result score #mhdp_reus_flying_damage_max AsaMatrix store result score #mhdp_reus_anger_damage_max AsaMatrix run scoreboard players operation #mhdp_reus_health AsaMatrix /= #asam_const_100 AsaMatrix
+    # 体力半分取得
+        scoreboard players set #mhdp_const_temp AsaMatrix 2
+        scoreboard players operation #mhdp_reus_health_half AsaMatrix /= #mhdp_const_temp AsaMatrix
 
 # ボスバー設定
     bossbar add asa_animator:reus_health [{"text": "火竜"},{"text":"\uE000","font":"mhdp"}]
@@ -32,25 +35,25 @@
 
 # 部位耐久値
     ## 頭：10%
-    scoreboard players set #mhdp_const_temp AsaMatrix 20
+    scoreboard players set #mhdp_const_temp AsaMatrix 10
     scoreboard players operation #mhdp_reus_head_damage AsaMatrix *= #mhdp_const_temp AsaMatrix
     scoreboard players operation #mhdp_reus_head_damage AsaMatrix /= #asam_const_100 AsaMatrix
     ## 胴：10%
-    scoreboard players set #mhdp_const_temp AsaMatrix 20
+    scoreboard players set #mhdp_const_temp AsaMatrix 10
     scoreboard players operation #mhdp_reus_body_damage AsaMatrix *= #mhdp_const_temp AsaMatrix
     scoreboard players operation #mhdp_reus_body_damage AsaMatrix /= #asam_const_100 AsaMatrix
     ## 尻尾：15%
-    scoreboard players set #mhdp_const_temp AsaMatrix 25
+    scoreboard players set #mhdp_const_temp AsaMatrix 15
     scoreboard players operation #mhdp_reus_tail_damage AsaMatrix *= #mhdp_const_temp AsaMatrix
     scoreboard players operation #mhdp_reus_tail_damage AsaMatrix /= #asam_const_100 AsaMatrix
 # 特殊怯み
     ## 15%
-    scoreboard players set #mhdp_const_temp AsaMatrix 20
+    scoreboard players set #mhdp_const_temp AsaMatrix 15
     scoreboard players operation #mhdp_reus_flying_damage_max AsaMatrix *= #mhdp_const_temp AsaMatrix
     scoreboard players operation #mhdp_reus_flying_damage_max AsaMatrix /= #asam_const_100 AsaMatrix
 # 怒り
     ## 15%
-    scoreboard players set #mhdp_const_temp AsaMatrix 20
+    scoreboard players set #mhdp_const_temp AsaMatrix 15
     scoreboard players operation #mhdp_reus_anger_damage_max AsaMatrix *= #mhdp_const_temp AsaMatrix
     scoreboard players operation #mhdp_reus_anger_damage_max AsaMatrix /= #asam_const_100 AsaMatrix
 
