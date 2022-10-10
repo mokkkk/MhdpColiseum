@@ -31,4 +31,4 @@
     execute if score #mhdp_reus_health AsaMatrix matches ..0 as @e[type=armor_stand,tag=ReusRoot] run function asa_animator:reus/manager/start_death_animation
 
 # 体力半分時処理
-    execute if entity @s[tag=!HpHalf] if score #mhdp_reus_health_half AsaMatrix matches ..0 run function mhdp_core:phase/3_quest/check/hp_half
+    execute as @e[type=armor_stand,tag=ReusRoot] if entity @s[tag=!HpHalf] if score #mhdp_reus_health_half AsaMatrix matches ..0 run function mhdp_core:phase/3_quest/check/hp_half

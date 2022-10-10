@@ -1,24 +1,32 @@
-## エンチャント
-    # 0：軽減不可
-    # 1：ダメージ軽減（無属性，雷属性）
-    # 2：火炎耐性（火属性）
-    # 3：爆発耐性
-    # 4：ダメージ軽減（龍属性）
-    execute if data storage mhdp: DamageType{Epf:0} run scoreboard players set $mhdp_epf AsaMatrix 0
-    execute if data storage mhdp: DamageType{Epf:1} run function mh_dp:damage/get_epf_protection
-    execute if data storage mhdp: DamageType{Epf:2} run function mh_dp:damage/get_epf_fire
-    execute if data storage mhdp: DamageType{Epf:3} run function mh_dp:damage/get_epf_blast
-    execute if data storage mhdp: DamageType{Epf:4} run function mh_dp:damage/get_epf_protection
+#> mhdp_core:player/damage/player
+#
+# ダメージを受けたときに走らせる処理 プレイヤー用
 
-# 龍属性やられ
-    scoreboard players set #mhdp_const_temp AsaMatrix 2
-    execute if entity @s[tag=BlightDragon] run scoreboard players operation $mhdp_epf AsaMatrix /= #mhdp_const_temp AsaMatrix
-    scoreboard players reset #mhdp_const_temp
-# EPF適用
-    execute store result storage score_damage: Argument.EPF int 1 run scoreboard players get $mhdp_epf AsaMatrix
+# ダメージ取得
+    execute store result score #mhdp_temp_damage MhdpCore run data get storage mhdp_core:temp Temp.Damage.Damage 100
+
+# 属性防御力に応じてダメージ増減
+    # ......
+    # scoreboard players operation #mhdp_temp_damage MhdpCore /= #asam_const_100 AsaMatrix
+
+# 物理防御力に応じてダメージ増減
+    # ......
+    # scoreboard players operation #mhdp_temp_damage MhdpCore /= #asam_const_100 AsaMatrix
+
+# スキルに応じてダメージ軽減
+    # 精霊の加護
+        # LV1
+        # LV2
+
+# score_damage用の引数用意
+    data modify storage score_damage: Argument set value {Damage:1.0f, BypassArmor:1b}
+    execute store result storage score_damage: Argument.Damage float 0.01 run scoreboard players get #mhdp_temp_damage MhdpCore
 
 # 攻撃
     execute unless entity @s[gamemode=creative] unless entity @s[gamemode=spectator] unless entity @s[scores={MhdpTAvoid=1..}] unless entity @s[scores={MhdpTDamage=1..}] run function score_damage_mhdp:api/attack
 
-# 回避成功
-    execute if entity @s[scores={MhdpTAvoid=1..}] unless entity @s[scores={MhdpTDamage=1..}] run function mh_dp:damage/player_avoid
+# フレーム回避成功時
+    execute if entity @s[scores={MhdpTAvoid=1..}] unless entity @s[scores={MhdpTDamage=1..}] run function mhdp_core:player/damage/player_avoid
+
+# 終了
+    scoreboard players reset #mhdp_temp_damage MhdpCore

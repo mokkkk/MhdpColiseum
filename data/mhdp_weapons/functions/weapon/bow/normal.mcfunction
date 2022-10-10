@@ -16,13 +16,13 @@
     function mhdp_weapons:weapon/bow/0_tick/
 
 # 1_抜刀攻撃（溜め）：
-    execute if entity @s[tag=!IsDrawing,tag=!PlySneakAvoidFunc,tag=PlyUsingEyeStart] run function mhdp_weapons:weapon/bow/1_draw_act/start
+    execute if entity @s[tag=!PlyWeaponDeactivate,tag=!IsDrawing,tag=!PlySneakAvoidFunc,tag=PlyUsingEyeStart] run function mhdp_weapons:weapon/bow/1_draw_act/start
 
 # 2_溜め：
 ## 立ち → 右クリック長押し
 ## 射撃 → 右クリック長押し
 ## チャージステップ → 右クリック長押し
-    execute if entity @s[tag=IsDrawing,tag=!WpnBowShot,tag=!WpnBowHShot,tag=!WpnBowCharge,tag=!WpnBowCStep,tag=!PlySneakAvoidFunc,tag=PlyUsingEyeCurrent] run function mhdp_weapons:weapon/bow/2_charge/start
+    execute if entity @s[tag=!PlyWeaponDeactivate,tag=IsDrawing,tag=!WpnBowShot,tag=!WpnBowHShot,tag=!WpnBowCharge,tag=!WpnBowCStep,tag=!PlySneakAvoidFunc,tag=PlyUsingEyeCurrent] run function mhdp_weapons:weapon/bow/2_charge/start
     execute if entity @s[tag=IsDrawing,tag=WpnBowCharge] run function mhdp_weapons:weapon/bow/2_charge/main
 
 # 3_射撃：
@@ -40,3 +40,5 @@
 
 # 終了
     tag @s remove IsDrawing
+
+execute if entity @s[tag=PlyWeaponDeactivate] run say 弓使えない

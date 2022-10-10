@@ -1,5 +1,8 @@
 # ダメージ
 tag @s add D_ReusAttack
-execute unless entity @s[scores={MhdpTAvoid=1..}] run effect give @s poison 10 0
+# プレイヤーに毒を与える
+# 10秒, lv0
+    scoreboard players set #mhdp_temp_poison_time MhdpCore 200
+    scoreboard players set #mhdp_temp_poison_lv MhdpCore 0
 function mhdp_core:player/damage/attack
 tag @s remove D_ReusAttack

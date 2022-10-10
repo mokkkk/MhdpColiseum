@@ -23,6 +23,7 @@
         scoreboard objectives add MhdpWeaponExt dummy
         scoreboard objectives add MhdpWeaponCharge dummy
         scoreboard objectives add MhdpWeaponTimer dummy
+        scoreboard objectives add MhdpWeaponDeactivateTimer dummy
 
     # モンスター処理用
         scoreboard objectives add AsaMatrix dummy

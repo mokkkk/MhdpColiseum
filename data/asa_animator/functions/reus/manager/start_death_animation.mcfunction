@@ -6,4 +6,4 @@ execute unless entity @s[tag=IsFlying] run tag @s add AnmDeath
 function asa_animator:reus/manager/health/kill
 
 # 討伐時処理
-    function mhdp_core:phase/3_quest/check/death
+    execute as @e[type=armor_stand,tag=ReusRoot] run function mhdp_core:phase/3_quest/check/death

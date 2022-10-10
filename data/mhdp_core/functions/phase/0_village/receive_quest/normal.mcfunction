@@ -10,6 +10,9 @@
 # エラーメッセージ
     execute if score #mhdp_quest_id MhdpCore matches ..-1 run tellraw @a {"text":"【ERROR:受注したクエストが見つかりませんでした】"}
 
+# フェーズ変更
+    execute if score #mhdp_quest_id MhdpCore matches 0.. run data modify storage mh_dp:status GameStatus.Phase set value 1
+
 # 終了
     kill @e[type=item,limit=1,sort=nearest]
     clear @s paper{MhdpQuest:1} 64

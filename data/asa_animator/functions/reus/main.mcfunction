@@ -3,7 +3,7 @@
 # 火竜メイン処理
 
 # アニメーション遷移
-    # execute if entity @s[tag=ChangeAnm] run function asa_animator:reus/manager/change
+    execute if entity @s[tag=ChangeAnm] run function asa_animator:reus/manager/change
 
 # アニメーション
     # 待機
