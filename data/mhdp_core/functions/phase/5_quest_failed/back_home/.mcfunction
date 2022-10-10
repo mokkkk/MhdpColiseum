@@ -1,4 +1,4 @@
-#> mhdp_core:phase/4_quest_cleared/back_home/
+#> mhdp_core:phase/5_quest_failed/back_home/
 #
 # Phase4_クエストクリア 帰還処理
 
@@ -31,11 +31,8 @@
 # モンスター消去処理
     execute as @e[type=armor_stand,tag=MonsterRoot] run function mhdp_core:phase/4_quest_cleared/back_home/setup/despawn_monster
 
-# 報酬チェストコピー
-    # function ...
-
-# クエストIDを参照し，状態をクリアにする
-    # function ...
+# 死亡復活処理
+    execute as @a[tag=PlyDeathAnimation] run function mhdp_core:player/death/animation/end
 
 # 村人再配置
     function mhdp_core:phase/0_village/villager/

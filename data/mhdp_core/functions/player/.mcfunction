@@ -18,10 +18,15 @@
     execute if entity @s[tag=PlyQuest,scores={MhdpJump=1..}] run function mhdp_core:player/jump/
 
 # 移動回避処理
-        execute if entity @s[tag=!PlySneakAvoidLock,tag=PlySneakAvoidFunc] run function mhdp_core:player/sneak/avoid/main
+    execute if entity @s[tag=!PlySneakAvoidLock,tag=PlySneakAvoidFunc] run function mhdp_core:player/sneak/avoid/main
 
 # ノックバック処理実行
     execute if entity @s[tag=MdhpKnockback] at @s facing entity @e[type=marker,tag=MhdpKnockbackPos] feet rotated ~ 0 run function mhdp_core:player/damage/knockback/
+
+# 死亡時処理実行
+    execute if entity @s[tag=PlyDead] run function mhdp_core:player/death/tick
+    # 死亡演出（クエスト中のみ）
+        execute if entity @s[tag=PlyDeathAnimation] run function mhdp_core:player/death/animation/main
 
 # デクリメント
     execute if entity @s[scores={MhdpTDamage=1..}] run scoreboard players remove @s MhdpTDamage 1

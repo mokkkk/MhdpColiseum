@@ -23,7 +23,7 @@
     execute store result storage score_damage: Argument.Damage float 0.01 run scoreboard players get #mhdp_temp_damage MhdpCore
 
 # 攻撃
-    execute unless entity @s[gamemode=creative] unless entity @s[gamemode=spectator] unless entity @s[scores={MhdpTAvoid=1..}] unless entity @s[scores={MhdpTDamage=1..}] run function score_damage_mhdp:api/attack
+    execute unless entity @s[gamemode=creative] unless entity @s[gamemode=spectator] unless entity @s[tag=PlyDeathAnimation] unless entity @s[scores={MhdpTAvoid=1..}] unless entity @s[scores={MhdpTDamage=1..}] run function score_damage_mhdp:api/attack
 
 # フレーム回避成功時
     execute if entity @s[scores={MhdpTAvoid=1..}] unless entity @s[scores={MhdpTDamage=1..}] run function mhdp_core:player/damage/player_avoid

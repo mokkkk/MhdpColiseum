@@ -18,6 +18,6 @@
     execute if data storage mh_dp:status GameStatus{Phase:4} run function mhdp_core:phase/4_quest_cleared/
 
 # 5_クエスト失敗
-
+    execute if data storage mh_dp:status GameStatus{Phase:5} run function mhdp_core:phase/5_quest_failed/
 
 # 6_ムービー

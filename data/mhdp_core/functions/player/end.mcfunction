@@ -22,3 +22,4 @@
     advancement revoke @s only mhdp_core:player/inventory_changed/main
     advancement revoke @s only mhdp_core:player/inventory_changed/off
     advancement revoke @s only mhdp_core:player/inventory_changed/other
+    advancement revoke @s only mhdp_core:player/hurt/entity_hurt_player

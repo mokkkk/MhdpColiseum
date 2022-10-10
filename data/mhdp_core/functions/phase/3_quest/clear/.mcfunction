@@ -7,5 +7,3 @@
 
 # Phase変更
     data modify storage mh_dp:status GameStatus.Phase set value 4
-
-say クエストクリア

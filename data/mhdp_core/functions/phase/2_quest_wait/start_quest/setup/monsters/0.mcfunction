@@ -7,8 +7,8 @@
 # ID決定
     scoreboard players set #mhdp_id_temp MhdpCore 1
 
-# 火竜
-    execute if data storage mhdp_core:temp {Temp:"Reus"} run function asa_animator:reus/manager/summon
+# 召喚
+    function mhdp_core:phase/2_quest_wait/start_quest/setup/monsters/summon
 
 # 終了
     data remove storage mhdp_core:temp Temp

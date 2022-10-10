@@ -40,5 +40,3 @@
 
 # 終了
     tag @s remove IsDrawing
-
-execute if entity @s[tag=PlyWeaponDeactivate] run say 弓使えない

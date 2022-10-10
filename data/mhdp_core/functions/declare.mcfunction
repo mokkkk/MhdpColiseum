@@ -3,6 +3,7 @@
 # declare用
 
 # tag
+    #declare tag PlyDead プレイヤーが死亡した
     #declare tag PlyUsedCoas プレイヤーがニンジン棒を使用した
     #declare tag PlySneakStart プレイヤーがスニークを開始した
     #declare tag PlySneakCurrent プレイヤーがスニーク中である
@@ -15,6 +16,8 @@
 
     #declare tag PlySneakAvoidFunc プレイヤースニーク回避実行中
     #declare tag PlySneakAvoidLock プレイヤースニーク回避ロック中
+
+    #declare tag PlyDeathAnimation プレイヤー死亡演出中
 
     # クエスト・武器処理関連
         #declare tag PlyQuest クエスト中判定用タグ
@@ -41,3 +44,5 @@
     #declare objective MhdpWeaponCharge 武器の溜め攻撃管理用
     #declare objective MhdpWeaponTimer 武器の行動タイマー
     #declare objective MhdpWeaponDeactivateTimer 武器の行動未受付時間
+
+    #declare objective MhdpTDeathAnimation プレイヤー死亡演出用タイマー
