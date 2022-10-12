@@ -13,9 +13,9 @@
 # プレイヤーの特殊装具をstickからcarrot_on_a_stickに変更(TO DO)
     # function ...
 
-# プレイヤーを移動
+# マップ処理
     # 大闘技場
-        execute if data storage mh_dp:status GameStatus.Quest{Field:1} run tp @a 221 66 141
+        execute if data storage mh_dp:status GameStatus.Quest{Field:1} run function mhdp_core:phase/2_quest_wait/start_quest/setup/map/coliseum
 
 # MhdpWeapons処理用タグ付与
     tag @a add PlyQuest

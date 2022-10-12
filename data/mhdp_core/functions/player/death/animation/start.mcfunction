@@ -5,6 +5,7 @@
 # 位置保存用Marker召喚
     # 処理用Marker召喚
         execute positioned ~ ~ ~ align xyz positioned ~0.5 ~0.5 ~0.5 run summon marker ~ ~ ~ {Tags:["DeathAnimationStand","Start"]}
+        execute as @e[type=marker,tag=DeathAnimationStand,tag=Start] run data modify entity @s Rotation set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].PlayerData.Rotation.Pre
     # 処理用MarkerにUidコピー
         scoreboard players operation @e[type=marker,tag=DeathAnimationStand,tag=Start] MhdpPlayerUid = @s MhdpPlayerUid
 
@@ -13,6 +14,9 @@
 
 # 武器処理中断
     scoreboard players set @s MhdpWeaponDeactivateTimer 100000
+
+# プレイヤーRotation調整
+    execute rotated as @e[type=marker,tag=DeathAnimationStand,tag=Start] run tp @s ~ ~ ~ ~ ~
     
 # 終了
     tag @e[type=marker,tag=DeathAnimationStand,tag=Start] remove Start

@@ -1,0 +1,1 @@
+execute as @e[type=slime,tag=ReusHealth] run function mob_manager:init/

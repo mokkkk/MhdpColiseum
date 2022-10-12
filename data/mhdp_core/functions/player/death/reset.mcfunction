@@ -8,5 +8,9 @@
      tag @s remove Target
      kill @e[type=marker,tag=SneakAvoidStand0,tag=Rotater]
 
+# ノックバック中断
+     execute if entity @s[scores={MhdpTKnockback=1..}] run function mhdp_core:player/damage/knockback/end
+     execute if entity @s[scores={MhdpTKnockback=1..}] run scoreboard players set @s MhdpTKnockback 0
+
 # ターゲットタグ消去
     tag @s remove MnsTarget

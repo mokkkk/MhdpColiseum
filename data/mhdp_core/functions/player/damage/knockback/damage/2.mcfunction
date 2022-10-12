@@ -11,7 +11,7 @@
 
 # ノックバック中タグ・スコア付与
     tag @s add MdhpKnockback
-    tag @s add MdhpKnockbacDW
+    tag @s add MdhpKnockbackDW
     scoreboard players set @s MhdpTKnockback 3
 
 # 武器の行動中断処理

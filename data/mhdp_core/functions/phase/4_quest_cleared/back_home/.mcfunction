@@ -22,6 +22,11 @@
     tp @a 168 61 21
     spawnpoint @a 168 61 21
 
+# forceload解除
+    # 大闘技場
+    # -138 70 55 to -6 70 153
+        execute positioned -138 70 55 run forceload remove ~ ~ 132 98
+
 # MhdpWeapons処理用タグ削除
     tag @a remove PlyQuest
     tag @a remove MnsTarget

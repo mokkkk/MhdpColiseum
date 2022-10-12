@@ -29,6 +29,16 @@
     # モンスター処理用
         scoreboard objectives add AsaMatrix dummy
 
+    # TSBライブラリ用
+        scoreboard objectives add Global dummy
+        scoreboard objectives add Temporary dummy
+        scoreboard objectives add Const dummy
+        scoreboard objectives add UserID dummy
+        scoreboard objectives add AttackedEntity dummy
+        scoreboard players set $2 Const 2
+        scoreboard players set $2^15 Const 32768
+        scoreboard players set $2^16 Const 65536
+
 # item置き換え用
     forceload add -1 -1 1 1
     setblock 0 0 0 lime_shulker_box

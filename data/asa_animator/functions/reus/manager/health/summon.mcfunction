@@ -16,4 +16,5 @@ summon slime ~ ~ ~ {NoGravity:1b,Silent:1b,NoAI:1b,Health:1000f,Size:2,Tags:["Mo
 summon slime ~ ~ ~ {NoGravity:1b,Silent:1b,NoAI:1b,Health:1000f,Size:2,Tags:["MonsterParts","ReusHealth","ReusParts","Tail2","TailParts"],Attributes:[{Name:"generic.max_health",Base:1000},{Name:"generic.knockback_resistance",Base:1},{Name:"generic.armor",Base:2}],DeathLootTable:"asa_animator:no_drop",ActiveEffects:[{Id:14b,Amplifier:1b,Duration:6000000,ShowParticles:0b}],PersistenceRequired:1b}
 summon slime ~ ~ ~ {NoGravity:1b,Silent:1b,NoAI:1b,Health:1000f,Size:2,Tags:["MonsterParts","ReusHealth","ReusParts","Tail3","TailParts"],Attributes:[{Name:"generic.max_health",Base:1000},{Name:"generic.knockback_resistance",Base:1},{Name:"generic.armor",Base:2}],DeathLootTable:"asa_animator:no_drop",ActiveEffects:[{Id:14b,Amplifier:1b,Duration:6000000,ShowParticles:0b}],PersistenceRequired:1b}
 
-execute as @e[type=slime,tag=ReusHealth] run function mob_manager:init/
+# 3tick後にTSB用init
+schedule function asa_animator:reus/manager/health/init 3t replace
