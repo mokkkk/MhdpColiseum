@@ -12,6 +12,10 @@
     # tp @a 221 66 141
 
 # 出現モンスター：
+# - 0：最初から
+# - 1：Targetモンスターが倒されたら
+# - 2：TargetモンスターのHPが50%以下になったら
+# - 3：一定時間経過
     data modify storage mh_dp:status GameStatus.Quest.Monsters set value []
     # モンスター：火竜
     # 出現条件：最初から

@@ -24,8 +24,16 @@
         #declare tag PlyWpnBow 所持武器判定用タグ（弓）
         #declare tag PlyWeaponDrawing プレイヤー武器抜刀中
         #declare tag PlyWeaponDrawingSub プレイヤーサブ武器抜刀中
+
+        #declare tag PlyArmorSuper スーパーアーマー中
+        #declare tag PlyArmorHyper ハイパーアーマー中
         
         #declare tag MnsTarget モンスターのターゲットになりうる
+
+    # 特殊装具処理関連
+        #declare tag PlyItmImmovable 処理特殊装具判定用タグ（不動の装衣）
+
+        #declare tag ItmUseImmovable 使用判定用タグ（不動の装衣）
 
 # storage
     #declare storage mh_dp:status MHDP各種ステータス保存用

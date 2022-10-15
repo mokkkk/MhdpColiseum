@@ -23,5 +23,6 @@ function asa_animator:reus/model
 # 攻撃
     execute if entity @s[scores={AsaMatrix=13}] run summon marker ^ ^5 ^12 {Tags:["ReusBreathTarget"]}
     execute if entity @s[scores={AsaMatrix=13}] as @e[type=marker,tag=ReusBreathTarget] at @s run function asa_animator:general/check_ground
-    execute if entity @s[scores={AsaMatrix=16}] positioned ^ ^ ^3 as @a[distance=0..5] run function mh_dp:player/knockback/start_wind
+    execute if entity @s[scores={AsaMatrix=16}] positioned ^ ^ ^3 as @a[distance=0..4] run function mhdp_core:player/damage/knockback/wind/1
+    execute if entity @s[scores={AsaMatrix=16}] positioned ^ ^ ^3 as @a[distance=4.1..6] run function mhdp_core:player/damage/knockback/wind/0
     execute if entity @s[scores={AsaMatrix=18}] positioned ^ ^4 ^3 facing entity @e[type=marker,tag=ReusBreathTarget,limit=1] feet run function asa_animator:reus/anim/breath/events/shot
