@@ -16,7 +16,7 @@
     execute if entity @s[tag=ItmUseImmovable] run tag @s add NotKnockback
 
 # フレーム回避確認
-    execute if entity @s[scores={MhdpTAvoid=1..}] run tag @s add NotKnockback
+    execute if entity @s[scores={MhdpTAvoid=1..}] run function mhdp_core:player/damage/player_avoid
     execute if entity @s[scores={MhdpTDamage=1..}] run tag @s add NotKnockback
 
 # スキルで無効化されていない場合，風圧処理実行
