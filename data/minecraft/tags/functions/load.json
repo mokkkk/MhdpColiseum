@@ -3,6 +3,7 @@
         "mhdp_core:load",
         "asa_matrix:load",
         "oh_my_dat:sys/load",
-        "score_damage_mhdp:core/init"
+        "score_damage_mhdp:core/init",
+        "array_util:core/init"
     ]
 }

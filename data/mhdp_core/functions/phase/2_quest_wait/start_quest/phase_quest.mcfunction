@@ -41,3 +41,6 @@
 
 # モンスターを配置
     function mhdp_core:phase/2_quest_wait/start_quest/setup/monsters/
+
+# クエスト状態を受注済みに変更
+    function mhdp_core:phase/2_quest_wait/start_quest/setup/quest_start

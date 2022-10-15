@@ -1,4 +1,4 @@
-#> mhdp_core:phase/2_quest_wait/start_quest/quests/0
+#> mhdp_core:phase/2_quest_wait/start_quest/quests/001
 #
 # テスト用クエスト
 
@@ -36,4 +36,4 @@
 # HP倍率：100%
     scoreboard players set #mhdp_hp_multiply AsaMatrix 100
 
-say クエスト設定完了(ID:0)
+say クエスト設定完了(ID:1)

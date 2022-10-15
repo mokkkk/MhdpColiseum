@@ -15,6 +15,8 @@
     # テスト用
     # give @p paper{display:{Name:'{"text":"テスト用クエスト","italic":false}',Lore:['{"text":"目標："}','{"text":"・火竜の討伐","italic":false}']},CustomModelData:10000,MhdpQuest:1,QuestId:0} 1
         data modify storage mhdp_core:temp Temp.Trade append value {maxUses:9999,uses:0,xp:0,buy:{id:"minecraft:emerald",Count:1b},sell:{id:"minecraft:paper",Count:1b,tag:{display:{Name:'{"text":"テスト用クエスト","italic":false}',Lore:['{"text":"目標："}','{"text":"・火竜の討伐","italic":false}']},CustomModelData:10000,MhdpQuest:1,QuestId:0}}}
+        data modify storage mhdp_core:temp Temp.Trade append value {maxUses:9999,uses:0,xp:0,buy:{id:"minecraft:emerald",Count:1b},sell:{id:"minecraft:paper",Count:1b,tag:{display:{Name:'{"text":"テスト用クエスト","italic":false}',Lore:['{"text":"目標："}','{"text":"・火竜の討伐2","italic":false}']},CustomModelData:10000,MhdpQuest:1,QuestId:1}}}
+        data modify storage mhdp_core:temp Temp.Trade append value {maxUses:9999,uses:0,xp:0,buy:{id:"minecraft:emerald",Count:1b},sell:{id:"minecraft:paper",Count:1b,tag:{display:{Name:'{"text":"テスト用クエスト","italic":false}',Lore:['{"text":"目標："}','{"text":"・火竜の討伐3","italic":false}']},CustomModelData:10000,MhdpQuest:1,QuestId:2}}}
 
     # ★1
         # function ...

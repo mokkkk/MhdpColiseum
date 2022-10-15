@@ -11,6 +11,8 @@
 # ノックバック中断
      execute if entity @s[scores={MhdpTKnockback=1..}] run function mhdp_core:player/damage/knockback/end
      execute if entity @s[scores={MhdpTKnockback=1..}] run scoreboard players set @s MhdpTKnockback 0
+     tag @s remove PlyArmorHyper
+     tag @s remove PlyArmorSuper
 
 # 属性やられ中断
      scoreboard players set @s MhdpBlightFire 0

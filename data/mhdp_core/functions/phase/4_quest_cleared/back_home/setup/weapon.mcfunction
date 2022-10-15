@@ -2,6 +2,9 @@
 #
 # Phase4_クエストクリア 帰還処理 プレイヤー武器リセット
 
+# 武器の行動中断処理
+    function mhdp_weapons:core/interruption/
+    
 # すでにクエスト中に武器データ取得を終えているので，データは取得しない
 # どこかにある武器を消去
     clear @s ender_eye{MhdpWeapon:1b} 64
