@@ -33,10 +33,6 @@
 # 武器に応じた納刀処理
     function mhdp_weapons:core/sheathe/weapon
 
-# 警告文表示
-    # ここの文言を考える
-    say 強制納刀
-
 # 演出
     playsound item.armor.equip_iron master @a ~ ~ ~ 1 0.7
 

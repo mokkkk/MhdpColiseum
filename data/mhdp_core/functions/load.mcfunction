@@ -11,6 +11,8 @@
         scoreboard objectives add MhdpJump minecraft.custom:minecraft.jump
         scoreboard objectives add MhdpDropEnderEye dropped:ender_eye
 
+        scoreboard objectives add MhdpBlightFire dummy
+
     # プレイヤータイマー用
         scoreboard objectives add MhdpTDamage dummy
         scoreboard objectives add MhdpTAvoid dummy

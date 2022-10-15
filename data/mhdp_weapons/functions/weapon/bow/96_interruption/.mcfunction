@@ -7,5 +7,3 @@
 
 # リセット処理
      function mhdp_weapons:weapon/bow/99_reset/
-
-say 弓中断

@@ -12,5 +12,11 @@
      execute if entity @s[scores={MhdpTKnockback=1..}] run function mhdp_core:player/damage/knockback/end
      execute if entity @s[scores={MhdpTKnockback=1..}] run scoreboard players set @s MhdpTKnockback 0
 
+# 属性やられ中断
+     scoreboard players set @s MhdpBlightFire 0
+     scoreboard players set @s MhdpBlightWater 0
+     scoreboard players set @s MhdpBlightIce 0
+     scoreboard players set @s MhdpBlightDragon 0
+
 # ターゲットタグ消去
     tag @s remove MnsTarget

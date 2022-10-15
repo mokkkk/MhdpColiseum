@@ -12,4 +12,4 @@
 
 # 属性やられ処理
     # 火属性やられ
-        execute if entity @s[tag=BlightFire] run scoreboard players remove @s MhdpBlightFire 100
+        execute if entity @s[tag=BltFire] run scoreboard players remove @s MhdpBlightFire 160

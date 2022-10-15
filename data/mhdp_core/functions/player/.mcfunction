@@ -8,14 +8,17 @@
 # スニーク開始時処理実行
     # execute if entity @s[tag=PlySneakStart] run function mhdp_core:player/sneak/
 
-# クエスト受注処理実行（村のみ）
+# クエスト受注処理（村のみ）
     execute if entity @s[tag=!PlyQuest,advancements={mhdp_core:player/villager_trade/quest_normal=true}] run function mhdp_core:phase/0_village/receive_quest/normal
 
-# MhdpWeapons処理実行（クエスト中のみ）
+# MhdpWeapons処理（クエスト中のみ）
     execute if entity @s[tag=PlyQuest] run function mhdp_weapons:tick/
 
-# ジャンプ時処理実行（クエスト中のみ）
+# ジャンプ時処理（クエスト中のみ）
     execute if entity @s[tag=PlyQuest,scores={MhdpJump=1..}] run function mhdp_core:player/jump/
+
+# 属性やられ処理（クエスト中のみ）
+    execute if entity @s[tag=PlyQuest] run function mhdp_core:player/blight/
 
 # 移動回避処理
     execute if entity @s[tag=!PlySneakAvoidLock,tag=PlySneakAvoidFunc] run function mhdp_core:player/sneak/avoid/main

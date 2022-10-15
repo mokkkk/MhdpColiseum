@@ -36,6 +36,10 @@
         execute store success score #mhdp_temp_success MhdpCore as @e[type=marker,tag=SneakAvoidStand0,tag=Start] run data modify entity @s Pos set from entity @p Pos
         execute unless score #mhdp_temp_success MhdpCore matches 1.. rotated ~ 0 as @e[type=marker,tag=SneakAvoidStand0,tag=Start] run tp @s ~ ~ ~ ~ ~
 
+# 属性やられ処理
+    # 火属性やられ
+        execute if entity @s[tag=BltFire] run scoreboard players remove @s MhdpBlightFire 160
+        
 # 終了
     tag @e[type=marker,tag=SneakAvoidStand0,tag=Start] remove Start
     kill @e[type=marker,tag=SneakAvoidStand1,tag=Start]

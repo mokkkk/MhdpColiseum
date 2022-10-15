@@ -3,9 +3,13 @@
 # プレイヤーを属性やられにする
 
 # 火属性やられ
-    execute unless entity @s[tag=BlightFire] if data storage mhdp: DamageType{Epf:2} run scoreboard players set @s MhdpBlightFire 100
+    execute unless entity @s[tag=BltFire] if data storage mhdp_core:temp Temp.Damage{Type:1} run scoreboard players set @s MhdpBlightFire 400
+
+# 水属性やられ
+    execute unless entity @s[tag=BltWater] if data storage mhdp_core:temp Temp.Damage{Type:2} run scoreboard players set @s MhdpBlightWater 400
+
+# 氷属性やられ
+    execute unless entity @s[tag=BltIce] if data storage mhdp_core:temp Temp.Damage{Type:4} run scoreboard players set @s MhdpBlightIce 400
 
 # 龍属性やられ
-    execute unless entity @s[tag=BlightDragon] if data storage mhdp: DamageType{Epf:4} run scoreboard players set @s MhdpBlightDragon 100
-
-say 属性やられ処理 in score_damage_mhdp:mh_dp/blight
+    execute unless entity @s[tag=BltDragon] if data storage mhdp_core:temp Temp.Damage{Type:5} run scoreboard players set @s MhdpBlightDragon 400

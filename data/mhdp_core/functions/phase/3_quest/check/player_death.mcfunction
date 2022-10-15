@@ -11,5 +11,3 @@
 
 # クエスト失敗
     execute if score #mhdp_quest_death_count MhdpCore matches ..0 run function mhdp_core:phase/3_quest/failed/
-
-say プレイヤー死亡 in mhdp_core:phase/3_quest/check/player_death

@@ -16,5 +16,3 @@
 
 # 武器を納刀状態にしてオフハンドに持たせる
     function mhdp_weapons:core/reset/count
-
-say 投げ捨て
