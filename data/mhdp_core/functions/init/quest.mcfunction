@@ -1,3 +1,6 @@
+#> mhdp_core:init/quest
+#
+# クエスト保存用データ初期化
 
 # storage初期化
     data remove storage mh_dp:quests List

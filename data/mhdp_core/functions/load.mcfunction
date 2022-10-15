@@ -30,6 +30,8 @@
 
     # モンスター処理用
         scoreboard objectives add AsaMatrix dummy
+        scoreboard objectives add MhdpMonsterIndex dummy
+        scoreboard objectives add MhdpPartsIndex dummy
 
     # TSBライブラリ用
         scoreboard objectives add Global dummy
@@ -44,3 +46,6 @@
 # item置き換え用
     forceload add -1 -1 1 1
     setblock 0 0 0 lime_shulker_box
+
+# モンスター肉質初期化
+    function mhdp_core:init/monster

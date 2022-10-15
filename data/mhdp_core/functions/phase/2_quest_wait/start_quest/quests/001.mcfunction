@@ -33,7 +33,7 @@
 # 制限時間：15分
     scoreboard players set #mhdp_quest_timer MhdpCore 15
 
-# HP倍率：100%
-    scoreboard players set #mhdp_hp_multiply AsaMatrix 100
+# HP倍率：50%
+    scoreboard players set #mhdp_hp_multiply AsaMatrix 50
 
 say クエスト設定完了(ID:1)

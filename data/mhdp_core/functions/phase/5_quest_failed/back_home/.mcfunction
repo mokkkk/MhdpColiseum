@@ -12,6 +12,9 @@
 # Phase変更
     data modify storage mh_dp:status GameStatus.Phase set value 0
 
+# プレイヤーの状態リセット
+    execute as @a run function mhdp_core:player/death/reset
+
 # プレイヤーの武器をリセット
     execute as @a run function mhdp_core:phase/4_quest_cleared/back_home/setup/weapon
 

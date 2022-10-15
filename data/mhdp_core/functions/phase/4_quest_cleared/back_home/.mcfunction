@@ -2,6 +2,16 @@
 #
 # Phase4_クエストクリア 帰還処理
 
+# クエストIDを参照し，状態をクリアにする
+    function mhdp_core:phase/4_quest_cleared/back_home/setup/quest_clear
+
+# クエストデータ初期化
+    data remove storage mh_dp:status GameStatus.Quest
+    scoreboard players reset #mhdp_quest_id
+    scoreboard players reset #mhdp_quest_monster_count
+    scoreboard players reset #mhdp_quest_death_count
+    scoreboard players reset #mhdp_quest_timer
+
 # Phase変更
     data modify storage mh_dp:status GameStatus.Phase set value 0
 
@@ -35,15 +45,5 @@
 # 報酬チェストコピー
     # function ...
 
-# クエストIDを参照し，状態をクリアにする
-    function mhdp_core:phase/4_quest_cleared/back_home/setup/quest_clear
-
 # 村人再配置
     function mhdp_core:phase/0_village/villager/
-
-# クエストデータ初期化
-    data remove storage mh_dp:status GameStatus.Quest
-    scoreboard players reset #mhdp_quest_id
-    scoreboard players reset #mhdp_quest_monster_count
-    scoreboard players reset #mhdp_quest_death_count
-    scoreboard players reset #mhdp_quest_timer
