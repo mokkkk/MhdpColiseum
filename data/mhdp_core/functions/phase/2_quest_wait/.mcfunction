@@ -9,6 +9,10 @@
     effect give @a slowness 1 100 true
     effect give @a jump_boost 1 128 true
 
+# HP・満腹度回復
+    effect give @a instant_health 1 10 true
+    effect give @a saturation 1 10 true
+
 # 出発ファンファーレを鳴らす
 
 # 1秒後に盲目付与

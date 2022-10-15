@@ -6,8 +6,8 @@
 # どこかにある武器を消去
     clear @s ender_eye{MhdpWeapon:1b} 64
 
-# shulker_box処理用アイテム補充
-    data modify block 0 0 0 Items set value [{Slot:0b,id:"minecraft:stone",Count:1b}]
+# オフハンドが空じゃない場合，オフハンドのアイテムを保存する
+    execute if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].PlayerData.Item.OffHand unless data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].PlayerData.Item.OffHand.tag{MhdpWeaponSub:1b} run function mhdp_weapons:core/check/off_store
 
 # shulker_boxに武器データをコピー
     data modify block 0 0 0 Items set value [{Slot:0b,id:"minecraft:stone",Count:1b}]
@@ -29,9 +29,14 @@
     # 退避した武器データをオフハンドにコピー
         item replace entity @s weapon.offhand from block 0 0 0 container.0
 
+# オフハンドのアイテムを回収する
+    execute if entity @s[tag=StoreOffItem] run function mhdp_weapons:core/check/off_give
+
 # 武器種に応じてタグを付与
     # 1：弓
         execute if data storage mhdp_core:temp Temp.Status{WeaponType:1} run tag @s add PlyWpnBow
 
 # 終了
     data remove storage mhdp_core:temp Temp
+    data remove storage mhdp_core:temp Temp2
+    tag @s remove StoreOffItem

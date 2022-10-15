@@ -12,5 +12,3 @@
     # execute if entity @s[tag=!AssetMob] run function mob_manager:init/add_tag
 # 初期化フラグ追加
     tag @s add AlreadyInitMob
-
-    say init in mob_manager:init/
