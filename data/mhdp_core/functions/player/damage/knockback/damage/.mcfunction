@@ -23,4 +23,5 @@
     execute if data storage mhdp_core:temp Temp.Damage{Knockback:3} if score #mhdp_kb_temp MhdpCore matches ..2 run function mhdp_core:player/damage/knockback/damage/2
 
 # 終了
+    execute if score #mhdp_kb_temp MhdpCore matches ..0 run say ノックバックあるよ
     scoreboard players reset #mhdp_kb_temp

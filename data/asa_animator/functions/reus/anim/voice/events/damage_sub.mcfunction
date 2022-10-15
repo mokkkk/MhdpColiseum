@@ -1,4 +1,5 @@
-# ダメージ
-effect give @s slowness 3 5 true
-effect give @s jump_boost 3 128 true
-execute if entity @s[type=player] at @s run tp @s ~ ~ ~ ~ 90
+# 咆哮
+# 3秒, lv0
+    scoreboard players set #mhdp_temp_voice_time MhdpCore 60
+    scoreboard players set #mhdp_temp_voice_lv MhdpCore 1
+    function mhdp_core:player/damage/voice/

@@ -1,2 +1,2 @@
-scoreboard players set #mhdp_reus_actcount AsaMatrix 0
+scoreboard players remove #mhdp_reus_actcount AsaMatrix 1
 tag @s add ChangeAnm

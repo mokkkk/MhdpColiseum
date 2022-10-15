@@ -6,7 +6,7 @@
     execute if entity @s[tag=SklTeoBlsLv2] run tag @s add NotPoison
 
 # スキルによる効果軽減
-    execute unless entity @s[tag=!SklTeoBlsLv1,tag=SklPosionproofLv2] run scoreboard players remove #mhdp_temp_poison_lv MhdpCore 1
+    execute unless entity @s[tag=!SklTeoBlsLv1,tag=!SklPosionproofLv2] run scoreboard players remove #mhdp_temp_poison_lv MhdpCore 1
     scoreboard players operation #mhdp_temp_poison_time MhdpCore *= #asam_const_100 AsaMatrix
     scoreboard players set #mhdp_temp_const MhdpCore 70
     execute if entity @s[tag=SklPosionproofLv1] run scoreboard players operation #mhdp_temp_poison_time MhdpCore *= #mhdp_temp_const MhdpCore
