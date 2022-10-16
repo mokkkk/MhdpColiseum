@@ -47,5 +47,10 @@
 # 報酬リセット
     clone 152 87 156 153 87 156 152 89 156 replace
 
+# 再度アイテム回収
+# 投げ捨てた武器は保存済みなのでkillする
+    kill @e[type=item,nbt={Item:{tag:{MhdpWeapon:1b}}}]
+    function mhdp_core:phase/2_quest_wait/prepare/pick_item
+
 # 村人再配置
     function mhdp_core:phase/0_village/villager/

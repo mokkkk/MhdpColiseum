@@ -42,5 +42,10 @@
 # 死亡復活処理
     execute as @a[tag=PlyDeathAnimation] run function mhdp_core:player/death/animation/end
 
+# 再度アイテム回収
+# 投げ捨てた武器は保存済みなのでkillする
+    kill @e[type=item,nbt={Item:{tag:{MhdpWeapon:1b}}}]
+    function mhdp_core:phase/2_quest_wait/prepare/pick_item
+
 # 村人再配置
     function mhdp_core:phase/0_village/villager/

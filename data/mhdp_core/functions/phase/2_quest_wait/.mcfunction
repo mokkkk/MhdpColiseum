@@ -13,6 +13,9 @@
     effect give @a instant_health 1 10 true
     effect give @a saturation 1 10 true
 
+# 落とし物回収
+    execute if score #mhdp_quest_timer MhdpCore matches 1 run function mhdp_core:phase/2_quest_wait/prepare/pick_item
+
 # 出発ファンファーレを鳴らす
 
 # 1秒後に盲目付与
