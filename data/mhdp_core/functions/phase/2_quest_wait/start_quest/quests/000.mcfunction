@@ -9,7 +9,6 @@
     # 大闘技場：ID 1
     data modify storage mh_dp:status GameStatus.Quest.Field set value 1
     spawnpoint @a 221 66 141
-    # tp @a 221 66 141
 
 # 出現モンスター：
 # - 0：最初から
@@ -28,7 +27,14 @@
     data modify storage mh_dp:status GameStatus.Movie set value 0b
 
 # 報酬準備
-    # ...
+    loot insert 152 89 156 loot mhdp_core:bonus/reus
+    loot insert 152 89 156 loot mhdp_core:bonus/reus
+    loot insert 152 89 156 loot mhdp_core:bonus/reus
+    execute if predicate asa_animator:random/050 run loot insert 152 89 156 loot mhdp_core:bonus/reus
+    execute if predicate asa_animator:random/050 run loot insert 152 89 156 loot mhdp_core:bonus/reus
+    execute if predicate asa_animator:random/050 run loot insert 152 89 156 loot mhdp_core:bonus/reus
+    execute if predicate asa_animator:random/050 run loot insert 152 89 156 loot mhdp_core:bonus/reus
+    execute if predicate asa_animator:random/050 run loot insert 152 89 156 loot mhdp_core:bonus/reus
 
 # 制限時間：15分
     scoreboard players set #mhdp_quest_timer MhdpCore 15

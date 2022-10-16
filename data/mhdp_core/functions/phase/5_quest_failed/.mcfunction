@@ -9,6 +9,8 @@
     effect give @a resistance 1 10 true
     effect give @a slowness 1 10 true
     effect give @a jump_boost 1 128 true
+    effect give @a instant_health 1 10 true
+    effect give @a saturation 1 10 true
 
 # テキスト表示
     execute if score #mhdp_quest_timer MhdpCore matches 21 run tellraw @a {"text": "【クエストに失敗しました】"}

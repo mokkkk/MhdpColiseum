@@ -7,6 +7,8 @@
 
 # 念のためプレイヤー無敵化
     effect give @a resistance 1 10 true
+    effect give @a instant_health 1 10 true
+    effect give @a saturation 1 10 true
 
 # テキスト表示
     execute if score #mhdp_quest_timer MhdpCore matches 1 run tellraw @a {"text": "【戦いに勝利した！】"}

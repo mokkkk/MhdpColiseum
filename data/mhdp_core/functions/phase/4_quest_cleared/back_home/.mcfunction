@@ -25,8 +25,8 @@
     # function ...
 
 # プレイヤーを移動
-    tp @a 168 61 21
-    spawnpoint @a 168 61 21
+    tp @a 266 63 204
+    spawnpoint @a 266 63 204
 
 # forceload解除
     # 大闘技場
@@ -43,7 +43,9 @@
     execute as @e[type=armor_stand,tag=MonsterRoot] run function mhdp_core:phase/4_quest_cleared/back_home/setup/despawn_monster
 
 # 報酬チェストコピー
-    # function ...
+    clone 152 89 156 153 89 156 255 63 198
+# 報酬リセット
+    clone 152 87 156 153 87 156 152 89 156 replace
 
 # 村人再配置
     function mhdp_core:phase/0_village/villager/

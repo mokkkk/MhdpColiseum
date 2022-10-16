@@ -2,6 +2,9 @@
 #
 # Phase1_クエスト受注 クエスト開始処理
 
+# 報酬リセット
+    clone 152 87 156 153 87 156 152 89 156 replace
+
 # クエスト独自処理実行
     function mhdp_core:phase/2_quest_wait/start_quest/quests/
 

@@ -19,6 +19,7 @@
      scoreboard players set @s MhdpBlightWater 0
      scoreboard players set @s MhdpBlightIce 0
      scoreboard players set @s MhdpBlightDragon 0
+     effect clear @s
 
 # ターゲットタグ消去
     tag @s remove MnsTarget

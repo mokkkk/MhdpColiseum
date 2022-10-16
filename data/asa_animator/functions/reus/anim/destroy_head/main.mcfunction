@@ -14,3 +14,7 @@ execute if entity @s[scores={AsaMatrix=41..55}] run tp @s ^0 ^0.01333333 ^0
 execute if entity @s[scores={AsaMatrix=56..}] run function asa_animator:reus/anim/destroy_head/end
 execute as @e[type=armor_stand,tag=ReusParts] run function #asa_matrix:animate
 function asa_animator:reus/model
+
+# 高度調整
+execute if entity @s[scores={AsaMatrix=1..40}] at @s if block ~ ~-0.2 ~ #asa_animator:no_collision at @s run function asa_animator:general/check_ground
+execute if entity @s[scores={AsaMatrix=1..40}] at @s unless block ~ ~ ~ #asa_animator:no_collision at @s run tp @s ~ ~0.1 ~ ~ ~

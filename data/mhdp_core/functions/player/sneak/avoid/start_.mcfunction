@@ -33,7 +33,11 @@
     # 移動方向検知
         execute as @e[type=marker,tag=SneakAvoidStand0,tag=Start] at @s facing entity @e[type=marker,tag=SneakAvoidStand1,tag=Start] feet rotated ~ 0 run tp @s ~ ~ ~ ~ ~
     # プレイヤー移動有無検知
-        execute store success score #mhdp_temp_success MhdpCore as @e[type=marker,tag=SneakAvoidStand0,tag=Start] run data modify entity @s Pos set from entity @p Pos
+        data modify storage mhdp_core:temp Temp.Pos1 set from entity @e[type=marker,tag=SneakAvoidStand0,tag=Start,limit=1] Pos
+        data modify storage mhdp_core:temp Temp.Pos2 set from entity @s Pos
+        data modify storage mhdp_core:temp Temp.Pos1[1] set value 0.0
+        data modify storage mhdp_core:temp Temp.Pos2[1] set value 0.0
+        execute store success score #mhdp_temp_success MhdpCore as @e[type=marker,tag=SneakAvoidStand0,tag=Start] run data modify storage mhdp_core:temp Temp.Pos1 set from storage mhdp_core:temp Temp.Pos2
         execute unless score #mhdp_temp_success MhdpCore matches 1.. rotated ~ 0 as @e[type=marker,tag=SneakAvoidStand0,tag=Start] run tp @s ~ ~ ~ ~ ~
 
 # 属性やられ処理
@@ -44,3 +48,4 @@
     tag @e[type=marker,tag=SneakAvoidStand0,tag=Start] remove Start
     kill @e[type=marker,tag=SneakAvoidStand1,tag=Start]
     scoreboard players reset #mhdp_temp_success
+    data remove storage mhdp_core:temp Temp

@@ -30,6 +30,13 @@ tag @s remove AnmSummon
 tag @s remove AnmVoice
 tag @s remove AnmAnger
 tag @s remove AnmFlyAnger
+tag @s remove AnmHardKick
+tag @s remove AnmHardFjb
+tag @s remove AnmHardFlyBiteC
+tag @s remove AnmHardFlyJump
+tag @s remove AnmHardJump2Bjb
+tag @s remove AnmHardFlyFlame
+tag @s remove AnmHardFlyBreathTurn
 tag @s remove IsTurn
 kill @e[type=marker,tag=ReusBreathTarget]
 kill @e[type=marker,tag=ReusChargeFPos]

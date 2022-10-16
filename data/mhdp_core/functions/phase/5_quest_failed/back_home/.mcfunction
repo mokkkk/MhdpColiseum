@@ -22,8 +22,8 @@
     # function ...
 
 # プレイヤーを移動
-    tp @a 168 61 21
-    spawnpoint @a 168 61 21
+    tp @a 266 63 204
+    spawnpoint @a 266 63 204
 
 # forceload解除
     # 大闘技場

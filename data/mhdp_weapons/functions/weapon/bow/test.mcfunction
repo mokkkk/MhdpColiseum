@@ -1,6 +1,6 @@
 
 # 矢召喚
-execute positioned ~ ~1.65 ~ run summon arrow ^ ^ ^1 {Owner:[I;0,0,0,0],Tags:["TestArrow","Start"]}
+execute positioned ~ ~1.65 ~ run summon arrow ^ ^ ^1 {Owner:[I;0,0,0,0],Tags:["TestArrow","Start"],crit:1b}
 
 # Dir決定用AreaEffectCloud召喚
 summon marker ^ ^ ^1 {Tags:["DirTarget"]}
