@@ -6,7 +6,7 @@
     scoreboard players add @s MhdpWeaponTimer 1
 
 # 移動禁止
-    execute if entity @s[scores={MhdpWeaponTimer=1}] run effect give @s jump_boost 1 127 true
+    execute if entity @s[scores={MhdpWeaponTimer=1}] run effect give @s jump_boost 1 128 true
     execute if entity @s[scores={MhdpWeaponTimer=..30}] run effect give @s slowness 1 5 true
 
 # 早めにステップ回避可能にする

@@ -44,6 +44,9 @@
     # 火属性やられ
         execute if entity @s[tag=BltFire] run scoreboard players remove @s MhdpBlightFire 160
 
+# 満腹度消費
+    execute unless entity @s[tag=BltIce] run effect give @s hunger 1 120 true
+
 # 武器リセット処理
     execute if entity @s[tag=PlyWeaponDrawing] run function mhdp_weapons:core/reset/weapon
         

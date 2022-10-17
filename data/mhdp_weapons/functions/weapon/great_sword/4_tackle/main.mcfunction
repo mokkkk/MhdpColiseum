@@ -1,6 +1,6 @@
-#> mhdp_weapons:weapon/bow/5_charge_step/main
+#> mhdp_weapons:weapon/great_sword/4_tackle/main
 #
-# 弓：チャージステップ
+# 大剣：タックル
 
 # 対象紐づけ
     tag @s add Target
@@ -11,17 +11,18 @@
     scoreboard players add @s MhdpWeaponTimer 1
 
 # 武器アニメーション
-    execute if entity @s[scores={MhdpWeaponTimer=1}] run function mhdp_weapons:weapon/bow/5_charge_step/animation_0
-    execute if entity @s[scores={MhdpWeaponTimer=8}] run function mhdp_weapons:weapon/bow/5_charge_step/animation_1
+    execute if entity @s[scores={MhdpWeaponTimer=1}] run function mhdp_weapons:weapon/great_sword/4_tackle/animation_0
+    execute if entity @s[scores={MhdpWeaponTimer=8}] run function mhdp_weapons:weapon/great_sword/4_tackle/animation_1
 
 # 移動
-    execute rotated as @e[type=marker,tag=SneakAvoidStand0,tag=Rotator] rotated ~ 0 run function mhdp_core:player/sneak/avoid/main_move
+    execute if entity @s[scores={MhdpWeaponTimer=..4}] rotated as @e[type=marker,tag=SneakAvoidStand0,tag=Rotator] rotated ~ 0 run function mhdp_weapons:weapon/great_sword/4_tackle/move_0
+    execute if entity @s[scores={MhdpWeaponTimer=5..8}] rotated as @e[type=marker,tag=SneakAvoidStand0,tag=Rotator] rotated ~ 0 run function mhdp_weapons:weapon/great_sword/4_tackle/move_1
 
 # 演出
-    execute if entity @s[scores={MhdpWeaponTimer=1}] at @s run summon area_effect_cloud ~ ~ ~ {Duration:6,Age:4,Effects:[{Id:2,Amplifier:3b,Duration:11,ShowParticles:0b}]}
-    execute if entity @s[scores={MhdpWeaponTimer=..5}] run playsound block.grass.step master @a ~ ~ ~ 1 1
-    execute if entity @s[scores={MhdpWeaponTimer=..10}] run particle block grass_block ~ ~0.1 ~ 0.5 0 0.5 0 3
+    execute if entity @s[scores={MhdpWeaponTimer=1}] at @s run summon area_effect_cloud ~ ~ ~ {Duration:6,Age:4,Effects:[{Id:2,Amplifier:10b,Duration:16,ShowParticles:0b}]}
+    execute if entity @s[scores={MhdpWeaponTimer=..3}] run playsound block.grass.step master @a ~ ~ ~ 1 1
+    execute if entity @s[scores={MhdpWeaponTimer=..5}] run particle block grass_block ~ ~0.1 ~ 0.5 0 0.5 0 3
 
 # 終了
-    execute if entity @s[scores={MhdpWeaponTimer=11..}] run function mhdp_weapons:weapon/bow/5_charge_step/end
+    execute if entity @s[scores={MhdpWeaponTimer=16..}] run function mhdp_weapons:weapon/great_sword/4_tackle/end
     tag @e[type=marker,tag=SneakAvoidStand0,tag=Rotator] remove Rotator

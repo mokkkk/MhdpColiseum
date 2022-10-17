@@ -8,6 +8,8 @@
 # スキル確認
     execute if entity @s[tag=SklEarplugsLv1] run scoreboard players set #mhdp_temp_voice_res MhdpCore 1
     execute if entity @s[tag=SklEarplugsLv2] run scoreboard players set #mhdp_temp_voice_res MhdpCore 2
+# アーマー確認
+    execute if entity @s[tag=PlyArmorHyper] run scoreboard players set #mhdp_temp_voice_res MhdpCore 2
 
 # フレーム回避確認
     execute if entity @s[scores={MhdpTAvoid=1..}] run function mhdp_core:player/damage/player_avoid

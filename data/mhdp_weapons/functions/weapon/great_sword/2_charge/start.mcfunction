@@ -14,4 +14,7 @@
 # ステップ回避ロック開始
     tag @s add PlySneakAvoidLock
 
+# 演出
+    playsound item.armor.equip_chain master @a ~ ~ ~ 1 1
+
 say 溜め開始

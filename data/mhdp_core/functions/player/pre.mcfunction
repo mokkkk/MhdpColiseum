@@ -16,3 +16,11 @@
 # エンダーアイ使用状態取得
     execute if entity @s[scores={MhdpDropEnderEye=1..}] run tag @s add PlyDroppedEnderEye
     function mhdp_core:player/item/ender_eye/get
+
+# 食料レベルが一定以下の場合，ジャンプを禁じる
+    execute store result score #mhdp_temp_food MhdpCore run data get storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].PlayerData.FoodLevel
+    execute if score #mhdp_temp_food MhdpCore matches ..6 run effect give @s jump_boost 1 128 true
+
+# 終了
+    scoreboard players reset #mhdp_temp_time
+    scoreboard players reset #mhdp_temp_food

@@ -10,3 +10,5 @@
     execute if data storage score_damage: Argument{BypassResistance:0b} store result score $Resistance ScoreDamageCore run data get entity @s ActiveEffects[{Id:11}].Amplifier
     execute if data storage score_damage: Argument{BypassResistance:0b} if data entity @s ActiveEffects[{Id:11}] run scoreboard players add $Resistance ScoreDamageCore 1
     execute if data storage score_damage: Argument{BypassResistance:1b} run scoreboard players set $Resistance ScoreDamageCore 0
+# ハイパーアーマー中は耐性エフェクトを強制的に4に設定
+    execute if entity @s[tag=PlyArmorHyper] if data storage score_damage: Argument{BypassResistance:0b} if score $Resistance ScoreDamageCore matches ..4 run scoreboard players add $Resistance ScoreDamageCore 4
