@@ -1,6 +1,6 @@
 #> mhdp_core:player/sneak/avoid/main_move
 #
-# スニーク回避実行処理・移動
+# ステップ回避実行処理・移動
 
 # 頭の高さにブロックがある場合は移動しない
     execute unless block ^ ^1 ^0.8 #mhdp_core:no_collision run tag @s add Moved

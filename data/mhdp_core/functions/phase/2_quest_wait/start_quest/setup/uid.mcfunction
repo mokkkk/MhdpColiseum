@@ -5,3 +5,6 @@
 # UID割り当て
     scoreboard players operation @s MhdpPlayerUid = #mhdp_temp_uid MhdpCore
     scoreboard players add #mhdp_temp_uid MhdpCore 1
+
+# スコア初期化
+    scoreboard players set @s MhdpWeaponDeactivateTimer 0

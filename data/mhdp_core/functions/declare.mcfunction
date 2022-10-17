@@ -14,8 +14,8 @@
     #declare tag PlyUsingEyeEnd プレイヤーがエンダーアイ使用を解除した
     #declare tag PlyDroppedEnderEye プレイヤーがエンダーアイを投げ捨てた
 
-    #declare tag PlySneakAvoidFunc プレイヤースニーク回避実行中
-    #declare tag PlySneakAvoidLock プレイヤースニーク回避ロック中
+    #declare tag PlySneakAvoidFunc プレイヤーステップ回避実行中
+    #declare tag PlySneakAvoidLock プレイヤーステップ回避ロック中
 
     #declare tag PlyDeathAnimation プレイヤー死亡演出中
 
@@ -46,7 +46,7 @@
     #declare objective MhdpTDamage プレイヤーダメージ後の無敵時間に使用
     #declare objective MhdpTAvoid プレイヤー回避無敵時間に使用
     #declare objective MhdpTSneakInterval プレイヤー連続スニーク検知用
-    #declare objective MhdpFuncSneakAvoid スニーク回避実行用
+    #declare objective MhdpFuncSneakAvoid ステップ回避実行用
 
     #declare objective MhdpWeaponExt 武器の特殊ゲージ管理用
     #declare objective MhdpWeaponCharge 武器の溜め攻撃管理用

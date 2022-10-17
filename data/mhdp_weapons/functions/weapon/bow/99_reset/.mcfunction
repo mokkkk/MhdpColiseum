@@ -3,6 +3,9 @@
 # 弓のリセット処理
 #
 
+# 抜刀中：モデル等リセット
+     execute if entity @s[tag=PlyWeaponDrawing] run function mhdp_weapons:weapon/bow/99_reset/model
+
 # スコア消去
      scoreboard players set @s MhdpWeaponCharge 0
      scoreboard players set @s MhdpWeaponTimer 0
@@ -17,7 +20,7 @@
      tag @s remove WpnBowCharge3
      tag @s remove WpnBowCharge4
 
-# スニーク回避ロック解除
+# ステップ回避ロック解除
      tag @s remove PlySneakAvoidLock
 
 # 移動速度リセット

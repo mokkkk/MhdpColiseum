@@ -1,1 +1,1 @@
-advancement revoke @a only mh_dp:toasts/reus
+advancement revoke @a only mhdp_core:toasts/reus

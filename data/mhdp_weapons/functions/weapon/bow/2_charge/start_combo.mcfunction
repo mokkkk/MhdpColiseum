@@ -8,7 +8,7 @@
 # タグ更新
     tag @s add WpnBowCharge
 
-# スニーク回避ロック開始
+# ステップ回避ロック開始
     tag @s add PlySneakAvoidLock
 
 say 溜め開始

@@ -21,7 +21,7 @@
         # 火属性やられ
             execute if entity @s[tag=BlightFire] run scoreboard players remove @s MhdpBlightFire 100
 
-# スニーク回避処理開始
+# ステップ回避処理開始
     # 処理用Marker召喚
         summon marker ~ ~ ~ {Tags:["SneakAvoidStand0","Start"]}
         summon marker ~ ~ ~ {Tags:["SneakAvoidStand1","Start"]}

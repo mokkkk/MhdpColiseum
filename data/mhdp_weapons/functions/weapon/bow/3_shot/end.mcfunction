@@ -5,7 +5,7 @@
 # タグ更新
     tag @s remove WpnBowShot
 
-# スニーク回避ロック解除
+# ステップ回避ロック解除
     tag @s remove PlySneakAvoidLock
     
 # 溜め段階タグ消去

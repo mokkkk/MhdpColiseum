@@ -8,7 +8,7 @@
 # B:オフハンドが空である
     execute unless data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].PlayerData.Item.OffHand run tag @s add FlagB
 
-# C:スニーク回避中でない
+# C:ステップ回避中でない
     execute unless entity @s[tag=PlySneakAvoidFunc] run tag @s add FlagC
 
 # A && B && Cの場合，抜刀成功

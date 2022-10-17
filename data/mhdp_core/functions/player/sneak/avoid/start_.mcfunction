@@ -1,6 +1,6 @@
 #> mhdp_core:player/sneak/avoid/start_
 #
-# スニーク回避開始
+# ステップ回避開始
 
 # タグ付与
     tag @s add PlySneakAvoidFunc
@@ -17,7 +17,7 @@
         # 火属性やられ
             execute if entity @s[tag=BlightFire] run scoreboard players remove @s MhdpBlightFire 100
 
-# スニーク回避処理開始
+# ステップ回避処理開始
     # 処理用Marker召喚
         summon marker ~ ~ ~ {Tags:["SneakAvoidStand0","Start"]}
         summon marker ~ ~ ~ {Tags:["SneakAvoidStand1","Start"]}
@@ -43,6 +43,9 @@
 # 属性やられ処理
     # 火属性やられ
         execute if entity @s[tag=BltFire] run scoreboard players remove @s MhdpBlightFire 160
+
+# 武器リセット処理
+    execute if entity @s[tag=PlyWeaponDrawing] run function mhdp_weapons:core/reset/weapon
         
 # 終了
     tag @e[type=marker,tag=SneakAvoidStand0,tag=Start] remove Start

@@ -1,6 +1,6 @@
 #> mhdp_core:player/sneak/avoid/main
 #
-# スニーク回避実行処理
+# ステップ回避実行処理
 
 # 対象紐づけ
     tag @s add Target

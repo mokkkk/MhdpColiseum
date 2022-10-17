@@ -11,5 +11,5 @@ function asa_animator:reus/manager/remove_animation_tag
 execute unless entity @s[tag=IsFlying] run tag @s add AnmDHead
 execute if entity @s[tag=IsFlying] run tag @s add AnmFlyDamage
 
-advancement grant @a[distance=0..64] only mh_dp:toasts/reus
+advancement grant @a[distance=0..64] only mhdp_core:toasts/reus
 schedule function asa_animator:reus/manager/destroy_parts/revoke 5t

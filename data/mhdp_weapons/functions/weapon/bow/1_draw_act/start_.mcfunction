@@ -26,7 +26,7 @@
         tag @s add WpnBowCharge
     # 溜めスコア初期化
         scoreboard players set @s MhdpWeaponCharge 0
-    # スニーク回避ロック開始
+    # ステップ回避ロック開始
         tag @s add PlySneakAvoidLock
 
 # 抜刀演出

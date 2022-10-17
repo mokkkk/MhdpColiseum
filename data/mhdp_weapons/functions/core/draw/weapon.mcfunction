@@ -4,3 +4,6 @@
 
 # 1：弓
     execute if entity @s[tag=PlyWpnBow] run function mhdp_weapons:weapon/bow/97_draw/
+
+# 2：大剣
+    execute if entity @s[tag=PlyWpnGsword] run function mhdp_weapons:weapon/great_sword/97_draw/

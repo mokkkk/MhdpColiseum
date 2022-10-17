@@ -34,6 +34,7 @@
 
 # 武器タグ消去
         tag @s remove PlyWpnBow
+        tag @s remove PlyWpnGsword
 
 # 終了
     data remove storage mhdp_core:temp Temp
