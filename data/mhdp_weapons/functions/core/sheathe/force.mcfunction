@@ -30,16 +30,16 @@
 # 武器ステータス更新
     data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].PlayerData.Item.OffHand.tag set from storage mhdp_core:temp Temp
 
+# 抜刀中タグ消去
+    tag @s remove PlyWeaponDrawing
+    tag @s remove PlyWeaponDrawingSub
+
 # 武器に応じた納刀処理
     function mhdp_weapons:core/sheathe/weapon
 
 # 演出
     playsound item.armor.equip_iron master @a ~ ~ ~ 1 0.7
 
-# 抜刀中タグ消去
-    tag @s remove PlyWeaponDrawing
-    tag @s remove PlyWeaponDrawingSub
-    
 # 終了
     data remove storage mhdp_core:temp Temp
     data remove block 0 0 0 Items[{Slot:0b}]

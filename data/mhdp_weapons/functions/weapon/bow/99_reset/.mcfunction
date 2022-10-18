@@ -4,7 +4,7 @@
 #
 
 # 抜刀中：モデル等リセット
-     execute if entity @s[tag=PlyWeaponDrawing] run function mhdp_weapons:weapon/bow/99_reset/model
+     execute if entity @s[tag=PlyWeaponDrawing] if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].PlayerData.Item.MainHand.tag{MhdpWeapon:1b} run function mhdp_weapons:weapon/bow/99_reset/model
 
 # スコア消去
      scoreboard players set @s MhdpWeaponCharge 0
