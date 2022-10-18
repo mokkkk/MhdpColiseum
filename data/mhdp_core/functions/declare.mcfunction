@@ -24,6 +24,7 @@
         #declare tag PlyWpnBow 所持武器判定用タグ（弓）
         #declare tag PlyWeaponDrawing プレイヤー武器抜刀中
         #declare tag PlyWeaponDrawingSub プレイヤーサブ武器抜刀中
+        #declare tag PlyDrawAttack プレイヤー抜刀攻撃中
 
         #declare tag PlyArmorSuper スーパーアーマー中
         #declare tag PlyArmorHyper ハイパーアーマー中

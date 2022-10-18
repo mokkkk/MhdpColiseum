@@ -18,6 +18,8 @@
     execute if entity @s[tag=WpnGswordCharge3,scores={MhdpWeaponCharge=900..1000}] run function mhdp_weapons:weapon/great_sword/2_charge/charge_4
 
 # 遷移
+    # 抜刀攻撃時，右クリックを素早く解除したとき，即座に溜め斬りに移行
+        execute if entity @s[tag=PlyDrawAttack,tag=!PlyUsingEyeCurrent,scores={MhdpWeaponTimer=5..6}] run function mhdp_weapons:weapon/great_sword/2_charge/change_charge_attack
     # 溜めスコアが一定以上になったとき，強制的に溜め斬りに移行
         execute if entity @s[scores={MhdpWeaponCharge=1100..}] run function mhdp_weapons:weapon/great_sword/2_charge/change_charge_attack
     # 右クリックを解除したとき，溜め斬りに移行

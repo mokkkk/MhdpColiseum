@@ -7,6 +7,7 @@
 
 # タグ更新
     tag @s remove WpnGswordChargeAttack
+    tag @s remove PlyDrawAttack
     
 # 溜め段階タグ消去
     tag @s remove WpnGswordCharge1

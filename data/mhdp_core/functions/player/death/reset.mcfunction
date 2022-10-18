@@ -13,6 +13,8 @@
      execute if entity @s[scores={MhdpTKnockback=1..}] run scoreboard players set @s MhdpTKnockback 0
      tag @s remove PlyArmorHyper
      tag @s remove PlyArmorSuper
+     tag @s remove PlyDrawAttack
+     tag @s remove RClicked
 
 # 属性やられ中断
      scoreboard players set @s MhdpBlightFire 0

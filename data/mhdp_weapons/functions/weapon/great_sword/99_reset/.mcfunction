@@ -14,6 +14,7 @@
      tag @s remove WpnGswordCharge
      tag @s remove WpnGswordChargeAttack
      tag @s remove WpnGswordUpper
+     tag @s remove WpnGswordSweep
      tag @s remove WpnGswordCharge1
      tag @s remove WpnGswordCharge2
      tag @s remove WpnGswordCharge3

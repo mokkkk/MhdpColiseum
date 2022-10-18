@@ -4,6 +4,7 @@
 
 # タグ消去
     tag @s remove WpnGswordCharge
+    tag @s remove PlyDrawAttack
 
 # 行動開始
     function mhdp_weapons:weapon/great_sword/4_tackle/start

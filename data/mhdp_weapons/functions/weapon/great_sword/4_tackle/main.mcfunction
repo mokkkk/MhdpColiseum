@@ -18,6 +18,9 @@
     execute if entity @s[scores={MhdpWeaponTimer=..4}] rotated as @e[type=marker,tag=SneakAvoidStand0,tag=Rotator] rotated ~ 0 run function mhdp_weapons:weapon/great_sword/4_tackle/move_0
     execute if entity @s[scores={MhdpWeaponTimer=5..8}] rotated as @e[type=marker,tag=SneakAvoidStand0,tag=Rotator] rotated ~ 0 run function mhdp_weapons:weapon/great_sword/4_tackle/move_1
 
+# 攻撃
+    execute if entity @s[scores={MhdpWeaponTimer=2}] at @s run function mhdp_weapons:weapon/great_sword/4_tackle/attack
+
 # 演出
     execute if entity @s[scores={MhdpWeaponTimer=1}] at @s run summon area_effect_cloud ~ ~ ~ {Duration:6,Age:4,Effects:[{Id:2,Amplifier:10b,Duration:16,ShowParticles:0b}]}
     execute if entity @s[scores={MhdpWeaponTimer=..3}] run playsound block.grass.step master @a ~ ~ ~ 1 1
