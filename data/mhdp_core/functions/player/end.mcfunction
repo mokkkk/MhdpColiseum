@@ -17,6 +17,9 @@
     tag @s remove PlyUsingEyeStart
     tag @s remove PlyUsingEyeEnd
 
+# 空中状態リセット
+    tag @s remove PlyJumpping
+
 # 進捗状況リセット
     advancement revoke @s only mhdp_core:player/villager_trade/quest_normal
     advancement revoke @s only mhdp_core:player/inventory_changed/main

@@ -34,7 +34,7 @@
 # Healthを持つEntityであれば実行
     execute if data storage score_damage: Argument.Damage if entity @s[team=!Null,type=!armor_stand] run function score_damage_mhdp:core/attack
 # 属性やられ
-    execute if entity @s[type=player] if data storage mhdp_core:temp Temp.Damage{Blight:1b} run function score_damage_mhdp:mh_dp/blight
+    execute if entity @s[type=player] if data storage mhdp_core:temp Temp.Damage{Blight:1b} if data storage mh_dp:status GameStatus{Phase:3} run function score_damage_mhdp:mh_dp/blight
 # ノックパック
     execute if entity @s[type=player] run function mhdp_core:player/damage/knockback/damage/
 # 毒

@@ -15,7 +15,7 @@
         item replace entity @s weapon.offhand with air
         data remove storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].PlayerData.Item.OffHand
 
-# 弓抜刀処理
+# 大剣抜刀処理
     function mhdp_weapons:weapon/great_sword/97_draw/
     tag @s add PlyWeaponDrawing
 
@@ -33,5 +33,8 @@
 
 # 抜刀演出
     playsound item.armor.equip_iron master @a ~ ~ ~ 1 1
+
+# ジャンプ中に抜刀攻撃した場合，ちょっと跳ねる
+    execute if entity @s[tag=PlyJumpping] run summon area_effect_cloud ~ ~ ~ {Duration:6,Age:4,Effects:[{Id:25,Amplifier:16b,Duration:4,ShowParticles:0b}]}
 
 say 抜刀溜め開始
