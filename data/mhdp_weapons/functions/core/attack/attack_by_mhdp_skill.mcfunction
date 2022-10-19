@@ -1,12 +1,8 @@
-#> mhdp_weapons:core/attack/attack_by_mhdpweapon
+#> mhdp_weapons:core/attack/attack_by_mhdp_skill
 #
-# 攻撃時処理
-
-# minecraft側データ取得
-    # ダメージ量
-        execute store result score #mhdp_temp_health MhdpCore run data get entity @e[tag=Victim,limit=1] Health 100
-        scoreboard players set #mhdp_temp_damage MhdpCore 100000
-        execute store result score #mhdp_temp_damage_multiply MhdpCore run scoreboard players operation #mhdp_temp_damage MhdpCore -= #mhdp_temp_health MhdpCore
+# 攻撃時処理（武器動作）
+# mhdp_temp_damage_multiply：物理ダメージ倍率
+# mhdp_temp_damage_multiply_element：属性ダメージ倍率
 
 # mhdp側データ取得
     # 攻撃側ステータス
@@ -17,11 +13,6 @@
     # 物理：#mhdp_temp_def
     # 属性：#mhdp_temp_element_def
         execute as @e[tag=Victim,limit=1] run function mhdp_core:monster/damage/get
-
-# 実ダメージからダメージ倍率を計算 (想定ダメージ6.5)
-    scoreboard players set #mhdp_temp_multiply MhdpCore 650
-    scoreboard players operation #mhdp_temp_damage_multiply MhdpCore *= #asam_const_100 AsaMatrix
-    execute store result score #mhdp_temp_damage_multiply_element MhdpCore run scoreboard players operation #mhdp_temp_damage_multiply MhdpCore /= #mhdp_temp_multiply MhdpCore
 
 # 物理ダメージ計算
     scoreboard players operation #mhdp_temp_atk_damage MhdpCore *= #mhdp_temp_damage_multiply MhdpCore
@@ -57,7 +48,6 @@
     scoreboard players reset #mhdp_temp_multiply
     scoreboard players reset #mhdp_temp_damage
     scoreboard players reset #mhdp_temp_damage_multiply
-    scoreboard players reset #mhdp_temp_damage_multiply_element
     scoreboard players reset #mhdp_temp_atk_damage
     scoreboard players reset #mhdp_temp_element_type
     scoreboard players reset #mhdp_temp_element_damage
