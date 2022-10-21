@@ -11,10 +11,6 @@
 # オフハンドアイテムをgive
     loot give @s mine 0 0 0 debug_stick
 
-    clone 0 0 0 0 0 0 -50 66 84 replace
-
 # 終了
     data remove storage mhdp_core:temp Temp2
     data remove block 0 0 0 Items[{Slot:0b}]
-
-say give

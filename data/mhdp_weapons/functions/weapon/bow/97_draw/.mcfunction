@@ -11,11 +11,16 @@
         execute store result score #mhdp_temp_cmd MhdpCore run data get storage mhdp_core:temp Temp.Status.CmdOffset
         scoreboard players add #mhdp_temp_cmd MhdpCore 1
         execute store result storage mhdp_core:temp Temp.CustomModelData int 1 run scoreboard players get #mhdp_temp_cmd MhdpCore
+    # 納刀状態フラグ変更
+        data modify storage mhdp_core:temp Temp.IsDrawing set value 1b
     # Attribute削除
         data modify storage mhdp_core:temp Temp.AttributeModifiers set value []
-    item modify entity @s weapon.mainhand mhdp_core:const/bow/default
+    item modify entity @s weapon.mainhand mhdp_core:const/bow/draw
 
 # リセット処理
      function mhdp_weapons:weapon/bow/99_reset/
+
+# 武器ステータス更新
+    data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].PlayerData.Item.MainHand.tag set from storage mhdp_core:temp Temp
 
 say 弓抜刀処理

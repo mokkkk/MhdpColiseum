@@ -31,8 +31,8 @@
     execute if entity @s[tag=!PlyWeaponDrawing] run function mhdp_weapons:core/check/
 
 # エンダーアイ使用
-    execute if entity @s[tag=PlyUsingEyeStart] run say エンダーアイ使用開始
-    execute if entity @s[tag=PlyUsingEyeEnd] run say エンダーアイ使用終了
+    # execute if entity @s[tag=PlyUsingEyeStart] run say エンダーアイ使用開始
+    # execute if entity @s[tag=PlyUsingEyeEnd] run say エンダーアイ使用終了
 
 # 終了
     advancement revoke @s only mhdp_core:player/inventory_changed/main

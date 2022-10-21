@@ -2,5 +2,14 @@
 #
 # 各武器の納刀処理呼び出し
 
+# 共通
+    # 抜刀攻撃タグ消去
+        tag @s remove PlyDrawAttack
+    # 右クリック保存タグ消去
+        tag @s remove RClicked
+
 # 1：弓
-    execute if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].PlayerData.Item.MainWeapon.tag.Status{WeaponType:1} run function mhdp_weapons:weapon/bow/98_sheathe/
+    execute if entity @s[tag=PlyWpnBow] run function mhdp_weapons:weapon/bow/98_sheathe/
+
+# 2：大剣
+    execute if entity @s[tag=PlyWpnGsword] run function mhdp_weapons:weapon/great_sword/98_sheathe/

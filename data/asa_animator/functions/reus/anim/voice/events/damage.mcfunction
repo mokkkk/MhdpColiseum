@@ -1,0 +1,1 @@
+execute positioned ^ ^ ^3 as @a[distance=..18] run function asa_animator:reus/anim/voice/events/damage_sub

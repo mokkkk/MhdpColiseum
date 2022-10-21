@@ -3,6 +3,9 @@
 # 弓のリセット処理
 #
 
+# 抜刀中：モデル等リセット
+     execute if entity @s[tag=PlyWeaponDrawing] if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].PlayerData.Item.MainHand.tag{MhdpWeapon:1b} run function mhdp_weapons:weapon/bow/99_reset/model
+
 # スコア消去
      scoreboard players set @s MhdpWeaponCharge 0
      scoreboard players set @s MhdpWeaponTimer 0
@@ -17,7 +20,7 @@
      tag @s remove WpnBowCharge3
      tag @s remove WpnBowCharge4
 
-# スニーク回避ロック解除
+# ステップ回避ロック解除
      tag @s remove PlySneakAvoidLock
 
 # 移動速度リセット
@@ -26,6 +29,6 @@
 
 # チャージステップ中断
      tag @s add Target
-     execute as @e[type=marker,tag=SneakAvoidStand0] if score @s MhdpPlayerUid = @a[tag=Target,limit=1,sort=nearest] MhdpPlayerUid run tag @s add Rotater
+     execute if entity @s[tag=!PlySneakAvoidFunc] as @e[type=marker,tag=SneakAvoidStand0] if score @s MhdpPlayerUid = @a[tag=Target,limit=1,sort=nearest] MhdpPlayerUid run tag @s add Rotater
      tag @s remove Target
-     kill @e[type=marker,tag=SneakAvoidStand0,tag=Rotater]
+     execute if entity @s[tag=!PlySneakAvoidFunc] run kill @e[type=marker,tag=SneakAvoidStand0,tag=Rotater]
