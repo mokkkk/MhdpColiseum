@@ -21,3 +21,4 @@
 # 終了
 # クエスト失敗時のみ，帰還するまで終了しない
     execute if entity @s[scores={MhdpTDeathAnimation=60..}] unless data storage mh_dp:status GameStatus{Phase:5} run function mhdp_core:player/death/animation/end
+    tag @e[type=marker,tag=Position,tag=DeathAnimationStand] remove Position

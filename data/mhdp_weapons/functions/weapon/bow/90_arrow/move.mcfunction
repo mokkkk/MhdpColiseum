@@ -14,4 +14,4 @@
 
 # particle表示
     particle crit ~ ~ ~ 0 0 0 0 1 force
-    execute if entity @s[scores={MhdpCore=2..6}] run particle flash ~ ~ ~ 0 0 0 0 1
+    execute if entity @s[scores={MhdpCore=2..6}] run particle enchanted_hit ~ ~ ~ 0 0 0 0.3 1

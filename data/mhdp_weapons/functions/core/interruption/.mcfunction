@@ -2,6 +2,9 @@
 #
 # 各武器の中断処理呼び出し
 
+# アイテムデータ取得準備
+    function oh_my_dat:please
+    
 # 共通
     # アーマー解除
         tag @s remove PlyArmorSuper

@@ -2,6 +2,9 @@
 #
 # Phase1_クエスト受注 クエストPhase開始処理
 
+# attribute設定
+    execute as @a run attribute @s generic.knockback_resistance base set 1.0
+
 # プレイヤーUID割り当て
     scoreboard players set #mhdp_temp_uid MhdpCore 0
     execute as @a[sort=arbitrary] run function mhdp_core:phase/2_quest_wait/start_quest/setup/uid

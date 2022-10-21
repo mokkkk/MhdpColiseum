@@ -2,6 +2,9 @@
 #
 # プレイヤー死亡時処理（tick内）
 
+# attribute設定
+    attribute @s generic.knockback_resistance base set 1.0
+
 # クエスト中の場合，武器納刀処理実行
     execute if entity @s[tag=PlyQuest] run function mhdp_weapons:core/sheathe/weapon
 
