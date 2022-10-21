@@ -47,6 +47,9 @@
 # 移動速度リセット
     effect clear @s speed
 
+# 満腹度消費
+    execute unless entity @s[tag=BltIce] run effect give @s hunger 1 60 true
+
 # 演出
     execute if entity @s[tag=!SklBowChargePlus,tag=!WpnBowCharge3] run playsound entity.experience_orb.pickup master @a ~ ~ ~ 1 1
     execute if entity @s[tag=SklBowChargePlus,tag=!WpnBowCharge4] run playsound entity.experience_orb.pickup master @a ~ ~ ~ 1 1

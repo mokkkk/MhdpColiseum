@@ -2,6 +2,9 @@
 #
 # Phase1_クエスト受注 クエスト開始処理 プレイヤー武器セット
 
+# データ取得準備
+    function oh_my_dat:please
+    
 # すでに出発条件確認でデータ取得を終えているので，データは取得しない
 # どこかにある武器を消去
     clear @s ender_eye{MhdpWeapon:1b} 64

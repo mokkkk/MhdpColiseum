@@ -17,11 +17,11 @@
 
 # クリティカル距離以外の場合，ダメージ減算
     execute if entity @s[scores={MhdpCore=..1}] run function mhdp_weapons:weapon/bow/90_arrow/calc
-    execute if entity @s[scores={MhdpCore=7..}] run function mhdp_weapons:weapon/bow/90_arrow/calc
+    execute if entity @s[scores={MhdpCore=8..}] run function mhdp_weapons:weapon/bow/90_arrow/calc
 
 # クリティカル距離の場合，演出
-    execute if entity @s[scores={MhdpCore=2..6}] as @a[tag=Attacker] at @s run playsound entity.arrow.hit_player master @s ~ ~ ~ 1 0.5
-    execute if entity @s[scores={MhdpCore=2..6}] at @s run particle end_rod ~ ~ ~ 0 0 0 0.1 3 force
+    execute if entity @s[scores={MhdpCore=2..7}] as @a[tag=Attacker] at @s run playsound entity.arrow.hit_player master @s ~ ~ ~ 1 0.5
+    execute if entity @s[scores={MhdpCore=2..7}] at @s run particle end_rod ~ ~ ~ 0 0 0 0.1 3 force
 
 # ダメージ発生
     execute positioned ^ ^ ^1 as @e[type=slime,tag=MonsterParts,distance=..2.5,limit=1,sort=nearest] run tag @s add Victim

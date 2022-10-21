@@ -4,7 +4,7 @@
 #
 
 # 移動
-    tp @s ^ ^ ^1
+    tp @s ^ ^ ^1 ~ ~0.1
 
 # ヒット判定
     execute positioned ^ ^ ^1 if entity @e[type=slime,tag=MonsterParts,distance=..2.5] run function mhdp_weapons:weapon/bow/90_arrow/attack
@@ -14,3 +14,4 @@
 
 # particle表示
     particle crit ~ ~ ~ 0 0 0 0 1 force
+    execute if entity @s[scores={MhdpCore=2..6}] run particle flash ~ ~ ~ 0 0 0 0 1

@@ -29,3 +29,7 @@
 # 終了
     execute if entity @s[scores={MhdpWeaponTimer=16..}] run function mhdp_weapons:weapon/great_sword/4_tackle/end
     tag @e[type=marker,tag=SneakAvoidStand0,tag=Rotator] remove Rotator
+
+# 遷移
+    # 右クリック中の場合，溜めに移行
+        execute if entity @s[tag=PlyUsingEyeCurrent,scores={MhdpWeaponTimer=9..}] run function mhdp_weapons:weapon/great_sword/4_tackle/change_charge

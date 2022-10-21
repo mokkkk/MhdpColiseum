@@ -1,6 +1,6 @@
-#> mhdp_weapons:weapon/great_sword/4_tackle/end
+#> mhdp_weapons:weapon/great_sword/4_tackle/change_charge
 #
-# 大剣：タックル終了
+# 大剣：タックル → 溜め
 
 # タグ更新
     tag @s remove WpnGswordTackle
@@ -16,3 +16,6 @@
 
 # モデル変更
     function mhdp_weapons:weapon/great_sword/99_reset/model
+
+# 遷移
+    function mhdp_weapons:weapon/great_sword/2_charge/start
