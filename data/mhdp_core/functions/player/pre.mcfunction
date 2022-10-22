@@ -20,9 +20,21 @@
 # 地上・空中状態取得
     execute if entity @s[nbt={OnGround:0b}] run tag @s add PlyJumpping
 
-# クエスト中に食料レベルが一定以下の場合，ジャンプを禁じる
+# 満腹度取得
     execute store result score #mhdp_temp_food MhdpCore run data get storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].PlayerData.FoodLevel
-    execute if entity @s[tag=PlyQuest] if score #mhdp_temp_food MhdpCore matches ..6 run effect give @s jump_boost 1 128 true
+
+# 満腹度回復条件確認
+    # スプリント中は回復しない
+        execute if predicate mhdp_core:player/stat/sprint run tag @s add PlyStaminaNotRegen
+        execute if predicate mhdp_core:player/stat/sprint run scoreboard players remove @s MhdpStamina 3
+    # スニーク回避中は回復しない
+        execute if entity @s[tag=PlySneakAvoidFunc] run tag @s add PlyStaminaNotRegen
+
+# 満腹度の調整
+    # 通常時：5に調節する
+        execute if entity @s[tag=!PlyStaminaPenalty] run function mhdp_core:player/data/food_level_normal
+    # ペナルティ時：3に調節する
+        execute if entity @s[tag=PlyQuest,tag=PlyStaminaPenalty] run function mhdp_core:player/data/food_level_penalty
 
 # 拠点強制帰還
     # 非クエスト中：

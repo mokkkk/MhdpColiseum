@@ -50,7 +50,15 @@
     execute unless score #mhdp_temp_element_type MhdpCore matches 0 run tellraw @a [{"text":"合計："},{"score":{"name":"#mhdp_temp_damage","objective":"MhdpCore"}}]
 
 # 武器種が弓以外の場合，切れ味更新
-    execute unless entity @s[tag=PlyWpnBow] run function mhdp_weapons:core/attack/sharpness
+    execute unless entity @s[tag=PlyWpnBow] run function mhdp_weapons:core/attack/sharpness/
+
+# ダメージログ表示
+    # 肉質に応じて色を設定
+        scoreboard players set $Color Temporary 0
+        execute if score #mhdp_temp_def MhdpCore matches 70.. run scoreboard players set $Color Temporary 1
+    # 表示
+        scoreboard players operation $Fluctuation Lib = #mhdp_temp_damage MhdpCore
+        execute positioned as @e[tag=Victim] facing entity @s feet positioned ^ ^ ^0.5 run function lib:status_log/show_health
 
 # 終了
     scoreboard players reset #mhdp_temp_health

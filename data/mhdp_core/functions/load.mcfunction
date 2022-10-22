@@ -23,7 +23,8 @@
         scoreboard objectives add MhdpFuncSneakAvoid dummy
 
     # 武器処理用
-        scoreboard objectives add MhdpWeaponExt dummy
+        scoreboard objectives add MhdpStamina dummy
+        scoreboard objectives add MhdpTStaminaPenalty dummy
         scoreboard objectives add MhdpWeaponCharge dummy
         scoreboard objectives add MhdpWeaponTimer dummy
         scoreboard objectives add MhdpWeaponDeactivateTimer dummy
@@ -39,9 +40,12 @@
         scoreboard objectives add Const dummy
         scoreboard objectives add UserID dummy
         scoreboard objectives add AttackedEntity dummy
+        scoreboard objectives add Lib dummy
         scoreboard players set $2 Const 2
         scoreboard players set $2^15 Const 32768
         scoreboard players set $2^16 Const 65536
+        scoreboard players set $10 Const 10
+        scoreboard players set $100 Const 100
 
 # item置き換え用
     forceload add -1 -1 1 1

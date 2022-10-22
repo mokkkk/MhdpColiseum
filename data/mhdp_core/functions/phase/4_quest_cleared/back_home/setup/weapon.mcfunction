@@ -23,9 +23,8 @@
         data modify storage mhdp_core:temp Temp set value {display:{},Status:{},CustomModelData:100,HideFlags:2,MhdpWeapon:1b,MhdpWeaponSub:0b,IsDrawing:0b}
         data modify storage mhdp_core:temp Temp.display set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].PlayerData.Item.MainWeapon.tag.display
         data modify storage mhdp_core:temp Temp.Status set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].PlayerData.Item.MainWeapon.tag.Status
-    # 切れ味設定
-    # 強制的に匠非発動時の切れ味にする
-        data modify storage mhdp_core:temp Temp.Status.SharpnessCurrent set from storage mhdp_core:temp Temp.Status.SharpnessMax
+    # 斬れ味設定
+        execute if entity @s[tag=!PlyWpnBow] run function mhdp_core:phase/4_quest_cleared/back_home/setup/weapon_sharpness
     # 納刀状態フラグ変更
         data modify storage mhdp_core:temp Temp.IsDrawing set value 0b
     # モデル変更
@@ -38,6 +37,13 @@
 # 武器タグ消去
         tag @s remove PlyWpnBow
         tag @s remove PlyWpnGsword
+
+# UI消去
+    title @a actionbar {"text": ""}
+
+# スタミナリセット
+    scoreboard players set @a MhdpStamina 1000
+    tag @a remove PlyStaminaPenalty
 
 # 終了
     data remove storage mhdp_core:temp Temp

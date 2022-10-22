@@ -17,8 +17,7 @@
     effect give @s slowness 1 3 true
 
 # 集中力消費
-    scoreboard players remove @s MhdpWeaponExt 60
-    execute if entity @s[scores={MhdpWeaponExt=..-1}] run scoreboard players set @s MhdpWeaponExt 0
+    scoreboard players remove @s MhdpStamina 100
 
 # attribute設定
     item modify entity @s weapon.mainhand mhdp_core:const/bow/default
