@@ -18,8 +18,8 @@
 # プレイヤーの武器をリセット
     execute as @a run function mhdp_core:phase/4_quest_cleared/back_home/setup/weapon
 
-# プレイヤーの特殊装具をリセット(TO DO)
-    # function ...
+# プレイヤーの特殊装具をリセット
+    function mhdp_core:phase/4_quest_cleared/back_home/setup/item
 
 # プレイヤーを移動
     tp @a 266 63 204

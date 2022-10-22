@@ -24,6 +24,18 @@
     execute store result score #mhdp_temp_food MhdpCore run data get storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].PlayerData.FoodLevel
     execute if entity @s[tag=PlyQuest] if score #mhdp_temp_food MhdpCore matches ..6 run effect give @s jump_boost 1 128 true
 
+# 拠点強制帰還
+    # 非クエスト中：
+        execute if entity @s[tag=PlyQuest] unless data storage mh_dp:status GameStatus{Phase:3} unless data storage mh_dp:status GameStatus{Phase:4} unless data storage mh_dp:status GameStatus{Phase:5} run function mhdp_core:phase/0_village/player/back_to_home_none_quest
+    # クエスト中：
+            # 現在時刻を取得
+                execute store result score #mhdp_temp_time MhdpCore run data get storage mh_dp:status GameStatus.Quest.StartTime
+                execute store result score #mhdp_temp_food MhdpCore run data get storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].PlayerData.QuestTime
+            # 減算
+                scoreboard players operation #mhdp_temp_time MhdpCore -= #mhdp_temp_food MhdpCore
+            # 比較
+                execute if entity @s[tag=PlyQuest] if data storage mh_dp:status GameStatus{Phase:3} unless score #mhdp_temp_time MhdpCore matches 0 run function mhdp_core:phase/0_village/player/back_to_home_quest
+
 # 終了
     scoreboard players reset #mhdp_temp_time
     scoreboard players reset #mhdp_temp_food
