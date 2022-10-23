@@ -3,6 +3,7 @@
 # UI表示処理等 スタミナ関連
 #
 #declare tag PlyStaminaPenalty プレイヤーがスタミナを使い切った
+#declare tag PlyStaminaPenaltyEnd スタミナペナルティ終了
 #declare tag PlyStaminaNotRegen このティックはスタミナが回復しない
 
 # スタミナ関連
@@ -14,7 +15,12 @@
 # ペナルティ中回復を封じる
     execute if entity @s[tag=PlyStaminaPenalty] run tag @s add PlyStaminaNotRegen
     execute if entity @s[tag=PlyStaminaPenalty] run scoreboard players remove @s MhdpTStaminaPenalty 1
-    execute if entity @s[tag=PlyStaminaPenalty,scores={MhdpTStaminaPenalty=..0}] run tag @s remove PlyStaminaPenalty
+
+# ペナルティ終了
+    execute if entity @s[tag=PlyStaminaPenalty,scores={MhdpTStaminaPenalty=..0}] run tag @s add PlyStaminaPenaltyEnd
+    execute if entity @s[tag=PlyStaminaPenaltyEnd] run scoreboard players add @s MhdpStamina 100
+    execute if entity @s[tag=PlyStaminaPenalty,scores={MhdpStamina=999..}] run tag @s remove PlyStaminaPenaltyEnd
+    execute if entity @s[tag=PlyStaminaPenalty,scores={MhdpStamina=999..}] run tag @s remove PlyStaminaPenalty
 
 # UI設定
     scoreboard players set #mhdp_const_125 MhdpCore 125
@@ -36,4 +42,4 @@
     function mhdp_weapons:ui/stamina/append
     scoreboard players operation #mhdp_temp_stamina MhdpStamina -= #mhdp_const_125 MhdpCore
 
-    data modify storage mhdp_core:temp Temp.UI.Stamina set value '[{"interpret":true,"nbt":"Temp.UI.StaminaArray[0]","storage":"mhdp_core:temp"},{"interpret":true,"nbt":"Temp.UI.StaminaArray[1]","storage":"mhdp_core:temp"},{"interpret":true,"nbt":"Temp.UI.StaminaArray[2]","storage":"mhdp_core:temp"},{"interpret":true,"nbt":"Temp.UI.StaminaArray[3]","storage":"mhdp_core:temp"},{"interpret":true,"nbt":"Temp.UI.StaminaArray[4]","storage":"mhdp_core:temp"},{"interpret":true,"nbt":"Temp.UI.StaminaArray[5]","storage":"mhdp_core:temp"},{"interpret":true,"nbt":"Temp.UI.StaminaArray[6]","storage":"mhdp_core:temp"},{"interpret":true,"nbt":"Temp.UI.StaminaArray[7]","storage":"mhdp_core:temp"},{"interpret":true,"nbt":"Temp.UI.StaminaArray[8]","storage":"mhdp_core:temp"},{"interpret":true,"nbt":"Temp.UI.StaminaArray[9]","storage":"mhdp_core:temp"}]'
+    data modify storage mhdp_core:temp Temp.UI.Stamina set value '["",{"interpret":true,"nbt":"Temp.UI.StaminaArray[0]","storage":"mhdp_core:temp"},{"interpret":true,"nbt":"Temp.UI.StaminaArray[1]","storage":"mhdp_core:temp"},{"interpret":true,"nbt":"Temp.UI.StaminaArray[2]","storage":"mhdp_core:temp"},{"interpret":true,"nbt":"Temp.UI.StaminaArray[3]","storage":"mhdp_core:temp"},{"interpret":true,"nbt":"Temp.UI.StaminaArray[4]","storage":"mhdp_core:temp"},{"interpret":true,"nbt":"Temp.UI.StaminaArray[5]","storage":"mhdp_core:temp"},{"interpret":true,"nbt":"Temp.UI.StaminaArray[6]","storage":"mhdp_core:temp"},{"interpret":true,"nbt":"Temp.UI.StaminaArray[7]","storage":"mhdp_core:temp"},{"interpret":true,"nbt":"Temp.UI.StaminaArray[8]","storage":"mhdp_core:temp"},{"interpret":true,"nbt":"Temp.UI.StaminaArray[9]","storage":"mhdp_core:temp"},{"text":"\\uF813\\uF801"},{"text":"_","font":"mhdp_stamina"}]'

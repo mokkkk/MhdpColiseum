@@ -38,6 +38,4 @@
     scoreboard players reset #mhdp_temp_sharp
     scoreboard players reset #mhdp_temp_sharp_current
     scoreboard players reset #mhdp_temp_sharp_sum
-    scoreboard players reset #mhdp_temp_sharp_color_current
-    scoreboard players reset #mhdp_temp_sharp_color
     scoreboard players reset #mhdp_temp_sharp_max

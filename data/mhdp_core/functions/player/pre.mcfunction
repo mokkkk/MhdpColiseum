@@ -26,7 +26,7 @@
 # 満腹度回復条件確認
     # スプリント中は回復しない
         execute if predicate mhdp_core:player/stat/sprint run tag @s add PlyStaminaNotRegen
-        execute if predicate mhdp_core:player/stat/sprint run scoreboard players remove @s MhdpStamina 3
+        execute if predicate mhdp_core:player/stat/sprint run scoreboard players remove @s MhdpStamina 1
     # スニーク回避中は回復しない
         execute if entity @s[tag=PlySneakAvoidFunc] run tag @s add PlyStaminaNotRegen
 

@@ -24,8 +24,11 @@
     execute if score #mhdp_temp_element_type MhdpCore matches 0 run scoreboard players set #mhdp_temp_element_damage MhdpCore 0
     execute unless score #mhdp_temp_element_type MhdpCore matches 0 run function mhdp_weapons:core/attack/get_element_damage
 
-# 武器に応じた独自処理
-    function mhdp_weapons:core/attack/weapon
+# 武器種が弓以外の場合，切れ味更新
+    execute unless entity @s[tag=PlyWpnBow] run function mhdp_weapons:core/attack/sharpness/
+
+# 斬れ味補正適用
+    execute if entity @s[tag=!PlyWpnBow] run function mhdp_weapons:core/attack/sharpness/calc
 
 # デバッグ用
     execute if score #mhdp_temp_element_type MhdpCore matches 0 run tellraw @a [{"text":"物理："},{"score":{"name":"#mhdp_temp_damage","objective":"MhdpCore"}}]
@@ -39,10 +42,7 @@
 
 # デバッグ用
     execute unless score #mhdp_temp_element_type MhdpCore matches 0 run tellraw @a [{"text":"合計："},{"score":{"name":"#mhdp_temp_damage","objective":"MhdpCore"}}]
-
-# 武器種が弓以外の場合，切れ味更新
-    execute unless entity @s[tag=PlyWpnBow] run function mhdp_weapons:core/attack/sharpness/
-
+    
 # ダメージログ表示
     # 肉質に応じて色を設定
         scoreboard players set $Color Temporary 0

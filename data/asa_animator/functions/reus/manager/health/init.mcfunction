@@ -1,6 +1,6 @@
 
 # tsb用init
-execute as @e[type=slime,tag=ReusHealth] run function mob_manager:init/
+    execute as @e[type=slime,tag=ReusHealth] run function mob_manager:init/
 
 # ID割り振り
     scoreboard players set @e[type=slime,tag=MonsterParts,tag=ReusHealth] MhdpMonsterIndex 0

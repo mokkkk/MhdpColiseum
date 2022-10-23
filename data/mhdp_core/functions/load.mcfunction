@@ -33,6 +33,7 @@
         scoreboard objectives add AsaMatrix dummy
         scoreboard objectives add MhdpMonsterIndex dummy
         scoreboard objectives add MhdpPartsIndex dummy
+        scoreboard objectives add MhdpPartsUid dummy
 
     # TSBライブラリ用
         scoreboard objectives add Global dummy

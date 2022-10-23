@@ -1,7 +1,6 @@
 
-# 初遭遇時，咆哮する
-execute if entity @s[tag=!AlreadyVoice] run tag @s add AnmVoice
-execute if entity @s[tag=!AlreadyVoice] run tag @s add AlreadyVoice
+# 初遭遇時
+execute if entity @s[tag=!AlreadyVoice] run function asa_animator:reus/manager/first_contact
 
 # 怒り変化
 execute if entity @s[tag=IsAnger] run scoreboard players add #mhdp_reus_anger_count AsaMatrix 1

@@ -4,4 +4,4 @@
 
 # タグ付与
     tag @s add PlyStaminaPenalty
-    scoreboard players set @s MhdpTStaminaPenalty 100
+    scoreboard players set @s MhdpTStaminaPenalty 60
