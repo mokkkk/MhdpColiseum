@@ -22,6 +22,14 @@
     # プレイヤー行動用
         scoreboard objectives add MhdpFuncSneakAvoid dummy
 
+    # プレイヤー防具用
+        scoreboard objectives add MhdpPlayerDefence dummy
+        scoreboard objectives add MhdpPlayerResistFire dummy
+        scoreboard objectives add MhdpPlayerResistWater dummy
+        scoreboard objectives add MhdpPlayerResistThunder dummy
+        scoreboard objectives add MhdpPlayerResistIce dummy
+        scoreboard objectives add MhdpPlayerResistDragon dummy
+
     # 武器処理用
         scoreboard objectives add MhdpStamina dummy
         scoreboard objectives add MhdpTStaminaPenalty dummy
@@ -47,6 +55,16 @@
         scoreboard players set $2^16 Const 65536
         scoreboard players set $10 Const 10
         scoreboard players set $100 Const 100
+        scoreboard players set $31743 Const 31743
+        scoreboard players set $65536 Const 65536
+        # 乱数値の設定
+            #> Private
+            # @private
+                #declare tag Random
+            summon minecraft:area_effect_cloud ~ ~ ~ {Age:-2147483648,Duration:-1,WaitTime:-2147483648,Tags:["Random"]}
+            execute store result score $Random.Base Global run data get entity @e[tag=Random,limit=1] UUID[1]
+            execute store result score $Random.Carry Global run data get entity @e[tag=Random,limit=1] UUID[3]
+            kill @e[tag=Random,limit=1]
 
 # item置き換え用
     forceload add -1 -1 1 1

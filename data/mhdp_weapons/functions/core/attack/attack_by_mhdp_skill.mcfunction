@@ -30,6 +30,12 @@
 # 斬れ味補正適用
     execute if entity @s[tag=!PlyWpnBow] run function mhdp_weapons:core/attack/sharpness/calc
 
+# 会心補正適用
+    execute store result score #mhdp_temp_crit MhdpCore run data get storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].PlayerData.Item.MainWeapon.tag.Status.Critical 100
+    function lib:random/
+    scoreboard players operation #mhdp_temp_rand MhdpCore %= #asam_const_100 AsaMatrix
+    execute if score #mhdp_temp_rand MhdpCore <= #mhdp_temp_crit MhdpCore run function mhdp_weapons:core/attack/crit/calc
+    
 # デバッグ用
     execute if score #mhdp_temp_element_type MhdpCore matches 0 run tellraw @a [{"text":"物理："},{"score":{"name":"#mhdp_temp_damage","objective":"MhdpCore"}}]
     execute unless score #mhdp_temp_element_type MhdpCore matches 0 run tellraw @a [{"text":"物理："},{"score":{"name":"#mhdp_temp_damage","objective":"MhdpCore"}},{"text":"     属性："},{"score":{"name":"#mhdp_temp_element_damage","objective":"MhdpCore"}}]
@@ -51,13 +57,21 @@
         scoreboard players operation $Fluctuation Lib = #mhdp_temp_damage MhdpCore
         execute positioned as @e[tag=Victim] facing entity @s feet positioned ^ ^ ^0.5 run function lib:status_log/show_health
 
+# ヒットエフェクト表示
+    # 会心
+        execute if entity @s[tag=Critical] run function mhdp_weapons:core/attack/effect/crit
+
 # 終了
+    tag @s remove Critical
     scoreboard players reset #mhdp_temp_health
     scoreboard players reset #mhdp_temp_multiply
     scoreboard players reset #mhdp_temp_damage
     scoreboard players reset #mhdp_temp_damage_multiply
+    scoreboard players reset #mhdp_temp_damage_multiply_element
     scoreboard players reset #mhdp_temp_atk_damage
     scoreboard players reset #mhdp_temp_element_type
     scoreboard players reset #mhdp_temp_element_damage
     scoreboard players reset #mhdp_temp_def
     scoreboard players reset #mhdp_temp_element_def
+    scoreboard players reset #mhdp_temp_rand
+    scoreboard players reset #mhdp_temp_crit
