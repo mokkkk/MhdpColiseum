@@ -22,6 +22,6 @@
 # Mobに適用
     function score_damage_mhdp:core/health_subtract
 # リセット
-    # scoreboard players reset $Damage ScoreDamageCore
+    scoreboard players reset $Damage ScoreDamageCore
     scoreboard players reset $Health ScoreDamageCore
-    # scoreboard players reset $Resistance ScoreDamageCore
+    scoreboard players reset $Resistance ScoreDamageCore

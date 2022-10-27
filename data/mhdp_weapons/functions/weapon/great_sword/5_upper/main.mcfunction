@@ -16,7 +16,10 @@
 
 # 移動速度低下
     execute if entity @s[scores={MhdpWeaponTimer=1..15}] run effect give @s slowness 1 5 true
-    execute if entity @s[scores={MhdpWeaponTimer=1..15}] run effect give @s jump_boost 1 128 true
+    execute if entity @s[scores={MhdpWeaponTimer=1}] run effect give @s jump_boost 1 128 true
+
+# ステップ回避ロック解除
+    execute if entity @s[scores={MhdpWeaponTimer=20}] run tag @s remove PlySneakAvoidLock
 
 # 終了
     execute if entity @s[scores={MhdpWeaponTimer=35..}] run function mhdp_weapons:weapon/great_sword/5_upper/end
@@ -27,3 +30,5 @@
         execute if entity @s[tag=RClicked,scores={MhdpWeaponTimer=21..}] run function mhdp_weapons:weapon/great_sword/5_upper/change_sweep
     # 右クリック中の場合，溜め斬りに移行
         execute if entity @s[tag=PlyUsingEyeCurrent,tag=!RClicked,scores={MhdpWeaponTimer=25..}] run function mhdp_weapons:weapon/great_sword/5_upper/change_charge
+    # ジャンプ時，ステップ回避に移行
+        execute if entity @s[scores={MhdpJump=1..,MhdpWeaponTimer=20..}] run function mhdp_core:player/sneak/avoid/start_
