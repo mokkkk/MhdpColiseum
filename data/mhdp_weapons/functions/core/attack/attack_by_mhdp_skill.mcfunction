@@ -4,6 +4,9 @@
 # mhdp_temp_damage_multiply：物理ダメージ倍率
 # mhdp_temp_damage_multiply_element：属性ダメージ倍率
 
+# 最も近くのスライムのみ対象とする
+    tag @e[type=slime,tag=Targets,limit=1,sort=nearest] add Victim
+
 # mhdp側データ取得
     # 攻撃側ステータス
         execute store result score #mhdp_temp_atk_damage MhdpCore run data get storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].PlayerData.Item.MainWeapon.tag.Status.AtkDamage 100
@@ -62,6 +65,7 @@
         execute if entity @s[tag=Critical] run function mhdp_weapons:core/attack/effect/crit
 
 # 終了
+# モンスターの物理肉質のみ，後の処理で使う可能性があるので残しておく
     tag @s remove Critical
     scoreboard players reset #mhdp_temp_health
     scoreboard players reset #mhdp_temp_multiply
@@ -71,7 +75,8 @@
     scoreboard players reset #mhdp_temp_atk_damage
     scoreboard players reset #mhdp_temp_element_type
     scoreboard players reset #mhdp_temp_element_damage
-    scoreboard players reset #mhdp_temp_def
+    # scoreboard players reset #mhdp_temp_def
     scoreboard players reset #mhdp_temp_element_def
     scoreboard players reset #mhdp_temp_rand
     scoreboard players reset #mhdp_temp_crit
+    tag @e[type=slime,tag=Victim] remove Victim

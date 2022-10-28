@@ -18,6 +18,9 @@
 # プレイヤーの武器をリセット
     execute as @a run function mhdp_core:phase/4_quest_cleared/back_home/setup/weapon
 
+# プレイヤーの防具をリセット
+    execute as @a run function mhdp_core:phase/4_quest_cleared/back_home/setup/armor
+    
 # プレイヤーの特殊装具をリセット
     function mhdp_core:phase/4_quest_cleared/back_home/setup/item
 
@@ -25,6 +28,9 @@
     tp @a 266 63 204
     spawnpoint @a 266 63 204
 
+# 中心点削除
+    kill @e[type=marker,tag=CenterPos]
+    
 # forceload解除
     # 大闘技場
     # -138 70 55 to -6 70 153
