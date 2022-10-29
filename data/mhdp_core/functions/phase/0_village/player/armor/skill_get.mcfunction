@@ -17,5 +17,3 @@
 
 # データが残っている限り繰り返す
     execute if data storage mhdp_core:temp Temp.Skills[0] run function mhdp_core:phase/0_village/player/armor/skill_get
-
-say 取得

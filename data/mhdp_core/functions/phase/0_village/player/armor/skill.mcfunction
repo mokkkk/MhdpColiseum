@@ -2,6 +2,10 @@
 #
 # プレイヤー装備中の防具のスキルレベルを計算
 
+# スキル進捗リセット
+    advancement revoke @s from mhdp_core:skills/root
+    advancement grant @s only mhdp_core:skills/root
+
 # 処理用スコア定義
     scoreboard objectives add SkillLv dummy
 
