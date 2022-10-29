@@ -22,5 +22,3 @@
 
 # 終了
     scoreboard players reset #mhdp_temp_armor
-
-say 防具データ更新 in mhdp_core:phase/0_village/player/armor/

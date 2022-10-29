@@ -6,9 +6,6 @@
     advancement revoke @s from mhdp_core:skills/root
     advancement grant @s only mhdp_core:skills/root
 
-# 処理用スコア定義
-    scoreboard objectives add SkillLv dummy
-
 # データ取得
     execute if data storage mhdp_core:temp Temp.Skills[0] run function mhdp_core:phase/0_village/player/armor/skill_get
 

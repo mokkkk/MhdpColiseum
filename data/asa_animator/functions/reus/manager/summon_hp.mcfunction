@@ -64,3 +64,13 @@
 
 # 終了
     scoreboard players reset #mhdp_const_temp
+
+# 報酬準備
+    loot insert 152 89 156 loot mhdp_core:bonus/reus
+    loot insert 152 89 156 loot mhdp_core:bonus/reus
+    loot insert 152 89 156 loot mhdp_core:bonus/reus
+    execute if predicate asa_animator:random/050 run loot insert 152 89 156 loot mhdp_core:bonus/reus
+    execute if predicate asa_animator:random/050 run loot insert 152 89 156 loot mhdp_core:bonus/reus
+    execute if predicate asa_animator:random/050 run loot insert 152 89 156 loot mhdp_core:bonus/reus
+    execute if predicate asa_animator:random/050 run loot insert 152 89 156 loot mhdp_core:bonus/reus
+    execute if predicate asa_animator:random/050 run loot insert 152 89 156 loot mhdp_core:bonus/reus

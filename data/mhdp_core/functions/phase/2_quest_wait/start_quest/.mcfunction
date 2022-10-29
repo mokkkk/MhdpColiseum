@@ -10,7 +10,7 @@
     kill @e[type=item,nbt={Item:{tag:{MhdpWeapon:1b}}}]
     function mhdp_core:phase/2_quest_wait/prepare/pick_item
 
-# クエスト独自処理実行
+# クエストデータ初期化処理実行
     function mhdp_core:phase/2_quest_wait/start_quest/quests/
 
 # Phase変更

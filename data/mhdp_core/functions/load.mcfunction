@@ -23,6 +23,7 @@
         scoreboard objectives add MhdpFuncSneakAvoid dummy
 
     # プレイヤー防具用
+        scoreboard objectives add SkillLv dummy
         scoreboard objectives add MhdpPlayerDefence dummy
         scoreboard objectives add MhdpPlayerResistFire dummy
         scoreboard objectives add MhdpPlayerResistWater dummy
@@ -69,6 +70,9 @@
 # item置き換え用
     forceload add -1 -1 1 1
     setblock 0 0 0 lime_shulker_box
+
+# クエストデータ初期化
+    # function mhdp_core:init/quest_data
 
 # モンスター肉質初期化
     function mhdp_core:init/monster

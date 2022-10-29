@@ -10,7 +10,8 @@
     execute if data storage mhdp: {ExistMonster:1b} run tellraw @a {"text": "【エラー：既に火竜が存在するため，召喚できません】"}
 
 # ID割り当て
-    scoreboard players operation @e[type=armor_stand,tag=ReusRoot,limit=1] MhdpCore = #mhdp_id_temp MhdpCore
+    scoreboard players operation @e[type=armor_stand,tag=ReusRoot] MhdpCore = #mhdp_id_temp MhdpCore
+    tp @e[type=armor_stand,tag=ReusRoot,limit=1] ~ ~ ~
 
 # 終了
     data modify storage mhdp: ExistMonster set value 0b
