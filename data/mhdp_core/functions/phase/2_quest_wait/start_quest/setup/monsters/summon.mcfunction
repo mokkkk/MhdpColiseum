@@ -4,3 +4,6 @@
 
 # 火竜
     execute if data storage mhdp_core:temp {Temp:"Reus"} run function asa_animator:reus/manager/summon
+
+# 角竜
+    execute if data storage mhdp_core:temp {Temp:"Diablos"} run function asa_animator:diablos/manager/summon

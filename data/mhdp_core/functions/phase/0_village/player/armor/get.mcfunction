@@ -17,6 +17,9 @@
 # 靴
     function mhdp_core:phase/0_village/player/armor/get_feet
 
+# スキル計算
+    function mhdp_core:phase/0_village/player/armor/skill
+
 # 終了
     scoreboard players reset #mhdp_temp_armor
 

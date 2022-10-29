@@ -25,7 +25,6 @@
     scoreboard players operation @s MhdpPlayerResistDragon += #mhdp_temp_armor MhdpCore
 
 # スキル値取得
-    # To Do
-
-# 終了
-    advancement revoke @s only mhdp_core:player/inventory_changed/head_leather
+    execute if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].PlayerData.Item.Armor.Legs.tag.Status.Skills[0] run data modify storage mhdp_core:temp Temp.Skills append from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].PlayerData.Item.Armor.Legs.tag.Status.Skills[0]
+    execute if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].PlayerData.Item.Armor.Legs.tag.Status.Skills[1] run data modify storage mhdp_core:temp Temp.Skills append from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].PlayerData.Item.Armor.Legs.tag.Status.Skills[1]
+    execute if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].PlayerData.Item.Armor.Legs.tag.Status.Skills[2] run data modify storage mhdp_core:temp Temp.Skills append from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].PlayerData.Item.Armor.Legs.tag.Status.Skills[2]
