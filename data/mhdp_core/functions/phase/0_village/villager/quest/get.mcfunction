@@ -11,5 +11,3 @@
 
 # データが残っているなら繰り返す
     execute if data storage mhdp_core:temp Temp.QuestList[0] run function mhdp_core:phase/0_village/villager/quest/get
-
-say 取り出し

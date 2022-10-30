@@ -3,6 +3,7 @@
 # 村人の配置処理 クエスト出発確認用
 
 # 既存の村人削除
+    tp @e[type=villager,tag=VlgBell] ~ 0 ~
     kill @e[type=villager,tag=VlgBell]
 
 # 召喚
