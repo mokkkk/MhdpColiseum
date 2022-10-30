@@ -13,7 +13,7 @@
     effect give @a saturation 1 10 true
 
 # テキスト表示
-    execute if score #mhdp_quest_timer MhdpCore matches 21 run tellraw @a {"text": "【クエストに失敗しました】"}
+    execute if score #mhdp_quest_timer MhdpCore matches 61 run tellraw @a {"text": "【クエストに失敗しました】"}
 
 # 20秒後に拠点に帰還
-    execute if score #mhdp_quest_timer MhdpCore matches 120.. run function mhdp_core:phase/5_quest_failed/back_home/
+    execute if score #mhdp_quest_timer MhdpCore matches 180.. run function mhdp_core:phase/5_quest_failed/back_home/

@@ -18,6 +18,8 @@
      tag @s remove WpnGswordCharge1
      tag @s remove WpnGswordCharge2
      tag @s remove WpnGswordCharge3
+     tag @s remove HitStopNormal
+     tag @s remove HitStopLong
 
 # ステップ回避ロック解除
      tag @s remove PlySneakAvoidLock

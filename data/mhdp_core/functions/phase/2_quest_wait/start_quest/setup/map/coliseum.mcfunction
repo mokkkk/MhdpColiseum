@@ -6,5 +6,8 @@
     # -138 70 55 to -6 70 153
     execute positioned -138 70 55 run forceload add ~ ~ 132 98
 
+# 中心点設置
+    schedule function mhdp_core:phase/2_quest_wait/start_quest/setup/map/coliseum_center 10t
+
 # 移動
     tp @a 221 66 141

@@ -13,4 +13,7 @@
 # 初期化フラグ追加
     tag @s add AlreadyInitMob
 
+# Mhdp用
+    function asa_animator:general/give_uid
+
 say init

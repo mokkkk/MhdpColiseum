@@ -5,9 +5,6 @@
 # タグ消去
     tag @s remove WpnBowShot
 
-# 集中力が負の値の場合，0に戻す
-    execute if entity @s[scores={MhdpWeaponExt=..-1}] run scoreboard players set @s MhdpWeaponExt 0
-
 # attribute設定
     item modify entity @s weapon.mainhand mhdp_core:const/bow/while_animation
 

@@ -7,3 +7,6 @@
 
 # 火竜
     execute if entity @s[tag=ReusBreath] run function asa_animator:reus/anim/breath/events/main_bullet
+
+# 角竜
+    execute if entity @s[tag=DiablosTailShot] run function asa_animator:diablos/anim/tail_shot/events/shot/main_bullet

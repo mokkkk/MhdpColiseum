@@ -7,3 +7,6 @@
 
 # クエスト受付
     function mhdp_core:phase/0_village/villager/quest/
+
+# ベル
+    function mhdp_core:phase/0_village/villager/departure/

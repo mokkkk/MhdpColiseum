@@ -1,0 +1,13 @@
+[
+  {
+    "function": "minecraft:set_count",
+    "count": {
+      "type": "minecraft:score",
+      "target": {
+        "type": "minecraft:fixed",
+        "name": "#mhdp_temp_emerald"
+      },
+      "score": "MhdpCore"
+    }
+  }
+]

@@ -14,6 +14,8 @@
 
 # ステップ回避ロック解除
     tag @s remove PlySneakAvoidLock
+    effect clear @s jump_boost
+    effect clear @s speed
 
 # 終了
     scoreboard players reset #mhdp_temp_cmd

@@ -1,4 +1,4 @@
-#> score_damage:core/init
+#> score_damage_mhdp:core/init
 #
 # スコアボードを用意する
 #
@@ -31,6 +31,7 @@ scoreboard players set $5 ScoreDamageCore 5
 scoreboard players set $10 ScoreDamageCore 10
 scoreboard players set $20 ScoreDamageCore 20
 scoreboard players set $25 ScoreDamageCore 25
+scoreboard players set $80 ScoreDamageCore 80
 scoreboard players set $100 ScoreDamageCore 100
 scoreboard players set $2000 ScoreDamageCore 2000
 scoreboard players set $10000 ScoreDamageCore 10000

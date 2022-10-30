@@ -12,9 +12,6 @@
 # 汎用武器の場合
     # execute if entity @s[tag=!PlyWeaponDrawing] run function mhdp_weapons:core/attack/attack_by_sword
 
-# テスト
-    # execute as @e[tag=Victim] at @s run function mhdp_core:monster/damage/
-
 # 終了
     tag @e[type=#lib:living,type=!player,tag=AttackedEntity] remove Victim
     tag @e[type=#lib:living,type=!player,tag=AttackedEntity] remove AttackedEntity

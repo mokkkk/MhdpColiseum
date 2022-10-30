@@ -10,7 +10,7 @@
 
 # mhdp側データ取得
     # 攻撃側属性
-        execute store result score #mhdp_element_temp MhdpCore run data get storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].PlayerData.Item.MainWeapon.Status.ElementType
+        execute store result score #mhdp_element_temp MhdpCore run data get storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].PlayerData.Item.MainWeapon.tag.Status.ElementType
     # 防御側耐性
     # 物理：#mhdp_temp_def
     # 属性：#mhdp_temp_element_def

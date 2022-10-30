@@ -6,10 +6,6 @@
 # 抜刀中確認
     execute if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].PlayerData.Item.MainHand.tag{MhdpWeapon:1b} run tag @s add IsDrawing
 
-# 集中力ゲージ回復
-    execute if entity @s[tag=!WpnBowCharge,tag=!WpnBowShot,tag=!WpnBowHShot,tag=!WpnBowCStep,scores={MhdpWeaponExt=..599}] run scoreboard players add @s MhdpWeaponExt 10
-    execute if entity @s[tag=!WpnBowCharge,tag=!WpnBowShot,tag=!WpnBowHShot,tag=!WpnBowCStep,scores={MhdpWeaponExt=601..}] run scoreboard players set @s MhdpWeaponExt 600
-    # scoreboard players set @s MhdpWeaponExt 600
-
-# UI表示
-    execute as @a run title @s actionbar {"score":{"name":"@s","objective":"MhdpWeaponExt"},"color":"black"}
+# スタミナ回復
+    execute if entity @s[tag=!PlyStaminaNotRegen,tag=!WpnBowCharge,tag=!WpnBowShot,tag=!WpnBowHShot,tag=!WpnBowCStep,scores={MhdpStamina=..999}] run scoreboard players add @s MhdpStamina 6
+    execute if entity @s[tag=!WpnBowCharge,tag=!WpnBowShot,tag=!WpnBowHShot,tag=!WpnBowCStep,scores={MhdpStamina=1001..}] run scoreboard players set @s MhdpStamina 1000

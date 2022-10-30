@@ -3,4 +3,7 @@
 # Phase1_クエスト受注 クエスト開始処理 モンスター召喚 分岐
 
 # 火竜
-    execute if data storage mhdp_core:temp {Temp:"Reus"} run function asa_animator:reus/manager/summon
+    execute if data storage mhdp_core:temp Temp{Name:"Reus"} run function asa_animator:reus/manager/summon
+
+# 角竜
+    execute if data storage mhdp_core:temp Temp{Name:"Diablos"} run function asa_animator:diablos/manager/summon

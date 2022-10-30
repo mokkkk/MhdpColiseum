@@ -10,8 +10,15 @@
     execute as @a[sort=arbitrary] run function mhdp_core:phase/2_quest_wait/start_quest/setup/uid
     scoreboard players reset #mhdp_temp_uid
 
+# クエスト開始時刻保存
+    data modify storage mh_dp:status GameStatus.Quest.StartTime set from storage mh_dp:status Time
+    execute as @a run function mhdp_core:phase/2_quest_wait/start_quest/setup/player_time
+
 # プレイヤーの武器をオフハンドにセット
     execute as @a run function mhdp_core:phase/2_quest_wait/start_quest/setup/weapon
+
+# プレイヤーの防具を外せなくする
+    execute as @a run function mhdp_core:phase/2_quest_wait/start_quest/setup/armor
 
 # プレイヤーの特殊装具をstickからcarrot_on_a_stickに変更(TO DO)
     # function ...

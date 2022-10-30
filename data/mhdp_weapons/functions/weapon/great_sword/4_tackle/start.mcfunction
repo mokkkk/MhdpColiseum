@@ -29,8 +29,8 @@
 # 移動速度リセット
     effect clear @s speed
 
-# 満腹度消費
-    execute unless entity @s[tag=BltIce] run effect give @s hunger 1 120 true
+# スタミナ消費
+    scoreboard players remove @s MhdpStamina 200
 
 # 終了
     tag @e[type=marker,tag=SneakAvoidStand0,tag=Start] remove Start

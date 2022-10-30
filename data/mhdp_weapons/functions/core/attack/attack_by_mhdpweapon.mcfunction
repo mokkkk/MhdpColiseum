@@ -36,6 +36,18 @@
 # 武器に応じた独自処理
     function mhdp_weapons:core/attack/weapon
 
+# 武器種が弓以外の場合，切れ味更新
+    execute unless entity @s[tag=PlyWpnBow] run function mhdp_weapons:core/attack/sharpness/
+
+# 斬れ味補正適用
+    execute if entity @s[tag=!PlyWpnBow] run function mhdp_weapons:core/attack/sharpness/calc
+
+# 会心補正適用
+    execute store result score #mhdp_temp_crit MhdpCore run data get storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].PlayerData.Item.MainWeapon.tag.Status.Critical 100
+    function lib:random/
+    scoreboard players operation #mhdp_temp_rand MhdpCore %= #asam_const_100 AsaMatrix
+    execute if score #mhdp_temp_rand MhdpCore <= #mhdp_temp_crit MhdpCore run function mhdp_weapons:core/attack/crit/calc
+
 # デバッグ用
     execute if score #mhdp_temp_element_type MhdpCore matches 0 run tellraw @a [{"text":"物理："},{"score":{"name":"#mhdp_temp_damage","objective":"MhdpCore"}}]
     execute unless score #mhdp_temp_element_type MhdpCore matches 0 run tellraw @a [{"text":"物理："},{"score":{"name":"#mhdp_temp_damage","objective":"MhdpCore"}},{"text":"     属性："},{"score":{"name":"#mhdp_temp_element_damage","objective":"MhdpCore"}}]
@@ -49,10 +61,19 @@
 # デバッグ用
     execute unless score #mhdp_temp_element_type MhdpCore matches 0 run tellraw @a [{"text":"合計："},{"score":{"name":"#mhdp_temp_damage","objective":"MhdpCore"}}]
 
-# 武器種が弓以外の場合，切れ味更新
-    execute unless entity @s[tag=PlyWpnBow] run function mhdp_weapons:core/attack/sharpness
+# ダメージログ表示
+    # 肉質に応じて色を設定
+        scoreboard players set $Color Temporary 0
+        execute if score #mhdp_temp_def MhdpCore matches 70.. run scoreboard players set $Color Temporary 1
+    # 表示
+        scoreboard players operation $Fluctuation Lib = #mhdp_temp_damage MhdpCore
+        execute at @s positioned ~ ~1.65 ~ facing entity @e[tag=Victim,limit=1] feet positioned ^ ^ ^3 run function lib:status_log/show_health
+
+# ヒットエフェクト表示
+    execute positioned as @e[tag=Victim] run function mhdp_weapons:core/attack/effect/
 
 # 終了
+    tag @s remove Critical
     scoreboard players reset #mhdp_temp_health
     scoreboard players reset #mhdp_temp_multiply
     scoreboard players reset #mhdp_temp_damage
@@ -63,3 +84,5 @@
     scoreboard players reset #mhdp_temp_element_damage
     scoreboard players reset #mhdp_temp_def
     scoreboard players reset #mhdp_temp_element_def
+    scoreboard players reset #mhdp_temp_rand
+    scoreboard players reset #mhdp_temp_crit

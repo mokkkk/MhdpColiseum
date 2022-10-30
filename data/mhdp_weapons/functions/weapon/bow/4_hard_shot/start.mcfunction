@@ -17,8 +17,7 @@
     effect give @s slowness 2 3 true
 
 # 集中力消費
-    scoreboard players remove @s MhdpWeaponExt 60
-    execute if entity @s[scores={MhdpWeaponExt=..-1}] run scoreboard players set @s MhdpWeaponExt 0
+    scoreboard players remove @s MhdpStamina 100
 
 # 溜め段階に応じた矢を発射する
     function mhdp_weapons:weapon/bow/3_shot/attack

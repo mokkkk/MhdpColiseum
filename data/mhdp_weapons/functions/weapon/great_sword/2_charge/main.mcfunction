@@ -25,4 +25,4 @@
     # 右クリックを解除したとき，溜め斬りに移行
         execute if entity @s[tag=!PlyUsingEyeCurrent,scores={MhdpWeaponTimer=10..}] run function mhdp_weapons:weapon/great_sword/2_charge/change_charge_attack
     # ジャンプしたとき，タックルに移行
-        execute if entity @s[scores={MhdpJump=1..,MhdpWeaponTimer=10..}] run function mhdp_weapons:weapon/great_sword/2_charge/change_tackle
+        execute if entity @s[scores={MhdpJump=1..,MhdpWeaponTimer=10..,MhdpStamina=1..}] run function mhdp_weapons:weapon/great_sword/2_charge/change_tackle

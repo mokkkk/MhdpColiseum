@@ -12,13 +12,17 @@
 
 # 部位特定
     # 配列コピー
-        data modify storage array_util: Array set from storage array_util: Array[-1]
+        data modify storage mhdp_core:temp Temp.Array set from storage array_util: Array[-1]
+        function array_util:api/revert
+        data modify storage array_util: Array set from storage mhdp_core:temp Temp.Array
     # 目標の添字を設定
         scoreboard players operation $Move ArrayUtilInput = @s MhdpPartsIndex
     # 移動
         function array_util:api/move
     # 配列コピー
-        data modify storage array_util: Array set from storage array_util: Array[-1]
+        data modify storage mhdp_core:temp Temp.Array set from storage array_util: Array[-1]
+        function array_util:api/revert
+        data modify storage array_util: Array set from storage mhdp_core:temp Temp.Array
 
 # 物理肉質
     execute store result score #mhdp_temp_def MhdpCore run data get storage array_util: Array[0]
@@ -30,3 +34,6 @@
         function array_util:api/move
     # 取得
         execute store result score #mhdp_temp_element_def MhdpCore run data get storage array_util: Array[-1]
+    # 終了
+        function array_util:api/revert
+        data remove storage array_util: Array

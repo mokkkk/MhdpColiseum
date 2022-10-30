@@ -1,0 +1,16 @@
+{
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:player_interacted_with_entity",
+      "conditions": {
+        "entity": {
+          "type": "minecraft:villager",
+          "nbt": "{Tags:[\"VlgBell\"]}"
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "mhdp_core:phase/1_quest_received/departure/"
+  }
+}

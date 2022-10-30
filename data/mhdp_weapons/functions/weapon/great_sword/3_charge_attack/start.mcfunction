@@ -14,7 +14,6 @@
 
 # 移動速度低下
     effect clear @s speed
-    effect give @s slowness 2 5 true
 
 # 武器ステータス変更
     data modify storage mhdp_core:temp Temp set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].PlayerData.Item.MainWeapon.tag

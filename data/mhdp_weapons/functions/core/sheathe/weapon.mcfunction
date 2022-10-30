@@ -7,6 +7,8 @@
         tag @s remove PlyDrawAttack
     # 右クリック保存タグ消去
         tag @s remove RClicked
+    # ヒットストップ用タグ消去
+        tag @s remove AttackHit
 
 # 1：弓
     execute if entity @s[tag=PlyWpnBow] run function mhdp_weapons:weapon/bow/98_sheathe/

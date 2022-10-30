@@ -50,7 +50,7 @@
     #declare objective MhdpTSneakInterval プレイヤー連続スニーク検知用
     #declare objective MhdpFuncSneakAvoid ステップ回避実行用
 
-    #declare objective MhdpWeaponExt 武器の特殊ゲージ管理用
+    #declare objective MhdpStamina 武器の特殊ゲージ管理用
     #declare objective MhdpWeaponCharge 武器の溜め攻撃管理用
     #declare objective MhdpWeaponTimer 武器の行動タイマー
     #declare objective MhdpWeaponDeactivateTimer 武器の行動未受付時間
