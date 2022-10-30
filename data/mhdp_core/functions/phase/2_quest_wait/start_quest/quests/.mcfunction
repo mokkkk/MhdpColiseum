@@ -47,6 +47,7 @@
 
 # 終了
     scoreboard players reset #mhdp_temp_emerald
+    function array_util:api/force_delete_cache
 
 # # 000 - テスト用クエスト
 #     execute if score #mhdp_quest_id MhdpCore matches 0 run function mhdp_core:phase/2_quest_wait/start_quest/quests/000
