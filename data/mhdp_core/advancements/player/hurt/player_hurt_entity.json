@@ -10,5 +10,8 @@
         }
       }
     }
+  },
+  "rewards": {
+    "function": "mhdp_core:player/advancements/hurt/player_hurt_entity"
   }
 }

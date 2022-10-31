@@ -21,9 +21,8 @@
     tag @s remove PlyJumpping
 
 # 進捗状況リセット
-    advancement revoke @s only mhdp_core:player/villager_trade/quest_normal
-    advancement revoke @s only mhdp_core:player/inventory_changed/main
-    advancement revoke @s only mhdp_core:player/inventory_changed/off
-    advancement revoke @s only mhdp_core:player/inventory_changed/other
-    advancement revoke @s only mhdp_core:player/hurt/entity_hurt_player
-    advancement revoke @s only mhdp_core:player/hurt/player_hurt_entity
+    execute if entity @s[tag=AdvTradeQuestNormal] run tag @s remove AdvTradeQuestNormal
+    execute if entity @s[tag=AdvInventoryChangedMain] run tag @s remove AdvInventoryChangedMain
+    execute if entity @s[tag=AdvInventoryChangedOff] run tag @s remove AdvInventoryChangedOff
+    execute if entity @s[tag=AdvInventoryChangedOther] run tag @s remove AdvInventoryChangedOther
+    execute if entity @s[tag=AdvPlayerHurtEntity] run tag @s remove AdvPlayerHurtEntity

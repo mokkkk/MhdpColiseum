@@ -6,10 +6,10 @@
     function mhdp_core:player/pre
 
 # クエスト受注処理（村のみ）
-    execute if entity @s[tag=!PlyQuest,advancements={mhdp_core:player/villager_trade/quest_normal=true}] run function mhdp_core:phase/0_village/receive_quest/normal
+    execute if entity @s[tag=!PlyQuest,tag=AdvTradeQuestNormal] run function mhdp_core:phase/0_village/receive_quest/normal
 
 # 防具取得処理（村のみ）
-    execute if entity @s[tag=!PlyQuest,advancements={mhdp_core:player/inventory_changed/armors=true}] run function mhdp_core:phase/0_village/player/armor/
+    execute if entity @s[tag=!PlyQuest,tag=AdvInventoryChangedArmor] run function mhdp_core:phase/0_village/player/armor/
 
 # MhdpWeapons処理（クエスト中のみ）
     execute if entity @s[tag=PlyQuest] run function mhdp_weapons:tick/

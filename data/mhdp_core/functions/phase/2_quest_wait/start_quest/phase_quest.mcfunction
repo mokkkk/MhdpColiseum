@@ -31,9 +31,9 @@
     tag @a add PlyQuest
 
 # 開始前にadvancementを除去
-    advancement revoke @s only mhdp_core:player/inventory_changed/main
-    advancement revoke @s only mhdp_core:player/inventory_changed/off
-    advancement revoke @s only mhdp_core:player/inventory_changed/other
+    execute if entity @s[tag=AdvInventoryChangedMain] run tag @s remove AdvInventoryChangedMain
+    execute if entity @s[tag=AdvInventoryChangedOff] run tag @s remove AdvInventoryChangedOff
+    execute if entity @s[tag=AdvInventoryChangedOther] run tag @s remove AdvInventoryChangedOther
 
 # Phase変更
     data modify storage mh_dp:status GameStatus.Phase set value 3

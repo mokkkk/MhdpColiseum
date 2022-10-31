@@ -4,3 +4,6 @@
 
 # 体力が0以下の場合，死亡とみなしてfunction実行
     execute if entity @s[nbt={Health:0.0f}] run function mhdp_core:player/death/advancements
+
+# 終了
+    advancement revoke @s only mhdp_core:player/hurt/entity_hurt_player
