@@ -11,14 +11,8 @@
 # 防具取得処理（村のみ）
     execute if entity @s[tag=!PlyQuest,tag=AdvInventoryChangedArmor] run function mhdp_core:phase/0_village/player/armor/
 
-# MhdpWeapons処理（クエスト中のみ）
-    execute if entity @s[tag=PlyQuest] run function mhdp_weapons:tick/
-
-# ジャンプ時処理（クエスト中のみ）
-    execute if entity @s[tag=PlyQuest,scores={MhdpJump=1..}] run function mhdp_core:player/jump/
-
-# 属性やられ処理（クエスト中のみ）
-    execute if entity @s[tag=PlyQuest] run function mhdp_core:player/blight/
+# クエスト中処理
+    execute if entity @s[tag=PlyQuest] run function mhdp_core:player/quest/
 
 # 移動回避処理
     execute if entity @s[tag=!PlySneakAvoidLock,tag=PlySneakAvoidFunc] run function mhdp_core:player/sneak/avoid/main

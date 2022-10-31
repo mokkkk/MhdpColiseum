@@ -26,3 +26,4 @@
     execute if entity @s[tag=AdvInventoryChangedOff] run tag @s remove AdvInventoryChangedOff
     execute if entity @s[tag=AdvInventoryChangedOther] run tag @s remove AdvInventoryChangedOther
     execute if entity @s[tag=AdvPlayerHurtEntity] run tag @s remove AdvPlayerHurtEntity
+    execute if entity @s[tag=AdvUsingItemPotion] run tag @s remove AdvUsingItemPotion

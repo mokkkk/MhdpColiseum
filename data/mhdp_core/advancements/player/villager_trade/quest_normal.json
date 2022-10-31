@@ -14,6 +14,6 @@
     }
   },
   "rewards": {
-    "function": "mhdp_core:player/advancements/using_item/ender_eye"
+    "function": "mhdp_core:player/advancements/villager_trade/quest_normal"
   }
 }
