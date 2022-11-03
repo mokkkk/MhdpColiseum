@@ -19,6 +19,7 @@
         scoreboard objectives add MhdpTSneakInterval dummy
         scoreboard objectives add MhdpTDeathAnimation dummy
         scoreboard objectives add MhdpTUsingItem dummy
+        scoreboard objectives add MhdpTUsingCoasItem dummy
 
     # プレイヤー行動用
         scoreboard objectives add MhdpFuncSneakAvoid dummy

@@ -22,4 +22,3 @@
 
 # 終了
     execute if entity @s[tag=PlyUsingPotionEnd] run tag @s remove PlyUsingPotionEnd
-

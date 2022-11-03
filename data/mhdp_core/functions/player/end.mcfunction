@@ -4,21 +4,21 @@
 
 # ニンジン棒クリックリセット
     scoreboard players set @s MhdpUsedCoas 0
-    tag @s remove PlyUsedCoas
+    execute if entity @s[tag=PlyUsedCoas] run tag @s remove PlyUsedCoas
 
 # スニーク状態リセット
-    tag @s remove PlySneakStart
-    tag @s remove PlySneakEnd
-    tag @s remove PlySneakDouble
+    execute if entity @s[tag=PlySneakStart] run tag @s remove PlySneakStart
+    execute if entity @s[tag=PlySneakEnd] run tag @s remove PlySneakEnd
+    execute if entity @s[tag=PlySneakDouble] run tag @s remove PlySneakDouble
 
 # エンダーアイ使用状態リセット
     scoreboard players set @s MhdpDropEnderEye 0
-    tag @s remove PlyDroppedEnderEye
-    tag @s remove PlyUsingEyeStart
-    tag @s remove PlyUsingEyeEnd
+    execute if entity @s[tag=PlyDroppedEnderEye] run tag @s remove PlyDroppedEnderEye
+    execute if entity @s[tag=PlyUsingEyeStart] run tag @s remove PlyUsingEyeStart
+    execute if entity @s[tag=PlyUsingEyeEnd] run tag @s remove PlyUsingEyeEnd
 
 # 空中状態リセット
-    tag @s remove PlyJumpping
+    execute if entity @s[tag=PlyJumpping] run tag @s remove PlyJumpping
 
 # 進捗状況リセット
     execute if entity @s[tag=AdvTradeQuestNormal] run tag @s remove AdvTradeQuestNormal

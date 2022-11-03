@@ -32,15 +32,19 @@
         scoreboard players operation $Damage ScoreDamageCore *= $CalcDefA ScoreDamageCore
         scoreboard players operation $Damage ScoreDamageCore /= $100 ScoreDamageCore
     # 属性 = Res / 100
-        scoreboard players set $CaldResA ScoreDamageCore 0
-        execute if data storage mhdp_core:temp Temp.Damage{Type:1} run scoreboard players operation $CaldResA ScoreDamageCore = @s MhdpPlayerResistFire
-        execute if data storage mhdp_core:temp Temp.Damage{Type:2} run scoreboard players operation $CaldResA ScoreDamageCore = @s MhdpPlayerResistWater
-        execute if data storage mhdp_core:temp Temp.Damage{Type:3} run scoreboard players operation $CaldResA ScoreDamageCore = @s MhdpPlayerResistThunder
-        execute if data storage mhdp_core:temp Temp.Damage{Type:4} run scoreboard players operation $CaldResA ScoreDamageCore = @s MhdpPlayerResistIce
-        execute if data storage mhdp_core:temp Temp.Damage{Type:5} run scoreboard players operation $CaldResA ScoreDamageCore = @s MhdpPlayerResistDragon
-        scoreboard players operation $CaldResB ScoreDamageCore = $100 ScoreDamageCore
-        scoreboard players operation $CaldResB ScoreDamageCore -= $CalcDefA ScoreDamageCore
-        scoreboard players operation $Damage ScoreDamageCore *= $CaldResB ScoreDamageCore
+        scoreboard players set $CalcResA ScoreDamageCore 0
+        tellraw @a [{"text":"$CalcResA_0："},{"score":{"name":"$CalcResA","objective":"ScoreDamageCore"}}]
+        execute if data storage mhdp_core:temp Temp.Damage{Type:1} run scoreboard players operation $CalcResA ScoreDamageCore = @s MhdpPlayerResistFire
+        execute if data storage mhdp_core:temp Temp.Damage{Type:2} run scoreboard players operation $CalcResA ScoreDamageCore = @s MhdpPlayerResistWater
+        execute if data storage mhdp_core:temp Temp.Damage{Type:3} run scoreboard players operation $CalcResA ScoreDamageCore = @s MhdpPlayerResistThunder
+        execute if data storage mhdp_core:temp Temp.Damage{Type:4} run scoreboard players operation $CalcResA ScoreDamageCore = @s MhdpPlayerResistIce
+        execute if data storage mhdp_core:temp Temp.Damage{Type:5} run scoreboard players operation $CalcResA ScoreDamageCore = @s MhdpPlayerResistDragon
+        tellraw @a [{"text":"$CalcResA_1："},{"score":{"name":"$CalcResA","objective":"ScoreDamageCore"}}]
+        scoreboard players operation $CalcResB ScoreDamageCore = $100 ScoreDamageCore
+        tellraw @a [{"text":"$CalcResB_0："},{"score":{"name":"$CalcResB","objective":"ScoreDamageCore"}}]
+        scoreboard players operation $CalcResB ScoreDamageCore -= $CalcResA ScoreDamageCore
+        tellraw @a [{"text":"$CalcResB_1："},{"score":{"name":"$CalcResB","objective":"ScoreDamageCore"}}]
+        scoreboard players operation $Damage ScoreDamageCore *= $CalcResB ScoreDamageCore
         scoreboard players operation $Damage ScoreDamageCore /= $100 ScoreDamageCore
     
 # Reset
@@ -50,5 +54,5 @@
     scoreboard players reset $EPF ScoreDamageCore
     scoreboard players reset $CalcDefA ScoreDamageCore
     scoreboard players reset $CalcDefB ScoreDamageCore
-    scoreboard players reset $CaldResA ScoreDamageCore
-    scoreboard players reset $CaldResB ScoreDamageCore
+    scoreboard players reset $CalcResA ScoreDamageCore
+    scoreboard players reset $CalcResB ScoreDamageCore
