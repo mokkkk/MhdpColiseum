@@ -28,3 +28,6 @@
     execute if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].PlayerData.Item.Armor.Head.tag.Status.Skills[0] run data modify storage mhdp_core:temp Temp.Skills append from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].PlayerData.Item.Armor.Head.tag.Status.Skills[0]
     execute if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].PlayerData.Item.Armor.Head.tag.Status.Skills[1] run data modify storage mhdp_core:temp Temp.Skills append from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].PlayerData.Item.Armor.Head.tag.Status.Skills[1]
     execute if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].PlayerData.Item.Armor.Head.tag.Status.Skills[2] run data modify storage mhdp_core:temp Temp.Skills append from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].PlayerData.Item.Armor.Head.tag.Status.Skills[2]
+
+# タグ取得
+    execute if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].PlayerData.Item.Armor.Head.tag run tag @s add PlyEquipArmorHead
