@@ -41,6 +41,9 @@
     # 2：大剣
         execute if data storage mhdp_core:temp Temp.Status{WeaponType:2} run tag @s add PlyWpnGsword
 
+# アイテム用
+    tag @s remove ItmCoasCancel
+
 # 終了
     data remove storage mhdp_core:temp Temp
     data remove storage mhdp_core:temp Temp2

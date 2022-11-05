@@ -12,3 +12,4 @@
 
 # 終了
     tag @s remove IsOffHand2
+    execute if entity @s[tag=PlyUsingCoasItem] run tag @s add ItmCoasCancel

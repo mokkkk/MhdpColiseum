@@ -4,5 +4,5 @@
 # １０１：砥石
 
 # エフェクト表示
-    particle crit ~ ~1.4 ~ 0.1 0.1 0.1 1 5
+    execute positioned ~ ~1.4 ~ run particle crit ^ ^ ^0.3 0.1 0.1 0.1 1 5
     playsound block.grindstone.use master @s ~ ~ ~ 1 2
