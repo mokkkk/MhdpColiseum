@@ -23,6 +23,7 @@
 
     # プレイヤー行動用
         scoreboard objectives add MhdpFuncSneakAvoid dummy
+        scoreboard objectives add MhdpPlayerUsingItemId dummy
 
     # プレイヤー防具用
         scoreboard objectives add SkillLv dummy

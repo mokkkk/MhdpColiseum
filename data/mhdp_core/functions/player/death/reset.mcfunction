@@ -23,5 +23,8 @@
      scoreboard players set @s MhdpBlightDragon 0
      effect clear @s
 
+# アイテム使用中断
+     tag @s add ItmCoasCancel
+
 # ターゲットタグ消去
     tag @s remove MnsTarget
