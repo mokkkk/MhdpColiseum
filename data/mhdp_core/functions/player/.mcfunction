@@ -14,11 +14,8 @@
 # クエスト中処理
     execute if entity @s[tag=PlyQuest] run function mhdp_core:player/quest/
 
-# 移動回避処理
-    execute if entity @s[tag=!PlySneakAvoidLock,tag=PlySneakAvoidFunc] run function mhdp_core:player/sneak/avoid/main
-
-# ノックバック処理実行
-    execute if entity @s[tag=MdhpKnockback] at @s facing entity @e[type=marker,tag=MhdpKnockbackPos] feet rotated ~ 0 run function mhdp_core:player/damage/knockback/
+# 自然回復
+    function mhdp_core:player/natural_regeneration/
 
 # 死亡時処理実行
     execute if entity @s[tag=PlyDead] run function mhdp_core:player/death/tick

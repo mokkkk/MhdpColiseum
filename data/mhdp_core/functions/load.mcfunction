@@ -15,6 +15,8 @@
 
     # プレイヤータイマー用
         scoreboard objectives add MhdpTDamage dummy
+        scoreboard objectives add MhdpTDamageInterval dummy
+        scoreboard objectives add MhdpTRegeneration dummy
         scoreboard objectives add MhdpTAvoid dummy
         scoreboard objectives add MhdpTSneakInterval dummy
         scoreboard objectives add MhdpTDeathAnimation dummy
