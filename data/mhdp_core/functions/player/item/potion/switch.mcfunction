@@ -8,6 +8,9 @@
 # １：回復薬
     execute if score #mhdp_temp_id MhdpCore matches 1 run function mhdp_core:player/item/potion/heal_normal/
 
+# ３：鬼人薬
+    execute if score #mhdp_temp_id MhdpCore matches 3 run function mhdp_core:player/item/potion/demondrug/
+
 # 終了
     scoreboard players reset #mhdp_temp_id MhdpCore
     scoreboard players set @s MhdpTUsingItem 0

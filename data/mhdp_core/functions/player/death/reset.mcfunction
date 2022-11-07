@@ -25,6 +25,7 @@
 
 # アイテム使用中断
      tag @s add ItmCoasCancel
+     tag @s remove ItmDemondrug
 
 # ターゲットタグ消去
     tag @s remove MnsTarget

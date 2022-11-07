@@ -17,6 +17,9 @@
     # 属性：#mhdp_temp_element_def
         execute as @e[tag=Victim,limit=1] run function mhdp_core:monster/damage/get
 
+# 補正値計算
+    function mhdp_weapons:core/attack/calc_item_skill
+
 # 物理ダメージ計算
     scoreboard players operation #mhdp_temp_atk_damage MhdpCore *= #mhdp_temp_damage_multiply MhdpCore
     execute store result score #mhdp_temp_damage MhdpCore run scoreboard players operation #mhdp_temp_atk_damage MhdpCore /= #asam_const_100 AsaMatrix
