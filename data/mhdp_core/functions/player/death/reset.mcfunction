@@ -24,8 +24,9 @@
      effect clear @s
 
 # アイテム使用中断
-     tag @s add ItmCoasCancel
+     tag @s remove ItmCoasCancel
      tag @s remove ItmDemondrug
+     tag @s remove ItmArmorskin
 
 # ターゲットタグ消去
     tag @s remove MnsTarget

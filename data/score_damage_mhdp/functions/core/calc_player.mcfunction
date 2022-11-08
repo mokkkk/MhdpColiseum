@@ -2,9 +2,16 @@
 #
 # 与えるダメージを計算します（MHDP用）
 
+# 防御力取得
+    scoreboard players operation $MhdpDef ScoreDamageCore = @s MhdpPlayerDefence
+
+# アイテム処理
+    # 硬化薬：+10
+        execute if entity @s[tag=ItmArmorskin] run scoreboard players add $MhdpDef ScoreDamageCore 10
+        scoreboard players operation #temp ScoreDamageCore = $MhdpDef ScoreDamageCore
+
 # 物理・属性防御力
-    # 物理 = 80 / (80 + Def) * 100
-        scoreboard players operation $MhdpDef ScoreDamageCore = @s MhdpPlayerDefence
+    # 物理 = 80 / (80 + Def) * 100 
         scoreboard players operation $CalcDefA ScoreDamageCore = $80 ScoreDamageCore
         scoreboard players operation $CalcDefA ScoreDamageCore *= $100 ScoreDamageCore
         scoreboard players operation $CalcDefB ScoreDamageCore = $80 ScoreDamageCore
