@@ -3,7 +3,7 @@
 # Phase1_クエスト受注 クエスト出発待機処理
 
 # 音を鳴らす
-    setblock 183 63 214 redstone_torch
+    setblock 223 62 206 redstone_torch
     schedule function mhdp_core:phase/1_quest_received/remove_torch 2t
 
 # クエスト出発確認
