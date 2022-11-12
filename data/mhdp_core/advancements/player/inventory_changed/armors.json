@@ -3,5 +3,8 @@
     "requirement": {
       "trigger": "minecraft:inventory_changed"
     }
+  },
+  "rewards": {
+    "function": "mhdp_core:player/advancements/inventory_changed/armors"
   }
 }

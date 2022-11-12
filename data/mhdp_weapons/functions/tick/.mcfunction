@@ -14,7 +14,7 @@
     function mhdp_weapons:ui/
 
 # 直接攻撃時処理
-    execute if entity @s[advancements={mhdp_core:player/hurt/player_hurt_entity=true}] run function mhdp_weapons:core/attack/
+    execute if entity @s[tag=AdvPlayerHurtEntity] run function mhdp_weapons:core/attack/
 
 # 武器メイン処理
     function mhdp_weapons:weapon/

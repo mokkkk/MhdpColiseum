@@ -18,6 +18,9 @@
     # 属性：#mhdp_temp_element_def
         execute as @e[tag=Victim,limit=1] run function mhdp_core:monster/damage/get
 
+# 補正値計算
+    function mhdp_weapons:core/attack/calc_item_skill
+
 # 実ダメージからダメージ倍率を計算 (想定ダメージ6.5)
     scoreboard players set #mhdp_temp_multiply MhdpCore 650
     scoreboard players operation #mhdp_temp_damage_multiply MhdpCore *= #asam_const_100 AsaMatrix

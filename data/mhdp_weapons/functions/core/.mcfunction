@@ -15,10 +15,10 @@
     execute if entity @s[tag=PlyDroppedEnderEye] run function mhdp_weapons:core/drop/
 
 # 通常抜刀
-    execute if entity @s[tag=!PlyWeaponDrawing,advancements={mhdp_core:player/inventory_changed/main=true}] run function mhdp_weapons:core/draw/
+    execute if entity @s[tag=!PlyWeaponDrawing,tag=AdvInventoryChangedMain] run function mhdp_weapons:core/draw/
 
 # 通常納刀（サブ武器なし）
-    execute if entity @s[tag=PlyWeaponDrawing,advancements={mhdp_core:player/inventory_changed/off=true}] run function mhdp_weapons:core/sheathe/
+    execute if entity @s[tag=PlyWeaponDrawing,tag=AdvInventoryChangedOff] run function mhdp_weapons:core/sheathe/
 
 # 強制納刀（武器がメインハンドにない）
     execute if entity @s[tag=PlyWeaponDrawing] unless data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].PlayerData.Item.MainHand.tag{MhdpWeapon:1b} unless data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].PlayerData.Item.OffHand.tag{MhdpWeapon:1b} run function mhdp_weapons:core/sheathe/force
@@ -35,6 +35,6 @@
     # execute if entity @s[tag=PlyUsingEyeEnd] run say エンダーアイ使用終了
 
 # 終了
-    advancement revoke @s only mhdp_core:player/inventory_changed/main
-    advancement revoke @s only mhdp_core:player/inventory_changed/off
-    advancement revoke @s only mhdp_core:player/inventory_changed/other
+    execute if entity @s[tag=AdvInventoryChangedMain] run tag @s remove AdvInventoryChangedMain
+    execute if entity @s[tag=AdvInventoryChangedOff] run tag @s remove AdvInventoryChangedOff
+    execute if entity @s[tag=AdvInventoryChangedOther] run tag @s remove AdvInventoryChangedOther

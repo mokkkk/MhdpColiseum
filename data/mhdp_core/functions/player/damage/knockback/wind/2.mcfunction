@@ -2,6 +2,9 @@
 #
 # プレイヤーノックバック開始処理
 
+# ガード確認
+    function mhdp_core:player/damage/knockback/wind/guard
+    
 # スキル確認
     execute if entity @s[tag=SklChamBlsLv2] run tag @s add NotKnockback
 

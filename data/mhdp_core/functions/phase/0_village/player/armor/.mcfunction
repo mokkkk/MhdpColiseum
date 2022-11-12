@@ -13,4 +13,4 @@
 
 # 終了
     tag @s remove Changed
-    advancement revoke @s only mhdp_core:player/inventory_changed/armors
+    tag @s remove AdvInventoryChangedArmor

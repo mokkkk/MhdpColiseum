@@ -15,6 +15,12 @@
     scoreboard players set @s MhdpPlayerResistIce 0
     scoreboard players set @s MhdpPlayerResistDragon 0
 
+# 装備状況タグリセット
+    tag @s remove PlyEquipArmorHead
+    tag @s remove PlyEquipArmorChest
+    tag @s remove PlyEquipArmorLegs
+    tag @s remove PlyEquipArmorFeet
+
 # スキル用タグリセット
     # 1：攻撃
         tag @s remove SklAttackUpLv1

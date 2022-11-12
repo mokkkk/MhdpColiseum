@@ -15,5 +15,8 @@
         }
       }
     }
+  },
+  "rewards": {
+    "function": "mhdp_core:player/advancements/inventory_changed/off"
   }
 }

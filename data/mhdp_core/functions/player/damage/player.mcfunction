@@ -5,19 +5,6 @@
 # ダメージ取得
     execute store result score #mhdp_temp_damage MhdpCore run data get storage mhdp_core:temp Temp.Damage.Damage 100
 
-# 属性防御力に応じてダメージ増減
-    # ......
-    # scoreboard players operation #mhdp_temp_damage MhdpCore /= #asam_const_100 AsaMatrix
-
-# 物理防御力に応じてダメージ増減
-    # ......
-    # scoreboard players operation #mhdp_temp_damage MhdpCore /= #asam_const_100 AsaMatrix
-
-# スキルに応じてダメージ軽減
-    # 精霊の加護
-        # LV1
-        # LV2
-
 # score_damage用の引数用意
     data modify storage score_damage: Argument set value {Damage:1.0f, BypassArmor:1b}
     execute store result storage score_damage: Argument.Damage float 0.01 run scoreboard players get #mhdp_temp_damage MhdpCore

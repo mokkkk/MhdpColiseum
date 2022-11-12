@@ -14,7 +14,7 @@
     execute if score #mhdp_quest_id MhdpCore matches 0.. run data modify storage mh_dp:status GameStatus.Phase set value 1
 
 # 終了
-    kill @e[type=item,limit=1,sort=nearest]
+    kill @e[type=item,nbt={Item:{tag:{MhdpQuest:1}}}]
     clear @s paper{MhdpQuest:1} 64
     scoreboard players reset #mhdp_temp_uses
     data remove storage mhdp_core:temp Temp

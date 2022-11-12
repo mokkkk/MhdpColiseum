@@ -45,12 +45,13 @@
         execute if entity @s[tag=BltFire] run scoreboard players remove @s MhdpBlightFire 160
 
 # スタミナ消費
-    execute if entity @s[tag=!SklConstitutionLv1,tag=!SklConstitutionLv2] run scoreboard players remove @s MhdpStamina 100
+    execute if entity @s[tag=!SklConstitutionLv1,tag=!SklConstitutionLv2] run scoreboard players remove @s MhdpStamina 200
     # スキル：体術
-        execute if entity @s[tag=SklConstitutionLv1] run scoreboard players remove @s MhdpStamina 90
-        execute if entity @s[tag=SklConstitutionLv2] run scoreboard players remove @s MhdpStamina 80
+        execute if entity @s[tag=SklConstitutionLv1] run scoreboard players remove @s MhdpStamina 180
+        execute if entity @s[tag=SklConstitutionLv2] run scoreboard players remove @s MhdpStamina 150
 
-# 武器リセット処理
+# 武器・アイテムリセット処理
+    tag @s add ItmCoasCancel
     execute if entity @s[tag=PlyWeaponDrawing] run function mhdp_weapons:core/reset/weapon
         
 # 終了

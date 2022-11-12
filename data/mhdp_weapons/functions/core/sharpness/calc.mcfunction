@@ -15,7 +15,7 @@
 
 # エラーメッセージ
     execute unless entity @s[tag=Decided] run tellraw @a {"text":"【エラー：切れ味が最大値を超えています】"}
-    execute unless entity @s[tag=Decided] run scoreboard players set #mhdp_temp_sharp_color AsaMatrix 6
+    execute unless entity @s[tag=Decided] run scoreboard players set #mhdp_temp_sharp_color MhdpCore 6
 
 # 終了
     tag @s remove Decided

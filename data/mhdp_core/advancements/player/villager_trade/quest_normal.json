@@ -12,5 +12,8 @@
         }
       }
     }
+  },
+  "rewards": {
+    "function": "mhdp_core:player/advancements/villager_trade/quest_normal"
   }
 }
