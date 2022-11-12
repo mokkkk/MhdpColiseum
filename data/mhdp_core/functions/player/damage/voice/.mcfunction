@@ -15,6 +15,16 @@
     execute if entity @s[scores={MhdpTAvoid=1..}] run function mhdp_core:player/damage/player_avoid
     execute if entity @s[scores={MhdpTDamage=1..}] run scoreboard players set #mhdp_temp_voice_res MhdpCore 3
 
+# ガード確認
+    execute if entity @s[tag=PlyWpnGsword,tag=WpnGswordGuard] run tag @s add PlyGuardSuccess
+
+# ガード成功時，演出
+    execute if entity @s[tag=PlyGuardSuccess] run playsound item.shield.block master @s ~ ~ ~ 1 1
+    execute if entity @s[tag=PlyGuardSuccess] run scoreboard players remove @s MhdpStamina 200
+    execute if entity @s[tag=PlyGuardSuccess] run function mhdp_core:player/damage/knockback/damage/0
+    execute if entity @s[tag=PlyGuardSuccess] run scoreboard players set #mhdp_temp_voice_res MhdpCore 3
+    execute if entity @s[tag=PlyGuardSuccess] run tag @s remove PlyGuardSuccess
+
 # 移動不可エフェクト付与
     execute if score #mhdp_temp_voice_lv MhdpCore > #mhdp_temp_voice_res MhdpCore at @s run summon area_effect_cloud ~ ~ ~ {Tags:["AecPoison"],Duration:6,Age:4,Effects:[{Id:2,Amplifier:10b,Duration:200,ShowParticles:0b},{Id:8,Amplifier:127b,Duration:1,ShowParticles:0b}]}
 # データ更新
