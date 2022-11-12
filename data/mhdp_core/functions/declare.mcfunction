@@ -23,6 +23,7 @@
     # クエスト・武器処理関連
         #declare tag PlyQuest クエスト中判定用タグ
         #declare tag PlyWpnBow 所持武器判定用タグ（弓）
+        #declare tag PlyWpnGsword 所持武器判定用タグ（大剣）
         #declare tag PlyWeaponDrawing プレイヤー武器抜刀中
         #declare tag PlyWeaponDrawingSub プレイヤーサブ武器抜刀中
         #declare tag PlyDrawAttack プレイヤー抜刀攻撃中

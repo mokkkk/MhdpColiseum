@@ -34,8 +34,9 @@
 # Healthを持つEntityであれば実行
     execute if data storage score_damage: Argument.Damage if entity @s[team=!Null,type=!armor_stand] run function score_damage_mhdp:core/attack
 # 属性やられ
-    execute if entity @s[type=player] if data storage mhdp_core:temp Temp.Damage{Blight:1b} if data storage mh_dp:status GameStatus{Phase:3} run function score_damage_mhdp:mh_dp/blight
+    execute if entity @s[type=player,tag=!PlyGuardSuccess] if data storage mhdp_core:temp Temp.Damage{Blight:1b} if data storage mh_dp:status GameStatus{Phase:3} run function score_damage_mhdp:mh_dp/blight
 # ノックパック
     execute if entity @s[type=player] run function mhdp_core:player/damage/knockback/damage/
 # 毒
-    execute if entity @s[type=player] if score #mhdp_temp_poison_time MhdpCore matches 1.. run function mhdp_core:player/damage/poison/
+    execute if entity @s[type=player,tag=!PlyGuardSuccess] if score #mhdp_temp_poison_time MhdpCore matches 1.. run function mhdp_core:player/damage/poison/
+    tag @s remove PlyGuardSuccess

@@ -21,7 +21,10 @@
     # $damage = $damage( * 100 * 100) * $CalcF( * 10) / 10
         scoreboard players operation $Damage ScoreDamageCore *= $CalcF ScoreDamageCore
 
-# MHDP処理
+# MHDPガード処理
+    execute if entity @s[type=player] run function score_damage_mhdp:core/calc_guard
+
+# MHDPステータス処理
     execute if entity @s[type=player] run function score_damage_mhdp:core/calc_player
     
 # Reset

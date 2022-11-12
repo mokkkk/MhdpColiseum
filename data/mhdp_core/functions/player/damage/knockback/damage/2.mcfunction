@@ -15,4 +15,4 @@
     scoreboard players set @s MhdpTKnockback 3
 
 # 武器の行動中断処理
-    function mhdp_weapons:core/interruption/
+    execute if entity @s[tag=!PlyGuardSuccess] run function mhdp_weapons:core/interruption/

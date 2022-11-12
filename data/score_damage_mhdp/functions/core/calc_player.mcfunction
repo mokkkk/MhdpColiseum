@@ -36,8 +36,23 @@
         # LV1
         # LV2
 
+# ガード成功時，ガード値に応じてダメージ軽減
+    execute if entity @s[tag=PlyGuardSuccess] if score $MhdpGuard ScoreDamageCore matches ..9 run scoreboard players set $CalcGuard ScoreDamageCore 90
+    execute if entity @s[tag=PlyGuardSuccess] if score $MhdpGuard ScoreDamageCore matches 10..19 run scoreboard players set $CalcGuard ScoreDamageCore 60
+    execute if entity @s[tag=PlyGuardSuccess] if score $MhdpGuard ScoreDamageCore matches 20..29 run scoreboard players set $CalcGuard ScoreDamageCore 30
+    execute if entity @s[tag=PlyGuardSuccess] if score $MhdpGuard ScoreDamageCore matches 30.. run scoreboard players set $CalcGuard ScoreDamageCore 10
+    execute if entity @s[tag=PlyGuardSuccess] run scoreboard players operation $Damage ScoreDamageCore *= $CalcGuard ScoreDamageCore
+    execute if entity @s[tag=PlyGuardSuccess] run scoreboard players operation $Damage ScoreDamageCore /= $100 ScoreDamageCore
+
+# 効果音再生
+    execute if entity @s[tag=!PlyArmorHyper,tag=!PlyGuardSuccess] at @s run playsound entity.player.hurt master @s ~ ~ ~ 1 1
+    execute if entity @s[tag=!PlyArmorHyper,tag=PlyGuardSuccess] at @s run playsound item.shield.block master @s ~ ~ ~ 1 1
+
 # Reset
     scoreboard players reset $CalcDefA ScoreDamageCore
     scoreboard players reset $CalcDefB ScoreDamageCore
     scoreboard players reset $CalcResA ScoreDamageCore
     scoreboard players reset $CalcResB ScoreDamageCore
+    scoreboard players reset $MhdpAttackGuard ScoreDamageCore
+    scoreboard players reset $MhdpGuard ScoreDamageCore
+    scoreboard players reset $CalcGuard ScoreDamageCore

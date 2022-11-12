@@ -8,6 +8,7 @@
 #declare tag WpnGswordTackle 大剣タックル中
 #declare tag WpnGswordUpper 大剣斬り上げ中
 #declare tag WpnGswordSweep 大剣薙ぎ払い中
+#declare tag WpnGswordGuard 大剣ガード中
 #declare tag WpnGswordCharge1 大剣溜め段階管理用
 #declare tag WpnGswordCharge2 大剣溜め段階管理用
 #declare tag WpnGswordCharge3 大剣溜め段階管理用
@@ -23,7 +24,7 @@
 # 立ち → 右クリック長押し
 # 切り上げ → 右クリック長押し
 # 薙ぎ払い → 右クリック長押し
-    execute if entity @s[tag=!PlyWeaponDeactivate,tag=IsDrawing,tag=!WpnGswordCharge,tag=!WpnGswordChargeAttack,tag=!WpnGswordTackle,tag=!WpnGswordUpper,tag=!WpnGswordSweep,tag=!PlySneakAvoidFunc,tag=PlyUsingEyeCurrent,tag=!PlySneakCurrent] run function mhdp_weapons:weapon/great_sword/2_charge/start
+    execute if entity @s[tag=!PlyWeaponDeactivate,tag=IsDrawing,tag=!WpnGswordCharge,tag=!WpnGswordChargeAttack,tag=!WpnGswordTackle,tag=!WpnGswordUpper,tag=!WpnGswordSweep,tag=!WpnGswordGuard,tag=!PlySneakAvoidFunc,tag=PlyUsingEyeCurrent,tag=!PlySneakCurrent] run function mhdp_weapons:weapon/great_sword/2_charge/start
     execute if entity @s[tag=IsDrawing,tag=WpnGswordCharge] run function mhdp_weapons:weapon/great_sword/2_charge/main
 
 ## 3_溜め斬り：
@@ -35,14 +36,19 @@
     execute if entity @s[tag=IsDrawing,tag=WpnGswordTackle] run function mhdp_weapons:weapon/great_sword/4_tackle/main
 
 ## 5_斬り上げ：
-# 立ち → スニーク+右クリック
+# ガード → スニーク+右クリック
 # 薙ぎ払い → スニーク+右クリック
-    execute if entity @s[tag=!PlyWeaponDeactivate,tag=IsDrawing,tag=!WpnGswordCharge,tag=!WpnGswordChargeAttack,tag=!WpnGswordTackle,tag=!WpnGswordUpper,tag=!WpnGswordSweep,tag=!PlySneakAvoidFunc,tag=PlyUsingEyeStart,tag=PlySneakCurrent] run function mhdp_weapons:weapon/great_sword/5_upper/start
     execute if entity @s[tag=IsDrawing,tag=WpnGswordUpper] run function mhdp_weapons:weapon/great_sword/5_upper/main
 
 ## 6_薙ぎ払い：
 # 斬り上げ → スニーク+右クリック
     execute if entity @s[tag=IsDrawing,tag=WpnGswordSweep] run function mhdp_weapons:weapon/great_sword/6_sweep/main
+
+## 7_ガード：
+# スニーク
+    execute if entity @s[tag=!PlyWeaponDeactivate,tag=IsDrawing,tag=!WpnGswordCharge,tag=!WpnGswordChargeAttack,tag=!WpnGswordTackle,tag=!WpnGswordUpper,tag=!WpnGswordSweep,tag=!WpnGswordGuard,tag=!PlySneakAvoidFunc,tag=!PlyUsingEyeCurrent,tag=PlySneakCurrent] run function mhdp_weapons:weapon/great_sword/7_guard/start
+    execute if entity @s[tag=IsDrawing,tag=WpnGswordGuard] run function mhdp_weapons:weapon/great_sword/7_guard/main
+    execute if entity @s[tag=IsDrawing,tag=WpnGswordGuardEnd] run function mhdp_weapons:weapon/great_sword/7_guard/main_end
 
 # 終了
     tag @s remove IsDrawing
