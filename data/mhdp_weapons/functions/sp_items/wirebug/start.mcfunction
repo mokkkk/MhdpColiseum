@@ -2,24 +2,6 @@
 #
 # 翔蟲 使用開始処理
 
-# タイマー設定
-    scoreboard players set @s MhdpTItmWirebug 0
-
-# タグ付与
-    execute if entity @s[tag=!ItmCoolWirebug] run tag @s add ItmUseWirebug
+# 確認
+    execute if entity @s[tag=!ItmUseWirebug,tag=!ItmCoolWirebug] run function mhdp_weapons:sp_items/wirebug/start_
     execute if entity @s[tag=ItmCoolWirebug] run tellraw @s {"text": "【クールタイムが終了していません】"}
-
-# 演出
-    playsound item.trident.throw master @a ~ ~ ~ 1 1.5
-
-# 移動禁止
-    execute if entity @s[tag=!ItmCoolWirebug] run summon area_effect_cloud ~ ~ ~ {Duration:6,Age:4,Effects:[{Id:2,Amplifier:6b,Duration:20,ShowParticles:0b}]}
-    execute if entity @s[tag=!ItmCoolWirebug] run effect give @s levitation 1 255 true
-    execute if entity @s[tag=!ItmCoolWirebug] run tag @s add PlyArmorHyper
-
-# 位置保存用Marker召喚
-    execute if entity @s[tag=!ItmCoolWirebug] run summon marker ~ ~ ~ {Tags:["WirebugStand","Start"]}
-# 処理用MarkerにUidコピー
-    execute if entity @s[tag=!ItmCoolWirebug] run scoreboard players operation @e[type=marker,tag=WirebugStand,tag=Start] MhdpPlayerUid = @s MhdpPlayerUid
-    execute if entity @s[tag=!ItmCoolWirebug] as @e[type=marker,tag=WirebugStand,tag=Start] run tp @s ~ ~ ~ ~ ~
-    execute if entity @s[tag=!ItmCoolWirebug] run tag @e[type=marker,tag=WirebugStand,tag=Start] remove Start

@@ -9,7 +9,7 @@
     execute rotated as @e[type=marker,tag=WirebugStand,tag=Rotater,limit=1] run function mhdp_weapons:sp_items/wirebug/effect_
 
 # 移動
-    execute at @e[type=marker,tag=WirebugStand,tag=Rotater,limit=1] run tp @s ~ ~ ~
+    tp @s @s
 
 # 終了
     tag @e[type=marker,tag=WirebugStand] remove Rotater
