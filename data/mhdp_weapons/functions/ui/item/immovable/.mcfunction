@@ -3,8 +3,11 @@
 # UI表示処理等 特殊装具ごとの特殊ゲージ
 #
 
-# 
+# 通常時
+    execute if entity @s[tag=!ItmUseImmovable,tag=!ItmCoolImmovable] run function mhdp_weapons:ui/item/immovable/normal
 
-# UI設定
-    execute if entity @s[scores={MhdpSpItemId0=1}] run data modify storage mhdp_core:temp Temp.UI.Item0 set value '["",{"text":"#","font":"items/test"}]'
-    execute if entity @s[scores={MhdpSpItemId1=1}] run data modify storage mhdp_core:temp Temp.UI.Item1 set value '["",{"text":"#","font":"items/test"}]'
+# 使用中
+    execute if entity @s[tag=ItmUseImmovable] run function mhdp_weapons:ui/item/immovable/using
+
+# クールタイム中
+    execute if entity @s[tag=ItmCoolImmovable] run function mhdp_weapons:ui/item/immovable/cooltime

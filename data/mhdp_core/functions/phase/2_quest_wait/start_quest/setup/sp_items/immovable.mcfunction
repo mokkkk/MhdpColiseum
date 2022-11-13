@@ -7,5 +7,5 @@
 
 # データ設定
     execute if score #mhdp_temp_count MhdpCore matches 1.. run tag @s add PlyItmImmovable
-    execute if score #mhdp_temp_count MhdpCore matches 1.. if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].PlayerData.SpItems[0] run data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].PlayerData.SpItems[1] set value 1
-    execute if score #mhdp_temp_count MhdpCore matches 1.. unless data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].PlayerData.SpItems[0] run data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].PlayerData.SpItems[0] set value 1
+    execute if score #mhdp_temp_count MhdpCore matches 1.. if entity @s[scores={MhdpSpItemId0=1..}] run scoreboard players set @s MhdpSpItemId1 1
+    execute if score #mhdp_temp_count MhdpCore matches 1.. if entity @s[scores={MhdpSpItemId0=..0}] run scoreboard players set @s MhdpSpItemId0 1

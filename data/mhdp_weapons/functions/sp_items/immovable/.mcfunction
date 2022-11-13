@@ -5,8 +5,8 @@
 #declare tag ItmUseImmovable アイテム使用判別用
 #declare tag ItmCoolImmovable アイテムクールタイム判別用
 
-# タイマー減少
-    scoreboard players remove @s MhdpTItmImmovable 1
-    
-# 一定時間で効果解除
-    execute if entity @s[scores={MhdpTItmImmovable=..0}] run function mhdp_weapons:sp_items/immovable/end
+# 使用中
+    execute if entity @s[tag=ItmUseImmovable] run function mhdp_weapons:sp_items/immovable/using
+
+# クールタイム中
+    execute if entity @s[tag=ItmCoolImmovable] run function mhdp_weapons:sp_items/immovable/cooltime

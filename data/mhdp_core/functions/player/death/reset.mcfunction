@@ -29,7 +29,6 @@
      tag @s remove ItmArmorskin
 
 # 特殊装具使用中断
-     tag @s remove ItmUseImmovable
      function mhdp_weapons:sp_items/reset
 
 # ターゲットタグ消去

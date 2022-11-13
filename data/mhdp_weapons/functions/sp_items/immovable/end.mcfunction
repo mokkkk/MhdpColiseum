@@ -3,9 +3,7 @@
 # 不動の装衣 終了処理
 
 # クールタイム設定
-    scoreboard players set @s MhdpTItmImmovableCooltime 1800
-    # スキル：整備
-        execute if entity @s[tag=SklToolSp] run scoreboard players set @s MhdpTItmImmovableCooltime 1500
+    scoreboard players set @s MhdpTItmImmovableCooltime 3600
 
 # タグ解除
     tag @s remove ItmUseImmovable
