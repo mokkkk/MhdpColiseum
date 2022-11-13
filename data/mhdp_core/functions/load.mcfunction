@@ -48,6 +48,8 @@
         scoreboard objectives add MhdpSpItemId1 dummy
         scoreboard objectives add MhdpTItmImmovable dummy
         scoreboard objectives add MhdpTItmImmovableCooltime dummy
+        scoreboard objectives add MhdpTItmWirebug dummy
+        scoreboard objectives add MhdpTItmWirebugCooltime dummy
 
     # モンスター処理用
         scoreboard objectives add AsaMatrix dummy

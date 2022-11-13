@@ -2,6 +2,9 @@
 #
 # 不動の装衣 終了処理
 
+# 通知
+    execute if entity @s[tag=ItmUseImmovable] run tellraw @s {"text": "【不動の装衣の効果が切れた】"}
+
 # クールタイム設定
     scoreboard players set @s MhdpTItmImmovableCooltime 3600
 

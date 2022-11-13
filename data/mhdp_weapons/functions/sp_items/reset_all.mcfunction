@@ -4,3 +4,6 @@
 
 # 不動の装衣
     function mhdp_weapons:sp_items/immovable/reset_all
+
+# 翔蟲
+    function mhdp_weapons:sp_items/wirebug/reset_all

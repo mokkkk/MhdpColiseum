@@ -45,7 +45,7 @@
     execute if entity @s[tag=PlyGuardSuccess] run scoreboard players operation $Damage ScoreDamageCore /= $100 ScoreDamageCore
 
 # 不動の装衣によるダメージ軽減
-    scoreboard players set $CalcGuard ScoreDamageCore 50
+    scoreboard players set $CalcGuard ScoreDamageCore 70
     execute if entity @s[tag=ItmUseImmovable] run scoreboard players operation $Damage ScoreDamageCore *= $CalcGuard ScoreDamageCore
     execute if entity @s[tag=ItmUseImmovable] run scoreboard players operation $Damage ScoreDamageCore /= $100 ScoreDamageCore
 

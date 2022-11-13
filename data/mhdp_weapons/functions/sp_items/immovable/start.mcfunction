@@ -3,7 +3,7 @@
 # 不動の装衣 使用開始処理
 
 # タイマー設定
-    scoreboard players set @s MhdpTItmImmovable 1500
+    scoreboard players set @s MhdpTItmImmovable 900
 
 # タグ付与
     execute if entity @s[tag=!ItmCoolImmovable] run tag @s add ItmUseImmovable
