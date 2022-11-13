@@ -38,6 +38,8 @@
 
 # 会心補正適用
     execute store result score #mhdp_temp_crit MhdpCore run data get storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].PlayerData.Item.MainWeapon.tag.Status.Critical 100
+    # 翔蟲抜刀攻撃時，会心100%
+        execute if entity @s[tag=PlyDrawAttackWirebug] run scoreboard players set #mhdp_temp_crit MhdpCore 100
     function lib:random/
     scoreboard players operation #mhdp_temp_rand MhdpCore %= #asam_const_100 AsaMatrix
     execute if score #mhdp_temp_rand MhdpCore <= #mhdp_temp_crit MhdpCore run function mhdp_weapons:core/attack/crit/calc

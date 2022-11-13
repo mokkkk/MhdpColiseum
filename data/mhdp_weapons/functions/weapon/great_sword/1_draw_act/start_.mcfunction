@@ -30,6 +30,8 @@
         tag @s add PlySneakAvoidLock
     # 抜刀検知タグ追加
         tag @s add PlyDrawAttack
+    # 翔蟲抜刀検知タグ追加
+        execute if entity @s[tag=ItmUseWirebug] run tag @s add PlyDrawAttackWirebug
 
 # 抜刀演出
     playsound item.armor.equip_iron master @a ~ ~ ~ 1 1

@@ -5,6 +5,7 @@
 # 共通
     # 抜刀攻撃タグ消去
         tag @s remove PlyDrawAttack
+        tag @s remove PlyDrawAttackWirebug
     # 右クリック保存タグ消去
         tag @s remove RClicked
     # ヒットストップ用タグ消去

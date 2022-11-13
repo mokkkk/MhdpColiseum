@@ -14,6 +14,7 @@
      tag @s remove PlyArmorHyper
      tag @s remove PlyArmorSuper
      tag @s remove PlyDrawAttack
+     tag @s remove PlyDrawAttackWirebug
      tag @s remove RClicked
 
 # 属性やられ中断
