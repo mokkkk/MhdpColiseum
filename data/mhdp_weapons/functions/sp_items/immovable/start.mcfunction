@@ -6,7 +6,8 @@
     scoreboard players set @s MhdpTItmImmovable 1500
 
 # タグ付与
-    tag @s add ItmUseImmovable
+    execute if entity @s[tag=!ItmCoolImmovable] run tag @s add ItmUseImmovable
+    execute if entity @s[tag=ItmCoolImmovable] run tellraw @s {"text": "【クールタイムが終了していません】"}
 
 # 演出
     playsound item.armor.equip_netherite master @a ~ ~ ~ 1 1

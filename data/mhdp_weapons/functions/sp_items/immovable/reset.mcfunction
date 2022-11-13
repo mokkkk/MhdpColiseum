@@ -2,6 +2,5 @@
 #
 # 不動の装衣 リセット処理
 
-# タグ消去
-    tag @s remove ItmUseImmovable
-    tag @s remove ItmCoolImmovable
+# 使用中の場合はクールタイム開始
+    execute if entity @s[tag=ItmUseImmovable] run function mhdp_weapons:sp_items/immovable/end
