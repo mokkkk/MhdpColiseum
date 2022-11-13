@@ -30,4 +30,4 @@
     execute if entity @s[tag=PlyGuardSuccess] run function score_damage_mhdp:core/sharpness
 
 # スタミナ消費
-    execute if entity @s[tag=PlyGuardSuccess] run scoreboard players remove @s MhdpStamina 200
+    execute if entity @s[tag=PlyGuardSuccess] run scoreboard players remove @s MhdpStamina 300

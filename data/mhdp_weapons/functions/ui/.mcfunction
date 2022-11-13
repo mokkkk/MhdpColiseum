@@ -20,7 +20,7 @@
 
 # UI表示
 # -39 斬れ味 +4 特殊 +4 アイテム1 +4 アイテム2 -70 スタミナ
-    title @s actionbar ["",{"text": "\uF999\uF999\uF821\uF999\uF999"},{"interpret":true,"nbt":"Temp.UI.Sharpness","storage":"mhdp_core:temp"},{"text": " "},{"interpret":true,"nbt":"Temp.UI.Ex","storage":"mhdp_core:temp"},{"text": " "},{"interpret":true,"nbt":"Temp.UI.Item","storage":"mhdp_core:temp"},{"text": " "},{"interpret":true,"nbt":"Temp.UI.Item","storage":"mhdp_core:temp"},{"text": " \uF812\uF888\uF888"},{"interpret":true,"nbt":"Temp.UI.Stamina","storage":"mhdp_core:temp"}]
+    title @s actionbar ["",{"text": "\uF999\uF999\uF821\uF999\uF999"},{"interpret":true,"nbt":"Temp.UI.Sharpness","storage":"mhdp_core:temp"},{"text": " "},{"interpret":true,"nbt":"Temp.UI.Ex","storage":"mhdp_core:temp"},{"text": " "},{"interpret":true,"nbt":"Temp.UI.Item0","storage":"mhdp_core:temp"},{"text": " "},{"interpret":true,"nbt":"Temp.UI.Item1","storage":"mhdp_core:temp"},{"text": " \uF812\uF888\uF888"},{"interpret":true,"nbt":"Temp.UI.Stamina","storage":"mhdp_core:temp"}]
 
 # 終了
     data remove storage mhdp_core:temp Temp
