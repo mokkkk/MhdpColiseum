@@ -40,6 +40,8 @@
         execute if data storage mhdp_core:temp Temp.Status{WeaponType:1} run tag @s add PlyWpnBow
     # 2：大剣
         execute if data storage mhdp_core:temp Temp.Status{WeaponType:2} run tag @s add PlyWpnGsword
+    # 3：片手剣
+        execute if data storage mhdp_core:temp Temp.Status{WeaponType:3} run tag @s add PlyWpnSsword
 
 # アイテム用
     tag @s remove ItmCoasCancel

@@ -26,6 +26,10 @@
 
 # 終了
     data remove block 0 0 0 Items[{Slot:0b}]
-
-# 終了
     data remove storage mhdp_core:temp Temp
+
+# アイテムデータ更新
+    data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].PlayerData.Item.MainHand set from entity @s SelectedItem
+    data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].PlayerData.Item.OffHand set from entity @s Inventory[{Slot:-106b}]
+
+say default

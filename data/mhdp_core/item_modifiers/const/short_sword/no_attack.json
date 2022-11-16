@@ -1,0 +1,51 @@
+[
+  {
+    "function": "minecraft:copy_nbt",
+    "source": {
+      "type": "minecraft:storage",
+      "source": "mhdp_core:temp"
+    },
+    "ops": [
+      {
+        "source": "Temp.CustomModelData",
+        "target": "CustomModelData",
+        "op": "replace"
+      }
+    ]
+  },
+  {
+    "function": "minecraft:copy_nbt",
+    "source": {
+      "type": "minecraft:storage",
+      "source": "mhdp_core:temp"
+    },
+    "ops": [
+      {
+        "source": "Temp.AttributeModifiers",
+        "target": "AttributeModifiers",
+        "op": "replace"
+      }
+    ]
+  },
+  {
+    "function": "minecraft:set_attributes",
+    "modifiers": [
+      {
+        "attribute": "minecraft:generic.attack_damage",
+        "name": "",
+        "amount": 0,
+        "operation": "addition",
+        "id": "efa5ecd3-b1ba-434b-b360-95abb51f80cc",
+        "slot": "mainhand"
+      },
+      {
+        "attribute": "minecraft:generic.attack_speed",
+        "name": "",
+        "amount": -2.4,
+        "operation": "addition",
+        "id": "8d0046ab-681b-4829-9e48-fdb9e3deca65",
+        "slot": "mainhand"
+      }
+    ]
+  }
+]

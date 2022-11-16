@@ -8,3 +8,6 @@
 
     # 2:大剣
         execute if entity @s[tag=PlyWpnGsword] run function mhdp_weapons:weapon/great_sword/
+
+    # 3:片手剣
+        execute if entity @s[tag=PlyWpnSsword] run function mhdp_weapons:weapon/short_sword/

@@ -17,8 +17,11 @@
 # 通常抜刀
     execute if entity @s[tag=!PlyWeaponDrawing,tag=AdvInventoryChangedMain] run function mhdp_weapons:core/draw/
 
-# 通常納刀（サブ武器なし）
+# 通常納刀
     execute if entity @s[tag=PlyWeaponDrawing,tag=AdvInventoryChangedOff] run function mhdp_weapons:core/sheathe/
+
+    execute if entity @s[tag=PlyWeaponDrawingSub] unless data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].PlayerData.Item.OffHand.tag{MhdpWeaponSub:1b} unless data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].PlayerData.Item.OffHand.tag{MhdpWeapon:1b} run say サブ武器無し強制納刀
+    execute if entity @s[tag=PlyWeaponDrawing,tag=!PlyWeaponDrawingSub] if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].PlayerData.Item.OffHand run say オフハンド空じゃない強制納刀
 
 # 強制納刀（武器がメインハンドにない）
     execute if entity @s[tag=PlyWeaponDrawing] unless data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].PlayerData.Item.MainHand.tag{MhdpWeapon:1b} unless data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].PlayerData.Item.OffHand.tag{MhdpWeapon:1b} run function mhdp_weapons:core/sheathe/force
