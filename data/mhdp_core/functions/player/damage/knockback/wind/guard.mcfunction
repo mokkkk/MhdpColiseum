@@ -8,7 +8,7 @@
 
 # ガード成功時，演出
     execute if entity @s[tag=NotKnockback] run playsound item.shield.block master @s ~ ~ ~ 1 1
-    execute if entity @s[tag=NotKnockback] run scoreboard players remove @s MhdpStamina 200
+    execute if entity @s[tag=NotKnockback] run scoreboard players remove @s MhdpStamina 300
     execute if entity @s[tag=NotKnockback] run tag @s add PlyGuardSuccess
     execute if entity @s[tag=NotKnockback] run function mhdp_core:player/damage/knockback/damage/0
     execute if entity @s[tag=NotKnockback] run tag @s remove PlyGuardSuccess

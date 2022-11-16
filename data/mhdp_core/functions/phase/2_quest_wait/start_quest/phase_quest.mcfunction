@@ -17,6 +17,9 @@
 # プレイヤーの武器をオフハンドにセット
     execute as @a run function mhdp_core:phase/2_quest_wait/start_quest/setup/weapon
 
+# プレイヤーの特殊装具を取得
+    execute as @a run function mhdp_core:phase/2_quest_wait/start_quest/setup/sp_items/
+
 # プレイヤーの防具を外せなくする
     execute as @a run function mhdp_core:phase/2_quest_wait/start_quest/setup/armor
 

@@ -7,4 +7,4 @@
     execute if score #mhdp_temp_count MhdpCore matches 2.. run tag @s add Check1
 
 # 終了
-    scoreboard players reset #mhdp_temp_count
+    scoreboard players reset #mhdp_temp_count MhdpCore

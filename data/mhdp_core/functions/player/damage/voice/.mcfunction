@@ -15,12 +15,15 @@
     execute if entity @s[scores={MhdpTAvoid=1..}] run function mhdp_core:player/damage/player_avoid
     execute if entity @s[scores={MhdpTDamage=1..}] run scoreboard players set #mhdp_temp_voice_res MhdpCore 3
 
+# 不動の装衣確認
+    execute if entity @s[tag=ItmUseImmovable] run scoreboard players set #mhdp_temp_voice_res MhdpCore 3
+
 # ガード確認
     execute if entity @s[tag=PlyWpnGsword,tag=WpnGswordGuard] run tag @s add PlyGuardSuccess
 
 # ガード成功時，演出
     execute if entity @s[tag=PlyGuardSuccess] run playsound item.shield.block master @s ~ ~ ~ 1 1
-    execute if entity @s[tag=PlyGuardSuccess] run scoreboard players remove @s MhdpStamina 200
+    execute if entity @s[tag=PlyGuardSuccess] run scoreboard players remove @s MhdpStamina 300
     execute if entity @s[tag=PlyGuardSuccess] run function mhdp_core:player/damage/knockback/damage/0
     execute if entity @s[tag=PlyGuardSuccess] run scoreboard players set #mhdp_temp_voice_res MhdpCore 3
     execute if entity @s[tag=PlyGuardSuccess] run tag @s remove PlyGuardSuccess

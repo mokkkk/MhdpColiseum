@@ -14,6 +14,7 @@
     #declare tag PlyUsingEyeEnd プレイヤーがエンダーアイ使用を解除した
     #declare tag PlyDroppedEnderEye プレイヤーがエンダーアイを投げ捨てた
     #declare tag PlyJumpping プレイヤージャンプ中（空中）
+    #declare tag PlySelectedItemChanged プレイヤーのSelectedItemSlotが変化した
 
     #declare tag PlySneakAvoidFunc プレイヤーステップ回避実行中
     #declare tag PlySneakAvoidLock プレイヤーステップ回避ロック中

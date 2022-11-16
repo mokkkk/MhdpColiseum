@@ -43,6 +43,14 @@
         scoreboard objectives add MhdpWeaponTimer dummy
         scoreboard objectives add MhdpWeaponDeactivateTimer dummy
 
+    # 特殊装具処理用
+        scoreboard objectives add MhdpSpItemId0 dummy
+        scoreboard objectives add MhdpSpItemId1 dummy
+        scoreboard objectives add MhdpTItmImmovable dummy
+        scoreboard objectives add MhdpTItmImmovableCooltime dummy
+        scoreboard objectives add MhdpTItmWirebug dummy
+        scoreboard objectives add MhdpTItmWirebugCooltime dummy
+
     # モンスター処理用
         scoreboard objectives add AsaMatrix dummy
         scoreboard objectives add MhdpMonsterIndex dummy

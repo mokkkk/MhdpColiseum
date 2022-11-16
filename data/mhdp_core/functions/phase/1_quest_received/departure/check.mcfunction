@@ -8,11 +8,11 @@
 # 武器を2本以上持っている
     execute as @a run function mhdp_core:phase/1_quest_received/departure/check_1_weapon_count
 
-# 同じ種類の特殊装具を2つ以上持っている（未実装）
-    # execute as @a run function mhdp_core:phase/1_quest_received/departure/check_2_sp_item_kind
+# 同じ種類の特殊装具を2つ以上持っている
+    execute as @a run function mhdp_core:phase/1_quest_received/departure/check_2_sp_item_kind
 
 # 特殊装具を3種類以上持っている（未実装）
-    # execute as @a run function mhdp_core:phase/1_quest_received/departure/check_3_sp_item_count
+    execute as @a run function mhdp_core:phase/1_quest_received/departure/check_3_sp_item_count
 
 # 武器をオフハンドにセットしていない
     execute as @a run function mhdp_core:phase/1_quest_received/departure/check_4_offhand

@@ -22,5 +22,8 @@
 # 武器納刀・抜刀処理
     function mhdp_weapons:core/
 
+# 特殊装具メイン処理
+    function mhdp_weapons:sp_items/
+
 # 終了
     tag @s remove PlyStaminaNotRegen

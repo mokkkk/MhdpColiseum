@@ -14,6 +14,7 @@
      tag @s remove PlyArmorHyper
      tag @s remove PlyArmorSuper
      tag @s remove PlyDrawAttack
+     tag @s remove PlyDrawAttackWirebug
      tag @s remove RClicked
 
 # 属性やられ中断
@@ -27,6 +28,9 @@
      tag @s remove ItmCoasCancel
      tag @s remove ItmDemondrug
      tag @s remove ItmArmorskin
+
+# 特殊装具使用中断
+     function mhdp_weapons:sp_items/reset
 
 # ターゲットタグ消去
     tag @s remove MnsTarget
