@@ -33,7 +33,7 @@
 
 ## 4：訓練
 # なにもなし
-    data modify storage mh_dp:quests List append value {Index:4,Level:0,Visible:1b,Started:0b,Cleared:0b,QuestRank:0,Field:1,Monsters:[],MonsterCount:1,Timer:15,HpMult:100,Reward:15,RewardItems:[],Movie:0b,MovieId:-1,display:{Name:'[{"text":"訓練","italic":false},{"interpret":true,"nbt":"Temp.Flag","storage":"mhdp_core:temp"}]',Lore:['{"text":"目標："}','{"text":"・何もなし","italic":false}']},NameNew:'{"text":"訓練(NEW)","italic":false}',NameClear:'{"text":"訓練(CLEAR)","italic":false}'}
+    data modify storage mh_dp:quests List append value {Index:4,Level:0,Visible:1b,Started:0b,Cleared:0b,QuestRank:0,Field:1,Monsters:[],MonsterCount:1,Timer:999,HpMult:100,Reward:15,RewardItems:[],Movie:0b,MovieId:-1,display:{Name:'[{"text":"訓練","italic":false},{"interpret":true,"nbt":"Temp.Flag","storage":"mhdp_core:temp"}]',Lore:['{"text":"目標："}','{"text":"・何もなし","italic":false}']},NameNew:'{"text":"訓練(NEW)","italic":false}',NameClear:'{"text":"訓練(CLEAR)","italic":false}'}
 
 ## 5：制限時間テスト
 # ノーマル・大闘技場・[火竜]・1分・HP100%・報酬3Z・ムービー無

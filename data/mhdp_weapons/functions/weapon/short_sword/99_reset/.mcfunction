@@ -11,6 +11,7 @@
      scoreboard players set @s MhdpWeaponTimer 0
 
 # タグ消去
+     tag @s remove WpnSsword2DA
      tag @s remove WpnSswordGuard
      tag @s remove WpnSswordGuardEnd
      tag @s remove HitStopNormal
@@ -22,3 +23,9 @@
 # 移動速度リセット
      effect clear @s speed
      effect clear @s slowness
+
+# 突進斬り中断
+     tag @s add Target
+     execute if entity @s[tag=!PlySneakAvoidFunc] as @e[type=marker,tag=SneakAvoidStand0] if score @s MhdpPlayerUid = @a[tag=Target,limit=1,sort=nearest] MhdpPlayerUid run tag @s add Rotater
+     tag @s remove Target
+     execute if entity @s[tag=!PlySneakAvoidFunc] run kill @e[type=marker,tag=SneakAvoidStand0,tag=Rotater]
