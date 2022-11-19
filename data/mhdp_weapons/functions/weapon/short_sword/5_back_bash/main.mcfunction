@@ -19,14 +19,16 @@
     execute if entity @s[scores={MhdpWeaponTimer=1}] run effect give @s slowness 1 3 true
 
 # ステップ回避ロック解除
-    execute if entity @s[scores={MhdpWeaponTimer=15}] run tag @s remove PlySneakAvoidLock
+    execute if entity @s[scores={MhdpWeaponTimer=18}] run tag @s remove PlySneakAvoidLock
 
 # 終了
     execute if entity @s[scores={MhdpWeaponTimer=22..}] run function mhdp_weapons:weapon/short_sword/5_back_bash/end
 
 # 遷移
-    # 右クリックした場合，盾攻撃２に移行
-        # execute if entity @s[tag=PlyUsingEyeStart,scores={MhdpWeaponTimer=10..16}] run tag @s add RClicked
-        # execute if entity @s[tag=RClicked,scores={MhdpWeaponTimer=18..}] run function mhdp_weapons:weapon/short_sword/5_back_bash/change_bash
+    # スニーク+右クリック時，回転斬りに移行
+        execute if entity @s[tag=PlyUsingEyeStart,scores={MhdpWeaponTimer=10..16}] run tag @s add RClicked
+        execute if entity @s[tag=RClicked,tag=PlySneakCurrent,scores={MhdpWeaponTimer=18..}] run function mhdp_weapons:weapon/short_sword/5_back_bash/change_spin
     # ジャンプ時，ステップ回避に移行
-        execute if entity @s[scores={MhdpJump=1..,MhdpWeaponTimer=18..}] run function mhdp_core:player/sneak/avoid/start_
+        execute if entity @s[tag=!PlySneakCurrent,scores={MhdpJump=1..,MhdpWeaponTimer=18..}] run function mhdp_core:player/sneak/avoid/start_
+    # スニーク+ジャンプ時，バックステップに移行
+        execute if entity @s[tag=PlySneakCurrent,scores={MhdpJump=1..,MhdpWeaponTimer=18..}] run function mhdp_weapons:weapon/short_sword/5_back_bash/change_step

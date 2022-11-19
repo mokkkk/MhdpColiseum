@@ -6,6 +6,11 @@
 #declare tag WpnSsword3Guard 片手剣ガード
 #declare tag WpnSsword4SB1 片手剣盾攻撃1
 #declare tag WpnSsword5SB2 片手剣盾攻撃2
+#declare tag WpnSsword6Spin 片手剣回転斬り
+#declare tag WpnSsword7Step 片手剣バックステップ
+#declare tag WpnSsword8CA 片手剣溜め斬り
+#declare tag WpnSsword9Jump 片手剣駆け上がり斬り
+#declare tag WpnSsword10Fall 片手剣フォールバッシュ
 
 #declare tag RClicked 右クリック入力保存
 
@@ -22,16 +27,37 @@
 
 ## 3_ガード
 # スニーク
-    execute if entity @s[tag=!PlyWeaponDeactivate,tag=IsDrawing,tag=!WpnSsword2DA,tag=!WpnSsword3Guard,tag=!WpnSsword4SB1,tag=!WpnSsword5SB2,tag=!PlySneakAvoidFunc,tag=!PlyUsingEyeCurrent,tag=PlySneakCurrent] run function mhdp_weapons:weapon/short_sword/3_guard/start
+    execute if entity @s[tag=!PlyWeaponDeactivate,tag=IsDrawing,tag=!WpnSsword2DA,tag=!WpnSsword3Guard,tag=!WpnSsword3GuardEnd,tag=!WpnSsword4SB1,tag=!WpnSsword5SB2,tag=!WpnSsword6Spin,tag=!WpnSsword7Step,tag=!WpnSsword8CA,tag=!WpnSsword9Jump,tag=!PlySneakAvoidFunc,tag=!PlyUsingEyeCurrent,tag=PlySneakCurrent] run function mhdp_weapons:weapon/short_sword/3_guard/start
     execute if entity @s[tag=IsDrawing,tag=WpnSsword3Guard] run function mhdp_weapons:weapon/short_sword/3_guard/main
     execute if entity @s[tag=IsDrawing,tag=WpnSsword3GuardEnd] run function mhdp_weapons:weapon/short_sword/3_guard/main_end
 
 ## 4_盾攻撃１
-    execute if entity @s[tag=!PlyWeaponDeactivate,tag=IsDrawing,tag=!WpnSsword2DA,tag=!WpnSsword3Guard,tag=!WpnSsword4SB1,tag=!WpnSsword5SB2,tag=!PlySneakAvoidFunc,tag=PlyUsingEyeStart,tag=!PlySneakCurrent] run function mhdp_weapons:weapon/short_sword/4_bash/start
+# 右クリック
+    execute if entity @s[tag=!PlyWeaponDeactivate,tag=IsDrawing,tag=!WpnSsword2DA,tag=!WpnSsword3Guard,tag=!WpnSsword3GuardEnd,tag=!WpnSsword4SB1,tag=!WpnSsword5SB2,tag=!WpnSsword6Spin,tag=!WpnSsword7Step,tag=!WpnSsword8CA,tag=!WpnSsword9Jump,tag=!PlySneakAvoidFunc,tag=PlyUsingEyeStart,tag=!PlySneakCurrent] run function mhdp_weapons:weapon/short_sword/4_bash/start
     execute if entity @s[tag=IsDrawing,tag=WpnSsword4SB1] run function mhdp_weapons:weapon/short_sword/4_bash/main
 
 ## 5_盾攻撃２
+# 盾攻撃１ → 右クリック
     execute if entity @s[tag=IsDrawing,tag=WpnSsword5SB2] run function mhdp_weapons:weapon/short_sword/5_back_bash/main
+
+## 6_回転斬り
+# 攻撃後 → スニーク+右クリック
+    execute if entity @s[tag=IsDrawing,tag=WpnSsword6Spin] run function mhdp_weapons:weapon/short_sword/6_spin/main
+
+## 7_バックステップ
+# 攻撃後 → スニーク+ジャンプ
+    execute if entity @s[tag=IsDrawing,tag=WpnSsword7Step] run function mhdp_weapons:weapon/short_sword/7_step/main
+
+## 8_溜め斬り
+# バックステップ → 右クリック長押し
+    execute if entity @s[tag=IsDrawing,tag=WpnSsword8CA] run function mhdp_weapons:weapon/short_sword/8_charge_attack/main
+
+## 9_駆け上がり斬り
+# 溜め斬り → ヒット時自動発動
+    execute if entity @s[tag=IsDrawing,tag=WpnSsword9Jump] run function mhdp_weapons:weapon/short_sword/9_jump/main
+
+## 10_フォールバッシュ
+    execute if entity @s[tag=IsDrawing,tag=WpnSsword10Fall] run function mhdp_weapons:weapon/short_sword/10_fall/main
 
 # 終了
     tag @s remove IsDrawing

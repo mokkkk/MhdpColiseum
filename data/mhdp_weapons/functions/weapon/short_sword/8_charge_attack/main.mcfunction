@@ -1,4 +1,4 @@
-#> mhdp_weapons:weapon/short_sword/2_dash_attack/main
+#> mhdp_weapons:weapon/short_sword/8_charge_attack/main
 #
 # 片手剣：突進斬り
 
@@ -27,19 +27,24 @@
     execute if entity @s[scores={MhdpWeaponTimer=..7}] run particle block grass_block ~ ~0.1 ~ 0.5 0 0.5 0 3
 
 # 攻撃
-    execute if entity @s[scores={MhdpWeaponTimer=8}] run function mhdp_weapons:weapon/short_sword/2_dash_attack/attack
+    execute if entity @s[scores={MhdpWeaponTimer=8}] run function mhdp_weapons:weapon/short_sword/8_charge_attack/attack
+
+# デバッグ用
+    execute if entity @s[scores={MhdpWeaponTimer=13}] run tag @s add WpnSswordHit
 
 # 遷移
+    # 攻撃ヒット時，駆け上がり斬りに移行
+        execute if entity @s[tag=WpnSswordHit,scores={MhdpWeaponTimer=13}] run function mhdp_weapons:weapon/short_sword/8_charge_attack/change_jump
     # 右クリック時，盾攻撃１に移行
-        execute if entity @s[tag=PlyUsingEyeStart,tag=!PlySneakCurrent,scores={MhdpWeaponTimer=13..20}] run function mhdp_weapons:weapon/short_sword/2_dash_attack/change_bash
+        execute if entity @s[tag=PlyUsingEyeStart,tag=!PlySneakCurrent,scores={MhdpWeaponTimer=14..20}] run function mhdp_weapons:weapon/short_sword/8_charge_attack/change_bash
     # スニーク+右クリック時，回転斬りに移行
-        execute if entity @s[tag=PlyUsingEyeStart,tag=PlySneakCurrent,scores={MhdpWeaponTimer=13..20}] run function mhdp_weapons:weapon/short_sword/2_dash_attack/change_spin
+        execute if entity @s[tag=PlyUsingEyeStart,tag=PlySneakCurrent,scores={MhdpWeaponTimer=14..20}] run function mhdp_weapons:weapon/short_sword/8_charge_attack/change_spin
     # ジャンプ時，ステップ回避に移行
-        execute if entity @s[scores={MhdpJump=1..,MhdpWeaponTimer=13..20}] run function mhdp_core:player/sneak/avoid/start_
+        execute if entity @s[scores={MhdpJump=1..,MhdpWeaponTimer=14..20}] run function mhdp_core:player/sneak/avoid/start_
 
 # タグ消去
     execute if entity @s[scores={MhdpWeaponTimer=10}] run function mhdp_weapons:weapon/short_sword/2_dash_attack/remove_tag
 # 終了
-    execute if entity @s[scores={MhdpWeaponTimer=21..}] run function mhdp_weapons:weapon/short_sword/2_dash_attack/end
+    execute if entity @s[scores={MhdpWeaponTimer=21..}] run function mhdp_weapons:weapon/short_sword/8_charge_attack/end
     execute if entity @s[scores={MhdpWeaponTimer=8}] run kill @e[type=marker,tag=SneakAvoidStand0,tag=Rotator]
     execute if entity @s[scores={MhdpWeaponTimer=..10}] run tag @e[type=marker,tag=SneakAvoidStand0,tag=Rotator] remove Rotator

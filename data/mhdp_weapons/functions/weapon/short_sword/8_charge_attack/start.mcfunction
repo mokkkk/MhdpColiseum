@@ -1,12 +1,12 @@
-#> mhdp_weapons:weapon/short_sword/2_dash_attack/start
+#> mhdp_weapons:weapon/short_sword/8_charge_attack/start
 #
-# 片手剣：突進斬り開始
+# 片手剣：溜め斬り開始
 
 # アニメーションタイマーリセット
     scoreboard players set @s MhdpWeaponTimer 0
 
 # タグ更新
-    tag @s add WpnSsword2DA
+    tag @s add WpnSsword8CA
 # ステップ回避ロック開始
     tag @s add PlySneakAvoidLock
 
@@ -25,4 +25,4 @@
     scoreboard players reset #mhdp_temp_success MhdpCore
     data remove storage mhdp_core:temp Temp
 
-say 突進斬り
+say 溜め斬り

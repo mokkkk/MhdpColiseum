@@ -16,8 +16,12 @@
      tag @s remove WpnSsword3GuardEnd
      tag @s remove WpnSsword4SB1
      tag @s remove WpnSsword5SB2
-     tag @s remove HitStopNormal
-     tag @s remove HitStopLong
+     tag @s remove WpnSsword6Spin
+     tag @s remove WpnSsword7Step
+     tag @s remove WpnSsword8CA
+     tag @s remove WpnSsword9Jump
+     tag @s remove WpnSswordCharged
+     tag @s remove WpnSswordHit
 
 # ステップ回避ロック解除
      tag @s remove PlySneakAvoidLock
