@@ -7,6 +7,20 @@
     },
     "ops": [
       {
+        "source": "Temp.Dummy",
+        "target": "Dymmy",
+        "op": "replace"
+      }
+    ]
+  },
+  {
+    "function": "minecraft:copy_nbt",
+    "source": {
+      "type": "minecraft:storage",
+      "source": "mhdp_core:temp"
+    },
+    "ops": [
+      {
         "source": "Temp.CustomModelData",
         "target": "CustomModelData",
         "op": "replace"

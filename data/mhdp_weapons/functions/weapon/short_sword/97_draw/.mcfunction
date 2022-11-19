@@ -17,7 +17,7 @@
 # サブ武器抜刀
     item replace entity @s weapon.offhand with ender_eye
     # Cmd計算
-        scoreboard players add #mhdp_temp_cmd MhdpCore 20
+        scoreboard players add #mhdp_temp_cmd MhdpCore 2
         execute store result storage mhdp_core:temp Temp.CustomModelData int 1 run scoreboard players get #mhdp_temp_cmd MhdpCore
     # サブ武器フラグ変更
         data modify storage mhdp_core:temp Temp.MhdpWeaponSub set value 1b

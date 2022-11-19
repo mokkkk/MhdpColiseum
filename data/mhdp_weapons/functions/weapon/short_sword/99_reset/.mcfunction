@@ -1,6 +1,6 @@
 #> mhdp_weapons:weapon/short_sword/99_reset/
 #
-# 大剣のリセット処理
+# 片手剣のリセット処理
 #
 
 # 抜刀中：モデル等リセット
@@ -12,8 +12,10 @@
 
 # タグ消去
      tag @s remove WpnSsword2DA
-     tag @s remove WpnSswordGuard
-     tag @s remove WpnSswordGuardEnd
+     tag @s remove WpnSsword3Guard
+     tag @s remove WpnSsword3GuardEnd
+     tag @s remove WpnSsword4SB1
+     tag @s remove WpnSsword5SB2
      tag @s remove HitStopNormal
      tag @s remove HitStopLong
 

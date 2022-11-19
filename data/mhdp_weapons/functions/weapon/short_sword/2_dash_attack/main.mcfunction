@@ -13,9 +13,12 @@
 # 武器アニメーション
     execute if entity @s[scores={MhdpWeaponTimer=1..4}] run function mhdp_weapons:weapon/short_sword/2_dash_attack/animation_0
     execute if entity @s[scores={MhdpWeaponTimer=8}] run function mhdp_weapons:weapon/short_sword/2_dash_attack/animation_1
+    execute if entity @s[scores={MhdpWeaponTimer=9}] run function mhdp_weapons:weapon/short_sword/2_dash_attack/animation_2
 
 # 移動
+    execute if entity @s[scores={MhdpWeaponTimer=1}] run tp @s ~ ~ ~ ~ ~-5
     execute if entity @s[scores={MhdpWeaponTimer=..7}] rotated as @e[type=marker,tag=SneakAvoidStand0,tag=Rotator] rotated ~ 0 run function mhdp_core:player/sneak/avoid/main_move
+    execute if entity @s[scores={MhdpWeaponTimer=8..10}] run tp @s ~ ~ ~ ~ ~4
 
 # 演出
     execute if entity @s[scores={MhdpWeaponTimer=1}] at @s run summon area_effect_cloud ~ ~ ~ {Duration:6,Age:4,Effects:[{Id:2,Amplifier:3b,Duration:11,ShowParticles:0b}]}
@@ -23,7 +26,7 @@
     execute if entity @s[scores={MhdpWeaponTimer=..7}] run particle block grass_block ~ ~0.1 ~ 0.5 0 0.5 0 3
 
 # 攻撃
-    execute if entity @s[scores={MhdpWeaponTimer=8}] run playsound entity.player.attack.sweep master @a ~ ~ ~ 1 1
+    execute if entity @s[scores={MhdpWeaponTimer=8}] run function mhdp_weapons:weapon/short_sword/2_dash_attack/attack
 
 # 遷移
     # ジャンプ時，ステップ回避に移行
