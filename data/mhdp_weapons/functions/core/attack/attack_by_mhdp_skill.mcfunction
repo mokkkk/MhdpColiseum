@@ -30,8 +30,11 @@
     execute if score #mhdp_temp_element_type MhdpCore matches 0 run scoreboard players set #mhdp_temp_element_damage MhdpCore 0
     execute unless score #mhdp_temp_element_type MhdpCore matches 0 run function mhdp_weapons:core/attack/get_element_damage
 
-# 武器種が弓以外の場合，切れ味更新
-    execute unless entity @s[tag=PlyWpnBow] run function mhdp_weapons:core/attack/sharpness/
+# 切れ味更新
+    execute if entity @s[tag=PlyWpnBow] run tag @s add NoUpdate
+    execute if entity @s[tag=PlyWpnSsword] if data storage mhdp_core:temp Temp.WeaponDamage{Offhand:1b} run tag @s add NoUpdate
+    execute unless entity @s[tag=NoUpdate] run function mhdp_weapons:core/attack/sharpness/
+    tag @s remove NoUpdate
 
 # 斬れ味補正適用
     execute if entity @s[tag=!PlyWpnBow] run function mhdp_weapons:core/attack/sharpness/calc
@@ -71,6 +74,7 @@
 # 終了
 # モンスターの物理肉質のみ，後の処理で使う可能性があるので残しておく
     tag @s remove Critical
+    data remove storage mhdp_core:temp Temp
     scoreboard players reset #mhdp_temp_health
     scoreboard players reset #mhdp_temp_multiply
     scoreboard players reset #mhdp_temp_damage

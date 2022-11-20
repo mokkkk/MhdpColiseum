@@ -20,8 +20,13 @@
      tag @s remove WpnSsword7Step
      tag @s remove WpnSsword8CA
      tag @s remove WpnSsword9Jump
+     tag @s remove WpnSsword10Fall
+     tag @s remove WpnSsword11Just0
+     tag @s remove WpnSsword12Just1
+     tag @s remove WpnSsword13Just2
+     tag @s remove WpnSsword14Just3
      tag @s remove WpnSswordCharged
-     tag @s remove WpnSswordHit
+     tag @s remove WpnSswordJust
 
 # ステップ回避ロック解除
      tag @s remove PlySneakAvoidLock

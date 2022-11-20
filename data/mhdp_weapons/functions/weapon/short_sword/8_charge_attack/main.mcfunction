@@ -29,12 +29,9 @@
 # 攻撃
     execute if entity @s[scores={MhdpWeaponTimer=8}] run function mhdp_weapons:weapon/short_sword/8_charge_attack/attack
 
-# デバッグ用
-    execute if entity @s[scores={MhdpWeaponTimer=13}] run tag @s add WpnSswordHit
-
 # 遷移
     # 攻撃ヒット時，駆け上がり斬りに移行
-        execute if entity @s[tag=WpnSswordHit,scores={MhdpWeaponTimer=13}] run function mhdp_weapons:weapon/short_sword/8_charge_attack/change_jump
+        execute if entity @s[tag=AttackHit,scores={MhdpWeaponTimer=13}] run function mhdp_weapons:weapon/short_sword/8_charge_attack/change_jump
     # 右クリック時，盾攻撃１に移行
         execute if entity @s[tag=PlyUsingEyeStart,tag=!PlySneakCurrent,scores={MhdpWeaponTimer=14..20}] run function mhdp_weapons:weapon/short_sword/8_charge_attack/change_bash
     # スニーク+右クリック時，回転斬りに移行

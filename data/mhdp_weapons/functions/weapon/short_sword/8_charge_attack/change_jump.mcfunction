@@ -11,6 +11,7 @@
 # タグ更新
     tag @s remove WpnSsword8CA
     tag @s remove RClicked
+    tag @s remove AttackHit
 
 # 移行
     function mhdp_weapons:weapon/short_sword/9_jump/start

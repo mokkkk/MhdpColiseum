@@ -2,6 +2,11 @@
 #
 # 攻撃時処理 ヒットエフェクト
 
+# 効果音
+    execute if data storage mhdp_core:temp Temp.WeaponDamage{Type:1} run say 切断
+    execute if data storage mhdp_core:temp Temp.WeaponDamage{Type:2} run say 打撃
+    execute if data storage mhdp_core:temp Temp.WeaponDamage{Type:3} run say 射撃
+
 # 流血
     execute if score #mhdp_temp_def MhdpCore matches ..44 run particle block red_wool ~ ~ ~ 0.1 0.1 0.1 1 15
     execute if score #mhdp_temp_def MhdpCore matches 45.. run particle block red_wool ~ ~ ~ 0.3 0.3 0.3 1 30

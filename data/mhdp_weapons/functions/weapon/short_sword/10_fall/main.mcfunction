@@ -6,9 +6,12 @@
     scoreboard players add @s MhdpWeaponTimer 1
 
 # 武器アニメーション
-    execute if entity @s[scores={MhdpWeaponTimer=1}] run function mhdp_weapons:weapon/short_sword/10_fall/animation_0
+    execute if entity @s[scores={MhdpWeaponTimer=1..}] run function mhdp_weapons:weapon/short_sword/10_fall/animation_0
     execute if entity @s[scores={MhdpWeaponTimer=10..12}] run function mhdp_weapons:weapon/short_sword/10_fall/animation_1
     execute if entity @s[scores={MhdpWeaponTimer=13..}] run function mhdp_weapons:weapon/short_sword/10_fall/animation_2
+
+# 移動速度低下
+    execute if entity @s[scores={MhdpWeaponTimer=1..3}] run effect give @s slowness 1 4 true
 
 # 移動
     execute if entity @s[scores={MhdpWeaponTimer=1..9}] run tp @s @s
@@ -21,5 +24,3 @@
 
 # 終了
     execute if entity @s[scores={MhdpWeaponTimer=22..}] run function mhdp_weapons:weapon/short_sword/10_fall/end
-
-# 遷移

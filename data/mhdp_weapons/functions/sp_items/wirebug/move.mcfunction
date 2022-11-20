@@ -16,6 +16,7 @@
     execute if score #mhdp_temp_rotate MhdpCore matches ..-80 run tag @s add MoveUp
     execute if score #mhdp_temp_rotate MhdpCore matches -15.. run scoreboard players set #mhdp_temp_rotate MhdpCore -15
     execute if score #mhdp_temp_rotate MhdpCore matches ..-52 run scoreboard players set #mhdp_temp_rotate MhdpCore -52
+    execute if entity @s[tag=MoveUp] run scoreboard players set #mhdp_temp_rotate MhdpCore -63
     scoreboard players set #mhdp_temp_const MhdpCore -2
     scoreboard players operation #mhdp_temp_rotate MhdpCore *= #mhdp_temp_const MhdpCore
     execute store result entity @e[type=area_effect_cloud,tag=MhdpKnockbackEffect,limit=1,sort=nearest] Effects[0].Amplifier byte 1 run scoreboard players get #mhdp_temp_rotate MhdpCore

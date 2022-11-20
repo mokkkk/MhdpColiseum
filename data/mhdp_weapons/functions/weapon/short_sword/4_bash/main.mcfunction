@@ -23,7 +23,7 @@
 
 # 遷移
     # 右クリックした場合，盾攻撃２に移行
-        execute if entity @s[tag=PlyUsingEyeStart,scores={MhdpWeaponTimer=10..16}] run tag @s add RClicked
+        execute if entity @s[tag=PlyUsingEyeStart,scores={MhdpWeaponTimer=10..}] run tag @s add RClicked
         execute if entity @s[tag=RClicked,tag=!PlySneakCurrent,scores={MhdpWeaponTimer=18..}] run function mhdp_weapons:weapon/short_sword/4_bash/change_back_bash
     # スニーク+右クリック時，回転斬りに移行
         execute if entity @s[tag=RClicked,tag=PlySneakCurrent,scores={MhdpWeaponTimer=18..}] run function mhdp_weapons:weapon/short_sword/4_bash/change_spin

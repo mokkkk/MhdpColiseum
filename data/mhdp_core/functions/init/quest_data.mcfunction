@@ -39,5 +39,9 @@
 # ノーマル・大闘技場・[火竜]・1分・HP100%・報酬3Z・ムービー無
     data modify storage mh_dp:quests List append value {Index:5,Level:0,Visible:1b,Started:0b,Cleared:0b,QuestRank:0,Field:1,Monsters:[{Name:"Reus",Condition:0,Target:-1}],MonsterCount:1,Timer:1,HpMult:100,Reward:3,RewardItems:[{Name:"Reus",Count:8,Min:4}],Movie:0b,MovieId:-1,display:{Name:'[{"text":"制限時間テスト","italic":false},{"interpret":true,"nbt":"Temp.Flag","storage":"mhdp_core:temp"}]',Lore:['{"text":"目標："}','{"text":"・火竜の討伐","italic":false}']},NameNew:'{"text":"制限時間テスト(NEW)","italic":false}',NameClear:'{"text":"制限時間テスト(CLEAR)","italic":false}'}
 
+## 6：めっちゃかたい火竜
+# ノーマル・大闘技場・[火竜]・999分・HP10000%・報酬3Z・ムービー無
+    data modify storage mh_dp:quests List append value {Index:6,Level:0,Visible:1b,Started:0b,Cleared:0b,QuestRank:0,Field:1,Monsters:[{Name:"Reus",Condition:0,Target:-1}],MonsterCount:1,Timer:999,HpMult:10000,Reward:3,RewardItems:[{Name:"Reus",Count:8,Min:4}],Movie:0b,MovieId:-1,display:{Name:'[{"text":"かたい火竜","italic":false},{"interpret":true,"nbt":"Temp.Flag","storage":"mhdp_core:temp"}]',Lore:['{"text":"目標："}','{"text":"・火竜の討伐","italic":false}']},NameNew:'{"text":"かたい火竜(NEW)","italic":false}',NameClear:'{"text":"かたい火竜(CLEAR)","italic":false}'}
+
 say クエストデータstorageを初期化しました
 function mhdp_core:phase/0_village/villager/quest/

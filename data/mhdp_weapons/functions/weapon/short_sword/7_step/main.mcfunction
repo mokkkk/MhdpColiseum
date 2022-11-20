@@ -27,23 +27,24 @@
     execute if entity @s[scores={MhdpWeaponTimer=..7}] run particle block grass_block ~ ~0.1 ~ 0.5 0 0.5 0 3
 
 # 右クリック溜め
-    execute if entity @s[tag=PlyUsingEyeCurrent,tag=!SklFocusLv1,tag=!SklFocusLv2,scores={MhdpWeaponTimer=16..72}] run scoreboard players add @s MhdpWeaponCharge 3
+    execute if entity @s[tag=PlyUsingEyeCurrent,tag=!SklFocusLv1,tag=!SklFocusLv2,scores={MhdpWeaponTimer=5..72}] run scoreboard players add @s MhdpWeaponCharge 3
     # スキル：集中
-        execute if entity @s[tag=PlyUsingEyeCurrent,tag=SklFocusLv1,scores={MhdpWeaponTimer=16..72}] run scoreboard players add @s MhdpWeaponCharge 4
-        execute if entity @s[tag=PlyUsingEyeCurrent,tag=SklFocusLv2,scores={MhdpWeaponTimer=16..72}] run scoreboard players add @s MhdpWeaponCharge 5
+        execute if entity @s[tag=PlyUsingEyeCurrent,tag=SklFocusLv1,scores={MhdpWeaponTimer=5..72}] run scoreboard players add @s MhdpWeaponCharge 4
+        execute if entity @s[tag=PlyUsingEyeCurrent,tag=SklFocusLv2,scores={MhdpWeaponTimer=5..72}] run scoreboard players add @s MhdpWeaponCharge 5
     # 溜め演出
-        execute if entity @s[tag=PlyUsingEyeCurrent,tag=!WpnSswordCharged,scores={MhdpWeaponTimer=16..72,MhdpWeaponCharge=45..}] run function mhdp_weapons:weapon/short_sword/7_step/charge
+        execute if entity @s[tag=PlyUsingEyeCurrent,tag=!WpnSswordCharged,scores={MhdpWeaponTimer=5..72,MhdpWeaponCharge=45..}] run function mhdp_weapons:weapon/short_sword/7_step/charge
 
 # 遷移
     # ジャンプ時，派生をキャンセル
         execute if entity @s[scores={MhdpJump=1..,MhdpWeaponTimer=2..}] run function mhdp_weapons:weapon/short_sword/7_step/end
     # 無操作時，突進斬りに移行
-        execute if entity @s[tag=!PlyUsingEyeCurrent,tag=!WpnSswordCharged,scores={MhdpWeaponTimer=16..}] run function mhdp_weapons:weapon/short_sword/7_step/change_dash
-        # execute if entity @s[tag=!PlyUsingEyeCurrent,scores={MhdpWeaponTimer=16..,MhdpWeaponCharge=..0}] run function mhdp_weapons:weapon/short_sword/7_step/change_dash
+        # execute if entity @s[tag=!PlyUsingEyeCurrent,tag=!WpnSswordCharged,scores={MhdpWeaponTimer=16..}] run function mhdp_weapons:weapon/short_sword/7_step/change_dash
+        execute if entity @s[tag=!PlyUsingEyeCurrent,scores={MhdpWeaponTimer=16..,MhdpWeaponCharge=..0}] run function mhdp_weapons:weapon/short_sword/7_step/change_dash
     # 右クリック時，ジャストラッシュに移行
-        # ...
+        execute if entity @s[tag=!PlyUsingEyeCurrent,scores={MhdpWeaponTimer=16..,MhdpWeaponCharge=1..44}] run function mhdp_weapons:weapon/short_sword/7_step/change_just
     # 右クリック長押し時，溜め斬りに移行
         execute if entity @s[tag=!PlyUsingEyeCurrent,tag=WpnSswordCharged,scores={MhdpWeaponTimer=16..}] run function mhdp_weapons:weapon/short_sword/7_step/change_charge_attack
+        execute if entity @s[tag=WpnSswordCharged,scores={MhdpWeaponTimer=16..,MhdpWeaponCharge=90..}] run function mhdp_weapons:weapon/short_sword/7_step/change_charge_attack
 
 # 移動終了
     execute if entity @s[scores={MhdpWeaponTimer=8}] run kill @e[type=marker,tag=SneakAvoidStand0,tag=Rotator]
