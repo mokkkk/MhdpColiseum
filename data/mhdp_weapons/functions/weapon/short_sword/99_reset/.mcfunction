@@ -26,6 +26,7 @@
      tag @s remove WpnSsword13Just2
      tag @s remove WpnSsword14Just3
      tag @s remove WpnSsword15Wire
+     tag @s remove WpnSsword16Upper
      tag @s remove WpnSswordCharged
      tag @s remove WpnSswordJust
 

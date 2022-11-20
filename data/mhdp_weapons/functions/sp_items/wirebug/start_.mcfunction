@@ -13,7 +13,6 @@
 
 # 移動禁止
     summon area_effect_cloud ~ ~ ~ {Duration:6,Age:4,Effects:[{Id:2,Amplifier:6b,Duration:20,ShowParticles:0b}]}
-    effect give @s levitation 1 255 true
     tag @s add PlyArmorHyper
 
 # 位置保存用Marker召喚

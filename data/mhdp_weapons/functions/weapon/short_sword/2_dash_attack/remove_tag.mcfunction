@@ -6,3 +6,4 @@
     tag @s remove PlyDrawAttack
     tag @s remove PlyDrawAttackWirebug
     tag @s remove PlySneakAvoidLock
+    tag @s remove PlyArmorHyper

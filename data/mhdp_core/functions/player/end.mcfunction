@@ -21,6 +21,7 @@
     execute if entity @s[tag=PlyJumpping] run tag @s remove PlyJumpping
 
 # 進捗状況リセット
+    execute if entity @s[tag=PlyDamaged] run tag @s remove PlyDamaged
     execute if entity @s[tag=PlySelectedItemChanged] run tag @s remove PlySelectedItemChanged
     execute if entity @s[tag=AdvTradeQuestNormal] run tag @s remove AdvTradeQuestNormal
     execute if entity @s[tag=AdvInventoryChangedMain] run tag @s remove AdvInventoryChangedMain

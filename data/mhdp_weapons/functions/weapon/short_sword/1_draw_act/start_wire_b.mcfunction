@@ -1,4 +1,4 @@
-#> mhdp_weapons:weapon/short_sword/1_draw_act/start_wire
+#> mhdp_weapons:weapon/short_sword/1_draw_act/start_wire_b
 #
 # 片手剣：抜刀攻撃（突進斬り） 実行 鉄蟲糸技
 

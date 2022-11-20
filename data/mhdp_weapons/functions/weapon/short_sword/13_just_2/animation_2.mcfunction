@@ -1,4 +1,4 @@
-#> mhdp_weapons:weapon/short_sword/13_just_2/animation_1
+#> mhdp_weapons:weapon/short_sword/13_just_2/animation_2
 #
 # 片手剣：ジャストラッシュ アイテムアニメーション
 
