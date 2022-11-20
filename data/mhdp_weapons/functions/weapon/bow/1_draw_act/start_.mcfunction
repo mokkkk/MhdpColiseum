@@ -32,4 +32,7 @@
 # 抜刀演出
     playsound item.armor.equip_iron master @a ~ ~ ~ 1 1
 
+# 翔蟲使用中止
+    function mhdp_weapons:sp_items/wirebug/reset
+    
 say 抜刀溜め開始

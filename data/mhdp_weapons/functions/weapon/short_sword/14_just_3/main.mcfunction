@@ -9,7 +9,7 @@
     execute if entity @s[scores={MhdpWeaponTimer=1}] run function mhdp_weapons:weapon/short_sword/14_just_3/animation_0
     execute if entity @s[scores={MhdpWeaponTimer=3}] run function mhdp_weapons:weapon/short_sword/14_just_3/animation_1
     execute if entity @s[scores={MhdpWeaponTimer=18}] run function mhdp_weapons:weapon/short_sword/14_just_3/animation_2
-    execute if entity @s[scores={MhdpWeaponTimer=25}] run function mhdp_weapons:weapon/short_sword/9_jump/animation_3
+    execute if entity @s[scores={MhdpWeaponTimer=28}] run function mhdp_weapons:weapon/short_sword/9_jump/animation_3
 
 # 攻撃
     execute if entity @s[scores={MhdpWeaponTimer=1}] run tp @s ~ ~ ~ ~2 ~1
