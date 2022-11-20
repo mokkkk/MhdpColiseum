@@ -20,6 +20,7 @@
      tag @s remove WpnGswordCharge1
      tag @s remove WpnGswordCharge2
      tag @s remove WpnGswordCharge3
+     tag @s remove WpnGsword8Edge
      tag @s remove HitStopNormal
      tag @s remove HitStopLong
 

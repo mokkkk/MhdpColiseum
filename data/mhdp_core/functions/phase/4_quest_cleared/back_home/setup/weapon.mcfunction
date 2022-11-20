@@ -37,6 +37,7 @@
 # 武器タグ消去
         tag @s remove PlyWpnBow
         tag @s remove PlyWpnGsword
+        tag @s remove PlyWpnSsword
 
 # UI消去
     title @a actionbar {"text": ""}
