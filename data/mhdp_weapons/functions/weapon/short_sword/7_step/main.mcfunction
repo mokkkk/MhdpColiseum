@@ -44,7 +44,7 @@
         execute if entity @s[tag=!PlyUsingEyeCurrent,scores={MhdpWeaponTimer=16..,MhdpWeaponCharge=1..44}] run function mhdp_weapons:weapon/short_sword/7_step/change_just
     # 右クリック長押し時，溜め斬りに移行
         execute if entity @s[tag=!PlyUsingEyeCurrent,tag=WpnSswordCharged,scores={MhdpWeaponTimer=16..}] run function mhdp_weapons:weapon/short_sword/7_step/change_charge_attack
-        execute if entity @s[tag=WpnSswordCharged,scores={MhdpWeaponTimer=16..,MhdpWeaponCharge=90..}] run function mhdp_weapons:weapon/short_sword/7_step/change_charge_attack
+        execute if entity @s[tag=WpnSswordCharged,scores={MhdpWeaponTimer=16..,MhdpWeaponCharge=180..}] run function mhdp_weapons:weapon/short_sword/7_step/change_charge_attack
 
 # 移動終了
     execute if entity @s[scores={MhdpWeaponTimer=8}] run kill @e[type=marker,tag=SneakAvoidStand0,tag=Rotator]

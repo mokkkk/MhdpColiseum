@@ -31,8 +31,51 @@
     # 翔蟲抜刀検知タグ追加
         tag @s add PlyDrawAttackWirebug
 
-# 抜刀演出
-    playsound item.armor.equip_iron master @a ~ ~ ~ 1 1
+# 演出
+    playsound entity.player.levelup master @s ~ ~ ~ 1 1.2
+    playsound entity.player.levelup master @s ~ ~ ~ 1 1.6
+    # [ImportKey]: NobwRALgngDgpmAXGAxgSwE4oDYIDRgCuhaAJkmAEaUAMALJQJwBMzAtHQMwBsNHzlOGwCGAdgBmfZoxTNu4gIysArAoVgCAO2EBbBMkBhigAJ1BGMIy6AzknAoA9oU0QkdGgRRxncDLbAA3YWxCfXAADyR3MChIgF9YgktSNEIbRGYCKwgLF0QouGxsNBgrfQUaKIx7bIh9KLQrAFFC4tLGgEdCIOwoAGVzT3JEcSDS+IBdIA_3
+    # 円 1
+    particle dust 1 1000000000 1000000000 2 ^0 ^ ^-2 0 0 0 0 1
+    particle dust 1 1000000000 1000000000 2 ^0.31287 ^ ^-1.97538 0 0 0 0 1
+    particle dust 1 1000000000 1000000000 2 ^0.61803 ^ ^-1.90211 0 0 0 0 1
+    particle dust 1 1000000000 1000000000 2 ^0.90798 ^ ^-1.78201 0 0 0 0 1
+    particle dust 1 1000000000 1000000000 2 ^1.17557 ^ ^-1.61803 0 0 0 0 1
+    particle dust 1 1000000000 1000000000 2 ^1.41421 ^ ^-1.41421 0 0 0 0 1
+    particle dust 1 1000000000 1000000000 2 ^1.61803 ^ ^-1.17557 0 0 0 0 1
+    particle dust 1 1000000000 1000000000 2 ^1.78201 ^ ^-0.90798 0 0 0 0 1
+    particle dust 1 1000000000 1000000000 2 ^1.90211 ^ ^-0.61803 0 0 0 0 1
+    particle dust 1 1000000000 1000000000 2 ^1.97538 ^ ^-0.31287 0 0 0 0 1
+    particle dust 1 1000000000 1000000000 2 ^2 ^ ^0 0 0 0 0 1
+    particle dust 1 1000000000 1000000000 2 ^1.97538 ^ ^0.31287 0 0 0 0 1
+    particle dust 1 1000000000 1000000000 2 ^1.90211 ^ ^0.61803 0 0 0 0 1
+    particle dust 1 1000000000 1000000000 2 ^1.78201 ^ ^0.90798 0 0 0 0 1
+    particle dust 1 1000000000 1000000000 2 ^1.61803 ^ ^1.17557 0 0 0 0 1
+    particle dust 1 1000000000 1000000000 2 ^1.41421 ^ ^1.41421 0 0 0 0 1
+    particle dust 1 1000000000 1000000000 2 ^1.17557 ^ ^1.61803 0 0 0 0 1
+    particle dust 1 1000000000 1000000000 2 ^0.90798 ^ ^1.78201 0 0 0 0 1
+    particle dust 1 1000000000 1000000000 2 ^0.61803 ^ ^1.90211 0 0 0 0 1
+    particle dust 1 1000000000 1000000000 2 ^0.31287 ^ ^1.97538 0 0 0 0 1
+    particle dust 1 1000000000 1000000000 2 ^0 ^ ^2 0 0 0 0 1
+    particle dust 1 1000000000 1000000000 2 ^-0.31287 ^ ^1.97538 0 0 0 0 1
+    particle dust 1 1000000000 1000000000 2 ^-0.61803 ^ ^1.90211 0 0 0 0 1
+    particle dust 1 1000000000 1000000000 2 ^-0.90798 ^ ^1.78201 0 0 0 0 1
+    particle dust 1 1000000000 1000000000 2 ^-1.17557 ^ ^1.61803 0 0 0 0 1
+    particle dust 1 1000000000 1000000000 2 ^-1.41421 ^ ^1.41421 0 0 0 0 1
+    particle dust 1 1000000000 1000000000 2 ^-1.61803 ^ ^1.17557 0 0 0 0 1
+    particle dust 1 1000000000 1000000000 2 ^-1.78201 ^ ^0.90798 0 0 0 0 1
+    particle dust 1 1000000000 1000000000 2 ^-1.90211 ^ ^0.61803 0 0 0 0 1
+    particle dust 1 1000000000 1000000000 2 ^-1.97538 ^ ^0.31287 0 0 0 0 1
+    particle dust 1 1000000000 1000000000 2 ^-2 ^ ^0 0 0 0 0 1
+    particle dust 1 1000000000 1000000000 2 ^-1.97538 ^ ^-0.31287 0 0 0 0 1
+    particle dust 1 1000000000 1000000000 2 ^-1.90211 ^ ^-0.61803 0 0 0 0 1
+    particle dust 1 1000000000 1000000000 2 ^-1.78201 ^ ^-0.90798 0 0 0 0 1
+    particle dust 1 1000000000 1000000000 2 ^-1.61803 ^ ^-1.17557 0 0 0 0 1
+    particle dust 1 1000000000 1000000000 2 ^-1.41421 ^ ^-1.41421 0 0 0 0 1
+    particle dust 1 1000000000 1000000000 2 ^-1.17557 ^ ^-1.61803 0 0 0 0 1
+    particle dust 1 1000000000 1000000000 2 ^-0.90798 ^ ^-1.78201 0 0 0 0 1
+    particle dust 1 1000000000 1000000000 2 ^-0.61803 ^ ^-1.90211 0 0 0 0 1
+    particle dust 1 1000000000 1000000000 2 ^-0.31287 ^ ^-1.97538 0 0 0 0 1
 
 # 終了
     data remove storage mhdp_core:temp Temp
@@ -40,4 +83,4 @@
 # 翔蟲使用中止
     function mhdp_weapons:sp_items/wirebug/reset
 
-say 飛影
+say 鉄蟲糸技：飛影

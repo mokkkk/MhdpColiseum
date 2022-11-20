@@ -16,6 +16,7 @@
 
 # 攻撃
     execute if entity @s[scores={MhdpWeaponTimer=2}] run function mhdp_weapons:weapon/short_sword/15_wire/attack
+    execute if entity @s[scores={MhdpWeaponTimer=2}] run function mhdp_weapons:weapon/short_sword/2_dash_attack/remove_tag
 
 # 遷移
     # 攻撃ヒット時，駆け上がり斬りに移行

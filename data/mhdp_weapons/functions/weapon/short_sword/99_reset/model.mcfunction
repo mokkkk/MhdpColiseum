@@ -12,7 +12,7 @@
         data modify storage mhdp_core:temp Temp.AttributeModifiers set value []
     item modify entity @s weapon.mainhand mhdp_core:const/short_sword/default
 # 抜刀中の場合はサブ武器もモデル変更
-    execute if entity @s[tag=IsDrawing] run function mhdp_weapons:weapon/short_sword/99_reset/model_sub
+    execute if entity @s[tag=PlyWeaponDrawing] run function mhdp_weapons:weapon/short_sword/99_reset/model_sub
 
 # 終了
     scoreboard players reset #mhdp_temp_cmd

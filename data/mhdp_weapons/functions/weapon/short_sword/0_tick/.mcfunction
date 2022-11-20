@@ -9,3 +9,9 @@
 # スタミナ回復
     execute if entity @s[tag=!PlyStaminaNotRegen,tag=!WpnSswordGuard,scores={MhdpStamina=..999}] run scoreboard players add @s MhdpStamina 6
     execute if entity @s[tag=!WpnSswordGuard,scores={MhdpStamina=1001..}] run scoreboard players set @s MhdpStamina 1000
+
+# 直接攻撃タイマー設定
+    execute if entity @s[scores={MhdpWeaponTimerSsword=1..}] run scoreboard players remove @s MhdpWeaponTimerSsword 1
+
+# 盾攻撃と回転斬りの判定用
+    execute if entity @s[tag=PlySneakCurrent,scores={MhdpWeaponTimerSsword=1..}] run tag @s add IsSpin

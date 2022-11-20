@@ -18,6 +18,6 @@
     data modify storage mhdp_core:temp Temp.WeaponDamage set value {Type:1,Offhand:0b}
 
 # ダメージ発生
-    execute positioned ^ ^ ^1 as @e[type=slime,tag=MonsterParts,distance=..4] run tag @s add Targets
+    execute positioned ^ ^ ^3 as @e[type=slime,tag=MonsterParts,distance=..3.5] run tag @s add Targets
     execute if entity @e[type=slime,tag=Targets] run function mhdp_weapons:core/attack/attack_by_mhdp_skill
     tag @e[type=slime,tag=Targets] remove Targets
