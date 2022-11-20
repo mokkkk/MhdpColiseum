@@ -5,6 +5,7 @@
 # ガード値取得
     scoreboard players set $MhdpGuard ScoreDamageCore 0
     execute if entity @s[tag=PlyWpnGsword,tag=WpnGswordGuard] run scoreboard players set $MhdpGuard ScoreDamageCore 70
+    execute if entity @s[tag=PlyWpnGsword,tag=WpnSsword3Guard] run scoreboard players set $MhdpGuard ScoreDamageCore 50
     # execute if entity @s[tag=PlyWpnGsword,tag=WpnGswordGuard] run scoreboard players set $MhdpGuard ScoreDamageCore 100
 
     # スキル：ガード性能

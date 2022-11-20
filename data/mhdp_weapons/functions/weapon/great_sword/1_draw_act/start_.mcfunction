@@ -39,4 +39,7 @@
 # ジャンプ中に抜刀攻撃した場合，ちょっと跳ねる
     execute if entity @s[tag=PlyJumpping] run summon area_effect_cloud ~ ~ ~ {Duration:6,Age:4,Effects:[{Id:25,Amplifier:16b,Duration:4,ShowParticles:0b}]}
 
+# 翔蟲使用中止
+    function mhdp_weapons:sp_items/wirebug/reset
+    
 say 抜刀溜め開始

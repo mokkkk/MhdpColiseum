@@ -1,6 +1,6 @@
 #> mhdp_weapons:core/sheathe/force
 #
-# メインハンドに武器を持っていないとき，強制納刀
+# 強制納刀
 
 # shulker_box処理用アイテム補充
     data modify block 0 0 0 Items set value [{Slot:0b,id:"minecraft:stone",Count:1b}]

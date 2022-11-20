@@ -1,6 +1,10 @@
 #> mhdp_core:player/death/check
 #
 # プレイヤー死亡時処理（advancements内） 体力確認
+#declare tag PlyDamaged このtickにダメージを受けた
+
+# ダメージ判定用タグ
+    tag @s add PlyDamaged
 
 # ダメージインターバルリセット
     scoreboard players set @s MhdpTDamageInterval 0
