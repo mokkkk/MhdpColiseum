@@ -13,6 +13,7 @@
 #declare tag WpnGswordCharge2 大剣溜め段階管理用
 #declare tag WpnGswordCharge3 大剣溜め段階管理用
 #declare tag WpnGsword8Edge 大剣ハンティングエッジ
+#declare tag WpnGsword9Armor 大剣金剛溜め
 #declare tag RClicked 右クリック入力保存
 
 # 0_常時実行：
@@ -25,7 +26,7 @@
 # 立ち → 右クリック長押し
 # 切り上げ → 右クリック長押し
 # 薙ぎ払い → 右クリック長押し
-    execute if entity @s[tag=!PlyWeaponDeactivate,tag=IsDrawing,tag=!WpnGswordCharge,tag=!WpnGswordChargeAttack,tag=!WpnGswordTackle,tag=!WpnGswordUpper,tag=!WpnGswordSweep,tag=!WpnGswordGuard,tag=!WpnGsword8Edge,tag=!PlySneakAvoidFunc,tag=PlyUsingEyeCurrent,tag=!PlySneakCurrent] run function mhdp_weapons:weapon/great_sword/2_charge/start
+    execute if entity @s[tag=!PlyWeaponDeactivate,tag=IsDrawing,tag=!WpnGswordCharge,tag=!WpnGswordChargeAttack,tag=!WpnGswordTackle,tag=!WpnGswordUpper,tag=!WpnGswordSweep,tag=!WpnGswordGuard,tag=!WpnGsword8Edge,tag=!WpnGsword9Armor,tag=!PlySneakAvoidFunc,tag=PlyUsingEyeCurrent,tag=!PlySneakCurrent] run function mhdp_weapons:weapon/great_sword/2_charge/start
     execute if entity @s[tag=IsDrawing,tag=WpnGswordCharge] run function mhdp_weapons:weapon/great_sword/2_charge/main
 
 ## 3_溜め斬り：
@@ -47,13 +48,17 @@
 
 ## 7_ガード：
 # スニーク
-    execute if entity @s[tag=!PlyWeaponDeactivate,tag=IsDrawing,tag=!WpnGswordCharge,tag=!WpnGswordChargeAttack,tag=!WpnGswordTackle,tag=!WpnGswordUpper,tag=!WpnGswordSweep,tag=!WpnGswordGuard,tag=!WpnGsword8Edge,tag=!PlySneakAvoidFunc,tag=!PlyUsingEyeCurrent,tag=PlySneakCurrent] run function mhdp_weapons:weapon/great_sword/7_guard/start
+    execute if entity @s[tag=!PlyWeaponDeactivate,tag=IsDrawing,tag=!WpnGswordCharge,tag=!WpnGswordChargeAttack,tag=!WpnGswordTackle,tag=!WpnGswordUpper,tag=!WpnGswordSweep,tag=!WpnGswordGuard,tag=!WpnGsword8Edge,tag=!WpnGsword9Armor,tag=!PlySneakAvoidFunc,tag=!PlyUsingEyeCurrent,tag=PlySneakCurrent] run function mhdp_weapons:weapon/great_sword/7_guard/start
     execute if entity @s[tag=IsDrawing,tag=WpnGswordGuard] run function mhdp_weapons:weapon/great_sword/7_guard/main
     execute if entity @s[tag=IsDrawing,tag=WpnGswordGuardEnd] run function mhdp_weapons:weapon/great_sword/7_guard/main_end
 
 ## 8_ハンティングエッジ：
 # 翔蟲移動中 → 抜刀攻撃
     execute if entity @s[tag=IsDrawing,tag=WpnGsword8Edge] run function mhdp_weapons:weapon/great_sword/8_edge/main
+
+## 9_金剛溜め：
+# 翔蟲待機中 → 抜刀攻撃
+    execute if entity @s[tag=IsDrawing,tag=WpnGsword9Armor] run function mhdp_weapons:weapon/great_sword/9_armor_charge/main
 
 # 終了
     tag @s remove IsDrawing

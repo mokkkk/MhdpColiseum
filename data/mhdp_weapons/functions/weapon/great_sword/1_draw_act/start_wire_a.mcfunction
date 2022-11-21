@@ -1,4 +1,4 @@
-#> mhdp_weapons:weapon/great_sword/1_draw_act/start_wire_b
+#> mhdp_weapons:weapon/great_sword/1_draw_act/start_wire_a
 #
 # 大剣：抜刀攻撃 実行 鉄蟲糸技
 
@@ -23,7 +23,7 @@
     # アニメーションタイマーリセット
         scoreboard players set @s MhdpWeaponTimer 0
     # タグ更新
-        tag @s add WpnGsword8Edge
+        tag @s add WpnGsword9Armor
     # ステップ回避ロック開始
         tag @s add PlySneakAvoidLock
     # 抜刀検知タグ追加
@@ -82,8 +82,20 @@
 
 # 翔蟲使用中止
     function mhdp_weapons:sp_items/wirebug/reset
+# クールタイム設定
+    scoreboard players set @s MhdpTItmWirebugCooltime 600
+# アーマー
+    tag @s add PlyArmorHyper
 
-# 跳ねる
-    summon area_effect_cloud ~ ~ ~ {Duration:6,Age:4,Effects:[{Id:25,Amplifier:16b,Duration:4,ShowParticles:0b}]}
+# 移動処理開始
+    # 処理用Marker召喚
+        summon marker ~ ~ ~ {Tags:["SneakAvoidStand0","Start"]}
+    # 処理用MarkerにUidコピー
+        scoreboard players operation @e[type=marker,tag=SneakAvoidStand0,tag=Start] MhdpPlayerUid = @s MhdpPlayerUid
+    # 移動方向決定
+        execute as @e[type=marker,tag=SneakAvoidStand0,tag=Start] run data modify entity @s Pos set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].PlayerData.Pos.Pre
+        execute rotated ~ 0 as @e[type=marker,tag=SneakAvoidStand0,tag=Start] positioned as @s run tp @s ~ ~ ~ ~ ~
+        execute positioned as @e[type=marker,tag=SneakAvoidStand0,tag=Start,limit=1] run tp @s ~ ~ ~ ~ ~ 
 
-say 鉄蟲糸技：ハンティングエッジ
+
+say 鉄蟲糸技：金剛溜め斬り

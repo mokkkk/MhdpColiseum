@@ -13,7 +13,7 @@
     item modify entity @s weapon.mainhand mhdp_core:const/great_sword/while_animation
 
 # 演出
-    playsound entity.hoglin.step master @a ~ ~ ~ 1 0.7
+    execute if entity @s[tag=!PlyJumpping] run playsound entity.hoglin.step master @a ~ ~ ~ 1 0.7
 
 # 終了
     scoreboard players reset #mhdp_temp_cmd
