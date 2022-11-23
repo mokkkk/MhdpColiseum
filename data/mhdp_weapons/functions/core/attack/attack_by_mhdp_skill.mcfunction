@@ -32,6 +32,7 @@
 
 # 切れ味更新
     execute if entity @s[tag=PlyWpnBow] run tag @s add NoUpdate
+    execute if entity @s[tag=PlyWpnGsword] if data storage mhdp_core:temp Temp.WeaponDamage{Offhand:1b} run tag @s add NoUpdate
     execute if entity @s[tag=PlyWpnSsword] if data storage mhdp_core:temp Temp.WeaponDamage{Offhand:1b} run tag @s add NoUpdate
     execute unless entity @s[tag=NoUpdate] run function mhdp_weapons:core/attack/sharpness/
     tag @s remove NoUpdate

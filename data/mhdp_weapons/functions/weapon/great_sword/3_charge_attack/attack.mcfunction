@@ -16,6 +16,7 @@
     execute if entity @s[tag=WpnGswordCharge3] run scoreboard players set #mhdp_temp_damage_multiply MhdpCore 550
     execute if entity @s[tag=WpnGswordCharge2,tag=PlyDrawAttackWirebug] run scoreboard players set #mhdp_temp_damage_multiply MhdpCore 280
     execute if entity @s[tag=WpnGswordCharge3,tag=PlyDrawAttackWirebug] run scoreboard players set #mhdp_temp_damage_multiply MhdpCore 360
+    data modify storage mhdp_core:temp Temp.WeaponDamage set value {Type:1,Offhand:0b}
 
 # ダメージ発生
     execute positioned ^ ^ ^4.5 as @e[type=slime,tag=MonsterParts,distance=..4] run tag @s add Targets

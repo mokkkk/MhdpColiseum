@@ -9,6 +9,7 @@
 # 倍率設定
     scoreboard players set #mhdp_temp_damage_multiply MhdpCore 80
     scoreboard players set #mhdp_temp_damage_multiply_element MhdpCore 0
+    data modify storage mhdp_core:temp Temp.WeaponDamage set value {Type:2,Offhand:1b}
 
 # ダメージ発生
     execute rotated ~ 0 positioned ^ ^ ^1.5 as @e[type=slime,tag=MonsterParts,distance=..3] run tag @s add Targets
