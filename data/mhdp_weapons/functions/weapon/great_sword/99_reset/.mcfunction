@@ -15,11 +15,14 @@
      tag @s remove WpnGswordChargeAttack
      tag @s remove WpnGswordUpper
      tag @s remove WpnGswordSweep
+     tag @s remove WpnGswordTackle
      tag @s remove WpnGswordGuard
      tag @s remove WpnGswordGuardEnd
      tag @s remove WpnGswordCharge1
      tag @s remove WpnGswordCharge2
      tag @s remove WpnGswordCharge3
+     tag @s remove WpnGsword8Edge
+     tag @s remove WpnGsword9Armor
      tag @s remove HitStopNormal
      tag @s remove HitStopLong
 
@@ -29,3 +32,9 @@
 # 移動速度リセット
      effect clear @s speed
      effect clear @s slowness
+
+# marker削除
+    tag @s add Target
+    execute as @e[type=marker,tag=SneakAvoidStand0] if score @s MhdpPlayerUid = @a[tag=Target,limit=1,sort=nearest] MhdpPlayerUid run tag @s add Rotator
+    tag @s remove Target
+    kill @e[type=marker,tag=SneakAvoidStand0,tag=Rotater]

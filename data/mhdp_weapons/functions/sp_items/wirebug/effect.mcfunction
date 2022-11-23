@@ -8,7 +8,7 @@
     tag @s remove Target
     execute rotated as @e[type=marker,tag=WirebugStand,tag=Rotater,limit=1] run function mhdp_weapons:sp_items/wirebug/effect_
 
-# 移動
+# 移動禁止
     execute if entity @s[tag=!PlySneakCurrent] run tp @s @s
 
 # 終了

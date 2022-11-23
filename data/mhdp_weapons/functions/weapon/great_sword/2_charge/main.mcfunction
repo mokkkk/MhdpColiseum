@@ -9,6 +9,8 @@
     execute if entity @s[scores={MhdpWeaponCharge=..1500}] run function mhdp_weapons:weapon/great_sword/2_charge/main_charge
 
 # 移動禁止
+    execute if entity @s[tag=!PlyJumpping,scores={MhdpWeaponTimer=..10}] run tp @s @s
+    execute if entity @s[scores={MhdpWeaponTimer=1..10,MhdpJump=1..}] run tp @s @s
     effect give @s slowness 1 10 true
 
 # 一定スコア毎に溜め段階増加

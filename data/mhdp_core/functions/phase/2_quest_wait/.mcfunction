@@ -7,7 +7,7 @@
 
 # プレイヤーの動きを止める
     effect give @a slowness 1 100 true
-    effect give @a jump_boost 1 128 true
+    execute as @a at @s run tp @s @s
 
 # HP・スタミナ回復
     effect give @a instant_health 1 10 true

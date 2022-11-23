@@ -6,3 +6,5 @@
     tag @s remove PlyItmImmovable
     tag @s remove ItmUseImmovable
     tag @s remove ItmCoolImmovable
+    scoreboard players reset @s MhdpTItmImmovable
+    scoreboard players reset @s MhdpTItmImmovableCooltime
