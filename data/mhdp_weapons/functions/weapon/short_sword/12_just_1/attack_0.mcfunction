@@ -10,6 +10,7 @@
     execute positioned ~ ~1.65 ~ run particle cloud ^-1 ^ ^1.5 0.2 0.2 0.2 0.05 5
     execute positioned ~ ~1.65 ~ run particle cloud ^ ^ ^1.7 0.2 0.2 0.2 0.05 5
     execute positioned ~ ~1.65 ~ run particle cloud ^1 ^ ^1.2 0.2 0.2 0.2 0.05 5
+    execute if entity @s[tag=WpnSswordJust] positioned ~ ~1.65 ~ positioned ^ ^ ^2 rotated ~90 0 run function mhdp_weapons:weapon/short_sword/12_just_1/particle_0
 
 # 倍率設定
     scoreboard players set #mhdp_temp_damage_multiply MhdpCore 140

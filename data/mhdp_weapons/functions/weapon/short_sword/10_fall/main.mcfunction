@@ -15,7 +15,7 @@
 
 # 移動
     execute if entity @s[scores={MhdpWeaponTimer=1..9}] run tp @s @s
-    execute if entity @s[scores={MhdpWeaponTimer=10}] run function asa_animator:general/check_ground
+    execute if entity @s[scores={MhdpWeaponTimer=10}] run function mhdp_weapons:weapon/short_sword/10_fall/move
 
 # 攻撃
     execute if entity @s[scores={MhdpWeaponTimer=1}] run tp @s ~ ~ ~ ~-5 ~-1
