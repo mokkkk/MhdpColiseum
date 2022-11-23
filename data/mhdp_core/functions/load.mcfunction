@@ -42,6 +42,7 @@
         scoreboard objectives add MhdpWeaponCharge dummy
         scoreboard objectives add MhdpWeaponTimer dummy
         scoreboard objectives add MhdpWeaponDeactivateTimer dummy
+        scoreboard objectives add MhdpWeaponCountBow dummy
         scoreboard objectives add MhdpWeaponTimerSsword dummy
 
     # 特殊装具処理用

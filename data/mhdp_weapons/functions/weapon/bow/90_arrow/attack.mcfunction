@@ -7,6 +7,9 @@
     tag @s add Target
     execute as @a if score @s MhdpPlayerUid = @e[type=marker,tag=Target,limit=1] MhdpPlayerUid run tag @s add Attacker
 
+# 飛翔にらみ撃ちの場合，確定でクリティカル
+    execute if entity @s[tag=JumpShot] run scoreboard players set @s MhdpCore 2
+
 # 溜め段階に応じて倍率設定
     scoreboard players set #mhdp_temp_damage_multiply MhdpCore 100
     scoreboard players set #mhdp_temp_damage_multiply_element MhdpCore 100

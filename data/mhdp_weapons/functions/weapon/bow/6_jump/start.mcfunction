@@ -37,6 +37,5 @@
 
 # 溜め段階に応じた矢を発射する
     function mhdp_weapons:weapon/bow/3_shot/attack
-    tag @s remove PlyDrawAttack
 
 say 射撃

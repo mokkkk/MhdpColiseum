@@ -19,6 +19,7 @@
     execute if entity @s[tag=WpnBowCharge2] run tag @e[type=marker,tag=PlyArrow,tag=Start,limit=1] add WpnBowCharge2
     execute if entity @s[tag=WpnBowCharge3] run tag @e[type=marker,tag=PlyArrow,tag=Start,limit=1] add WpnBowCharge3
     execute if entity @s[tag=WpnBowCharge4] run tag @e[type=marker,tag=PlyArrow,tag=Start,limit=1] add WpnBowCharge4
+    execute if entity @s[tag=PlyDrawAttack] run tag @e[type=marker,tag=PlyArrow,tag=Start,limit=1] add DrawAttack
 
 # 終了
     tag @e[type=marker,tag=PlyArrow,tag=Start] remove Start
