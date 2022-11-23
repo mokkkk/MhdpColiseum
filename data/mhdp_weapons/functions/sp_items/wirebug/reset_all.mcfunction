@@ -6,6 +6,8 @@
     tag @s remove PlyItmWirebug
     tag @s remove ItmUseWirebug
     tag @s remove ItmCoolWirebug
+    scoreboard players reset @s MhdpTItmWirebug
+    scoreboard players reset @s MhdpTItmWirebugCooltime
 
 # marker削除
     kill @e[type=marker,tag=WirebugStand]
