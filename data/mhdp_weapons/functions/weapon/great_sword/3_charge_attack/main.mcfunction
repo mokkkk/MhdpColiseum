@@ -19,7 +19,8 @@
         execute if entity @s[tag=AttackHit,tag=HitStopLong,scores={MhdpWeaponTimer=8}] run function mhdp_weapons:weapon/great_sword/3_charge_attack/animation_0
 
 # 移動禁止
-    execute if entity @s[scores={MhdpWeaponTimer=1}] run effect give @s jump_boost 1 128 true
+    execute if entity @s[tag=!PlyJumpping,scores={MhdpWeaponTimer=1..8}] run tp @s @s
+    execute if entity @s[scores={MhdpWeaponTimer=1..8,MhdpJump=1..}] run tp @s @s
     execute if entity @s[scores={MhdpWeaponTimer=1}] run summon area_effect_cloud ~ ~ ~ {Duration:6,Age:4,Effects:[{Id:2,Amplifier:5b,Duration:4,ShowParticles:0b}]}
     execute if entity @s[scores={MhdpWeaponTimer=8..30}] run effect give @s slowness 1 4 true
 

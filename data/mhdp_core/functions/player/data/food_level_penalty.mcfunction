@@ -7,4 +7,6 @@
     execute if score #mhdp_temp_food MhdpCore matches ..2 run effect give @s saturation 1 0 true
 
 # ジャンプ禁止
-    effect give @s jump_boost 1 128 true
+    # effect give @s jump_boost 1 128 true
+    execute if entity @s[scores={MhdpJump=1..}] run tp @s @s
+    execute if entity @s[scores={MhdpJump=1..}] run tp @s ~ ~-0.1 ~

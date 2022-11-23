@@ -8,9 +8,10 @@
 # 念のためプレイヤー無敵化・移動を封じる
     effect give @a resistance 1 10 true
     effect give @a slowness 1 10 true
-    effect give @a jump_boost 1 128 true
     effect give @a instant_health 1 10 true
     effect give @a saturation 1 10 true
+    execute as @a if entity @s[tag=!PlyJumpping] at @s run tp @s @s
+    execute as @a if entity @s[scores={MhdpJump=1..}] run tp @s @s
 
 # テキスト表示
     execute if score #mhdp_quest_timer MhdpCore matches 61 run tellraw @a {"text": "【クエストに失敗しました】"}

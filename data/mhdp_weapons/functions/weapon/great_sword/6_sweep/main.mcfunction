@@ -16,7 +16,8 @@
 
 # 移動速度低下
     execute if entity @s[scores={MhdpWeaponTimer=1..15}] run effect give @s slowness 1 5 true
-    execute if entity @s[scores={MhdpWeaponTimer=1}] run effect give @s jump_boost 1 128 true
+    execute if entity @s[tag=!PlyJumpping,scores={MhdpWeaponTimer=1..19}] run tp @s @s
+    execute if entity @s[scores={MhdpWeaponTimer=1..19,MhdpJump=1..}] run tp @s @s
 
 # ステップ回避ロック解除
     execute if entity @s[scores={MhdpWeaponTimer=20..}] run tag @s remove PlySneakAvoidLock
