@@ -10,7 +10,9 @@
     execute if entity @s[scores={MhdpWeaponTimer=10}] run function mhdp_weapons:weapon/great_sword/6_sweep/animation_1
 
 # 攻撃
+    execute if entity @s[scores={MhdpWeaponTimer=1}] run tp @s ~ ~ ~ ~3 ~2
     execute if entity @s[scores={MhdpWeaponTimer=10}] run function mhdp_weapons:weapon/great_sword/6_sweep/attack
+    execute if entity @s[scores={MhdpWeaponTimer=10..12}] run tp @s ~ ~ ~ ~-1.5 ~
 
 # 移動速度低下
     execute if entity @s[scores={MhdpWeaponTimer=1..15}] run effect give @s slowness 1 5 true

@@ -41,4 +41,5 @@
         execute if entity @s[tag=!PlyUsingEyeCurrent,scores={MhdpWeaponTimer=10..}] run function mhdp_weapons:weapon/great_sword/9_armor_charge/change_charge_attack
 
 # 終了
+    particle dust 1 1000000000 1000000000 1 ~ ~1 ~ 0.5 0.5 0.5 0 1
     execute if entity @s[scores={MhdpWeaponTimer=..45}] run tag @e[type=marker,tag=SneakAvoidStand0,tag=Rotator] remove Rotator

@@ -26,6 +26,7 @@
 # 立ち → 右クリック長押し
 # 切り上げ → 右クリック長押し
 # 薙ぎ払い → 右クリック長押し
+# ハンティングエッジ → 右クリック長押し
     execute if entity @s[tag=!PlyWeaponDeactivate,tag=IsDrawing,tag=!WpnGswordCharge,tag=!WpnGswordChargeAttack,tag=!WpnGswordTackle,tag=!WpnGswordUpper,tag=!WpnGswordSweep,tag=!WpnGswordGuard,tag=!WpnGsword8Edge,tag=!WpnGsword9Armor,tag=!PlySneakAvoidFunc,tag=PlyUsingEyeCurrent,tag=!PlySneakCurrent] run function mhdp_weapons:weapon/great_sword/2_charge/start
     execute if entity @s[tag=IsDrawing,tag=WpnGswordCharge] run function mhdp_weapons:weapon/great_sword/2_charge/main
 
