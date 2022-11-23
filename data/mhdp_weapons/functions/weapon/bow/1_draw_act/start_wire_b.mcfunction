@@ -80,8 +80,6 @@
 
 # 翔蟲使用中止
     function mhdp_weapons:sp_items/wirebug/reset
-# クールタイム設定
-    scoreboard players set @s MhdpTItmWirebugCooltime 800
 
 # 跳ねる
     summon area_effect_cloud ~ ~ ~ {Duration:6,Age:4,Effects:[{Id:25,Amplifier:16b,Duration:4,ShowParticles:0b}]}

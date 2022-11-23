@@ -8,7 +8,7 @@
     execute if entity @s[scores={MhdpWeaponTimer=..28}] run scoreboard players add @s MhdpWeaponTimer 1
 
 # 移動禁止
-    execute if entity @s[scores={MhdpWeaponTimer=1..35}] run tp @s @s
+    # execute if entity @s[scores={MhdpWeaponTimer=1..35}] run tp @s @s
     effect give @s slowness 1 5 true
 
 # アニメーション

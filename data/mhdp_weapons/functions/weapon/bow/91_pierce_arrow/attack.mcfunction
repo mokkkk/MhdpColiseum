@@ -8,8 +8,8 @@
     execute as @a if score @s MhdpPlayerUid = @e[type=marker,tag=Target,limit=1] MhdpPlayerUid run tag @s add Attacker
 
 # 倍率設定
-    scoreboard players set #mhdp_temp_damage_multiply MhdpCore 80
-    scoreboard players set #mhdp_temp_damage_multiply_element MhdpCore 80
+    scoreboard players set #mhdp_temp_damage_multiply MhdpCore 40
+    scoreboard players set #mhdp_temp_damage_multiply_element MhdpCore 40
     data modify storage mhdp_core:temp Temp.WeaponDamage set value {Type:1,Offhand:0b}
 
 # クリティカル距離以外の場合，ダメージ減算
