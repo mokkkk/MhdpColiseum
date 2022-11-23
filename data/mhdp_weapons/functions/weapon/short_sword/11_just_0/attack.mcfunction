@@ -6,6 +6,9 @@
 # 演出
     playsound entity.player.attack.sweep master @a ~ ~ ~ 1 0.7
     playsound item.trident.throw master @a ~ ~ ~ 1 0.7
+    execute positioned ~ ~1.65 ~ run particle sweep_attack ^-1 ^ ^1.5 0.2 0.2 0.2 0.05 5
+    execute positioned ~ ~1.65 ~ run particle sweep_attack ^ ^ ^1.7 0.2 0.2 0.2 0.05 5
+    execute positioned ~ ~1.65 ~ run particle sweep_attack ^1 ^ ^1.2 0.2 0.2 0.2 0.05 5
 
 # 倍率設定
     scoreboard players set #mhdp_temp_damage_multiply MhdpCore 100

@@ -7,9 +7,10 @@
     playsound entity.player.attack.sweep master @a ~ ~ ~ 1 0.7
     playsound item.trident.throw master @a ~ ~ ~ 1 1.2
     playsound item.trident.throw master @a ~ ~ ~ 1 0.7
-    execute positioned ~ ~1.65 ~ run particle sweep_attack ^ ^ ^1.7 0.2 0.2 0.2 0.05 5
-    execute positioned ~ ~1.65 ~ run particle sweep_attack ^ ^ ^2.7 0.2 0.2 0.2 0.05 5
-    execute positioned ~ ~1.65 ~ run particle sweep_attack ^ ^ ^3.7 0.2 0.2 0.2 0.05 5
+    execute positioned ~ ~1.75 ~ positioned ^-0.5 ^ ^3 rotated ~90 70 run function mhdp_weapons:weapon/short_sword/12_just_1/particle_1
+    execute positioned ~ ~1.75 ~ positioned ^-0.5 ^ ^3 rotated ~90 -20 run function mhdp_weapons:weapon/short_sword/12_just_1/particle_1
+    execute if entity @s[tag=WpnSswordJust] positioned ~ ~1.75 ~ positioned ^-0.5 ^ ^2 rotated ~90 70 run function mhdp_weapons:weapon/short_sword/12_just_1/particle_0
+    execute if entity @s[tag=WpnSswordJust] positioned ~ ~1.75 ~ positioned ^-0.5 ^ ^2 rotated ~90 -20 run function mhdp_weapons:weapon/short_sword/12_just_1/particle_0
 
 # 倍率設定
     scoreboard players set #mhdp_temp_damage_multiply MhdpCore 100
