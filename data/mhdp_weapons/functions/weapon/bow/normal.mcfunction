@@ -12,6 +12,7 @@
 #declare tag WpnBowCharge3 弓溜め段階管理用
 #declare tag WpnBowCharge4 弓溜め段階管理用
 #declare tag WpnBow6Jump 弓飛翔にらみ撃ち
+#declare tag WpnBow7Pierce 弓竜の一矢
 
 ## 0_常時実行：
     function mhdp_weapons:weapon/bow/0_tick/
@@ -23,7 +24,7 @@
 # 立ち → 右クリック長押し
 # 射撃 → 右クリック長押し
 # チャージステップ → 右クリック長押し
-    execute if entity @s[tag=!PlyWeaponDeactivate,tag=IsDrawing,tag=!WpnBowShot,tag=!WpnBowHShot,tag=!WpnBowCharge,tag=!WpnBowCStep,tag=!WpnBow6Jump,tag=!PlySneakAvoidFunc,tag=PlyUsingEyeCurrent] run function mhdp_weapons:weapon/bow/2_charge/start
+    execute if entity @s[tag=!PlyWeaponDeactivate,tag=IsDrawing,tag=!WpnBowShot,tag=!WpnBowHShot,tag=!WpnBowCharge,tag=!WpnBowCStep,tag=!WpnBow6Jump,tag=!WpnBow7Pierce,tag=!PlySneakAvoidFunc,tag=PlyUsingEyeCurrent] run function mhdp_weapons:weapon/bow/2_charge/start
     execute if entity @s[tag=IsDrawing,tag=WpnBowCharge] run function mhdp_weapons:weapon/bow/2_charge/main
 
 ## 3_射撃：
@@ -40,7 +41,12 @@
     execute if entity @s[tag=IsDrawing,tag=WpnBowCStep] run function mhdp_weapons:weapon/bow/5_charge_step/main
 
 ## 6_飛翔にらみ撃ち
+# 翔蟲移動中 → 抜刀攻撃
     execute if entity @s[tag=IsDrawing,tag=WpnBow6Jump] run function mhdp_weapons:weapon/bow/6_jump/main
+
+## 7_竜の一矢
+# 翔蟲待機中 → 抜刀攻撃
+    execute if entity @s[tag=IsDrawing,tag=WpnBow7Pierce] run function mhdp_weapons:weapon/bow/7_pierce/main
 
 # 終了
     tag @s remove IsDrawing

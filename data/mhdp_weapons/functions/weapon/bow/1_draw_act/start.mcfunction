@@ -10,8 +10,8 @@
 
 # A && B && Cの場合，抜刀攻撃成功
     execute if entity @s[tag=FlagA,tag=FlagB,tag=!ItmUseWirebug] run function mhdp_weapons:weapon/bow/1_draw_act/start_
-    execute if entity @s[tag=FlagA,tag=FlagB,tag=ItmUseWirebug,scores={MhdpTItmWirebug=1..3}] run function mhdp_weapons:weapon/bow/1_draw_act/start_wire_a
-    execute if entity @s[tag=FlagA,tag=FlagB,tag=ItmUseWirebug,scores={MhdpTItmWirebug=4..}] run function mhdp_weapons:weapon/bow/1_draw_act/start_wire_b
+    execute if entity @s[tag=FlagA,tag=FlagB,tag=ItmUseWirebug,scores={MhdpTItmWirebug=1..4}] run function mhdp_weapons:weapon/bow/1_draw_act/start_wire_a
+    execute if entity @s[tag=FlagA,tag=FlagB,tag=ItmUseWirebug,scores={MhdpTItmWirebug=5..}] run function mhdp_weapons:weapon/bow/1_draw_act/start_wire_b
 
 # 終了
     tag @s remove FlagA

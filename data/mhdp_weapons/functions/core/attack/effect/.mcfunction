@@ -15,8 +15,8 @@
     execute if entity @s[tag=Critical] run function mhdp_weapons:core/attack/effect/crit
 
 # 属性
-    execute if score #mhdp_temp_element_type MhdpCore matches 1 at @s positioned ~ ~1.65 ~ facing entity @e[type=slime,tag=Victim] feet positioned ^ ^ ^1.5 run function mhdp_weapons:core/attack/effect/element/fire
-    execute if score #mhdp_temp_element_type MhdpCore matches 2 at @s positioned ~ ~1.65 ~ facing entity @e[type=slime,tag=Victim] feet positioned ^ ^ ^1.5 run function mhdp_weapons:core/attack/effect/element/water
-    execute if score #mhdp_temp_element_type MhdpCore matches 3 at @s positioned ~ ~1.65 ~ facing entity @e[type=slime,tag=Victim] feet positioned ^ ^ ^1.5 run function mhdp_weapons:core/attack/effect/element/thunder
-    execute if score #mhdp_temp_element_type MhdpCore matches 4 at @s positioned ~ ~1.65 ~ facing entity @e[type=slime,tag=Victim] feet positioned ^ ^ ^1.5 run function mhdp_weapons:core/attack/effect/element/ice
-    execute if score #mhdp_temp_element_type MhdpCore matches 5 at @s positioned ~ ~1.65 ~ facing entity @e[type=slime,tag=Victim] feet positioned ^ ^ ^1.5 run function mhdp_weapons:core/attack/effect/element/dragon
+    execute if score #mhdp_temp_element_type MhdpCore matches 1 positioned ~ ~1.65 ~ facing entity @e[type=slime,tag=Victim] feet positioned ^ ^ ^1.5 run function mhdp_weapons:core/attack/effect/element/fire
+    execute if score #mhdp_temp_element_type MhdpCore matches 2 positioned ~ ~1.65 ~ facing entity @e[type=slime,tag=Victim] feet positioned ^ ^ ^1.5 run function mhdp_weapons:core/attack/effect/element/water
+    execute if score #mhdp_temp_element_type MhdpCore matches 3 positioned ~ ~1.65 ~ facing entity @e[type=slime,tag=Victim] feet positioned ^ ^ ^1.5 run function mhdp_weapons:core/attack/effect/element/thunder
+    execute if score #mhdp_temp_element_type MhdpCore matches 4 positioned ~ ~1.65 ~ facing entity @e[type=slime,tag=Victim] feet positioned ^ ^ ^1.5 run function mhdp_weapons:core/attack/effect/element/ice
+    execute if score #mhdp_temp_element_type MhdpCore matches 5 positioned ~ ~1.65 ~ facing entity @e[type=slime,tag=Victim] feet positioned ^ ^ ^1.5 run function mhdp_weapons:core/attack/effect/element/dragon
