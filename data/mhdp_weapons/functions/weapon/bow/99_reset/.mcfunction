@@ -19,6 +19,8 @@
      tag @s remove WpnBowCharge2
      tag @s remove WpnBowCharge3
      tag @s remove WpnBowCharge4
+     tag @s remove WpnBow6Jump
+     tag @s remove WpnBow7Pierce
 
 # ステップ回避ロック解除
      tag @s remove PlySneakAvoidLock

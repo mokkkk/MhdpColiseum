@@ -7,5 +7,5 @@
     execute if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].PlayerData.Item.MainHand.tag{MhdpWeapon:1b} run tag @s add IsDrawing
 
 # スタミナ回復
-    execute if entity @s[tag=!PlyStaminaNotRegen,tag=!WpnBowCharge,tag=!WpnBowShot,tag=!WpnBowHShot,tag=!WpnBowCStep,scores={MhdpStamina=..999}] run scoreboard players add @s MhdpStamina 4
-    execute if entity @s[tag=!WpnBowCharge,tag=!WpnBowShot,tag=!WpnBowHShot,tag=!WpnBowCStep,scores={MhdpStamina=1001..}] run scoreboard players set @s MhdpStamina 1000
+    execute if entity @s[tag=!PlyStaminaNotRegen,tag=!WpnBowCharge,tag=!WpnBowShot,tag=!WpnBowHShot,tag=!WpnBowCStep,tag=!WpnBow6Jump,scores={MhdpStamina=..999}] run scoreboard players add @s MhdpStamina 4
+    execute if entity @s[tag=!WpnBowCharge,tag=!WpnBowShot,tag=!WpnBowHShot,tag=!WpnBowCStep,tag=!WpnBow6Jump,scores={MhdpStamina=1001..}] run scoreboard players set @s MhdpStamina 1000

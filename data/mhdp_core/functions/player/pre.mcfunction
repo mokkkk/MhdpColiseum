@@ -8,6 +8,7 @@
     execute if score #mhdp_temp_time MhdpCore matches 1.. run function mhdp_core:player/data/get
 
 # ニンジン棒クリック取得
+    execute if entity @s[scores={MhdpDropCoas=1..}] run tag @s add PlyDroppedCoas
     execute if entity @s[scores={MhdpUsedCoas=1..}] run tag @s add PlyUsedCoas
 
 # スニーク状態取得

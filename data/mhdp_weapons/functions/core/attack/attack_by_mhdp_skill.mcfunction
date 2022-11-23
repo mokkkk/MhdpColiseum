@@ -67,7 +67,7 @@
         execute if score #mhdp_temp_def MhdpCore matches 70.. run scoreboard players set $Color Temporary 1
     # 表示
         scoreboard players operation $Fluctuation Lib = #mhdp_temp_damage MhdpCore
-        execute at @s positioned ~ ~1.65 ~ facing entity @e[tag=Victim,limit=1] feet positioned ^ ^ ^3 run function lib:status_log/show_health
+        execute positioned as @e[tag=Victim] positioned ~ ~1.65 ~ facing entity @e[type=slime,tag=Victim] feet positioned ^ ^ ^1.5 run function lib:status_log/show_health
 
 # ヒットエフェクト表示
     execute positioned as @e[tag=Victim] run function mhdp_weapons:core/attack/effect/

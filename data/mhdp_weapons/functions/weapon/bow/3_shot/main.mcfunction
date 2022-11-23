@@ -5,6 +5,10 @@
 # コンボ用タイマー
     scoreboard players add @s MhdpWeaponTimer 1
 
+# ジャンプ禁止
+    execute if entity @s[scores={MhdpWeaponTimer=..4,MhdpJump=1..}] run tp @s @s
+    execute if entity @s[scores={MhdpWeaponTimer=..4,MhdpJump=1..}] run tp @s ~ ~-0.1 ~
+
 # 遷移
     # スニーク + 右クリック操作時，剛射に移行
         execute if entity @s[tag=PlyUsingEyeStart,tag=PlySneakCurrent,scores={MhdpWeaponTimer=5..14}] run function mhdp_weapons:weapon/bow/3_shot/change_hard_shot

@@ -23,5 +23,5 @@
     execute if entity @s[scores={MhdpWeaponTimer=..10}] run particle block grass_block ~ ~0.1 ~ 0.5 0 0.5 0 3
 
 # 終了
-    execute if entity @s[scores={MhdpWeaponTimer=11..}] run function mhdp_weapons:weapon/bow/5_charge_step/end
+    execute if entity @s[scores={MhdpWeaponTimer=10..}] run function mhdp_weapons:weapon/bow/5_charge_step/end
     tag @e[type=marker,tag=SneakAvoidStand0,tag=Rotator] remove Rotator
