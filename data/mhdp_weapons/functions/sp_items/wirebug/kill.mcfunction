@@ -13,7 +13,3 @@
     tp @e[tag=MhdpKnockbackParts,tag=KillTarget] ~ ~-1000 ~
     kill @e[tag=MhdpKnockbackParts,tag=KillTarget]
     scoreboard players add #mhdp_global_knockback_kill_id MhdpCore 1
-
-    # execute as @e[type=minecraft:area_effect_cloud,tag=MhdpKnockbackParts] at @s positioned ~ ~0.4 ~ run tag @e[type=minecraft:slime,distance=..0.1] add KillTarget
-
-    say kill

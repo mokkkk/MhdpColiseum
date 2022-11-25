@@ -16,8 +16,6 @@
 
 # ノックバック用に出していたMobを片づける
     execute if entity @s[scores={MhdpTItmWirebug=6}] run function mhdp_weapons:sp_items/wirebug/kill
-    # execute if entity @s[scores={MhdpTItmWirebug=6}] run tp @e[tag=MhdpKnockbackParts] ~ ~-1000 ~
-    # execute if entity @s[scores={MhdpTItmWirebug=6}] run kill @e[tag=MhdpKnockbackParts]
 
 # 終了
     execute if entity @s[tag=!PlyJumpping,scores={MhdpTItmWirebug=12..79}] run scoreboard players set @s MhdpTItmWirebug 80 
