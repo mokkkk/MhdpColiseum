@@ -5,11 +5,8 @@
 # 初期実行処理（状態取得）
     function mhdp_core:player/pre
 
-# クエスト受注処理（村のみ）
-    execute if entity @s[tag=!PlyQuest,tag=AdvTradeQuestNormal] run function mhdp_core:phase/0_village/receive_quest/normal
-
-# 防具取得処理（村のみ）
-    execute if entity @s[tag=!PlyQuest,tag=AdvInventoryChangedArmor] run function mhdp_core:phase/0_village/player/armor/
+# 村中処理
+    execute if entity @s[tag=!PlyQuest] run function mhdp_core:player/village/
 
 # クエスト中処理
     execute if entity @s[tag=PlyQuest] run function mhdp_core:player/quest/

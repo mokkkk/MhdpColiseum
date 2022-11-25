@@ -52,6 +52,10 @@
     # 報酬金保険発動時
         execute if entity @a[tag=CatSklInsurance] run scoreboard players set #mhdp_quest_death_count MhdpCore 4
 
+# ノックバック用ID初期化
+    scoreboard players set #mhdp_global_knockback_id MhdpCore 0
+    scoreboard players set #mhdp_global_knockback_kill_id MhdpCore 0
+
 # モンスターを配置
     function mhdp_core:phase/2_quest_wait/start_quest/setup/monsters/
 
