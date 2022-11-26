@@ -1,4 +1,4 @@
-#> mhdp_core:player/item/potion/check_item_changed
+#> mhdp_core:player/item/food/check_item_changed
 #
 # アイテム用メイン処理 薬 入れ替え検知
 

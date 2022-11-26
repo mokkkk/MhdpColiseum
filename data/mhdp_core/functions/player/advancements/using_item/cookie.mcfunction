@@ -1,4 +1,4 @@
-#> mhdp_core:player/advancements/using_item/cooked_beef
+#> mhdp_core:player/advancements/using_item/cookie
 #
 # 進捗確認用
 

@@ -5,13 +5,13 @@
       "conditions": {
         "item": {
           "items": [
-            "minecraft:cooked_beef"
+            "minecraft:cookie"
           ]
         }
       }
     }
   },
   "rewards": {
-    "function": "mhdp_core:player/advancements/using_item/cooked_beef"
+    "function": "mhdp_core:player/advancements/using_item/cookie"
   }
 }

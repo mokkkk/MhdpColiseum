@@ -4,3 +4,5 @@
 
 # ５１：怪力の種
     execute if entity @s[tag=ItmMightSeed] run function mhdp_core:player/item/food/might_seed/timer
+# ５２：硬化の種
+    execute if entity @s[tag=ItmAdamantSeed] run function mhdp_core:player/item/food/adamant_seed/timer

@@ -8,7 +8,11 @@
 # アイテム処理
     # 硬化薬：+10
         execute if entity @s[tag=ItmArmorskin] run scoreboard players add $MhdpDef ScoreDamageCore 10
-        scoreboard players operation #temp ScoreDamageCore = $MhdpDef ScoreDamageCore
+    # 硬化の種：+20
+        execute if entity @s[tag=ItmAdamantSeed] run scoreboard players add $MhdpDef ScoreDamageCore 20
+
+# 数値取得
+    scoreboard players operation #temp ScoreDamageCore = $MhdpDef ScoreDamageCore
 
 # 物理・属性防御力
     # 物理 = 80 / (80 + Def) * 100 

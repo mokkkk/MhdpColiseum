@@ -14,7 +14,7 @@
         scoreboard players set @s MhdpItmTMightSeed 3600
 
 # アイテム補充
-    execute store result score #mhdp_temp_count MhdpCore run clear @s cooked_beef{MhdpItem:1b,MhdpItemId:51} 0
+    execute store result score #mhdp_temp_count MhdpCore run clear @s cookie{MhdpItem:1b,MhdpItemId:51} 0
     execute if score #mhdp_temp_count MhdpCore matches 1.. run function mhdp_core:player/item/food/might_seed/move
     scoreboard players reset #mhdp_temp_count MhdpCore
 
