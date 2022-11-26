@@ -15,9 +15,8 @@
     execute if entity @s[scores={MhdpTItmWirebug=5}] run function mhdp_weapons:sp_items/wirebug/move
 
 # ノックバック用に出していたMobを片づける
-    execute if entity @s[scores={MhdpTItmWirebug=6}] run tp @e[tag=MhdpKnockbackParts] ~ ~-1000 ~
-    execute if entity @s[scores={MhdpTItmWirebug=6}] run kill @e[tag=MhdpKnockbackParts]
+    execute if entity @s[scores={MhdpTItmWirebug=6}] run function mhdp_weapons:sp_items/wirebug/kill
 
 # 終了
-    execute if entity @s[tag=!PlyJumpping,scores={MhdpTItmWirebug=7..39}] run scoreboard players set @s MhdpTItmWirebug 40 
-    execute if entity @s[scores={MhdpTItmWirebug=40..}] run function mhdp_weapons:sp_items/wirebug/end
+    execute if entity @s[tag=!PlyJumpping,scores={MhdpTItmWirebug=12..79}] run scoreboard players set @s MhdpTItmWirebug 80 
+    execute if entity @s[scores={MhdpTItmWirebug=80..}] run function mhdp_weapons:sp_items/wirebug/end

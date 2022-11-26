@@ -20,6 +20,9 @@
         execute store result storage mhdp_core:temp Temp.Dummy int 1 run scoreboard players get @s MhdpWeaponTimer
     item modify entity @s weapon.offhand mhdp_core:const/short_sword/while_animation
 
+# ベクトルリセット
+    tp @s @s
+
 # 終了
     scoreboard players reset #mhdp_temp_cmd
     data remove storage mhdp_core:temp Temp

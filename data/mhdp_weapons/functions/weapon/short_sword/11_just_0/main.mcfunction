@@ -40,7 +40,7 @@
 
 # 遷移
     # 右クリック時，ジャストラッシュ２に移行
-        execute if entity @s[tag=PlyUsingEyeStart,tag=!PlySneakCurrent,scores={MhdpWeaponTimer=20..70}] run function mhdp_weapons:weapon/short_sword/11_just_0/change_next
+        execute if entity @s[tag=PlyUsingEyeStart,scores={MhdpWeaponTimer=20..70}] run function mhdp_weapons:weapon/short_sword/11_just_0/change_next
     # ジャンプ時，ステップ回避に移行
         execute if entity @s[scores={MhdpJump=1..,MhdpWeaponTimer=20..70}] run function mhdp_core:player/sneak/avoid/start_
 

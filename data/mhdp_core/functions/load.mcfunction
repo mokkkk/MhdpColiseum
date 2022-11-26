@@ -23,6 +23,9 @@
         scoreboard objectives add MhdpTUsingItem dummy
         scoreboard objectives add MhdpTUsingCoasItem dummy
 
+        scoreboard objectives add MhdpItmTMightSeed dummy
+        scoreboard objectives add MhdpItmTAdamantSeed dummy
+
     # プレイヤー行動用
         scoreboard objectives add MhdpFuncSneakAvoid dummy
         scoreboard objectives add MhdpPlayerUsingItemId dummy

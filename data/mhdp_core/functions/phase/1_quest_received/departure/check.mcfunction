@@ -17,12 +17,15 @@
 # 武器をオフハンドにセットしていない
     execute as @a run function mhdp_core:phase/1_quest_received/departure/check_4_offhand
 
+# アイテム個数制限超え
+    execute as @a run function mhdp_core:phase/1_quest_received/departure/check_5_item_count
+
 # いずれかの条件に引っかかった場合，エラーメッセージ表示
-    execute as @a unless entity @s[tag=!Check0,tag=!Check1,tag=!Check2,tag=!Check3,tag=!Check4] run tag @s add Temp
+    execute as @a unless entity @s[tag=!Check0,tag=!Check1,tag=!Check2,tag=!Check3,tag=!Check4,tag=!Check5] run tag @s add Temp
     execute if entity @a[tag=Temp] run function mhdp_core:phase/1_quest_received/departure/error
 
 # 全条件に引っかからなかった場合，クエスト開始処理起動
-    execute unless entity @a[tag=Check0] unless entity @a[tag=Check1] unless entity @a[tag=Check2] unless entity @a[tag=Check3] unless entity @a[tag=Check4] run function mhdp_core:phase/1_quest_received/departure/start
+    execute unless entity @a[tag=Check0] unless entity @a[tag=Check1] unless entity @a[tag=Check2] unless entity @a[tag=Check3] unless entity @a[tag=Check4] unless entity @a[tag=Check5] run function mhdp_core:phase/1_quest_received/departure/start
 
 # 終了
     tag @a remove Check0
@@ -30,4 +33,5 @@
     tag @a remove Check2
     tag @a remove Check3
     tag @a remove Check4
+    tag @a remove Check5
     tag @a remove Temp

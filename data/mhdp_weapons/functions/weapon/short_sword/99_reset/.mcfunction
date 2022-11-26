@@ -42,3 +42,7 @@
      execute if entity @s[tag=!PlySneakAvoidFunc] as @e[type=marker,tag=SneakAvoidStand0] if score @s MhdpPlayerUid = @a[tag=Target,limit=1,sort=nearest] MhdpPlayerUid run tag @s add Rotater
      tag @s remove Target
      execute if entity @s[tag=!PlySneakAvoidFunc] run kill @e[type=marker,tag=SneakAvoidStand0,tag=Rotater]
+
+# ノックバックパーツ
+    tp @e[tag=WpnSswordKnockback] ~ ~-1000 ~
+    kill @e[tag=WpnSswordKnockback]
