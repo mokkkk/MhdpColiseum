@@ -6,6 +6,8 @@
     function oh_my_dat:please
     
 # 共通
+    # 一瞬動きを止める
+        tp @s @s
     # アーマー解除
         tag @s remove PlyArmorSuper
         tag @s remove PlyArmorHyper

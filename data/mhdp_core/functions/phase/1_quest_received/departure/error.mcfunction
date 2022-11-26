@@ -9,3 +9,4 @@
     execute if entity @a[tag=Check2] run tellraw @a [{"text": "【特殊装具は1種類につき1つしか所持できません："},{"selector":"@a[tag=Check2]"},{"text": "】"}]
     execute if entity @a[tag=Check3] run tellraw @a [{"text": "【特殊装具は2つまでしか所持できません："},{"selector":"@a[tag=Check3]"},{"text": "】"}]
     execute if entity @a[tag=Check4,tag=!Check0,tag=!Check1] run tellraw @a [{"text": "【武器がオフハンドにセットされていません："},{"selector":"@a[tag=Check4,tag=!Check0,tag=!Check1]"},{"text": "】"}]
+    execute if entity @a[tag=Check5] run tellraw @a [{"text": "【アイテムの持ち込み個数制限を超えています："},{"selector":"@a[tag=Check5]"},{"text": "】"}]

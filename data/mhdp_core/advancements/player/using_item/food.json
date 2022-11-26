@@ -1,0 +1,17 @@
+{
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:using_item",
+      "conditions": {
+        "item": {
+          "items": [
+            "minecraft:cooked_beef"
+          ]
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "mhdp_core:player/advancements/using_item/cooked_beef"
+  }
+}

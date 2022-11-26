@@ -28,6 +28,8 @@
      tag @s remove ItmCoasCancel
      tag @s remove ItmDemondrug
      tag @s remove ItmArmorskin
+     tag @s remove ItmMightSeed
+     tag @s remove ItmAdamantSeed
 
 # 特殊装具使用中断
      function mhdp_weapons:sp_items/reset

@@ -5,6 +5,8 @@
 # アイテム補正取得
     # 鬼人薬：+5
         execute if entity @s[tag=ItmDemondrug] run scoreboard players add #mhdp_temp_atk_damage MhdpCore 500
+    # 怪力の種： +10
+        execute if entity @s[tag=ItmMightSeed] run scoreboard players add #mhdp_temp_atk_damage MhdpCore 1000
 
 # スキル補正取得
     # 攻撃：
