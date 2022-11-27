@@ -9,7 +9,7 @@ scoreboard players add #mhdp_reus_actcount_phase AsaMatrix 1
 function asa_animator:reus/manager/change_target
 
 # 行動
-execute if entity @a[tag=ReusTarget] run function asa_animator:reus/manager/change_act
+# execute if entity @a[tag=ReusTarget] run function asa_animator:reus/manager/change_act
 
 # 軸合わせ
 execute unless predicate asa_animator:reus/turn run function asa_animator:reus/manager/change_normal/_/turn_b
