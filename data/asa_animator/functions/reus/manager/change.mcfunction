@@ -12,10 +12,13 @@ function asa_animator:reus/manager/change_target
 # execute if entity @a[tag=ReusTarget] run function asa_animator:reus/manager/change_act
 
 # 軸合わせ
-execute unless predicate asa_animator:reus/turn run function asa_animator:reus/manager/change_normal/_/turn_b
+# execute unless predicate asa_animator:reus/turn run function asa_animator:reus/manager/change_normal/_/turn_b
 
 # 怒り終了
 execute if entity @s[tag=IsAnger] if score #mhdp_reus_anger_count AsaMatrix matches 15.. run function asa_animator:reus/manager/end_anger
+
+# 強制
+tag @s add AnmBite
 
 # 終了
 tag @s remove ChangeAnm

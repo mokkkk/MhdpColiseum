@@ -2,21 +2,40 @@
 scoreboard players add @s AsaMatrix 1
 execute if entity @s[scores={AsaMatrix=1}] run function asa_animator:reus/anim/bite/start
 execute if entity @s[scores={AsaMatrix=1}] run function asa_animator:reus/anim/bite/keyframes/0
-execute if entity @s[scores={AsaMatrix=1..7}] run tp @s ^0 ^0 ^0.02857143 ~-0.5 ~
-execute if entity @s[scores={AsaMatrix=8}] run function asa_animator:reus/anim/bite/keyframes/1
-execute if entity @s[scores={AsaMatrix=8..15}] run tp @s ^0 ^0 ^0 ~-1 ~
+execute if entity @s[scores={AsaMatrix=1..9}] run tp @s ^0 ^0 ^0.02222222 ~0.5 ~
+execute if entity @s[scores={AsaMatrix=10}] run function asa_animator:reus/anim/bite/keyframes/1
+execute if entity @s[scores={AsaMatrix=10..15}] run tp @s ^0 ^0 ^0
 execute if entity @s[scores={AsaMatrix=16}] run function asa_animator:reus/anim/bite/keyframes/2
-execute if entity @s[scores={AsaMatrix=16..22}] run tp @s ^0 ^0 ^0.1142857
-execute if entity @s[scores={AsaMatrix=23}] run function asa_animator:reus/anim/bite/keyframes/3
-execute if entity @s[scores={AsaMatrix=23..32}] run tp @s ^0 ^0 ^0
-execute if entity @s[scores={AsaMatrix=33}] run function asa_animator:reus/anim/bite/keyframes/4
-execute if entity @s[scores={AsaMatrix=33..45}] run tp @s ^0 ^0 ^-0.07692308
-execute if entity @s[scores={AsaMatrix=46..}] run function asa_animator:reus/anim/bite/end
+execute if entity @s[scores={AsaMatrix=16..21}] run tp @s ^0 ^0 ^0.1333333 ~-0.5 ~
+execute if entity @s[scores={AsaMatrix=22}] run function asa_animator:reus/anim/bite/keyframes/3
+execute if entity @s[scores={AsaMatrix=22..31}] run tp @s ^0 ^0 ^0 ~-0.5 ~
+execute if entity @s[scores={AsaMatrix=32}] run function asa_animator:reus/anim/bite/keyframes/4
+execute if entity @s[scores={AsaMatrix=32..40}] run tp @s ^0 ^0 ^-0.08888889 ~0.5 ~
+execute if entity @s[scores={AsaMatrix=41}] run function asa_animator:reus/anim/bite/keyframes/5
+execute if entity @s[scores={AsaMatrix=41..44}] run tp @s ^0 ^0 ^0
+execute if entity @s[scores={AsaMatrix=45}] run function asa_animator:reus/anim/bite/keyframes/6
+execute if entity @s[scores={AsaMatrix=45..50}] run tp @s ^0 ^0 ^0.1333333
+execute if entity @s[scores={AsaMatrix=51}] run function asa_animator:reus/anim/bite/keyframes/7
+execute if entity @s[scores={AsaMatrix=51..67}] run tp @s ^0 ^0 ^0
+execute if entity @s[scores={AsaMatrix=68}] run function asa_animator:reus/anim/bite/keyframes/8
+execute if entity @s[scores={AsaMatrix=68..79}] run tp @s ^0 ^0 ^-0.04166667
+execute if entity @s[scores={AsaMatrix=80}] run function asa_animator:reus/anim/bite/keyframes/9
+execute if entity @s[scores={AsaMatrix=80..90}] run tp @s ^0 ^0 ^-0.04545455
+execute if entity @s[scores={AsaMatrix=91..}] run function asa_animator:reus/anim/bite/end
 execute as @e[type=armor_stand,tag=ReusParts] run function #asa_matrix:animate
 function asa_animator:reus/model
 
-execute if entity @s[scores={AsaMatrix=1}] run playsound entity.ender_dragon.flap master @a ~ ~ ~ 2 0.7
+# 移動
+    execute if entity @s[scores={AsaMatrix=1..3}] run function asa_animator:reus/manager/rotate
+    execute if entity @s[scores={AsaMatrix=15..21}] at @s run tp @s ^ ^ ^0.45
+    execute if entity @s[scores={AsaMatrix=31..40}] at @s run tp @s ^ ^ ^0.1
+    execute if entity @s[scores={AsaMatrix=44..50}] at @s run tp @s ^ ^ ^0.45
 
-execute if entity @s[scores={AsaMatrix=1..7}] run function asa_animator:reus/manager/rotate
-execute if entity @s[scores={AsaMatrix=1..7}] unless entity @e[tag=ReusAttackTarget,distance=..6] at @s run tp @s ^ ^ ^0.3
-execute if entity @s[scores={AsaMatrix=19}] positioned ^ ^1 ^5 run function asa_animator:reus/anim/bite/events/damage
+# 演出
+    execute if entity @s[scores={AsaMatrix=1}] run playsound entity.ender_dragon.flap master @a ~ ~ ~ 2 0.7
+    execute if entity @s[scores={AsaMatrix=31}] run playsound entity.ender_dragon.flap master @a ~ ~ ~ 2 0.7
+    execute if entity @s[scores={AsaMatrix=67}] run playsound block.grass.step master @a ~ ~ ~ 2 0.7
+
+# 攻撃
+    execute if entity @s[scores={AsaMatrix=19}] run function asa_animator:reus/anim/bite/events/damage
+    execute if entity @s[scores={AsaMatrix=48}] run function asa_animator:reus/anim/bite/events/damage

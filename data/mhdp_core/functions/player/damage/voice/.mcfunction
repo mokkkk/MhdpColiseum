@@ -20,7 +20,7 @@
 
 # ガード確認
     execute if entity @s[tag=PlyWpnGsword,tag=WpnGswordGuard] run tag @s add PlyGuardSuccess
-    execute if entity @s[tag=PlyWpnGsword,tag=WpnSsword3Guard] run tag @s add PlyGuardSuccess
+    execute if entity @s[tag=PlyWpnSsword,tag=WpnSsword3Guard] run tag @s add PlyGuardSuccess
 
 # ガード成功時，演出
     execute if entity @s[tag=PlyGuardSuccess] run playsound item.shield.block master @s ~ ~ ~ 1 1
