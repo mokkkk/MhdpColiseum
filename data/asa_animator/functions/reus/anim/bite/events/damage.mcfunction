@@ -12,9 +12,9 @@
         execute if data storage mh_dp:settings Custom{QuestRank:1} run data modify storage mhdp_core:temp Temp.Damage.Damage set value 32.0f
 
 # ターゲット設定
-    execute positioned ^-1.6 ^1 ^5 run tag @e[type=!armor_stand,type=!area_effect_cloud,type=!marker,tag=!ReusParts,tag=!ReiaParts,tag=!Target,distance=0..2.5] add Target
-    execute positioned ^ ^1.3 ^5 run tag @e[type=!armor_stand,type=!area_effect_cloud,type=!marker,tag=!ReusParts,tag=!ReiaParts,tag=!Target,distance=0..2.5] add Target
-    execute positioned ^1.6 ^1 ^5 run tag @e[type=!armor_stand,type=!area_effect_cloud,type=!marker,tag=!ReusParts,tag=!ReiaParts,tag=!Target,distance=0..2.5] add Target
+    execute positioned ^-1.6 ^1 ^5 run tag @e[type=!armor_stand,type=!area_effect_cloud,type=!marker,tag=!ReusParts,tag=!ReiaParts,tag=!Target,distance=0..3.5] add Target
+    execute positioned ^ ^1.3 ^5 run tag @e[type=!armor_stand,type=!area_effect_cloud,type=!marker,tag=!ReusParts,tag=!ReiaParts,tag=!Target,distance=0..3.5] add Target
+    execute positioned ^1.6 ^1 ^5 run tag @e[type=!armor_stand,type=!area_effect_cloud,type=!marker,tag=!ReusParts,tag=!ReiaParts,tag=!Target,distance=0..3.5] add Target
 
 # 攻撃処理
     execute as @e[tag=Target] run function asa_animator:reus/anim/bite/events/damage_sub

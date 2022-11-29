@@ -8,6 +8,7 @@
 
 # ダメージインターバルリセット
     scoreboard players set @s MhdpTDamageInterval 0
+    scoreboard players set @s MhdpTRegeneration 0
 
 # 体力が0以下の場合，死亡とみなしてfunction実行
     execute if entity @s[nbt={Health:0.0f}] run function mhdp_core:player/death/advancements

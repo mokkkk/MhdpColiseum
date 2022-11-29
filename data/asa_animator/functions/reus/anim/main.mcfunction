@@ -2,11 +2,9 @@
 ### 地上時行動
 
 # 尻尾回転・左
-    # execute if entity @s[tag=AnmTailL] run function asa_animator:reus/anim/tail_spin_l/main
+    execute if entity @s[tag=AnmTailL] run function asa_animator:reus/anim/tail_spin_l/main
 # 尻尾回転・右
     # execute if entity @s[tag=AnmTailR] run function asa_animator:reus/anim/tail_spin_r/main
-# 尻尾回転・2連
-    # execute if entity @s[tag=AnmTail2] run function asa_animator:reus/anim/tail_spin_2/main
 
 # 地上床ドン
     # execute if entity @s[tag=AnmJump] run function asa_animator:reus/anim/jump/main
