@@ -26,7 +26,7 @@ execute as @e[type=armor_stand,tag=ReusParts] run function #asa_matrix:animate
 function asa_animator:reus/model
 
 # 移動
-    execute if entity @s[scores={AsaMatrix=1..3}] run function asa_animator:reus/manager/rotate
+    execute if entity @s[scores={AsaMatrix=1..3}] run function asa_animator:reus/manager/4_general/rotate
     execute if entity @s[scores={AsaMatrix=15..21}] at @s run tp @s ^ ^ ^0.45 ~0.1 ~
     execute if entity @s[scores={AsaMatrix=31..40}] at @s run tp @s ^ ^ ^0.1
     execute if entity @s[scores={AsaMatrix=44..50}] at @s run tp @s ^ ^ ^0.45 ~-0.1 ~
@@ -46,4 +46,4 @@ function asa_animator:reus/model
 
 # 遷移
     # 敵が体側面で回避した場合
-        execute if entity @s[scores={AsaMatrix=30}] if predicate asa_animator:random/050 positioned ^ ^ ^-2 if entity @a[tag=ReusAttackTarget,distance=..6] at @s run function asa_animator:reus/anim/bite/events/change
+        execute if entity @s[scores={AsaMatrix=30}] if predicate asa_animator:random/070 positioned ^ ^ ^-2 if entity @a[tag=ReusAttackTarget,distance=..6] at @s run function asa_animator:reus/anim/bite/events/change

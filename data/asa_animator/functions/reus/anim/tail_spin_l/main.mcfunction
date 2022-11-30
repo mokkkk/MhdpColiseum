@@ -10,34 +10,36 @@ execute if entity @s[scores={AsaMatrix=18..24}] run tp @s ^-0.1 ^-0.01428571 ^-0
 execute if entity @s[scores={AsaMatrix=25}] run function asa_animator:reus/anim/tail_spin_l/keyframes/3
 execute if entity @s[scores={AsaMatrix=25..33}] run tp @s ^-0.1 ^-0.01111111 ^-0.1 ~-7 ~
 execute if entity @s[scores={AsaMatrix=34}] run function asa_animator:reus/anim/tail_spin_l/keyframes/4
-execute if entity @s[scores={AsaMatrix=34..44}] run tp @s ^0 ^-0.00909091 ^0 ~-2 ~
-execute if entity @s[scores={AsaMatrix=45}] run function asa_animator:reus/anim/tail_spin_l/keyframes/5
-execute if entity @s[scores={AsaMatrix=45..57}] run tp @s ^0 ^0.02307692 ^0 ~1 ~
-execute if entity @s[scores={AsaMatrix=58}] run function asa_animator:reus/anim/tail_spin_l/keyframes/6
-execute if entity @s[scores={AsaMatrix=58..64}] run tp @s ^-0.1 ^-0.01428571 ^-0.1 ~-21 ~
-execute if entity @s[scores={AsaMatrix=65}] run function asa_animator:reus/anim/tail_spin_l/keyframes/7
-execute if entity @s[scores={AsaMatrix=65..73}] run tp @s ^-0.1 ^-0.01111111 ^-0.1 ~-7 ~
-execute if entity @s[scores={AsaMatrix=74}] run function asa_animator:reus/anim/tail_spin_l/keyframes/8
-execute if entity @s[scores={AsaMatrix=74..86}] run tp @s ^0 ^-0.01538462 ^0 ~-2 ~
-execute if entity @s[scores={AsaMatrix=87}] run function asa_animator:reus/anim/tail_spin_l/keyframes/9
-execute if entity @s[scores={AsaMatrix=87..99}] run tp @s ^0 ^0.03076923 ^0 ~1 ~
-execute if entity @s[scores={AsaMatrix=100..}] run function asa_animator:reus/anim/tail_spin_l/end
+execute if entity @s[scores={AsaMatrix=34..41}] run tp @s ^0 ^-0.0125 ^0 ~-2 ~
+execute if entity @s[scores={AsaMatrix=42}] run function asa_animator:reus/anim/tail_spin_l/keyframes/5
+execute if entity @s[scores={AsaMatrix=42..50}] run tp @s ^0 ^0.03333334 ^0 ~1 ~
+execute if entity @s[scores={AsaMatrix=51}] run function asa_animator:reus/anim/tail_spin_l/keyframes/6
+execute if entity @s[scores={AsaMatrix=51..57}] run tp @s ^-0.1 ^-0.01428571 ^-0.1 ~-21 ~
+execute if entity @s[scores={AsaMatrix=58}] run function asa_animator:reus/anim/tail_spin_l/keyframes/7
+execute if entity @s[scores={AsaMatrix=58..66}] run tp @s ^-0.1 ^-0.01111111 ^-0.1 ~-7 ~
+execute if entity @s[scores={AsaMatrix=67}] run function asa_animator:reus/anim/tail_spin_l/keyframes/8
+execute if entity @s[scores={AsaMatrix=67..79}] run tp @s ^0 ^-0.01538462 ^0 ~-2 ~
+execute if entity @s[scores={AsaMatrix=80}] run function asa_animator:reus/anim/tail_spin_l/keyframes/9
+execute if entity @s[scores={AsaMatrix=80..92}] run tp @s ^0 ^0.03076923 ^0 ~1 ~
+execute if entity @s[scores={AsaMatrix=93..}] run function asa_animator:reus/anim/tail_spin_l/end
 execute as @e[type=armor_stand,tag=ReusParts] run function #asa_matrix:animate
 function asa_animator:reus/model
 
 # 演出
     execute if entity @s[scores={AsaMatrix=1}] run playsound entity.ender_dragon.flap master @a ~ ~ ~ 2 0.7
     execute if entity @s[scores={AsaMatrix=17..21}] run playsound block.grass.step master @a ~ ~ ~ 2 0.7
-    execute if entity @s[scores={AsaMatrix=57..61}] run playsound block.grass.step master @a ~ ~ ~ 2 0.7
+    execute if entity @s[scores={AsaMatrix=50..54}] run playsound block.grass.step master @a ~ ~ ~ 2 0.7
     execute if entity @s[scores={AsaMatrix=17}] run playsound entity.player.attack.sweep master @a ~ ~ ~ 2 0.5
-    execute if entity @s[scores={AsaMatrix=57}] run playsound entity.player.attack.sweep master @a ~ ~ ~ 2 0.5
+    execute if entity @s[scores={AsaMatrix=50}] run playsound entity.player.attack.sweep master @a ~ ~ ~ 2 0.5
+    execute if entity @s[scores={AsaMatrix=17..20}] run playsound entity.ravager.attack master @a[distance=..48] ~ ~ ~ 1 0.82 1
+    execute if entity @s[scores={AsaMatrix=50..53}] run playsound entity.ravager.attack master @a[distance=..48] ~ ~ ~ 1 0.82 1
 
 # 攻撃
-    execute if entity @s[scores={AsaMatrix=19..29}] run function asa_animator:reus/anim/tail_spin_l/events/damage
-    execute if entity @s[scores={AsaMatrix=59..69}] run function asa_animator:reus/anim/tail_spin_l/events/damage
+    execute if entity @s[scores={AsaMatrix=19..31}] run function asa_animator:reus/anim/tail_spin_l/events/damage
+    execute if entity @s[scores={AsaMatrix=52..64}] run function asa_animator:reus/anim/tail_spin_l/events/damage
 
 # 高度調整
     execute if entity @s[scores={AsaMatrix=1..11}] at @s if block ~ ~-0.2 ~ #asa_animator:no_collision at @s run function asa_animator:general/check_ground
     execute if entity @s[scores={AsaMatrix=1..11}] at @s unless block ~ ~ ~ #asa_animator:no_collision at @s run tp @s ~ ~0.1 ~ ~ ~
-    execute if entity @s[scores={AsaMatrix=74..}] at @s if block ~ ~-0.2 ~ #asa_animator:no_collision at @s run function asa_animator:general/check_ground
-    execute if entity @s[scores={AsaMatrix=74..}] at @s unless block ~ ~ ~ #asa_animator:no_collision at @s run tp @s ~ ~0.1 ~ ~ ~
+    execute if entity @s[scores={AsaMatrix=66..}] at @s if block ~ ~-0.2 ~ #asa_animator:no_collision at @s run function asa_animator:general/check_ground
+    execute if entity @s[scores={AsaMatrix=66..}] at @s unless block ~ ~ ~ #asa_animator:no_collision at @s run tp @s ~ ~0.1 ~ ~ ~

@@ -3,7 +3,7 @@
 # 火竜メイン処理
 
 # アニメーション遷移
-    execute if entity @s[tag=ChangeAnm] run function asa_animator:reus/manager/change
+    execute if entity @s[tag=ChangeAnm] run function asa_animator:reus/manager/1_change/
 
 # アニメーション
     # 待機
@@ -17,7 +17,7 @@
         execute unless predicate asa_animator:reus/stay unless entity @s[tag=IsTurn] run function asa_animator:reus/anim/main
 
 # 当たり判定位置
-    execute as @e[type=slime,tag=ReusParts] run function asa_animator:reus/manager/health/pos
+    execute as @e[type=slime,tag=ReusParts] run function asa_animator:reus/manager/2_health/
 
 # 地面埋まり対策
     # execute unless block ~ ~ ~ #asa_animator:no_collision unless block ~ ~1 ~ #asa_animator:no_collision at @s run function asa_animator:general/back

@@ -1,4 +1,6 @@
-
+#> asa_animator:reus/manager/0_init/3_general/hp
+#
+# 火竜 召喚処理 HP・部位耐久値初期化
 
 # 遭遇履歴更新
     execute store result score #mhdp_const_temp AsaMatrix run data get storage mh_dp:status Monster.Count
@@ -36,16 +38,20 @@
 # 部位耐久値
     ## 頭：10%
     scoreboard players set #mhdp_const_temp AsaMatrix 10
-    scoreboard players operation #mhdp_reus_head_damage AsaMatrix *= #mhdp_const_temp AsaMatrix
+    execute store result score #mhdp_reus_head_damage_max AsaMatrix run scoreboard players operation #mhdp_reus_head_damage AsaMatrix *= #mhdp_const_temp AsaMatrix
     scoreboard players operation #mhdp_reus_head_damage AsaMatrix /= #asam_const_100 AsaMatrix
     ## 胴：10%
     scoreboard players set #mhdp_const_temp AsaMatrix 10
-    scoreboard players operation #mhdp_reus_body_damage AsaMatrix *= #mhdp_const_temp AsaMatrix
+    execute store result score #mhdp_reus_body_damage_max AsaMatrix run scoreboard players operation #mhdp_reus_body_damage AsaMatrix *= #mhdp_const_temp AsaMatrix
     scoreboard players operation #mhdp_reus_body_damage AsaMatrix /= #asam_const_100 AsaMatrix
     ## 尻尾：15%
     scoreboard players set #mhdp_const_temp AsaMatrix 15
-    scoreboard players operation #mhdp_reus_tail_damage AsaMatrix *= #mhdp_const_temp AsaMatrix
+    execute store result score #mhdp_reus_tail_damage_max AsaMatrix run scoreboard players operation #mhdp_reus_tail_damage AsaMatrix *= #mhdp_const_temp AsaMatrix
     scoreboard players operation #mhdp_reus_tail_damage AsaMatrix /= #asam_const_100 AsaMatrix
+    ## 脚：12%
+    scoreboard players set #mhdp_const_temp AsaMatrix 12
+    execute store result score #mhdp_reus_leg_damage_max AsaMatrix run scoreboard players operation #mhdp_reus_leg_damage AsaMatrix *= #mhdp_const_temp AsaMatrix
+    scoreboard players operation #mhdp_reus_leg_damage AsaMatrix /= #asam_const_100 AsaMatrix
 # 特殊怯み
     ## 15%
     scoreboard players set #mhdp_const_temp AsaMatrix 15
@@ -58,7 +64,6 @@
     scoreboard players operation #mhdp_reus_anger_damage_max AsaMatrix /= #asam_const_100 AsaMatrix
 
 # 初期化
-    scoreboard players set #mhdp_reus_kill_timer AsaMatrix 0
     scoreboard players operation #mhdp_reus_flying_damage AsaMatrix = #mhdp_reus_flying_damage_max AsaMatrix
     scoreboard players operation #mhdp_reus_anger_damage AsaMatrix = #mhdp_reus_anger_damage_max AsaMatrix
 
