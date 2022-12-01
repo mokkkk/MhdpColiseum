@@ -24,12 +24,24 @@
         function array_util:api/revert
         data modify storage array_util: Array set from storage mhdp_core:temp Temp.Array
 
-# 物理肉質
-    execute store result score #mhdp_temp_def MhdpCore run data get storage array_util: Array[0]
-
-# 属性肉質
+# 物理肉質（[0,1,2]）
     # 目標の添字を設定
-        scoreboard players operation $Move ArrayUtilInput = #mhdp_element_temp MhdpCore
+        execute store result score $Move ArrayUtilInput run data get storage mhdp_core:temp Temp.WeaponDamage.Type
+        scoreboard players remove $Move ArrayUtilInput 1
+    # 移動
+        function array_util:api/move
+    # 取得
+        execute store result score #mhdp_temp_def MhdpCore run data get storage array_util: Array[-1]
+    # 終了
+        function array_util:api/revert
+
+    # デバッグ用
+        tellraw @a [{"text":"Move："},{"score":{"name":"$Move","objective":"ArrayUtilInput"}}]
+
+# 属性肉質（[3,4,5,6,7]）
+    # 目標の添字を設定
+        scoreboard players operation $Move ArrayUtilInput = #mhdp_temp_element_type MhdpCore
+        scoreboard players add $Move ArrayUtilInput 2
     # 移動
         function array_util:api/move
     # 取得

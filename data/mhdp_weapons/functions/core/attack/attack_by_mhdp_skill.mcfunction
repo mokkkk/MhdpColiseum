@@ -64,7 +64,7 @@
 # ダメージログ表示
     # 肉質に応じて色を設定
         scoreboard players set $Color Temporary 0
-        execute if score #mhdp_temp_def MhdpCore matches 70.. run scoreboard players set $Color Temporary 1
+        execute if score #mhdp_temp_def MhdpCore matches 45.. run scoreboard players set $Color Temporary 1
     # 表示
         scoreboard players operation $Fluctuation Lib = #mhdp_temp_damage MhdpCore
         execute positioned as @e[tag=Victim] positioned ~ ~1.65 ~ facing entity @e[type=slime,tag=Victim] feet positioned ^ ^ ^1.5 run function lib:status_log/show_health

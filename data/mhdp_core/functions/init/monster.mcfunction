@@ -10,10 +10,10 @@
 # 火竜
     # Head, Body, Leg, Tail
     data modify storage mh_dp:monster_data List append value []
-        data modify storage mh_dp:monster_data List[0] append value [80,5,5,40,15,50]
-        data modify storage mh_dp:monster_data List[0] append value [50,5,5,25,15,30]
-        data modify storage mh_dp:monster_data List[0] append value [65,5,5,30,15,50]
-        data modify storage mh_dp:monster_data List[0] append value [65,5,5,20,15,20]
+        data modify storage mh_dp:monster_data List[0] append value [65,72,60,0,5,30,15,50]
+        data modify storage mh_dp:monster_data List[0] append value [30,45,30,0,5,25,15,30]
+        data modify storage mh_dp:monster_data List[0] append value [38,33,20,0,5,30,15,50]
+        data modify storage mh_dp:monster_data List[0] append value [45,40,35,0,5,20,15,20]
 
 # 角竜
     # Head, Body, Leg, Tail

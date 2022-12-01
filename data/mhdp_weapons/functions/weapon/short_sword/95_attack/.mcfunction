@@ -4,11 +4,7 @@
 
 # 倍率計算
      scoreboard players set #mhdp_temp_damage_mult MhdpCore 50
-     scoreboard players operation #mhdp_temp_damage MhdpCore *= #mhdp_temp_damage_mult MhdpCore
-     scoreboard players operation #mhdp_temp_damage MhdpCore /= #asam_const_100 AsaMatrix
-     scoreboard players set #mhdp_temp_damage_mult MhdpCore 100
-     scoreboard players operation #mhdp_temp_element_damage MhdpCore *= #mhdp_temp_damage_mult MhdpCore
-     scoreboard players operation #mhdp_temp_element_damage MhdpCore /= #asam_const_100 AsaMatrix
+     scoreboard players set #mhdp_temp_element_damage_mult MhdpCore 80
 
 # 属性設定
      data modify storage mhdp_core:temp Temp.WeaponDamage set value {Type:1,Offhand:0b}
