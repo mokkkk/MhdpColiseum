@@ -5,8 +5,9 @@
 # アニメーション遷移
     scoreboard players set @s AsaMatrix 0
     function asa_animator:reus/manager/4_general/remove_animation_tag
-    execute unless entity @s[tag=IsFlying] run tag @s add AnmDBody
+    execute if entity @s[tag=!IsFlying] run tag @s add AnmDBody
     execute if entity @s[tag=IsFlying] run tag @s add AnmFlyDamage
+    tag @s remove IsFlying
 
 # 部位破壊処理
     execute if entity @s[tag=!DestroyBody] run function asa_animator:reus/manager/3_damage/1_destroy/body

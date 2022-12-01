@@ -80,7 +80,7 @@
     # execute if entity @s[tag=AnmFlyDamage] run function asa_animator:reus/anim/flying_damage/main
 
 # 地上時討伐
-    # execute if entity @s[tag=AnmDeath] run function asa_animator:reus/anim/death/main
+    execute if entity @s[tag=AnmDeath] run function asa_animator:reus/anim/death/main
 
 # 飛行時討伐
     # execute if entity @s[tag=AnmFlyDeath] run function asa_animator:reus/anim/flying_death/main
@@ -95,8 +95,8 @@
     # execute if entity @s[tag=AnmFlyAnger] run function asa_animator:reus/anim/flying_voice/main
 
 # 頭部破壊ひるみ
-    # execute if entity @s[tag=AnmDHead] run function asa_animator:reus/anim/destroy_head/main
+    execute if entity @s[tag=AnmDHead] run function asa_animator:reus/anim/destroy_head/main
 # 胴体破壊ひるみ
-    # execute if entity @s[tag=AnmDBody] run function asa_animator:reus/anim/destroy_body/main
+    execute if entity @s[tag=AnmDBody] run function asa_animator:reus/anim/destroy_body/main
 # 尻尾破壊ひるみ
-    # execute if entity @s[tag=AnmDTail] run function asa_animator:reus/anim/destroy_tail/main
+    execute if entity @s[tag=AnmDTail] run function asa_animator:reus/anim/destroy_tail/main

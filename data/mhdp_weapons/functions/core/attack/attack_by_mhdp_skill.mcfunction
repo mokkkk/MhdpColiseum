@@ -72,6 +72,9 @@
 # ヒットエフェクト表示
     execute positioned as @e[tag=Victim] run function mhdp_weapons:core/attack/effect/
 
+# モンスター側ダメージ処理実行
+    execute as @e[tag=Victim] at @s run function asa_animator:general/damage
+
 # 終了
 # モンスターの物理肉質のみ，後の処理で使う可能性があるので残しておく
     tag @s remove Critical
@@ -84,7 +87,6 @@
     scoreboard players reset #mhdp_temp_atk_damage
     scoreboard players reset #mhdp_temp_element_type
     scoreboard players reset #mhdp_temp_element_damage
-    # scoreboard players reset #mhdp_temp_def
     scoreboard players reset #mhdp_temp_element_def
     scoreboard players reset #mhdp_temp_rand
     scoreboard players reset #mhdp_temp_crit

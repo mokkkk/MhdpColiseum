@@ -2,6 +2,9 @@
 #
 # 翔蟲 tick処理
 
+# 武器使用制限解除
+    scoreboard players set @s MhdpWeaponDeactivateTimer 0
+
 # 効果音
     playsound block.grass.step master @a ~ ~ ~ 1 1
 
