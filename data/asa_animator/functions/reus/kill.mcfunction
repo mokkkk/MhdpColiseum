@@ -28,6 +28,7 @@
     scoreboard players reset #mhdp_reus_anger_damage
     scoreboard players reset #mhdp_reus_anger_count
 # 行動管理
+    scoreboard players reset #mhdp_reus_targetcount
     scoreboard players reset #mhdp_reus_actcount_phase
     scoreboard players reset #mhdp_reus_actcount
     scoreboard players reset #mhdp_reus_health

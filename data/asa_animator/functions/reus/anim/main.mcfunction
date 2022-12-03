@@ -100,3 +100,5 @@
     execute if entity @s[tag=AnmDBody] run function asa_animator:reus/anim/destroy_body/main
 # 尻尾破壊ひるみ
     execute if entity @s[tag=AnmDTail] run function asa_animator:reus/anim/destroy_tail/main
+# スタン
+    execute if entity @s[tag=AnmDStun] run function asa_animator:reus/anim/damage_stun/main
