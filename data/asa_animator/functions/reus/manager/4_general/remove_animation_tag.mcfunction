@@ -7,6 +7,7 @@
     tag @s remove AnmTailR
 
     tag @s remove AnmDHead
+    tag @s remove AnmDBody
     tag @s remove AnmDTail
     tag @s remove AnmDTailD
     tag @s remove AnmDLegL

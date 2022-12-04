@@ -97,7 +97,7 @@
 # 頭部ひるみ
     execute if entity @s[tag=AnmDHead] run function asa_animator:reus/anim/damage_head/main
 # 胴体ひるみ
-    # execute if entity @s[tag=AnmDBody] run function asa_animator:reus/anim/destroy_body/main
+    execute if entity @s[tag=AnmDBody] run function asa_animator:reus/anim/damage_body/main
 # 尻尾ひるみ
     execute if entity @s[tag=AnmDTail] run function asa_animator:reus/anim/damage_tail/main
 # 尻尾ひるみ（破壊）
