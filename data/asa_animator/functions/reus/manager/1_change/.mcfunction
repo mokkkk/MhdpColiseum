@@ -24,7 +24,7 @@
 
 # 強制
     tag @s add AnmDashStart
-    # function asa_animator:reus/manager/1_change/1_animations/tail_spin
+    # function asa_animator:reus/manager/1_change/1_animations/breath
 
 # 終了
     tag @s remove ChangeAnm

@@ -8,19 +8,19 @@ execute if entity @s[scores={AsaMatrix=7..13}] run tp @s ^0 ^0 ^0.2
 execute if entity @s[scores={AsaMatrix=14}] run function asa_animator:reus/anim/dash_bite/keyframes/2
 execute if entity @s[scores={AsaMatrix=14..20}] run tp @s ^0 ^0 ^0.1142857
 execute if entity @s[scores={AsaMatrix=21}] run function asa_animator:reus/anim/dash_bite/keyframes/3
-execute if entity @s[scores={AsaMatrix=21..37}] run tp @s ^0 ^0 ^0
-execute if entity @s[scores={AsaMatrix=38}] run function asa_animator:reus/anim/dash_bite/keyframes/4
-execute if entity @s[scores={AsaMatrix=38..49}] run tp @s ^0 ^0 ^-0.04166667
-execute if entity @s[scores={AsaMatrix=50}] run function asa_animator:reus/anim/dash_bite/keyframes/5
-execute if entity @s[scores={AsaMatrix=50..61}] run tp @s ^0 ^0 ^-0.04166667
-execute if entity @s[scores={AsaMatrix=62..}] run function asa_animator:reus/anim/dash_bite/end
+execute if entity @s[scores={AsaMatrix=21..47}] run tp @s ^0 ^0 ^0
+execute if entity @s[scores={AsaMatrix=48}] run function asa_animator:reus/anim/dash_bite/keyframes/4
+execute if entity @s[scores={AsaMatrix=48..64}] run tp @s ^0 ^0 ^-0.1
+execute if entity @s[scores={AsaMatrix=65}] run function asa_animator:reus/anim/dash_bite/keyframes/5
+execute if entity @s[scores={AsaMatrix=65..81}] run tp @s ^0 ^0 ^-0.02941176
+execute if entity @s[scores={AsaMatrix=82..}] run function asa_animator:reus/anim/dash_bite/end
 execute as @e[type=armor_stand,tag=ReusParts] run function #asa_matrix:animate
 function asa_animator:reus/model
 
 # 演出
     execute if entity @s[scores={AsaMatrix=1}] run playsound entity.ender_dragon.flap master @a ~ ~ ~ 2 0.7
-    execute if entity @s[scores={AsaMatrix=37}] run playsound entity.ender_dragon.flap master @a ~ ~ ~ 2 0.7
-    execute if entity @s[scores={AsaMatrix=37}] run playsound block.grass.step master @a ~ ~ ~ 2 0.7
+    execute if entity @s[scores={AsaMatrix=47}] run playsound entity.ender_dragon.flap master @a ~ ~ ~ 2 0.7
+    execute if entity @s[scores={AsaMatrix=47}] run playsound block.grass.step master @a ~ ~ ~ 2 0.7
 
 # 攻撃
     execute if entity @s[scores={AsaMatrix=19}] run function asa_animator:reus/anim/bite/events/damage

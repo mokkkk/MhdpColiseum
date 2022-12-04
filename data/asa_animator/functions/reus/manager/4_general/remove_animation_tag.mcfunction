@@ -5,6 +5,12 @@
 # タグ消去
     tag @s remove AnmTailL
     tag @s remove AnmTailR
+    tag @s remove AnmBite
+    tag @s remove AnmDashStart
+    tag @s remove AnmDash
+    tag @s remove AnmDashBite
+    tag @s remove AnmBStep
+    tag @s remove AnmBreath
 
     tag @s remove AnmDHead
     tag @s remove AnmDBody

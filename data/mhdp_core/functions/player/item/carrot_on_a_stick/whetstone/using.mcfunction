@@ -15,4 +15,4 @@
     execute if entity @s[scores={MhdpTUsingCoasItem=80..}] run function mhdp_core:player/item/carrot_on_a_stick/whetstone/end
 
 # ジャンプ時，アイテム使用をキャンセルしてステップ回避に移行
-    execute if entity @s[scores={MhdpJump=1..}] run function mhdp_core:player/sneak/avoid/start_
+    execute if entity @s[scores={MhdpJump=1..}] run function mhdp_core:player/sneak/avoid/start

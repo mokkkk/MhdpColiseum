@@ -13,8 +13,13 @@
     execute if entity @s[tag=AnmDash] run function asa_animator:reus/anim/dash/main
     execute if entity @s[tag=AnmDashBite] run function asa_animator:reus/anim/dash_bite/main
 
-# 地上床ドン
-    # execute if entity @s[tag=AnmJump] run function asa_animator:reus/anim/jump/main
+# バックステップ
+    execute if entity @s[tag=AnmBStep] run function asa_animator:reus/anim/bstep/main
+# ブレス
+    execute if entity @s[tag=AnmBreath] run function asa_animator:reus/anim/breath/main
+
+# 床ドン
+    execute if entity @s[tag=AnmJump] run function asa_animator:reus/anim/jump/main
 
 # ブレス
     # execute if entity @s[tag=AnmBreath] run function asa_animator:reus/anim/breath/main

@@ -1,7 +1,6 @@
 #> mhdp_weapons:weapon/bow/90_arrow/
 #
 # 放たれた矢の処理
-#
 
 # タイマー増加
     scoreboard players add @s MhdpCore 1

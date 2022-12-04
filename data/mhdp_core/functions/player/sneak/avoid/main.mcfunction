@@ -11,12 +11,12 @@
     scoreboard players remove @s MhdpFuncSneakAvoid 1
 
 # 移動
-    execute if entity @s[scores={MhdpFuncSneakAvoid=15..}] rotated as @e[type=marker,tag=SneakAvoidStand0,tag=Rotater] rotated ~ 0 run function mhdp_core:player/sneak/avoid/main_move
+    execute if entity @s[scores={MhdpFuncSneakAvoid=14..}] rotated as @e[type=marker,tag=SneakAvoidStand0,tag=Rotater] rotated ~ 0 run function mhdp_core:player/sneak/avoid/main_move
 
 # 演出
-    execute if entity @s[scores={MhdpFuncSneakAvoid=24}] at @s run summon area_effect_cloud ~ ~ ~ {Duration:6,Age:4,Effects:[{Id:2,Amplifier:3b,Duration:24,ShowParticles:0b}]}
-    execute if entity @s[scores={MhdpFuncSneakAvoid=20..}] run playsound block.grass.step master @a ~ ~ ~ 1 1
-    execute if entity @s[scores={MhdpFuncSneakAvoid=15..}] run particle block grass_block ~ ~0.1 ~ 0.5 0 0.5 0 3
+    execute if entity @s[scores={MhdpFuncSneakAvoid=19}] at @s run summon area_effect_cloud ~ ~ ~ {Duration:6,Age:4,Effects:[{Id:2,Amplifier:3b,Duration:18,ShowParticles:0b}]}
+    execute if entity @s[scores={MhdpFuncSneakAvoid=15..}] run playsound block.grass.step master @a ~ ~ ~ 1 1
+    execute if entity @s[scores={MhdpFuncSneakAvoid=13..}] run particle block grass_block ~ ~0.1 ~ 0.5 0 0.5 0 3
 
 # 終了
     execute if entity @s[scores={MhdpFuncSneakAvoid=..0}] run kill @e[type=marker,tag=SneakAvoidStand0,tag=Rotater]
