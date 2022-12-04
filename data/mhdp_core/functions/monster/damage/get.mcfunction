@@ -35,9 +35,6 @@
     # 終了
         function array_util:api/revert
 
-    # デバッグ用
-        tellraw @a [{"text":"Move："},{"score":{"name":"$Move","objective":"ArrayUtilInput"}}]
-
 # 属性肉質（[3,4,5,6,7]）
     # 目標の添字を設定
         scoreboard players operation $Move ArrayUtilInput = #mhdp_temp_element_type MhdpCore

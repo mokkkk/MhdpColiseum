@@ -8,6 +8,11 @@
 # 2連噛みつき
     execute if entity @s[tag=AnmBite] run function asa_animator:reus/anim/bite/main
 
+# 突進
+    execute if entity @s[tag=AnmDashStart] run function asa_animator:reus/anim/dash_start/main
+    execute if entity @s[tag=AnmDash] run function asa_animator:reus/anim/dash/main
+    execute if entity @s[tag=AnmDashBite] run function asa_animator:reus/anim/dash_bite/main
+
 # 地上床ドン
     # execute if entity @s[tag=AnmJump] run function asa_animator:reus/anim/jump/main
 

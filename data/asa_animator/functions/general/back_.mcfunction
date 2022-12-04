@@ -1,2 +1,3 @@
-execute unless block ^ ^ ^0.5 #asa_animator:no_collision unless block ^ ^1 ^0.5 #asa_animator:no_collision positioned ^ ^ ^0.5 run function asa_animator:general/back_
+execute unless score #mhdp_back_count MhdpCore matches 10.. unless block ^ ^ ^0.5 #asa_animator:no_collision unless block ^ ^1 ^0.5 #asa_animator:no_collision unless block ^ ^2 ^0.5 #asa_animator:no_collision unless block ^ ^3 ^0.5 #asa_animator:no_collision positioned ^ ^ ^0.5 run function asa_animator:general/back_
 execute if block ^ ^ ^0.5 #asa_animator:no_collision run tp @s ~ ~ ~
+scoreboard players add #mhdp_back_count MhdpCore 1
