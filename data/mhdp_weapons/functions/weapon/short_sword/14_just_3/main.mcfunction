@@ -19,7 +19,7 @@
     execute if entity @s[tag=AttackHit,scores={MhdpWeaponTimer=15}] run function mhdp_weapons:weapon/short_sword/14_just_3/attack_1
 
 # ノックバック用に出していたMobを片づける
-    execute if entity @s[tag=AttackHit,scores={MhdpWeaponTimer=19}] run function mhdp_weapons:weapon/short_sword/14_just_3/kill
+    execute if entity @s[tag=AttackHit,scores={MhdpWeaponTimer=17}] run function mhdp_weapons:weapon/short_sword/14_just_3/kill
 
 # 移動速度低下
     execute if entity @s[scores={MhdpWeaponTimer=1..20}] run effect give @s slowness 1 5 true

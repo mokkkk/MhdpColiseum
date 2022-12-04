@@ -15,10 +15,10 @@
     execute if entity @s[tag=BodyParts] run scoreboard players operation #mhdp_reus_body_damage AsaMatrix += #reus_damage AsaMatrix
     execute if entity @s[tag=TailParts] run scoreboard players operation #mhdp_reus_tail_damage AsaMatrix += #reus_damage AsaMatrix
     execute if entity @s[tag=LegParts] run scoreboard players operation #mhdp_reus_leg_damage AsaMatrix += #reus_damage AsaMatrix
-    execute if entity @s[tag=HeadParts] if score #mhdp_reus_head_damage AsaMatrix matches ..0 as @e[type=armor_stand,tag=ReusRoot,distance=0..15,tag=!AnmDStun] run function asa_animator:reus/manager/3_damage/0_animation/damage_head
-    execute if entity @s[tag=BodyParts] if score #mhdp_reus_body_damage AsaMatrix matches ..0 as @e[type=armor_stand,tag=ReusRoot,distance=0..15,tag=!AnmDStun] run function asa_animator:reus/manager/3_damage/0_animation/damage_body
-    execute if entity @s[tag=TailParts] if data storage mhdp_core:temp Temp.WeaponDamage{Type:1} if score #mhdp_reus_tail_damage AsaMatrix matches ..0 as @e[type=armor_stand,tag=ReusRoot,distance=0..15,tag=!AnmDStun] run function asa_animator:reus/manager/3_damage/0_animation/damage_tail
-    execute if entity @s[tag=LegParts] if score #mhdp_reus_leg_damage AsaMatrix matches ..0 as @e[type=armor_stand,tag=ReusRoot,distance=0..15,tag=!AnmDStun] run function asa_animator:reus/manager/3_damage/0_animation/damage_leg
+    execute if entity @s[tag=HeadParts] if score #mhdp_reus_head_damage AsaMatrix matches ..0 as @e[type=armor_stand,tag=ReusRoot,distance=0..15,tag=!AnmDLegL,tag=!AnmDLegR,tag=!AnmDStun] run function asa_animator:reus/manager/3_damage/0_animation/damage_head
+    execute if entity @s[tag=BodyParts] if score #mhdp_reus_body_damage AsaMatrix matches ..0 as @e[type=armor_stand,tag=ReusRoot,distance=0..15,tag=!AnmDLegL,tag=!AnmDLegR,tag=!AnmDStun] run function asa_animator:reus/manager/3_damage/0_animation/damage_body
+    execute if entity @s[tag=TailParts] if data storage mhdp_core:temp Temp.WeaponDamage{Type:1} if score #mhdp_reus_tail_damage AsaMatrix matches ..0 as @e[type=armor_stand,tag=ReusRoot,distance=0..15,tag=!AnmDLegL,tag=!AnmDLegR,tag=!AnmDStun] run function asa_animator:reus/manager/3_damage/0_animation/damage_tail
+    execute if entity @s[tag=LegParts] if score #mhdp_reus_leg_damage AsaMatrix matches ..0 as @e[type=armor_stand,tag=ReusRoot,distance=0..15,tag=!AnmDLegL,tag=!AnmDLegR,tag=!AnmDStun] run function asa_animator:reus/manager/3_damage/0_animation/damage_leg
 
 # スタンダメージ適用
     execute if entity @s[tag=HeadParts] if data storage mhdp_core:temp Temp.WeaponDamage{Type:2} run scoreboard players operation #mhdp_reus_stun_damage AsaMatrix += #reus_damage AsaMatrix
@@ -26,7 +26,7 @@
 
 # 怒り遷移
     execute if entity @e[type=armor_stand,tag=ReusRoot,tag=!IsAnger] run scoreboard players operation #mhdp_reus_anger_damage AsaMatrix += #reus_damage AsaMatrix
-    execute if score #mhdp_reus_anger_damage AsaMatrix matches ..0 as @e[type=armor_stand,tag=ReusRoot] if entity @s[tag=!IsAnger] run function asa_animator:reus/manager/3_damage/0_animation/anger
+    execute if score #mhdp_reus_anger_damage AsaMatrix matches ..0 as @e[type=armor_stand,tag=ReusRoot] if entity @s[tag=!IsAnger,tag=!AnmDLegL,tag=!AnmDLegR,tag=!AnmDStun] run function asa_animator:reus/manager/3_damage/0_animation/anger
 
 # 飛行時怯み処理
     execute as @e[type=armor_stand,tag=ReusRoot,distance=0..15] if entity @s[tag=IsFlying] run scoreboard players operation #mhdp_reus_flying_damage AsaMatrix += #reus_damage AsaMatrix

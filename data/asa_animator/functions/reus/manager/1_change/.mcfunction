@@ -23,7 +23,8 @@
     execute if entity @s[tag=IsAnger] if score #mhdp_reus_anger_count AsaMatrix matches 30.. run function asa_animator:reus/manager/end_anger
 
 # 強制
-    tag @s add AnmBite
+    # tag @s add AnmDTail
+    function asa_animator:reus/manager/1_change/1_animations/damage_leg
 
 # 終了
     tag @s remove ChangeAnm

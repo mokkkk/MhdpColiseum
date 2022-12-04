@@ -5,6 +5,9 @@
     execute if entity @s[tag=AnmTailL] run function asa_animator:reus/anim/tail_spin_l/main
     execute if entity @s[tag=AnmTailR] run function asa_animator:reus/anim/tail_spin_r/main
 
+# 2連噛みつき
+    execute if entity @s[tag=AnmBite] run function asa_animator:reus/anim/bite/main
+
 # 地上床ドン
     # execute if entity @s[tag=AnmJump] run function asa_animator:reus/anim/jump/main
 
@@ -13,9 +16,6 @@
 
 # 移動
     # execute if entity @s[tag=AnmMove] run function asa_animator:reus/anim/move/main
-
-# 2連噛みつき
-    execute if entity @s[tag=AnmBite] run function asa_animator:reus/anim/bite/main
 
 # チャージ噛みつき
     # execute if entity @s[tag=AnmBiteC] run function asa_animator:reus/anim/bite_charge/main
@@ -94,11 +94,16 @@
 # 飛行時怒り
     # execute if entity @s[tag=AnmFlyAnger] run function asa_animator:reus/anim/flying_voice/main
 
-# 頭部破壊ひるみ
-    execute if entity @s[tag=AnmDHead] run function asa_animator:reus/anim/destroy_head/main
-# 胴体破壊ひるみ
-    execute if entity @s[tag=AnmDBody] run function asa_animator:reus/anim/destroy_body/main
-# 尻尾破壊ひるみ
-    execute if entity @s[tag=AnmDTail] run function asa_animator:reus/anim/destroy_tail/main
+# 頭部ひるみ
+    execute if entity @s[tag=AnmDHead] run function asa_animator:reus/anim/damage_head/main
+# 胴体ひるみ
+    # execute if entity @s[tag=AnmDBody] run function asa_animator:reus/anim/destroy_body/main
+# 尻尾ひるみ
+    execute if entity @s[tag=AnmDTail] run function asa_animator:reus/anim/damage_tail/main
+# 尻尾ひるみ（破壊）
+    execute if entity @s[tag=AnmDTailD] run function asa_animator:reus/anim/damage_tail_destroy/main
+# 転倒
+    execute if entity @s[tag=AnmDLegL] run function asa_animator:reus/anim/damage_leg_l/main
+    execute if entity @s[tag=AnmDLegR] run function asa_animator:reus/anim/damage_leg_r/main
 # スタン
     execute if entity @s[tag=AnmDStun] run function asa_animator:reus/anim/damage_stun/main
