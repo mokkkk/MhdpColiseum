@@ -52,3 +52,7 @@ function asa_animator:reus/model
     execute if entity @s[scores={AsaMatrix=24..26}] run playsound entity.ravager.attack master @a[distance=..48] ~ ~ ~ 0.5 0.82 0.5
     execute if entity @s[scores={AsaMatrix=61..63}] run playsound entity.ravager.attack master @a[distance=..48] ~ ~ ~ 0.5 0.82 0.5
     execute if entity @s[scores={AsaMatrix=98..100}] run playsound entity.ravager.attack master @a[distance=..48] ~ ~ ~ 0.5 0.82 0.5
+
+# 高度調整
+    execute if entity @s[scores={AsaMatrix=16..112}] at @s if block ~ ~1.5 ~ #asa_animator:no_collision at @s run function asa_animator:general/check_ground
+    execute if entity @s[scores={AsaMatrix=16..112}] at @s unless block ~ ~1.7 ~ #asa_animator:no_collision at @s run tp @s ~ ~0.1 ~ ~ ~

@@ -1,6 +1,9 @@
 
 ### 地上時行動
 
+# 移動
+    execute if entity @s[tag=AnmMove] run function asa_animator:reus/anim/move/main
+
 # 尻尾回転
     execute if entity @s[tag=AnmTailL] run function asa_animator:reus/anim/tail_spin_l/main
     execute if entity @s[tag=AnmTailR] run function asa_animator:reus/anim/tail_spin_r/main
@@ -21,14 +24,8 @@
 # 床ドン
     execute if entity @s[tag=AnmJump] run function asa_animator:reus/anim/jump/main
 
-# ブレス
-    # execute if entity @s[tag=AnmBreath] run function asa_animator:reus/anim/breath/main
-
-# 移動
-    # execute if entity @s[tag=AnmMove] run function asa_animator:reus/anim/move/main
-
 # チャージ噛みつき
-    # execute if entity @s[tag=AnmBiteC] run function asa_animator:reus/anim/bite_charge/main
+    execute if entity @s[tag=AnmBiteC] run function asa_animator:reus/anim/bite_charge/main
 
 # ハード：滑空蹴り
     # execute if entity @s[tag=AnmHardKick] run function asa_animator:reus/anim/hard_jump_kick/main
@@ -117,3 +114,7 @@
     execute if entity @s[tag=AnmDLegR] run function asa_animator:reus/anim/damage_leg_r/main
 # スタン
     execute if entity @s[tag=AnmDStun] run function asa_animator:reus/anim/damage_stun/main
+
+# 攻撃後後隙
+    execute if entity @s[tag=AnmAfter] run function asa_animator:reus/anim/after_attack/main
+    

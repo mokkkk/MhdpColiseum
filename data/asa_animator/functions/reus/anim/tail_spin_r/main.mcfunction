@@ -6,7 +6,7 @@ execute if entity @s[scores={AsaMatrix=1..6}] run tp @s ^0 ^-0.01666667 ^0
 execute if entity @s[scores={AsaMatrix=7}] run function asa_animator:reus/anim/tail_spin_r/keyframes/1
 execute if entity @s[scores={AsaMatrix=7..17}] run tp @s ^0 ^0.009090909 ^0 ~-3 ~
 execute if entity @s[scores={AsaMatrix=18}] run function asa_animator:reus/anim/tail_spin_r/keyframes/2
-execute if entity @s[scores={AsaMatrix=18..24}] run tp @s ^0.1 ^-0.01428571 ^-0.1 ~21 ~
+execute if entity @s[scores={AsaMatrix=18..24}] run tp @s ^0.1 ^-0.01428571 ^-0.1 ~23 ~
 execute if entity @s[scores={AsaMatrix=25}] run function asa_animator:reus/anim/tail_spin_r/keyframes/3
 execute if entity @s[scores={AsaMatrix=25..33}] run tp @s ^0.1 ^-0.01111111 ^-0.1 ~7 ~
 execute if entity @s[scores={AsaMatrix=34}] run function asa_animator:reus/anim/tail_spin_r/keyframes/4

@@ -7,7 +7,7 @@
         "condition": "minecraft:entity_properties",
         "entity": "this",
         "predicate": {
-          "nbt": "{Tags:[\"AnmBreath\"]}"
+          "nbt": "{Tags:[\"AnmMove\"]}"
         }
       },
       {
@@ -21,21 +21,14 @@
         "condition": "minecraft:entity_properties",
         "entity": "this",
         "predicate": {
-          "nbt": "{Tags:[\"AnmBite2\"]}"
+          "nbt": "{Tags:[\"AnmDashStart\"]}"
         }
       },
       {
         "condition": "minecraft:entity_properties",
         "entity": "this",
         "predicate": {
-          "nbt": "{Tags:[\"AnmMove\"]}"
-        }
-      },
-      {
-        "condition": "minecraft:entity_properties",
-        "entity": "this",
-        "predicate": {
-          "nbt": "{Tags:[\"AnmBjb\"]}"
+          "nbt": "{Tags:[\"AnmDashBite\"]}"
         }
       }
     ]

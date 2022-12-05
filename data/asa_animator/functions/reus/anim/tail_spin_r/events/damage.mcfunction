@@ -16,8 +16,8 @@
     execute if entity @s[tag=DestroyTail] positioned ^ ^1.3 ^-2.5 run tag @e[type=!armor_stand,type=!area_effect_cloud,type=!marker,tag=!ReusParts,tag=!ReiaParts,tag=!Target,distance=0..2.1] add Target
     execute if entity @s[tag=DestroyTail] positioned ^1.5 ^1.3 ^-2.5 run tag @e[type=!armor_stand,type=!area_effect_cloud,type=!marker,tag=!ReusParts,tag=!ReiaParts,tag=!Target,distance=0..2.1] add Target
     # 通常時
-    execute if entity @s[tag=!DestroyTail] positioned ^ ^1.3 ^-5.5 run tag @e[type=!armor_stand,type=!area_effect_cloud,type=!marker,tag=!ReusParts,tag=!ReiaParts,tag=!Target,distance=0..3] add Target
-    execute if entity @s[tag=!DestroyTail] positioned ^-1.6 ^1.3 ^-5.7 run tag @e[type=!armor_stand,type=!area_effect_cloud,type=!marker,tag=!ReusParts,tag=!ReiaParts,tag=!Target,distance=0..3] add Target
+    execute if entity @s[tag=!DestroyTail] positioned ^ ^1.3 ^-6.5 run tag @e[type=!armor_stand,type=!area_effect_cloud,type=!marker,tag=!ReusParts,tag=!ReiaParts,tag=!Target,distance=0..3] add Target
+    execute if entity @s[tag=!DestroyTail] positioned ^-1.6 ^1.3 ^-6.7 run tag @e[type=!armor_stand,type=!area_effect_cloud,type=!marker,tag=!ReusParts,tag=!ReiaParts,tag=!Target,distance=0..3] add Target
 
 # 攻撃処理
     execute as @e[tag=Target] run function asa_animator:reus/anim/tail_spin_l/events/damage_sub

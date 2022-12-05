@@ -7,6 +7,13 @@
         "condition": "minecraft:entity_properties",
         "entity": "this",
         "predicate": {
+          "nbt": "{Tags:[\"AnmMove\"]}"
+        }
+      },
+      {
+        "condition": "minecraft:entity_properties",
+        "entity": "this",
+        "predicate": {
           "nbt": "{Tags:[\"AnmTailL\"]}"
         }
       },
@@ -49,10 +56,108 @@
         "condition": "minecraft:entity_properties",
         "entity": "this",
         "predicate": {
+          "nbt": "{Tags:[\"AnmBreath\"]}"
+        }
+      },
+      {
+        "condition": "minecraft:entity_properties",
+        "entity": "this",
+        "predicate": {
           "nbt": "{Tags:[\"AnmBStep\"]}"
         }
       },
+      {
+        "condition": "minecraft:entity_properties",
+        "entity": "this",
+        "predicate": {
+          "nbt": "{Tags:[\"AnmBiteC\"]}"
+        }
+      },
 
+      {
+        "condition": "minecraft:entity_properties",
+        "entity": "this",
+        "predicate": {
+          "nbt": "{Tags:[\"AnmSummon\"]}"
+        }
+      },
+      {
+        "condition": "minecraft:entity_properties",
+        "entity": "this",
+        "predicate": {
+          "nbt": "{Tags:[\"AnmFlyDamage\"]}"
+        }
+      },
+      {
+        "condition": "minecraft:entity_properties",
+        "entity": "this",
+        "predicate": {
+          "nbt": "{Tags:[\"AnmDeath\"]}"
+        }
+      },
+      {
+        "condition": "minecraft:entity_properties",
+        "entity": "this",
+        "predicate": {
+          "nbt": "{Tags:[\"AnmFlyDeath\"]}"
+        }
+      },
+      {
+        "condition": "minecraft:entity_properties",
+        "entity": "this",
+        "predicate": {
+          "nbt": "{Tags:[\"AnmDHead\"]}"
+        }
+      },
+      {
+        "condition": "minecraft:entity_properties",
+        "entity": "this",
+        "predicate": {
+          "nbt": "{Tags:[\"AnmDBody\"]}"
+        }
+      },
+      {
+        "condition": "minecraft:entity_properties",
+        "entity": "this",
+        "predicate": {
+          "nbt": "{Tags:[\"AnmDTail\"]}"
+        }
+      },
+      {
+        "condition": "minecraft:entity_properties",
+        "entity": "this",
+        "predicate": {
+          "nbt": "{Tags:[\"AnmDTailD\"]}"
+        }
+      },
+      {
+        "condition": "minecraft:entity_properties",
+        "entity": "this",
+        "predicate": {
+          "nbt": "{Tags:[\"AnmDLegL\"]}"
+        }
+      },
+      {
+        "condition": "minecraft:entity_properties",
+        "entity": "this",
+        "predicate": {
+          "nbt": "{Tags:[\"AnmDLegR\"]}"
+        }
+      },
+      {
+        "condition": "minecraft:entity_properties",
+        "entity": "this",
+        "predicate": {
+          "nbt": "{Tags:[\"AnmDStun\"]}"
+        }
+      },
+      {
+        "condition": "minecraft:entity_properties",
+        "entity": "this",
+        "predicate": {
+          "nbt": "{Tags:[\"AnmAfter\"]}"
+        }
+      },
 
 
 
@@ -201,83 +306,6 @@
         "entity": "this",
         "predicate": {
           "nbt": "{Tags:[\"AnmBjb\"]}"
-        }
-      },
-      {
-        "condition": "minecraft:entity_properties",
-        "entity": "this",
-        "predicate": {
-          "nbt": "{Tags:[\"AnmSummon\"]}"
-        }
-      },
-      {
-        "condition": "minecraft:entity_properties",
-        "entity": "this",
-        "predicate": {
-          "nbt": "{Tags:[\"AnmFlyDamage\"]}"
-        }
-      },
-      {
-        "condition": "minecraft:entity_properties",
-        "entity": "this",
-        "predicate": {
-          "nbt": "{Tags:[\"AnmDeath\"]}"
-        }
-      },
-      {
-        "condition": "minecraft:entity_properties",
-        "entity": "this",
-        "predicate": {
-          "nbt": "{Tags:[\"AnmFlyDeath\"]}"
-        }
-      },
-      {
-        "condition": "minecraft:entity_properties",
-        "entity": "this",
-        "predicate": {
-          "nbt": "{Tags:[\"AnmDHead\"]}"
-        }
-      },
-      {
-        "condition": "minecraft:entity_properties",
-        "entity": "this",
-        "predicate": {
-          "nbt": "{Tags:[\"AnmDBody\"]}"
-        }
-      },
-      {
-        "condition": "minecraft:entity_properties",
-        "entity": "this",
-        "predicate": {
-          "nbt": "{Tags:[\"AnmDTail\"]}"
-        }
-      },
-      {
-        "condition": "minecraft:entity_properties",
-        "entity": "this",
-        "predicate": {
-          "nbt": "{Tags:[\"AnmDTailD\"]}"
-        }
-      },
-      {
-        "condition": "minecraft:entity_properties",
-        "entity": "this",
-        "predicate": {
-          "nbt": "{Tags:[\"AnmDLegL\"]}"
-        }
-      },
-      {
-        "condition": "minecraft:entity_properties",
-        "entity": "this",
-        "predicate": {
-          "nbt": "{Tags:[\"AnmDLegR\"]}"
-        }
-      },
-      {
-        "condition": "minecraft:entity_properties",
-        "entity": "this",
-        "predicate": {
-          "nbt": "{Tags:[\"AnmDStun\"]}"
         }
       },
       {

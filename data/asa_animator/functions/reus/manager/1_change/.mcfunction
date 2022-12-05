@@ -11,20 +11,20 @@
 # ターゲットリセット
     function asa_animator:reus/manager/1_change/target
 
+# 強制
+    tag @s add AnmDashStart
+    # function asa_animator:reus/manager/1_change/1_animations/breath
+
 # 行動
     # execute if entity @a[tag=ReusAttackTarget] run function asa_animator:reus/manager/1_change/act
 
 # 軸合わせ
-    # execute unless predicate asa_animator:reus/turn run function asa_animator:reus/manager/change_normal/_/turn_b
+    execute unless predicate asa_animator:reus/turn run function asa_animator:reus/manager/1_change/1_animations/turn
 
 # 怒り終了
     execute if entity @s[tag=IsAnger] unless entity @a[tag=ReusAttackTarget] run scoreboard players add #mhdp_reus_anger_count AsaMatrix 1
     execute if entity @s[tag=IsAnger] if entity @a[tag=ReusAttackTarget] run scoreboard players add #mhdp_reus_anger_count AsaMatrix 2
     execute if entity @s[tag=IsAnger] if score #mhdp_reus_anger_count AsaMatrix matches 30.. run function asa_animator:reus/manager/end_anger
-
-# 強制
-    tag @s add AnmDashStart
-    # function asa_animator:reus/manager/1_change/1_animations/breath
 
 # 終了
     tag @s remove ChangeAnm
