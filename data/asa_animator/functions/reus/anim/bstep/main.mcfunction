@@ -22,3 +22,7 @@ function asa_animator:reus/model
     execute if entity @s[scores={AsaMatrix=24}] run function asa_animator:reus/manager/5_extra/change_to_normal
     execute if entity @s[scores={AsaMatrix=18..20}] run playsound block.grass.step master @a ~ ~ ~ 2 0.7
     execute if entity @s[scores={AsaMatrix=18}] run playsound entity.hoglin.step master @a ~ ~ ~ 2 0.7
+
+# 高度調整
+    execute if entity @s[scores={AsaMatrix=19..25}] at @s if block ~ ~-0.2 ~ #asa_animator:no_collision at @s run function asa_animator:general/check_ground
+    execute if entity @s[scores={AsaMatrix=19..25}] at @s unless block ~ ~ ~ #asa_animator:no_collision at @s run tp @s ~ ~0.1 ~ ~ ~

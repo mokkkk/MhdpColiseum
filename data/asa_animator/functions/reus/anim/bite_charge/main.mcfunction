@@ -21,7 +21,7 @@ function asa_animator:reus/model
 
 # 移動
     execute if entity @s[scores={AsaMatrix=1..12}] if entity @e[tag=ReusAttackTarget,distance=..6] at @s run tp @s ^ ^ ^-0.4
-    execute if entity @s[scores={AsaMatrix=1..23}] unless entity @e[tag=ReusAttackTarget,distance=..2] run function asa_animator:reus/manager/4_general/rotate
+    execute if entity @s[scores={AsaMatrix=1..25}] unless entity @e[tag=ReusAttackTarget,distance=..2] run function asa_animator:reus/manager/4_general/rotate
     execute if entity @s[scores={AsaMatrix=23..37}] unless entity @e[tag=ReusAttackTarget,distance=..6] at @s run tp @s ^ ^ ^0.7
 
 # 演出

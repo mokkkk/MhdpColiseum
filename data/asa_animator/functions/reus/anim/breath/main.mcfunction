@@ -26,3 +26,7 @@ function asa_animator:reus/model
 
 # ブレス発射
     execute if entity @s[scores={AsaMatrix=21}] positioned ^ ^1 ^5 facing entity @e[type=marker,tag=ReusBreathTarget,limit=1] feet run function asa_animator:reus/anim/breath/events/shot
+
+# 高度調整
+    execute at @s if block ~ ~-0.2 ~ #asa_animator:no_collision at @s run function asa_animator:general/check_ground
+    execute at @s unless block ~ ~ ~ #asa_animator:no_collision at @s run tp @s ~ ~0.1 ~ ~ ~
