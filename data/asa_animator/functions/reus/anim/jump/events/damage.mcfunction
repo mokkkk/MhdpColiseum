@@ -8,8 +8,10 @@
     data modify storage mhdp_core:temp Temp.Damage set value {Damage:0.0f,Knockback:3,Guard:4,Type:0,Blight:0b}
     # クエストランクノーマル
         execute if data storage mh_dp:settings Custom{QuestRank:0} run data modify storage mhdp_core:temp Temp.Damage.Damage set value 20.0f
+        execute if entity @s[tag=IsAnger] if data storage mh_dp:settings Custom{QuestRank:0} run data modify storage mhdp_core:temp Temp.Damage.Damage set value 22.2f
     # クエストランクハード
         execute if data storage mh_dp:settings Custom{QuestRank:1} run data modify storage mhdp_core:temp Temp.Damage.Damage set value 44.0f
+        execute if entity @s[tag=IsAnger] if data storage mh_dp:settings Custom{QuestRank:1} run data modify storage mhdp_core:temp Temp.Damage.Damage set value 48.4f
 
 # ターゲット設定
     execute as @a[distance=7.51..9.2] run function mhdp_core:player/damage/knockback/wind/1

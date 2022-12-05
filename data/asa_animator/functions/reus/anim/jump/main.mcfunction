@@ -10,11 +10,11 @@ execute if entity @s[scores={AsaMatrix=9..12}] run tp @s ^0 ^-0.125 ^0
 execute if entity @s[scores={AsaMatrix=13}] run function asa_animator:reus/anim/jump/keyframes/3
 execute if entity @s[scores={AsaMatrix=13..17}] run tp @s ^0 ^0.88 ^-0.04
 execute if entity @s[scores={AsaMatrix=18}] run function asa_animator:reus/anim/jump/keyframes/4
-execute if entity @s[scores={AsaMatrix=18..24}] run tp @s ^0 ^0.07142857 ^-0.04285714
-execute if entity @s[scores={AsaMatrix=25}] run function asa_animator:reus/anim/jump/keyframes/5
-execute if entity @s[scores={AsaMatrix=25..29}] run tp @s ^0 ^-0.98 ^0.1
-execute if entity @s[scores={AsaMatrix=30}] run function asa_animator:reus/anim/jump/keyframes/6
-execute if entity @s[scores={AsaMatrix=30..57}] run tp @s ^0 ^0 ^0
+execute if entity @s[scores={AsaMatrix=18..29}] run tp @s ^0 ^0.04166667 ^-0.025
+execute if entity @s[scores={AsaMatrix=30}] run function asa_animator:reus/anim/jump/keyframes/5
+execute if entity @s[scores={AsaMatrix=30..34}] run tp @s ^0 ^-0.98 ^0.1
+execute if entity @s[scores={AsaMatrix=35}] run function asa_animator:reus/anim/jump/keyframes/6
+execute if entity @s[scores={AsaMatrix=35..57}] run tp @s ^0 ^0 ^0
 execute if entity @s[scores={AsaMatrix=58}] run function asa_animator:reus/anim/jump/keyframes/7
 execute if entity @s[scores={AsaMatrix=58..66}] run tp @s ^0 ^0.02222222 ^0
 execute if entity @s[scores={AsaMatrix=67}] run function asa_animator:reus/anim/jump/keyframes/8
@@ -27,10 +27,17 @@ execute if entity @s[scores={AsaMatrix=101..}] run function asa_animator:reus/an
 execute as @e[type=armor_stand,tag=ReusParts] run function #asa_matrix:animate
 function asa_animator:reus/model
 
-execute if entity @s[scores={AsaMatrix=1}] run playsound block.grass.step master @a ~ ~ ~ 2 0.7
-execute if entity @s[scores={AsaMatrix=13}] run playsound entity.ender_dragon.flap master @a ~ ~ ~ 2 0.7
-execute if entity @s[scores={AsaMatrix=66}] run playsound block.grass.step master @a ~ ~ ~ 2 0.7
-execute if entity @s[scores={AsaMatrix=29}] positioned ^ ^ ^1 run function asa_animator:reus/anim/jump/events/damage
+# 演出
+    execute if entity @s[scores={AsaMatrix=1}] run playsound block.grass.step master @a ~ ~ ~ 2 0.7
+    execute if entity @s[scores={AsaMatrix=13}] run playsound entity.ender_dragon.flap master @a ~ ~ ~ 2 0.7
+    execute if entity @s[scores={AsaMatrix=66}] run playsound block.grass.step master @a ~ ~ ~ 2 0.7
+    execute if entity @s[scores={AsaMatrix=1}] run function asa_animator:reus/manager/5_extra/change_to_fly
+    execute if entity @s[scores={AsaMatrix=40}] run tag @s remove IsFlying
+    execute if entity @s[scores={AsaMatrix=66}] run function asa_animator:reus/manager/5_extra/change_to_normal
 
-execute if entity @s[scores={AsaMatrix=1}] run function asa_animator:reus/manager/5_extra/change_to_fly
-execute if entity @s[scores={AsaMatrix=40}] run function asa_animator:reus/manager/5_extra/change_to_normal
+# 攻撃
+    execute if entity @s[scores={AsaMatrix=34}] positioned ^ ^ ^1 run function asa_animator:reus/anim/jump/events/damage
+
+# 高度調整
+    execute if entity @s[scores={AsaMatrix=1..5}] at @s if block ~ ~-0.2 ~ #asa_animator:no_collision at @s run function asa_animator:general/check_ground
+    execute if entity @s[scores={AsaMatrix=1..5}] at @s unless block ~ ~ ~ #asa_animator:no_collision at @s run tp @s ~ ~0.1 ~ ~ ~

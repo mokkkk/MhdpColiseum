@@ -35,6 +35,8 @@ function asa_animator:reus/model
     execute if entity @s[scores={AsaMatrix=1}] run playsound entity.ender_dragon.flap master @a ~ ~ ~ 2 0.7
     execute if entity @s[scores={AsaMatrix=31}] run playsound entity.ender_dragon.flap master @a ~ ~ ~ 2 0.7
     execute if entity @s[scores={AsaMatrix=67}] run playsound block.grass.step master @a ~ ~ ~ 2 0.7
+    execute if entity @s[tag=IsAnger,scores={AsaMatrix=10..21}] as @e[type=armor_stand,tag=ReusParts,tag=HeadU,distance=0..12] at @s positioned ^ ^1.1 ^0.5 run particle flame ~ ~ ~ 0.2 0.2 0.2 0.1 3
+    execute if entity @s[tag=IsAnger,scores={AsaMatrix=41..50}] as @e[type=armor_stand,tag=ReusParts,tag=HeadU,distance=0..12] at @s positioned ^ ^1.1 ^0.5 run particle flame ~ ~ ~ 0.2 0.2 0.2 0.1 3
 
 # 攻撃
     execute if entity @s[scores={AsaMatrix=19}] run function asa_animator:reus/anim/bite/events/damage

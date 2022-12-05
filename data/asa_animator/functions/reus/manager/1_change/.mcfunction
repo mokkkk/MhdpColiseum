@@ -12,8 +12,8 @@
     function asa_animator:reus/manager/1_change/target
 
 # 強制
-    tag @s add AnmDashStart
-    # function asa_animator:reus/manager/1_change/1_animations/breath
+    # tag @s add AnmBite
+    function asa_animator:reus/manager/1_change/1_animations/breath
 
 # 行動
     # execute if entity @a[tag=ReusAttackTarget] run function asa_animator:reus/manager/1_change/act

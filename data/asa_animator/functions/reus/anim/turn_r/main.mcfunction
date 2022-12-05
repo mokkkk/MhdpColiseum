@@ -10,8 +10,8 @@ execute if entity @s[scores={AsaMatrix=11..15}] run tp @s ^0 ^0.04 ^0
 execute if entity @s[scores={AsaMatrix=16}] run function asa_animator:reus/anim/turn_r/keyframes/3
 execute if entity @s[scores={AsaMatrix=16..20}] run tp @s ^0 ^-0.04 ^0
 execute if entity @s[scores={AsaMatrix=21}] run function asa_animator:reus/anim/turn_r/keyframes/4
-execute if entity @s[scores={AsaMatrix=21..26}] run tp @s ^0 ^0.01666667 ^0
-execute if entity @s[scores={AsaMatrix=27..}] run function asa_animator:reus/anim/turn_r/end
+execute if entity @s[scores={AsaMatrix=21..23}] run tp @s ^0 ^0.01666667 ^0
+execute if entity @s[scores={AsaMatrix=23..}] run function asa_animator:reus/anim/turn_r/end
 execute as @e[type=armor_stand,tag=ReusParts] run function #asa_matrix:animate
 function asa_animator:reus/model
 

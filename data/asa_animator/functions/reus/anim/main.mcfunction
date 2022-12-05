@@ -1,17 +1,17 @@
 
 ### 地上時行動
 
-# 移動
+# 移動（軸合わせ有）
     execute if entity @s[tag=AnmMove] run function asa_animator:reus/anim/move/main
 
 # 尻尾回転
     execute if entity @s[tag=AnmTailL] run function asa_animator:reus/anim/tail_spin_l/main
     execute if entity @s[tag=AnmTailR] run function asa_animator:reus/anim/tail_spin_r/main
 
-# 2連噛みつき
+# 2連噛みつき（軸合わせ有）
     execute if entity @s[tag=AnmBite] run function asa_animator:reus/anim/bite/main
 
-# 突進
+# 突進（軸合わせ有）
     execute if entity @s[tag=AnmDashStart] run function asa_animator:reus/anim/dash_start/main
     execute if entity @s[tag=AnmDash] run function asa_animator:reus/anim/dash/main
     execute if entity @s[tag=AnmDashBite] run function asa_animator:reus/anim/dash_bite/main
@@ -24,7 +24,7 @@
 # 床ドン
     execute if entity @s[tag=AnmJump] run function asa_animator:reus/anim/jump/main
 
-# チャージ噛みつき
+# チャージ噛みつき（軸合わせ有）
     execute if entity @s[tag=AnmBiteC] run function asa_animator:reus/anim/bite_charge/main
 
 # ハード：滑空蹴り
@@ -117,4 +117,3 @@
 
 # 攻撃後後隙
     execute if entity @s[tag=AnmAfter] run function asa_animator:reus/anim/after_attack/main
-    
