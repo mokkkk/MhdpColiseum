@@ -16,6 +16,8 @@
     # 地上軸合わせ
         execute unless predicate asa_animator:reus/stay if entity @s[tag=!IsFlying,tag=AnmTurnL] at @s run function asa_animator:reus/anim/turn_l/main
         execute unless predicate asa_animator:reus/stay if entity @s[tag=!IsFlying,tag=AnmTurnR] at @s run function asa_animator:reus/anim/turn_r/main
+    # 飛行軸合わせ
+        execute unless predicate asa_animator:reus/stay if entity @s[tag=IsFlying,tag=IsTurn] at @s run function asa_animator:reus/anim/flying_turn/main
     # 行動
         execute unless predicate asa_animator:reus/stay unless entity @s[tag=IsTurn] at @s run function asa_animator:reus/anim/main
 

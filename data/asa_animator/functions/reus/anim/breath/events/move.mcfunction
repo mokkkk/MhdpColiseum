@@ -11,6 +11,7 @@
         execute as @a[tag=Target] if score @s MhdpTAvoid matches 1.. run function mhdp_core:player/damage/player_avoid
         execute as @a[tag=Target] if score @s MhdpTDamage matches 1.. run tag @s remove Target
     execute if entity @e[tag=Target] run function asa_animator:reus/anim/breath/events/damage
+    tag @e[tag=Target] remove Target
 
 # 地面の中に埋まったとき，消去
     execute positioned ~ ~1.45 ~ unless block ^ ^ ^0.8 #mhdp_core:no_collision run function asa_animator:reus/anim/breath/events/damage

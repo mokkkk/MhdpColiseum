@@ -33,13 +33,16 @@
 ### 地上 → 飛行
 
 # 飛行開始
-    # execute if entity @s[tag=AnmFly] run function asa_animator:reus/anim/start_fly/main
+    execute if entity @s[tag=AnmFly] run function asa_animator:reus/anim/start_fly/main
 # BJB
     # execute if entity @s[tag=AnmBjb] run function asa_animator:reus/anim/bjb/main
 # ハード：FJB
     # execute if entity @s[tag=AnmHardFjb] run function asa_animator:reus/anim/hard_fjb/main
 
 ### 飛行時行動
+
+# 3WAYブレス
+    execute if entity @s[tag=AnmFBreath3] run function asa_animator:reus/anim/flying_breath_3/main
 
 # 飛行移動(前進)
     # execute if entity @s[tag=AnmFlyMoveF] run function asa_animator:reus/anim/flying_move_forward/main

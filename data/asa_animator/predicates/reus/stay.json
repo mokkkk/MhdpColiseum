@@ -73,6 +73,23 @@
           "nbt": "{Tags:[\"AnmBiteC\"]}"
         }
       },
+      {
+        "condition": "minecraft:entity_properties",
+        "entity": "this",
+        "predicate": {
+          "nbt": "{Tags:[\"AnmFly\"]}"
+        }
+      },
+      {
+        "condition": "minecraft:entity_properties",
+        "entity": "this",
+        "predicate": {
+          "nbt": "{Tags:[\"AnmFBreath3\"]}"
+        }
+      },
+
+
+
 
       {
         "condition": "minecraft:entity_properties",
@@ -158,6 +175,19 @@
           "nbt": "{Tags:[\"AnmAfter\"]}"
         }
       },
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
