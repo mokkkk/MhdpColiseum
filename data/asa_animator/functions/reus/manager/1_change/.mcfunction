@@ -12,7 +12,7 @@
     function asa_animator:reus/manager/1_change/target
 
 # 強制
-    tag @s add AnmFBreath3
+    tag @s add AnmFBite
     # function asa_animator:reus/manager/1_change/1_animations/breath
 
 # 行動
