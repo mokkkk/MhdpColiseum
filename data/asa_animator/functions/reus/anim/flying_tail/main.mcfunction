@@ -6,24 +6,26 @@ execute if entity @s[scores={AsaMatrix=1..8}] run tp @s ^0 ^0.2125 ^-0.0375
 execute if entity @s[scores={AsaMatrix=9}] run function asa_animator:reus/anim/flying_tail/keyframes/1
 execute if entity @s[scores={AsaMatrix=9..16}] run tp @s ^0 ^-0.0625 ^0 ~3 ~
 execute if entity @s[scores={AsaMatrix=17}] run function asa_animator:reus/anim/flying_tail/keyframes/2
-execute if entity @s[scores={AsaMatrix=17..25}] run tp @s ^-0.1 ^-0.05555556 ^0
+execute if entity @s[scores={AsaMatrix=17..25}] run tp @s ^0 ^-0.05555556 ^0
 execute if entity @s[scores={AsaMatrix=26}] run function asa_animator:reus/anim/flying_tail/keyframes/3
-execute if entity @s[scores={AsaMatrix=26..33}] run tp @s ^0.1 ^0.1 ^0 ~-12 ~
-execute if entity @s[scores={AsaMatrix=34}] run function asa_animator:reus/anim/flying_tail/keyframes/4
-execute if entity @s[scores={AsaMatrix=34..41}] run tp @s ^-0.05 ^0.3 ^0 ~-1 ~
-execute if entity @s[scores={AsaMatrix=42}] run function asa_animator:reus/anim/flying_tail/keyframes/5
-execute if entity @s[scores={AsaMatrix=42..50}] run tp @s ^-0.05 ^-0.2666667 ^0.02222222 ~9 ~
-execute if entity @s[scores={AsaMatrix=51}] run function asa_animator:reus/anim/flying_tail/keyframes/6
+execute if entity @s[scores={AsaMatrix=26..29}] run tp @s ^0 ^0 ^0 ~-12 ~
+execute if entity @s[scores={AsaMatrix=30}] run function asa_animator:reus/anim/flying_tail/keyframes/4
+execute if entity @s[scores={AsaMatrix=30..33}] run tp @s ^0 ^0 ^0 ~-12 ~
+execute if entity @s[scores={AsaMatrix=34}] run function asa_animator:reus/anim/flying_tail/keyframes/5
+execute if entity @s[scores={AsaMatrix=34..41}] run tp @s ^0 ^0.25 ^0 ~-1 ~
+execute if entity @s[scores={AsaMatrix=42}] run function asa_animator:reus/anim/flying_tail/keyframes/6
+execute if entity @s[scores={AsaMatrix=42..50}] run tp @s ^0 ^-0.2666667 ^0.02222222 ~9 ~
+execute if entity @s[scores={AsaMatrix=51}] run function asa_animator:reus/anim/flying_tail/keyframes/7
 execute if entity @s[scores={AsaMatrix=51..56}] run tp @s ^0 ^0.04166667 ^0 ~1 ~
-execute if entity @s[scores={AsaMatrix=57}] run function asa_animator:reus/anim/flying_tail/keyframes/7
-execute if entity @s[scores={AsaMatrix=57..77}] run tp @s ^0 ^0.001190478 ^0 ~0.1 ~
-execute if entity @s[scores={AsaMatrix=78}] run function asa_animator:reus/anim/flying_tail/keyframes/8
-execute if entity @s[scores={AsaMatrix=78..88}] run tp @s ^0 ^0.00227273 ^0
-execute if entity @s[scores={AsaMatrix=89}] run function asa_animator:reus/anim/flying_tail/keyframes/9
-execute if entity @s[scores={AsaMatrix=89..100}] run tp @s ^0 ^0.06666666 ^0.008333334
-execute if entity @s[scores={AsaMatrix=101}] run function asa_animator:reus/anim/flying_tail/keyframes/10
-execute if entity @s[scores={AsaMatrix=101..115}] run tp @s ^0 ^-0.09333333 ^0
-execute if entity @s[scores={AsaMatrix=116..}] run function asa_animator:reus/anim/flying_tail/end
+execute if entity @s[scores={AsaMatrix=57}] run function asa_animator:reus/anim/flying_tail/keyframes/8
+execute if entity @s[scores={AsaMatrix=57..67}] run tp @s ^0 ^0.00227273 ^0
+execute if entity @s[scores={AsaMatrix=68}] run function asa_animator:reus/anim/flying_tail/keyframes/9
+execute if entity @s[scores={AsaMatrix=68..78}] run tp @s ^0 ^0.00227273 ^0
+execute if entity @s[scores={AsaMatrix=79}] run function asa_animator:reus/anim/flying_tail/keyframes/10
+execute if entity @s[scores={AsaMatrix=79..90}] run tp @s ^0 ^0.06666666 ^0.008333334
+execute if entity @s[scores={AsaMatrix=91}] run function asa_animator:reus/anim/flying_tail/keyframes/11
+execute if entity @s[scores={AsaMatrix=91..105}] run tp @s ^0 ^-0.09333333 ^0
+execute if entity @s[scores={AsaMatrix=106..}] run function asa_animator:reus/anim/flying_tail/end
 execute as @e[type=armor_stand,tag=ReusParts] run function #asa_matrix:animate
 function asa_animator:reus/model
 
@@ -36,7 +38,7 @@ function asa_animator:reus/model
     execute if entity @s[scores={AsaMatrix=24}] run playsound entity.player.attack.sweep master @a ~ ~ ~ 2 0.5
     execute if entity @s[scores={AsaMatrix=26}] run playsound entity.ender_dragon.flap master @a ~ ~ ~ 2 0.7
     execute if entity @s[scores={AsaMatrix=41}] run playsound entity.ender_dragon.flap master @a ~ ~ ~ 2 0.7
-    execute if entity @s[scores={AsaMatrix=100}] run playsound entity.ender_dragon.flap master @a ~ ~ ~ 2 0.7
+    execute if entity @s[scores={AsaMatrix=90}] run playsound entity.ender_dragon.flap master @a ~ ~ ~ 2 0.7
     execute if entity @s[scores={AsaMatrix=47..67}] run playsound entity.ravager.attack master @a[distance=..48] ~ ~ ~ 1 0.82 1
 
 # 攻撃

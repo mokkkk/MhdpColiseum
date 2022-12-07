@@ -12,17 +12,17 @@ execute if entity @s[scores={AsaMatrix=24..28}] run tp @s ^0 ^0.16 ^-0.18
 execute if entity @s[scores={AsaMatrix=29}] run function asa_animator:reus/anim/flying_breath_3/keyframes/4
 execute if entity @s[scores={AsaMatrix=29..35}] run tp @s ^0 ^-0.1285714 ^0.08571429
 execute if entity @s[scores={AsaMatrix=36}] run function asa_animator:reus/anim/flying_breath_3/keyframes/5
-execute if entity @s[scores={AsaMatrix=36..41}] run tp @s ^0 ^0.06666667 ^-0.03333334
+execute if entity @s[scores={AsaMatrix=36..41}] run tp @s ^0 ^0.2333333 ^-0.03333334
 execute if entity @s[scores={AsaMatrix=42}] run function asa_animator:reus/anim/flying_breath_3/keyframes/6
-execute if entity @s[scores={AsaMatrix=42..48}] run tp @s ^0 ^-0.05714286 ^0.02857144
+execute if entity @s[scores={AsaMatrix=42..48}] run tp @s ^0 ^-0.2 ^0.02857144
 execute if entity @s[scores={AsaMatrix=49}] run function asa_animator:reus/anim/flying_breath_3/keyframes/7
-execute if entity @s[scores={AsaMatrix=49..54}] run tp @s ^0 ^0.06666667 ^-0.03333334
+execute if entity @s[scores={AsaMatrix=49..54}] run tp @s ^0 ^0.2333333 ^-0.03333334
 execute if entity @s[scores={AsaMatrix=55}] run function asa_animator:reus/anim/flying_breath_3/keyframes/8
-execute if entity @s[scores={AsaMatrix=55..61}] run tp @s ^0 ^-0.05714286 ^0.02857144
+execute if entity @s[scores={AsaMatrix=55..61}] run tp @s ^0 ^-0.2 ^0.02857144
 execute if entity @s[scores={AsaMatrix=62}] run function asa_animator:reus/anim/flying_breath_3/keyframes/9
-execute if entity @s[scores={AsaMatrix=62..70}] run tp @s ^0 ^0.06666667 ^-0.3
+execute if entity @s[scores={AsaMatrix=62..70}] run tp @s ^0 ^0.1777778 ^-0.02222223
 execute if entity @s[scores={AsaMatrix=71}] run function asa_animator:reus/anim/flying_breath_3/keyframes/10
-execute if entity @s[scores={AsaMatrix=71..78}] run tp @s ^0 ^-0.0125 ^-0.1
+execute if entity @s[scores={AsaMatrix=71..78}] run tp @s ^0 ^-0.1375 ^-0.07499999
 execute if entity @s[scores={AsaMatrix=79}] run function asa_animator:reus/anim/flying_breath_3/keyframes/11
 execute if entity @s[scores={AsaMatrix=79..93}] run tp @s ^0 ^-0.03333334 ^-0.08000002
 execute if entity @s[scores={AsaMatrix=94..}] run function asa_animator:reus/anim/flying_breath_3/end

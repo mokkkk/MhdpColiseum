@@ -41,14 +41,20 @@
 
 ### 飛行時行動
 
-# 飛行噛みつき
+# 噛みつき
     execute if entity @s[tag=AnmFBite] run function asa_animator:reus/anim/flying_bite/main
 
-# 飛行尻尾なぎはらい
+# 尻尾なぎはらい
     execute if entity @s[tag=AnmFTail] run function asa_animator:reus/anim/flying_tail/main
 
 # 3WAYブレス
     execute if entity @s[tag=AnmFBreath3] run function asa_animator:reus/anim/flying_breath_3/main
+
+# 爪攻撃
+    execute if entity @s[tag=AnmFAttack] run function asa_animator:reus/anim/flying_attack/main
+
+# 爪強襲
+    execute if entity @s[tag=AnmFDash] run function asa_animator:reus/anim/flying_attack_move/main
 
 # 飛行移動(前進)
     # execute if entity @s[tag=AnmFlyMoveF] run function asa_animator:reus/anim/flying_move_forward/main

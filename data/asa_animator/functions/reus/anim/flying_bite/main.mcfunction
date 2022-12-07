@@ -2,30 +2,38 @@
 scoreboard players add @s AsaMatrix 1
 execute if entity @s[scores={AsaMatrix=1}] run function asa_animator:reus/anim/flying_bite/start
 execute if entity @s[scores={AsaMatrix=1}] run function asa_animator:reus/anim/flying_bite/keyframes/0
-execute if entity @s[scores={AsaMatrix=1..8}] run tp @s ^0 ^0.0875 ^0.2
-execute if entity @s[scores={AsaMatrix=9}] run function asa_animator:reus/anim/flying_bite/keyframes/1
-execute if entity @s[scores={AsaMatrix=9..16}] run tp @s ^0 ^-0.125 ^0.8
-execute if entity @s[scores={AsaMatrix=17}] run function asa_animator:reus/anim/flying_bite/keyframes/2
-execute if entity @s[scores={AsaMatrix=17..20}] run tp @s ^0 ^-0.075 ^1.2
-execute if entity @s[scores={AsaMatrix=21}] run function asa_animator:reus/anim/flying_bite/keyframes/3
-execute if entity @s[scores={AsaMatrix=21..24}] run tp @s ^0 ^-0.09999999 ^0.2
-execute if entity @s[scores={AsaMatrix=25}] run function asa_animator:reus/anim/flying_bite/keyframes/4
-execute if entity @s[scores={AsaMatrix=25..45}] run tp @s ^0 ^0.04761905 ^0.1
-execute if entity @s[scores={AsaMatrix=46..}] run function asa_animator:reus/anim/flying_bite/end
+execute if entity @s[scores={AsaMatrix=1..6}] run tp @s ^0 ^0.03333334 ^-0.08333334
+execute if entity @s[scores={AsaMatrix=7}] run function asa_animator:reus/anim/flying_bite/keyframes/1
+execute if entity @s[scores={AsaMatrix=7..12}] run tp @s ^0 ^0.04166666 ^0.3
+execute if entity @s[scores={AsaMatrix=13}] run function asa_animator:reus/anim/flying_bite/keyframes/2
+execute if entity @s[scores={AsaMatrix=13..18}] run tp @s ^0 ^0.04166667 ^0.3
+execute if entity @s[scores={AsaMatrix=19}] run function asa_animator:reus/anim/flying_bite/keyframes/3
+execute if entity @s[scores={AsaMatrix=19..26}] run tp @s ^0 ^-0.125 ^0.6
+execute if entity @s[scores={AsaMatrix=27}] run function asa_animator:reus/anim/flying_bite/keyframes/4
+execute if entity @s[scores={AsaMatrix=27..30}] run tp @s ^0 ^-0.075 ^1.0
+execute if entity @s[scores={AsaMatrix=31}] run function asa_animator:reus/anim/flying_bite/keyframes/5
+execute if entity @s[scores={AsaMatrix=31..34}] run tp @s ^0 ^-0.09999999 ^0.2
+execute if entity @s[scores={AsaMatrix=35}] run function asa_animator:reus/anim/flying_bite/keyframes/6
+execute if entity @s[scores={AsaMatrix=35..50}] run tp @s ^0 ^0.0625 ^0.1
+execute if entity @s[scores={AsaMatrix=51..}] run function asa_animator:reus/anim/flying_bite/end
 execute as @e[type=armor_stand,tag=ReusParts] run function #asa_matrix:animate
 function asa_animator:reus/model
 
+# 移動
+    execute if entity @s[scores={AsaMatrix=1..13}] run function asa_animator:reus/manager/4_general/rotate
+
 # 演出
-    execute if entity @s[scores={AsaMatrix=8}] run playsound entity.ender_dragon.flap master @a ~ ~ ~ 2 0.7
-    execute if entity @s[scores={AsaMatrix=24}] run playsound entity.ender_dragon.flap master @a ~ ~ ~ 2 0.7
-    execute if entity @s[tag=IsAnger,scores={AsaMatrix=10..23}] as @e[type=armor_stand,tag=ReusParts,tag=HeadU,distance=0..12] at @s positioned ^ ^1.1 ^0.5 run particle flame ~ ~ ~ 0.2 0.2 0.2 0.1 3
+    execute if entity @s[scores={AsaMatrix=6}] run playsound entity.ender_dragon.flap master @a ~ ~ ~ 2 0.7
+    execute if entity @s[scores={AsaMatrix=18}] run playsound entity.ender_dragon.flap master @a ~ ~ ~ 2 0.7
+    execute if entity @s[scores={AsaMatrix=34}] run playsound entity.ender_dragon.flap master @a ~ ~ ~ 2 0.7
+    execute if entity @s[tag=IsAnger,scores={AsaMatrix=18..34}] as @e[type=armor_stand,tag=ReusParts,tag=HeadU,distance=0..12] at @s positioned ^ ^1.1 ^0.5 run particle flame ~ ~ ~ 0.2 0.2 0.2 0.1 3
 
 # 攻撃
-    execute if entity @s[scores={AsaMatrix=9..20}] run function asa_animator:reus/anim/flying_bite/events/damage
-    execute if entity @s[scores={AsaMatrix=23}] run function asa_animator:reus/anim/bite/events/damage
+    execute if entity @s[scores={AsaMatrix=20..34}] run function asa_animator:reus/anim/flying_bite/events/damage
+    execute if entity @s[scores={AsaMatrix=34}] run function asa_animator:reus/anim/bite/events/damage
 
 # 高度調整
-    execute if entity @s[scores={AsaMatrix=1..35}] at @s if block ~ ~-1.2 ~ #asa_animator:no_collision at @s run tp @s ~ ~-0.5 ~ ~ ~
-    execute if entity @s[scores={AsaMatrix=1..35}] at @s unless block ~ ~-0.5 ~ #asa_animator:no_collision at @s run tp @s ~ ~0.5 ~ ~ ~
-    execute if entity @s[scores={AsaMatrix=36..}] at @s if block ~ ~-2 ~ #asa_animator:no_collision at @s run tp @s ~ ~-0.3 ~ ~ ~
-    execute if entity @s[scores={AsaMatrix=36..}] at @s unless block ~ ~-3 ~ #asa_animator:no_collision at @s run tp @s ~ ~0.3 ~ ~ ~
+    execute if entity @s[scores={AsaMatrix=12..35}] at @s if block ~ ~-1.2 ~ #asa_animator:no_collision at @s run tp @s ~ ~-0.5 ~ ~ ~
+    execute if entity @s[scores={AsaMatrix=12..35}] at @s unless block ~ ~-0.5 ~ #asa_animator:no_collision at @s run tp @s ~ ~0.5 ~ ~ ~
+    execute if entity @s[scores={AsaMatrix=40..}] at @s if block ~ ~-2 ~ #asa_animator:no_collision at @s run tp @s ~ ~-0.3 ~ ~ ~
+    execute if entity @s[scores={AsaMatrix=40..}] at @s unless block ~ ~-3 ~ #asa_animator:no_collision at @s run tp @s ~ ~0.3 ~ ~ ~

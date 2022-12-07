@@ -101,6 +101,20 @@
           "nbt": "{Tags:[\"AnmFBreath3\"]}"
         }
       },
+      {
+        "condition": "minecraft:entity_properties",
+        "entity": "this",
+        "predicate": {
+          "nbt": "{Tags:[\"AnmFAttack\"]}"
+        }
+      },
+      {
+        "condition": "minecraft:entity_properties",
+        "entity": "this",
+        "predicate": {
+          "nbt": "{Tags:[\"AnmFDash\"]}"
+        }
+      },
 
 
 
