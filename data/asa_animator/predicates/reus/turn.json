@@ -44,6 +44,20 @@
         "predicate": {
           "nbt": "{Tags:[\"AnmFAttack\"]}"
         }
+      },
+      {
+        "condition": "minecraft:entity_properties",
+        "entity": "this",
+        "predicate": {
+          "nbt": "{Tags:[\"AnmFBreathML\"]}"
+        }
+      },
+      {
+        "condition": "minecraft:entity_properties",
+        "entity": "this",
+        "predicate": {
+          "nbt": "{Tags:[\"AnmFBreathMR\"]}"
+        }
       }
     ]
   }

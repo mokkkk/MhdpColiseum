@@ -1,11 +1,11 @@
 # 爪強襲
 # Normal：9（18 * 0.5）
 # Hard：16（44 * 0.34）
-# Guard：3（大剣ガード可能）
+# Guard：5（ガード性能必要）
 # 属性なし・属性やられなし
 
 # ダメージ設定
-    data modify storage mhdp_core:temp Temp.Damage set value {Damage:0.0f,Knockback:1,Guard:3,Type:0,Blight:0b}
+    data modify storage mhdp_core:temp Temp.Damage set value {Damage:0.0f,Knockback:1,Guard:5,Type:0,Blight:0b}
     # クエストランクノーマル
         execute if data storage mh_dp:settings Custom{QuestRank:0} run data modify storage mhdp_core:temp Temp.Damage.Damage set value 18.0f
         execute if entity @s[tag=IsAnger] if data storage mh_dp:settings Custom{QuestRank:0} run data modify storage mhdp_core:temp Temp.Damage.Damage set value 20.0f

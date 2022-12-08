@@ -56,6 +56,13 @@
 # 爪強襲
     execute if entity @s[tag=AnmFDash] run function asa_animator:reus/anim/flying_attack_move/main
 
+# 移動ブレス
+    execute if entity @s[tag=AnmFBreathML] run function asa_animator:reus/anim/flying_move_breath_l/main
+    execute if entity @s[tag=AnmFBreathMR] run function asa_animator:reus/anim/flying_move_breath_r/main
+
+# 地上強襲（着地）
+    execute if entity @s[tag=AnmFJump] run function asa_animator:reus/anim/flying_jump/main
+
 # 飛行移動(前進)
     # execute if entity @s[tag=AnmFlyMoveF] run function asa_animator:reus/anim/flying_move_forward/main
 # 飛行移動(後退)
