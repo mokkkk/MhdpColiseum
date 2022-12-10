@@ -139,3 +139,5 @@
 
 # 攻撃後後隙
     execute if entity @s[tag=AnmAfter] run function asa_animator:reus/anim/after_attack/main
+# 攻撃後後隙（短）
+    execute if entity @s[tag=AnmAfterS] run function asa_animator:reus/anim/after_attack_short/main

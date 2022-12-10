@@ -12,7 +12,7 @@
     function asa_animator:reus/manager/1_change/target
 
 # 強制
-    tag @s add AnmFBreathML
+    tag @s add AnmFJump
     # function asa_animator:reus/manager/1_change/1_animations/breath
 
 # 行動
