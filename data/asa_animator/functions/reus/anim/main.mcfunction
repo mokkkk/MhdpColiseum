@@ -70,6 +70,14 @@
 # 横なぎ払い火炎放射
     execute if entity @s[tag=AnmFBreathL] run function asa_animator:reus/anim/flying_breath_large/main
 
+# 縦なぎ払い火炎放射
+    execute if entity @s[tag=AnmFBreathV] run function asa_animator:reus/anim/flying_breath_charge/main
+
+### 飛行 → 地上
+
+# 着地
+    execute if entity @s[tag=AnmFEnd] run function asa_animator:reus/anim/end_fly/main
+
 
 # 飛行移動(前進)
     # execute if entity @s[tag=AnmFlyMoveF] run function asa_animator:reus/anim/flying_move_forward/main

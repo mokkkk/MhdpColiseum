@@ -34,6 +34,7 @@ function asa_animator:reus/model
 
 # 演出
     execute if entity @s[scores={AsaMatrix=1}] run playsound entity.player.breath master @a ~ ~ ~ 2 0.7
+    execute if entity @s[scores={AsaMatrix=8}] run playsound entity.ender_dragon.flap master @a ~ ~ ~ 2 0.7
     execute if entity @s[scores={AsaMatrix=23}] run playsound entity.ender_dragon.flap master @a ~ ~ ~ 2 0.7
     execute if entity @s[scores={AsaMatrix=41}] run playsound entity.ender_dragon.flap master @a ~ ~ ~ 2 0.7
     execute if entity @s[scores={AsaMatrix=54}] run playsound entity.ender_dragon.flap master @a ~ ~ ~ 2 0.7

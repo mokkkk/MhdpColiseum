@@ -157,6 +157,20 @@
           "nbt": "{Tags:[\"AnmFBreathL\"]}"
         }
       },
+      {
+        "condition": "minecraft:entity_properties",
+        "entity": "this",
+        "predicate": {
+          "nbt": "{Tags:[\"AnmFBreathV\"]}"
+        }
+      },
+      {
+        "condition": "minecraft:entity_properties",
+        "entity": "this",
+        "predicate": {
+          "nbt": "{Tags:[\"AnmFEnd\"]}"
+        }
+      },
 
 
 

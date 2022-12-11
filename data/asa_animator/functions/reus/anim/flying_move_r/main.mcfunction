@@ -19,4 +19,3 @@ function asa_animator:reus/model
 
 # 演出
     execute if entity @s[scores={AsaMatrix=6}] run playsound entity.ender_dragon.flap master @a ~ ~ ~ 2 0.7
-    execute if entity @s[scores={AsaMatrix=1..6}] run playsound entity.ravager.attack master @a[distance=..48] ~ ~ ~ 1 1.2 1
