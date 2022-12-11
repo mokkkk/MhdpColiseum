@@ -41,6 +41,10 @@
 
 ### 飛行時行動
 
+# 回り込み
+    execute if entity @s[tag=AnmFMoveL] run function asa_animator:reus/anim/flying_move_l/main
+    execute if entity @s[tag=AnmFMoveR] run function asa_animator:reus/anim/flying_move_r/main
+
 # 噛みつき
     execute if entity @s[tag=AnmFBite] run function asa_animator:reus/anim/flying_bite/main
 
