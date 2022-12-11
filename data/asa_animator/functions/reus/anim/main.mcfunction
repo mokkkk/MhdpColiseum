@@ -63,6 +63,10 @@
 # 地上強襲（着地）
     execute if entity @s[tag=AnmFJump] run function asa_animator:reus/anim/flying_jump/main
 
+# 横なぎ払い火炎放射
+    execute if entity @s[tag=AnmFBreathL] run function asa_animator:reus/anim/flying_breath_large/main
+
+
 # 飛行移動(前進)
     # execute if entity @s[tag=AnmFlyMoveF] run function asa_animator:reus/anim/flying_move_forward/main
 # 飛行移動(後退)
@@ -79,8 +83,7 @@
 
 # ブレス
     # execute if entity @s[tag=AnmFlyBreath] run function asa_animator:reus/anim/flying_breath/main
-# 対地なぎ払い火炎放射
-    # execute if entity @s[tag=AnmFlyBreathL] run function asa_animator:reus/anim/flying_breath_large/main
+
 
 # ハード：チャージ噛みつき
     # execute if entity @s[tag=AnmHardFlyBiteC] run function asa_animator:reus/anim/hard_flying_bite_charge/main

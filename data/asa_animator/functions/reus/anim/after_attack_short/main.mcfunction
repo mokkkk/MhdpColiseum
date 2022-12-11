@@ -10,7 +10,7 @@ execute if entity @s[scores={AsaMatrix=7..18}] run tp @s ^0 ^-0.008333334 ^-0.00
 execute if entity @s[scores={AsaMatrix=19}] run function asa_animator:reus/anim/after_attack_short/keyframes/3
 execute if entity @s[scores={AsaMatrix=19..22}] run tp @s ^0 ^0.025 ^0.0875
 execute if entity @s[scores={AsaMatrix=23}] run function asa_animator:reus/anim/after_attack_short/keyframes/4
-execute if entity @s[scores={AsaMatrix=23..27}] run tp @s ^0 ^-0.02 ^0.13
+execute if entity @s[scores={AsaMatrix=23..27}] run tp @s ^0 ^-0.02 ^0.18
 execute if entity @s[scores={AsaMatrix=28}] run function asa_animator:reus/anim/after_attack_short/keyframes/5
 execute if entity @s[scores={AsaMatrix=28..42}] run tp @s ^0 ^0 ^0
 execute if entity @s[scores={AsaMatrix=43}] run function asa_animator:reus/anim/after_attack_short/keyframes/6
@@ -25,3 +25,4 @@ function asa_animator:reus/model
     execute if entity @s[scores={AsaMatrix=1}] run playsound block.grass.step master @a ~ ~ ~ 2 0.7
     execute if entity @s[scores={AsaMatrix=19}] run playsound block.grass.step master @a ~ ~ ~ 2 0.7
     execute if entity @s[scores={AsaMatrix=42}] run playsound block.grass.step master @a ~ ~ ~ 2 0.7
+    execute if entity @s[scores={AsaMatrix=28..30}] run playsound entity.ravager.attack master @a[distance=..48] ~ ~ ~ 1 0.82 1
