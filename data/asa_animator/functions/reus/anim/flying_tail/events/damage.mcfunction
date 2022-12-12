@@ -15,9 +15,11 @@
 
 # ターゲット設定
     # 尻尾切断時
+    execute if entity @s[tag=DestroyTail] positioned ^ ^1.3 ^1 run tag @e[type=!armor_stand,type=!area_effect_cloud,type=!marker,tag=!ReusParts,tag=!ReiaParts,tag=!Target,distance=0..2.5] add Target
     execute if entity @s[tag=DestroyTail] positioned ^ ^1.3 ^3 run tag @e[type=!armor_stand,type=!area_effect_cloud,type=!marker,tag=!ReusParts,tag=!ReiaParts,tag=!Target,distance=0..2.5] add Target
     execute if entity @s[tag=DestroyTail] positioned ^1.5 ^1.3 ^3 run tag @e[type=!armor_stand,type=!area_effect_cloud,type=!marker,tag=!ReusParts,tag=!ReiaParts,tag=!Target,distance=0..2.5] add Target
     # 通常時
+    execute if entity @s[tag=!DestroyTail] positioned ^ ^1.3 ^3 run tag @e[type=!armor_stand,type=!area_effect_cloud,type=!marker,tag=!ReusParts,tag=!ReiaParts,tag=!Target,distance=0..2.5] add Target
     execute if entity @s[tag=!DestroyTail] positioned ^ ^1.3 ^7 run tag @e[type=!armor_stand,type=!area_effect_cloud,type=!marker,tag=!ReusParts,tag=!ReiaParts,tag=!Target,distance=0..3.5] add Target
     execute if entity @s[tag=!DestroyTail] positioned ^1.6 ^1.3 ^7 run tag @e[type=!armor_stand,type=!area_effect_cloud,type=!marker,tag=!ReusParts,tag=!ReiaParts,tag=!Target,distance=0..3.5] add Target
 

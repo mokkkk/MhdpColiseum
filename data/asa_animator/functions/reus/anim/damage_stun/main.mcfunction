@@ -2,58 +2,77 @@
 scoreboard players add @s AsaMatrix 1
 execute if entity @s[scores={AsaMatrix=1}] run function asa_animator:reus/anim/damage_stun/start
 execute if entity @s[scores={AsaMatrix=1}] run function asa_animator:reus/anim/damage_stun/keyframes/0
-execute if entity @s[scores={AsaMatrix=1..5}] run tp @s ^0.3 ^-0.05 ^0 ~1 ~
+execute if entity @s[scores={AsaMatrix=1..5}] run tp @s ^0.3 ^-0.05 ^0
 execute if entity @s[scores={AsaMatrix=6}] run function asa_animator:reus/anim/damage_stun/keyframes/1
 execute if entity @s[scores={AsaMatrix=6..14}] run tp @s ^0.1666667 ^-0.1388889 ^0
 execute if entity @s[scores={AsaMatrix=15}] run function asa_animator:reus/anim/damage_stun/keyframes/2
-execute if entity @s[scores={AsaMatrix=15..34}] run tp @s ^0 ^0 ^0 
-execute if entity @s[scores={AsaMatrix=35}] run function asa_animator:reus/anim/damage_stun/keyframes/3
-execute if entity @s[scores={AsaMatrix=35..48}] run tp @s ^0 ^0 ^0 ~1 ~
-execute if entity @s[scores={AsaMatrix=49}] run function asa_animator:reus/anim/damage_stun/keyframes/4
-execute if entity @s[scores={AsaMatrix=49..55}] run tp @s ^0.0142857 ^0 ^0 
-execute if entity @s[scores={AsaMatrix=56}] run function asa_animator:reus/anim/damage_stun/keyframes/5
-execute if entity @s[scores={AsaMatrix=56..65}] run tp @s ^-0.00999999 ^0 ^0 ~-1 ~
-execute if entity @s[scores={AsaMatrix=66}] run function asa_animator:reus/anim/damage_stun/keyframes/6
-execute if entity @s[scores={AsaMatrix=66..96}] run tp @s ^0 ^0 ^0
-execute if entity @s[scores={AsaMatrix=97}] run function asa_animator:reus/anim/damage_stun/keyframes/7
-execute if entity @s[scores={AsaMatrix=97..110}] run tp @s ^0 ^0 ^0 ~1 ~
-execute if entity @s[scores={AsaMatrix=111}] run function asa_animator:reus/anim/damage_stun/keyframes/8
-execute if entity @s[scores={AsaMatrix=111..117}] run tp @s ^0.0142857 ^0 ^0
-execute if entity @s[scores={AsaMatrix=118}] run function asa_animator:reus/anim/damage_stun/keyframes/9
-execute if entity @s[scores={AsaMatrix=118..127}] run tp @s ^-0.00999999 ^0 ^0 ~-1 ~
-execute if entity @s[scores={AsaMatrix=128}] run function asa_animator:reus/anim/damage_stun/keyframes/10
-execute if entity @s[scores={AsaMatrix=128..163}] run tp @s ^0 ^0 ^0
-execute if entity @s[scores={AsaMatrix=164}] run function asa_animator:reus/anim/damage_stun/keyframes/11
-execute if entity @s[scores={AsaMatrix=164..177}] run tp @s ^0 ^0 ^0 ~1 ~
-execute if entity @s[scores={AsaMatrix=178}] run function asa_animator:reus/anim/damage_stun/keyframes/12
-execute if entity @s[scores={AsaMatrix=178..184}] run tp @s ^0.0142857 ^0 ^0
-execute if entity @s[scores={AsaMatrix=185}] run function asa_animator:reus/anim/damage_stun/keyframes/13
-execute if entity @s[scores={AsaMatrix=185..194}] run tp @s ^-0.00999999 ^0 ^0 ~-1 ~
-execute if entity @s[scores={AsaMatrix=195}] run function asa_animator:reus/anim/damage_stun/keyframes/14
-execute if entity @s[scores={AsaMatrix=195..212}] run tp @s ^0 ^0 ^0
-execute if entity @s[scores={AsaMatrix=213}] run function asa_animator:reus/anim/damage_stun/keyframes/15
-execute if entity @s[scores={AsaMatrix=213..227}] run tp @s ^0 ^0.06 ^0
-execute if entity @s[scores={AsaMatrix=228}] run function asa_animator:reus/anim/damage_stun/keyframes/16
-execute if entity @s[scores={AsaMatrix=228..242}] run tp @s ^0 ^0.04 ^0
-execute if entity @s[scores={AsaMatrix=243..}] run function asa_animator:reus/anim/damage_stun/end
+execute if entity @s[scores={AsaMatrix=15..24}] run tp @s ^0 ^0 ^0
+execute if entity @s[scores={AsaMatrix=25}] run function asa_animator:reus/anim/damage_stun/keyframes/3
+execute if entity @s[scores={AsaMatrix=25..38}] run tp @s ^0 ^0 ^0
+execute if entity @s[scores={AsaMatrix=39}] run function asa_animator:reus/anim/damage_stun/keyframes/4
+execute if entity @s[scores={AsaMatrix=39..45}] run tp @s ^0.0142857 ^0 ^0
+execute if entity @s[scores={AsaMatrix=46}] run function asa_animator:reus/anim/damage_stun/keyframes/5
+execute if entity @s[scores={AsaMatrix=46..55}] run tp @s ^-0.00999999 ^0 ^0
+execute if entity @s[scores={AsaMatrix=56}] run function asa_animator:reus/anim/damage_stun/keyframes/6
+execute if entity @s[scores={AsaMatrix=56..61}] run tp @s ^0 ^0 ^0
+execute if entity @s[scores={AsaMatrix=62}] run function asa_animator:reus/anim/damage_stun/keyframes/7
+execute if entity @s[scores={AsaMatrix=62..75}] run tp @s ^0 ^0 ^0
+execute if entity @s[scores={AsaMatrix=76}] run function asa_animator:reus/anim/damage_stun/keyframes/8
+execute if entity @s[scores={AsaMatrix=76..82}] run tp @s ^0.0142857 ^0 ^0
+execute if entity @s[scores={AsaMatrix=83}] run function asa_animator:reus/anim/damage_stun/keyframes/9
+execute if entity @s[scores={AsaMatrix=83..92}] run tp @s ^-0.00999999 ^0 ^0
+execute if entity @s[scores={AsaMatrix=93}] run function asa_animator:reus/anim/damage_stun/keyframes/10
+execute if entity @s[scores={AsaMatrix=93..98}] run tp @s ^0 ^0 ^0
+execute if entity @s[scores={AsaMatrix=99}] run function asa_animator:reus/anim/damage_stun/keyframes/11
+execute if entity @s[scores={AsaMatrix=99..112}] run tp @s ^0 ^0 ^0
+execute if entity @s[scores={AsaMatrix=113}] run function asa_animator:reus/anim/damage_stun/keyframes/12
+execute if entity @s[scores={AsaMatrix=113..119}] run tp @s ^0.0142857 ^0 ^0
+execute if entity @s[scores={AsaMatrix=120}] run function asa_animator:reus/anim/damage_stun/keyframes/13
+execute if entity @s[scores={AsaMatrix=120..129}] run tp @s ^-0.00999999 ^0 ^0
+execute if entity @s[scores={AsaMatrix=130}] run function asa_animator:reus/anim/damage_stun/keyframes/14
+execute if entity @s[scores={AsaMatrix=130..135}] run tp @s ^0 ^0 ^0
+execute if entity @s[scores={AsaMatrix=136}] run function asa_animator:reus/anim/damage_stun/keyframes/15
+execute if entity @s[scores={AsaMatrix=136..149}] run tp @s ^0 ^0 ^0
+execute if entity @s[scores={AsaMatrix=150}] run function asa_animator:reus/anim/damage_stun/keyframes/16
+execute if entity @s[scores={AsaMatrix=150..156}] run tp @s ^0.0142857 ^0 ^0
+execute if entity @s[scores={AsaMatrix=157}] run function asa_animator:reus/anim/damage_stun/keyframes/17
+execute if entity @s[scores={AsaMatrix=157..166}] run tp @s ^-0.00999999 ^0 ^0
+execute if entity @s[scores={AsaMatrix=167}] run function asa_animator:reus/anim/damage_stun/keyframes/18
+execute if entity @s[scores={AsaMatrix=167..172}] run tp @s ^0 ^0 ^0
+execute if entity @s[scores={AsaMatrix=173}] run function asa_animator:reus/anim/damage_stun/keyframes/19
+execute if entity @s[scores={AsaMatrix=173..186}] run tp @s ^0 ^0 ^0
+execute if entity @s[scores={AsaMatrix=187}] run function asa_animator:reus/anim/damage_stun/keyframes/20
+execute if entity @s[scores={AsaMatrix=187..193}] run tp @s ^0.0142857 ^0 ^0
+execute if entity @s[scores={AsaMatrix=194}] run function asa_animator:reus/anim/damage_stun/keyframes/21
+execute if entity @s[scores={AsaMatrix=194..203}] run tp @s ^-0.00999999 ^0 ^0
+execute if entity @s[scores={AsaMatrix=204}] run function asa_animator:reus/anim/damage_stun/keyframes/22
+execute if entity @s[scores={AsaMatrix=204..209}] run tp @s ^0 ^0 ^0
+execute if entity @s[scores={AsaMatrix=210}] run function asa_animator:reus/anim/damage_stun/keyframes/23
+execute if entity @s[scores={AsaMatrix=210..224}] run tp @s ^0 ^0.06 ^0
+execute if entity @s[scores={AsaMatrix=225}] run function asa_animator:reus/anim/damage_stun/keyframes/24
+execute if entity @s[scores={AsaMatrix=225..239}] run tp @s ^0 ^0.04 ^0
+execute if entity @s[scores={AsaMatrix=240..}] run function asa_animator:reus/anim/damage_stun/end
 execute as @e[type=armor_stand,tag=ReusParts] run function #asa_matrix:animate
 function asa_animator:reus/model
 
 # 演出
-    execute if entity @s[scores={AsaMatrix=1..212}] at @e[type=armor_stand,tag=ReusParts,tag=HeadU] positioned ^-0.3 ^2.5 ^0.5 run particle crit ~ ~ ~ 0.45 0 0.45 0.2 1
+    execute if entity @s[scores={AsaMatrix=1..210}] as @e[type=armor_stand,tag=ReusParts,tag=HeadU,distance=0..12] at @s positioned ^ ^2.5 ^0.5 run particle crit ^ ^ ^ 0.3 0.1 0.3 0.1 1
+
     execute if entity @s[scores={AsaMatrix=13..16}] run playsound block.grass.step master @a ~ ~ ~ 2 0.7
     execute if entity @s[scores={AsaMatrix=14}] run playsound entity.hoglin.step master @a ~ ~ ~ 2 0.7
-    execute if entity @s[scores={AsaMatrix=34}] run playsound block.grass.step master @a ~ ~ ~ 2 0.7
-    execute if entity @s[scores={AsaMatrix=96}] run playsound block.grass.step master @a ~ ~ ~ 2 0.7
-    execute if entity @s[scores={AsaMatrix=163}] run playsound block.grass.step master @a ~ ~ ~ 2 0.7
-    execute if entity @s[scores={AsaMatrix=212}] run playsound block.grass.step master @a ~ ~ ~ 2 0.7
+    execute if entity @s[scores={AsaMatrix=24}] run playsound block.grass.step master @a ~ ~ ~ 2 0.7
+    execute if entity @s[scores={AsaMatrix=61}] run playsound block.grass.step master @a ~ ~ ~ 2 0.7
+    execute if entity @s[scores={AsaMatrix=98}] run playsound block.grass.step master @a ~ ~ ~ 2 0.7
+    execute if entity @s[scores={AsaMatrix=210}] run playsound block.grass.step master @a ~ ~ ~ 2 0.7
 
     execute if entity @s[scores={AsaMatrix=1..5}] run playsound entity.ravager.hurt master @a[distance=..48] ~ ~ ~ 0.5 0.7 0.5
     execute if entity @s[scores={AsaMatrix=1..5}] run playsound entity.ravager.attack master @a[distance=..48] ~ ~ ~ 0.5 0.82 0.5
-    execute if entity @s[scores={AsaMatrix=34..36}] run playsound entity.ravager.attack master @a[distance=..48] ~ ~ ~ 0.5 0.82 0.5
-    execute if entity @s[scores={AsaMatrix=96..98}] run playsound entity.ravager.attack master @a[distance=..48] ~ ~ ~ 0.5 0.82 0.5
-    execute if entity @s[scores={AsaMatrix=163..165}] run playsound entity.ravager.attack master @a[distance=..48] ~ ~ ~ 0.5 0.82 0.5
+    execute if entity @s[scores={AsaMatrix=24..26}] run playsound entity.ravager.attack master @a[distance=..48] ~ ~ ~ 0.5 0.82 0.5
+    execute if entity @s[scores={AsaMatrix=61..63}] run playsound entity.ravager.attack master @a[distance=..48] ~ ~ ~ 0.5 0.82 0.5
+    execute if entity @s[scores={AsaMatrix=98..100}] run playsound entity.ravager.attack master @a[distance=..48] ~ ~ ~ 0.5 0.82 0.5
+    execute if entity @s[scores={AsaMatrix=135..137}] run playsound entity.ravager.attack master @a[distance=..48] ~ ~ ~ 0.5 0.82 0.5
+    execute if entity @s[scores={AsaMatrix=172..174}] run playsound entity.ravager.attack master @a[distance=..48] ~ ~ ~ 0.5 0.82 0.5
 
 # 高度調整
-    execute if entity @s[scores={AsaMatrix=16..212}] at @s if block ~ ~1.5 ~ #asa_animator:no_collision at @s run function asa_animator:general/check_ground
-    execute if entity @s[scores={AsaMatrix=16..212}] at @s unless block ~ ~1.7 ~ #asa_animator:no_collision at @s run tp @s ~ ~0.1 ~ ~ ~
+    execute if entity @s[scores={AsaMatrix=16..210}] at @s if block ~ ~1.5 ~ #asa_animator:no_collision at @s run function asa_animator:general/check_ground
+    execute if entity @s[scores={AsaMatrix=16..210}] at @s unless block ~ ~1.7 ~ #asa_animator:no_collision at @s run tp @s ~ ~0.1 ~ ~ ~

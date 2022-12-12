@@ -14,8 +14,10 @@ execute if entity @s[scores={AsaMatrix=27..34}] run tp @s ^0 ^0 ^0
 execute if entity @s[scores={AsaMatrix=35}] run function asa_animator:reus/anim/flying_attack_move/keyframes/5
 execute if entity @s[scores={AsaMatrix=35..40}] run tp @s ^0 ^-0.2666667 ^0.2166667
 execute if entity @s[scores={AsaMatrix=41}] run function asa_animator:reus/anim/flying_attack_move/keyframes/6
-execute if entity @s[scores={AsaMatrix=41..57}] run tp @s ^0 ^0.1117647 ^-0.1705882 ~8 ~
-execute if entity @s[scores={AsaMatrix=58}] run function asa_animator:reus/anim/flying_attack_move/keyframes/7
+execute if entity @s[scores={AsaMatrix=41..48}] run tp @s ^0 ^0.11875 ^-0.18125 ~8 ~
+execute if entity @s[scores={AsaMatrix=49}] run function asa_animator:reus/anim/flying_attack_move/keyframes/7
+execute if entity @s[scores={AsaMatrix=49..57}] run tp @s ^0 ^0.1055556 ^-0.1611111 ~8 ~
+execute if entity @s[scores={AsaMatrix=58}] run function asa_animator:reus/anim/flying_attack_move/keyframes/8
 execute if entity @s[scores={AsaMatrix=58..76}] run tp @s ^0 ^-0.04736842 ^0.1 ~3 ~
 execute if entity @s[scores={AsaMatrix=77..}] run function asa_animator:reus/anim/flying_attack_move/end
 execute as @e[type=armor_stand,tag=ReusParts] run function #asa_matrix:animate
@@ -32,6 +34,7 @@ function asa_animator:reus/model
     execute if entity @s[scores={AsaMatrix=6}] run playsound entity.ender_dragon.flap master @a ~ ~ ~ 2 0.7
     execute if entity @s[scores={AsaMatrix=18}] run playsound entity.ender_dragon.flap master @a ~ ~ ~ 2 0.7
     execute if entity @s[scores={AsaMatrix=40}] run playsound entity.ender_dragon.flap master @a ~ ~ ~ 2 0.7
+    execute if entity @s[scores={AsaMatrix=57}] run playsound entity.ender_dragon.flap master @a ~ ~ ~ 2 0.7
     execute if entity @s[scores={AsaMatrix=34}] run playsound item.trident.throw master @a ~ ~ ~ 2 0.7
     execute if entity @s[scores={AsaMatrix=29..34}] run particle cloud ~ ~2 ~ 1 1 1 0.2 5
 

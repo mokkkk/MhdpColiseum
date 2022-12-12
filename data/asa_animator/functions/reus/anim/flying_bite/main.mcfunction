@@ -8,9 +8,9 @@ execute if entity @s[scores={AsaMatrix=7..12}] run tp @s ^0 ^0.04166666 ^0.3
 execute if entity @s[scores={AsaMatrix=13}] run function asa_animator:reus/anim/flying_bite/keyframes/2
 execute if entity @s[scores={AsaMatrix=13..18}] run tp @s ^0 ^0.04166667 ^0.3
 execute if entity @s[scores={AsaMatrix=19}] run function asa_animator:reus/anim/flying_bite/keyframes/3
-execute if entity @s[scores={AsaMatrix=19..26}] run tp @s ^0 ^-0.125 ^0.6
+execute if entity @s[scores={AsaMatrix=19..26}] run tp @s ^0 ^-0.125 ^0.8
 execute if entity @s[scores={AsaMatrix=27}] run function asa_animator:reus/anim/flying_bite/keyframes/4
-execute if entity @s[scores={AsaMatrix=27..30}] run tp @s ^0 ^-0.075 ^1.0
+execute if entity @s[scores={AsaMatrix=27..30}] run tp @s ^0 ^-0.075 ^1.4
 execute if entity @s[scores={AsaMatrix=31}] run function asa_animator:reus/anim/flying_bite/keyframes/5
 execute if entity @s[scores={AsaMatrix=31..34}] run tp @s ^0 ^-0.09999999 ^0.2
 execute if entity @s[scores={AsaMatrix=35}] run function asa_animator:reus/anim/flying_bite/keyframes/6
