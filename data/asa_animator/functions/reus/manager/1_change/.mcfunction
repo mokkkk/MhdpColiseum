@@ -12,8 +12,8 @@
     function asa_animator:reus/manager/1_change/target
 
 # 強制
-    tag @s add AnmDStun
-    # function asa_animator:reus/manager/1_change/1_animations/breath
+    # tag @s add AnmBjb
+    function asa_animator:reus/manager/1_change/1_animations/fbreath
 
 # 行動
     # execute if entity @a[tag=ReusAttackTarget] run function asa_animator:reus/manager/1_change/act
@@ -24,7 +24,7 @@
 # 怒り終了
     execute if entity @s[tag=IsAnger] unless entity @a[tag=ReusAttackTarget] run scoreboard players add #mhdp_reus_anger_count AsaMatrix 1
     execute if entity @s[tag=IsAnger] if entity @a[tag=ReusAttackTarget] run scoreboard players add #mhdp_reus_anger_count AsaMatrix 2
-    execute if entity @s[tag=IsAnger] if score #mhdp_reus_anger_count AsaMatrix matches 30.. run function asa_animator:reus/manager/end_anger
+    execute if entity @s[tag=IsAnger] if score #mhdp_reus_anger_count AsaMatrix matches 30.. run function asa_animator:reus/manager/3_damage/2_anger/end
 
 # 終了
     tag @s remove ChangeAnm

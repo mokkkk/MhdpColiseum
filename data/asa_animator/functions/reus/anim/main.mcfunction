@@ -95,33 +95,21 @@
     execute if entity @s[tag=AnmFEndML] run function asa_animator:reus/anim/flying_move_land_l/main
     execute if entity @s[tag=AnmFEndMR] run function asa_animator:reus/anim/flying_move_land_r/main
 
-### 飛行 → 地上
-
-# 着地
-    # execute if entity @s[tag=AnmEndFly] run function asa_animator:reus/anim/end_fly/main
-# 飛行床ドン
-    # execute if entity @s[tag=AnmFlyJump] run function asa_animator:reus/anim/flying_jump/main
-# 地走り火炎
-    # execute if entity @s[tag=AnmFlyBreathC] run function asa_animator:reus/anim/flying_breath_charge/main
-
-
-# 飛行時ひるみ
-    execute if entity @s[tag=AnmFlyDamage] run function asa_animator:reus/anim/flying_damage/main
+### その他
 
 # 地上時討伐
     execute if entity @s[tag=AnmDeath] run function asa_animator:reus/anim/death/main
-
 # 飛行時討伐
-    # execute if entity @s[tag=AnmFlyDeath] run function asa_animator:reus/anim/flying_death/main
+    execute if entity @s[tag=AnmFlyDeath] run function asa_animator:reus/anim/flying_death/main
 
 # 登場
-    # execute if entity @s[tag=AnmSummon] run function asa_animator:reus/anim/summon/main
+    execute if entity @s[tag=AnmSummon] run function asa_animator:reus/anim/summon/main
 # 咆哮
     execute if entity @s[tag=AnmVoice] run function asa_animator:reus/anim/voice/main
 # 怒り
     execute if entity @s[tag=AnmAnger] run function asa_animator:reus/anim/anger/main
 # 飛行時怒り
-    # execute if entity @s[tag=AnmFlyAnger] run function asa_animator:reus/anim/flying_voice/main
+    execute if entity @s[tag=AnmFAnger] run function asa_animator:reus/anim/flying_voice/main
 
 # 頭部ひるみ
     execute if entity @s[tag=AnmDHead] run function asa_animator:reus/anim/damage_head/main
@@ -136,6 +124,8 @@
     execute if entity @s[tag=AnmDLegR] run function asa_animator:reus/anim/damage_leg_r/main
 # スタン
     execute if entity @s[tag=AnmDStun] run function asa_animator:reus/anim/damage_stun/main
+# 飛行時ひるみ（落下）
+    execute if entity @s[tag=AnmFlyDamage] run function asa_animator:reus/anim/flying_damage/main
 
 # 攻撃後後隙
     execute if entity @s[tag=AnmAfter] run function asa_animator:reus/anim/after_attack/main
