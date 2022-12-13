@@ -1,29 +1,12 @@
-#> asa_animator:reus/manager/1_change/
+#> asa_animator:reus/manager/1_change/3_start_fly/
 #
-# 火竜 アニメーション遷移処理
+# 火竜 地上 → 飛行 切り替え
 
-# アニメーションタイマーリセット
-    scoreboard players set @s AsaMatrix 0
+# ターゲットが近距離にいる場合，一定確率でBjb
+    execute if entity @e[tag=ReusAttackTarget,distance=..10] if predicate asa_animator:random/050 run tag @s add AnmBjb
 
-# 行動回数増加
-    scoreboard players add #mhdp_reus_actcount_phase AsaMatrix 1
-
-# ターゲットリセット
-    function asa_animator:reus/manager/1_change/target
-
-# 行動
-    # execute if entity @a[tag=ReusAttackTarget] run function asa_animator:reus/manager/1_change/act
-
-# 軸合わせ
-    # execute unless predicate asa_animator:reus/turn run function asa_animator:reus/manager/change_normal/_/turn_b
-
-# 怒り終了
-    execute if entity @s[tag=IsAnger] unless entity @a[tag=ReusAttackTarget] run scoreboard players add #mhdp_reus_anger_count AsaMatrix 1
-    execute if entity @s[tag=IsAnger] if entity @a[tag=ReusAttackTarget] run scoreboard players add #mhdp_reus_anger_count AsaMatrix 2
-    execute if entity @s[tag=IsAnger] if score #mhdp_reus_anger_count AsaMatrix matches 30.. run function asa_animator:reus/manager/end_anger
-
-# 強制
-    tag @s add AnmBite
+# それ以外の場合，普通に飛ぶ
+    execute if predicate asa_animator:reus/stay run tag @s add AnmFly
 
 # 終了
-    tag @s remove ChangeAnm
+    scoreboard players set #mhdp_reus_actcount_phase AsaMatrix 0

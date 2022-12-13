@@ -13,10 +13,10 @@
 
 # 強制
     # tag @s add AnmBjb
-    function asa_animator:reus/manager/1_change/1_animations/fbreath
+    # function asa_animator:reus/manager/1_change/1_animations/fbreath
 
 # 行動
-    # execute if entity @a[tag=ReusAttackTarget] run function asa_animator:reus/manager/1_change/act
+    execute if entity @a[tag=ReusAttackTarget] run function asa_animator:reus/manager/1_change/act
 
 # 軸合わせ
     execute unless predicate asa_animator:reus/turn run function asa_animator:reus/manager/1_change/1_animations/turn
