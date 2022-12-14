@@ -7,9 +7,10 @@
           "type": "minecraft:group",
           "children": [
             {
+              "##comment":"回り込み",
               "type": "minecraft:item",
               "name": "minecraft:paper",
-              "weight": 25,
+              "weight": 5,
               "functions": [
                 {
                 "function": "minecraft:set_nbt",
@@ -18,9 +19,10 @@
               ]
             },
             {
+              "##comment":"爪急襲",
               "type": "minecraft:item",
               "name": "minecraft:paper",
-              "weight": 15,
+              "weight": 4,
               "functions": [
                 {
                 "function": "minecraft:set_nbt",
@@ -29,9 +31,10 @@
               ]
             },
             {
+              "##comment":"滑空ブレス",
               "type": "minecraft:item",
               "name": "minecraft:paper",
-              "weight": 15,
+              "weight": 5,
               "functions": [
                 {
                 "function": "minecraft:set_nbt",
@@ -40,84 +43,14 @@
               ]
             },
             {
+              "##comment":"横なぎ払い火炎放射",
               "type": "minecraft:item",
               "name": "minecraft:paper",
-              "weight": 25,
+              "weight": 4,
               "functions": [
                 {
                 "function": "minecraft:set_nbt",
                 "tag": "{ActPaper:1,Act:4}"
-                }
-              ]
-            },
-            {
-              "type": "minecraft:item",
-              "name": "minecraft:paper",
-              "weight": 20,
-              "functions": [
-                {
-                "function": "minecraft:set_nbt",
-                "tag": "{ActPaper:1,Act:5}"
-                }
-              ]
-            },
-            {
-              "type": "minecraft:item",
-              "name": "minecraft:paper",
-              "weight": 14,
-              "functions": [
-                {
-                "function": "minecraft:set_nbt",
-                "tag": "{ActPaper:1,Act:6}"
-                }
-              ],
-              "conditions": [
-                {
-                  "condition": "minecraft:entity_properties",
-                  "entity": "this",
-                  "predicate": {
-                    "nbt": "{Tags:[\"IsHard\"]}"
-                  }
-                }
-              ]
-            },
-            {
-              "type": "minecraft:item",
-              "name": "minecraft:paper",
-              "weight": 18,
-              "functions": [
-                {
-                "function": "minecraft:set_nbt",
-                "tag": "{ActPaper:1,Act:7}"
-                }
-              ],
-              "conditions": [
-                {
-                  "condition": "minecraft:entity_properties",
-                  "entity": "this",
-                  "predicate": {
-                    "nbt": "{Tags:[\"IsHard\"]}"
-                  }
-                }
-              ]
-            },
-            {
-              "type": "minecraft:item",
-              "name": "minecraft:paper",
-              "weight": 22,
-              "functions": [
-                {
-                "function": "minecraft:set_nbt",
-                "tag": "{ActPaper:1,Act:8}"
-                }
-              ],
-              "conditions": [
-                {
-                  "condition": "minecraft:entity_properties",
-                  "entity": "this",
-                  "predicate": {
-                    "nbt": "{Tags:[\"IsHard\"]}"
-                  }
                 }
               ]
             }

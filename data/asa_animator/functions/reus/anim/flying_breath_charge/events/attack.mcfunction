@@ -1,7 +1,7 @@
 # 縦なぎ払い火炎放射 予備動作
 # Normal：14（28 * 0.5）
 # Hard：19（56 * 0.34）
-# Guard：10（ガード不可）
+# Guard：1（ガード可）
 # 属性なし・属性やられなし
 
 # 頭部の位置に合わせる
@@ -20,13 +20,13 @@
     execute as @e[type=marker,tag=ReusChargeFAttack] at @s run function asa_animator:reus/anim/flying_breath_large/events/damage
 
 # ダメージ設定
-    data modify storage mhdp_core:temp Temp.Damage set value {Damage:0.0f,Knockback:2,Guard:10,Type:1,Blight:1b}
+    data modify storage mhdp_core:temp Temp.Damage set value {Damage:0.0f,Knockback:2,Guard:1,Type:1,Blight:1b}
     # クエストランクノーマル
-        execute if data storage mh_dp:settings Custom{QuestRank:0} run data modify storage mhdp_core:temp Temp.Damage.Damage set value 28.0f
-        execute if entity @s[tag=IsAnger] if data storage mh_dp:settings Custom{QuestRank:0} run data modify storage mhdp_core:temp Temp.Damage.Damage set value 30.3f
+        execute if data storage mh_dp:settings Custom{QuestRank:0} run data modify storage mhdp_core:temp Temp.Damage.Damage set value 2.0f
+        execute if entity @s[tag=IsAnger] if data storage mh_dp:settings Custom{QuestRank:0} run data modify storage mhdp_core:temp Temp.Damage.Damage set value 2.0f
     # クエストランクハード
-        execute if data storage mh_dp:settings Custom{QuestRank:1} run data modify storage mhdp_core:temp Temp.Damage.Damage set value 56.0f
-        execute if entity @s[tag=IsAnger] if data storage mh_dp:settings Custom{QuestRank:1} run data modify storage mhdp_core:temp Temp.Damage.Damage set value 61.6f 
+        execute if data storage mh_dp:settings Custom{QuestRank:1} run data modify storage mhdp_core:temp Temp.Damage.Damage set value 2.0f
+        execute if entity @s[tag=IsAnger] if data storage mh_dp:settings Custom{QuestRank:1} run data modify storage mhdp_core:temp Temp.Damage.Damage set value 2.0f
 
 # 攻撃処理
     execute positioned ^ ^ ^5 as @e[tag=Target] run function asa_animator:reus/anim/flying_breath_large/events/damage_sub

@@ -1,9 +1,16 @@
 #> asa_animator:reus/manager/1_change/4_flying/far
 #
-# 火竜 地上行動 遠
+# 火竜 飛行行動 遠
 
-# ブレス
+# 抽選
+    loot spawn ~ 0 ~ loot asa_animator:reus/flying/far
 
-# 移動
+# 回り込み
+    execute if entity @e[type=item,nbt={Item:{tag:{Act:1}}}] run function asa_animator:reus/manager/1_change/1_animations/fmove
+# 爪急襲
+    execute if entity @e[type=item,nbt={Item:{tag:{Act:2}}}] run tag @s add AnmFDash
+# 滑空ブレス
+    execute if entity @e[type=item,nbt={Item:{tag:{Act:3}}}] run function asa_animator:reus/manager/1_change/1_animations/fbreath
 
-# 飛行開始
+# 終了
+    kill @e[type=item,nbt={Item:{tag:{ActPaper:1}}}]

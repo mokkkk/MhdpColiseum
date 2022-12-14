@@ -212,27 +212,6 @@
                 "tag": "{ActPaper:1,Act:6}"
                 }
               ]
-            },
-            {
-              "##comment":"ハードモーション例",
-              "type": "minecraft:item",
-              "name": "minecraft:paper",
-              "weight": 1,
-              "functions": [
-                {
-                "function": "minecraft:set_nbt",
-                "tag": "{ActPaper:1,Act:5}"
-                }
-              ],
-              "conditions": [
-                {
-                  "condition": "minecraft:entity_properties",
-                  "entity": "this",
-                  "predicate": {
-                    "nbt": "{Tags:[\"IsHard\"]}"
-                  }
-                }
-              ]
             }
           ]
         }

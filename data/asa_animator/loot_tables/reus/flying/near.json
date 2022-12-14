@@ -7,20 +7,49 @@
           "type": "minecraft:group",
           "children": [
             {
+              "##comment":"移動噛みつき",
               "type": "minecraft:item",
               "name": "minecraft:paper",
-              "weight": 25,
+              "weight": 4,
               "functions": [
                 {
                 "function": "minecraft:set_nbt",
                 "tag": "{ActPaper:1,Act:1}"
                 }
+              ],
+              "conditions": [
+                {
+                  "condition": "minecraft:inverted",
+                  "term": {
+                    "condition": "minecraft:reference",
+                    "name": "asa_animator:reus/pos_forward"
+                  }
+                }
               ]
             },
             {
+              "##comment":"移動噛みつき（前方確率上昇）",
               "type": "minecraft:item",
               "name": "minecraft:paper",
-              "weight": 20,
+              "weight": 7,
+              "functions": [
+                {
+                "function": "minecraft:set_nbt",
+                "tag": "{ActPaper:1,Act:1}"
+                }
+              ],
+              "conditions": [
+                {
+                  "condition": "minecraft:reference",
+                  "name": "asa_animator:reus/pos_forward"
+                }
+              ]
+            },
+            {
+              "##comment":"回り込み",
+              "type": "minecraft:item",
+              "name": "minecraft:paper",
+              "weight": 5,
               "functions": [
                 {
                 "function": "minecraft:set_nbt",
@@ -29,9 +58,10 @@
               ]
             },
             {
+              "##comment":"爪攻撃",
               "type": "minecraft:item",
               "name": "minecraft:paper",
-              "weight": 25,
+              "weight": 6,
               "functions": [
                 {
                 "function": "minecraft:set_nbt",
@@ -40,9 +70,10 @@
               ]
             },
             {
+              "##comment":"爪急襲",
               "type": "minecraft:item",
               "name": "minecraft:paper",
-              "weight": 15,
+              "weight": 3,
               "functions": [
                 {
                 "function": "minecraft:set_nbt",
@@ -51,9 +82,10 @@
               ]
             },
             {
+              "##comment":"滑空ブレス",
               "type": "minecraft:item",
               "name": "minecraft:paper",
-              "weight": 15,
+              "weight": 5,
               "functions": [
                 {
                 "function": "minecraft:set_nbt",
@@ -62,42 +94,14 @@
               ]
             },
             {
+              "##comment":"なぎ払い火炎放射",
               "type": "minecraft:item",
               "name": "minecraft:paper",
-              "weight": 20,
+              "weight": 4,
               "functions": [
                 {
                 "function": "minecraft:set_nbt",
                 "tag": "{ActPaper:1,Act:6}"
-                }
-              ],
-              "conditions": [
-                {
-                  "condition": "minecraft:entity_properties",
-                  "entity": "this",
-                  "predicate": {
-                    "nbt": "{Tags:[\"IsHard\"]}"
-                  }
-                }
-              ]
-            },
-            {
-              "type": "minecraft:item",
-              "name": "minecraft:paper",
-              "weight": 18,
-              "functions": [
-                {
-                "function": "minecraft:set_nbt",
-                "tag": "{ActPaper:1,Act:7}"
-                }
-              ],
-              "conditions": [
-                {
-                  "condition": "minecraft:entity_properties",
-                  "entity": "this",
-                  "predicate": {
-                    "nbt": "{Tags:[\"IsHard\"]}"
-                  }
                 }
               ]
             }
