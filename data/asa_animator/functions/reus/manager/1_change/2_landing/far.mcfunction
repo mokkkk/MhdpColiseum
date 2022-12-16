@@ -14,3 +14,5 @@
 
 # 終了
     kill @e[type=item,nbt={Item:{tag:{ActPaper:1}}}]
+
+say land far

@@ -36,3 +36,7 @@
 
 # ターゲットタグ消去
     tag @s remove MnsTarget
+
+# 各モンスターのターゲットタグ消去
+    tag @s remove ReusTarget
+    tag @s remove ReusAttackTarget

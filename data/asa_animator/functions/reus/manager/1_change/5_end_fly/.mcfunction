@@ -17,3 +17,5 @@
 # 終了
     kill @e[type=item,nbt={Item:{tag:{ActPaper:1}}}]
     scoreboard players set #mhdp_reus_actcount_phase AsaMatrix 0
+
+say end fly

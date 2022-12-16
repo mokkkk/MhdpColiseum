@@ -9,8 +9,8 @@
     data modify storage mh_dp:status Monster.Meet.Reus set value true
 
 # HPセット
-    execute if data storage mh_dp:settings Custom{QuestRank:0} run scoreboard players set #mhdp_reus_health AsaMatrix 50000
-    execute if data storage mh_dp:settings Custom{QuestRank:1} run scoreboard players set #mhdp_reus_health AsaMatrix 70000
+    execute if data storage mh_dp:settings Custom{QuestRank:0} run scoreboard players set #mhdp_reus_health AsaMatrix 700000
+    execute if data storage mh_dp:settings Custom{QuestRank:1} run scoreboard players set #mhdp_reus_health AsaMatrix 1050000
     # HP倍率適用
         scoreboard players operation #mhdp_reus_health AsaMatrix *= #mhdp_hp_multiply AsaMatrix
         scoreboard players operation #mhdp_reus_health AsaMatrix /= #asam_const_100 AsaMatrix
@@ -76,30 +76,30 @@
     execute store result score #mhdp_reus_anger_damage_max AsaMatrix run scoreboard players operation #mhdp_reus_anger_damage AsaMatrix /= #asam_const_100 AsaMatrix
 
 # デバッグ用
-    scoreboard players set #mhdp_const_temp AsaMatrix 1
-    scoreboard players operation #mhdp_reus_head_damage AsaMatrix = #mhdp_reus_health AsaMatrix
-    scoreboard players operation #mhdp_reus_head_damage AsaMatrix *= #mhdp_const_temp AsaMatrix
-    execute store result score #mhdp_reus_head_damage_max AsaMatrix run scoreboard players operation #mhdp_reus_head_damage AsaMatrix /= #asam_const_100 AsaMatrix
-    scoreboard players set #mhdp_const_temp AsaMatrix 1
-    scoreboard players operation #mhdp_reus_body_damage AsaMatrix = #mhdp_reus_health AsaMatrix
-    scoreboard players operation #mhdp_reus_body_damage AsaMatrix *= #mhdp_const_temp AsaMatrix
-    execute store result score #mhdp_reus_body_damage_max AsaMatrix run scoreboard players operation #mhdp_reus_body_damage AsaMatrix /= #asam_const_100 AsaMatrix
-    scoreboard players set #mhdp_const_temp AsaMatrix 1
-    scoreboard players operation #mhdp_reus_tail_damage AsaMatrix = #mhdp_reus_health AsaMatrix
-    scoreboard players operation #mhdp_reus_tail_damage AsaMatrix *= #mhdp_const_temp AsaMatrix
-    execute store result score #mhdp_reus_tail_damage_max AsaMatrix run scoreboard players operation #mhdp_reus_tail_damage AsaMatrix /= #asam_const_100 AsaMatrix
-    scoreboard players set #mhdp_const_temp AsaMatrix 1
-    scoreboard players operation #mhdp_reus_leg_damage AsaMatrix = #mhdp_reus_health AsaMatrix
-    scoreboard players operation #mhdp_reus_leg_damage AsaMatrix *= #mhdp_const_temp AsaMatrix
-    execute store result score #mhdp_reus_leg_damage_max AsaMatrix run scoreboard players operation #mhdp_reus_leg_damage AsaMatrix /= #asam_const_100 AsaMatrix
-    scoreboard players set #mhdp_const_temp AsaMatrix 1
-    scoreboard players operation #mhdp_reus_stun_damage AsaMatrix = #mhdp_reus_health AsaMatrix
-    scoreboard players operation #mhdp_reus_stun_damage AsaMatrix *= #mhdp_const_temp AsaMatrix
-    execute store result score #mhdp_reus_stun_damage_max AsaMatrix run scoreboard players operation #mhdp_reus_stun_damage AsaMatrix /= #asam_const_100 AsaMatrix
-    scoreboard players set #mhdp_const_temp AsaMatrix 1
-    scoreboard players operation #mhdp_reus_flying_damage AsaMatrix = #mhdp_reus_health AsaMatrix
-    scoreboard players operation #mhdp_reus_flying_damage AsaMatrix *= #mhdp_const_temp AsaMatrix
-    execute store result score #mhdp_reus_flying_damage_max AsaMatrix run scoreboard players operation #mhdp_reus_flying_damage AsaMatrix /= #asam_const_100 AsaMatrix
+    # scoreboard players set #mhdp_const_temp AsaMatrix 1
+    # scoreboard players operation #mhdp_reus_head_damage AsaMatrix = #mhdp_reus_health AsaMatrix
+    # scoreboard players operation #mhdp_reus_head_damage AsaMatrix *= #mhdp_const_temp AsaMatrix
+    # execute store result score #mhdp_reus_head_damage_max AsaMatrix run scoreboard players operation #mhdp_reus_head_damage AsaMatrix /= #asam_const_100 AsaMatrix
+    # scoreboard players set #mhdp_const_temp AsaMatrix 1
+    # scoreboard players operation #mhdp_reus_body_damage AsaMatrix = #mhdp_reus_health AsaMatrix
+    # scoreboard players operation #mhdp_reus_body_damage AsaMatrix *= #mhdp_const_temp AsaMatrix
+    # execute store result score #mhdp_reus_body_damage_max AsaMatrix run scoreboard players operation #mhdp_reus_body_damage AsaMatrix /= #asam_const_100 AsaMatrix
+    # scoreboard players set #mhdp_const_temp AsaMatrix 1
+    # scoreboard players operation #mhdp_reus_tail_damage AsaMatrix = #mhdp_reus_health AsaMatrix
+    # scoreboard players operation #mhdp_reus_tail_damage AsaMatrix *= #mhdp_const_temp AsaMatrix
+    # execute store result score #mhdp_reus_tail_damage_max AsaMatrix run scoreboard players operation #mhdp_reus_tail_damage AsaMatrix /= #asam_const_100 AsaMatrix
+    # scoreboard players set #mhdp_const_temp AsaMatrix 1
+    # scoreboard players operation #mhdp_reus_leg_damage AsaMatrix = #mhdp_reus_health AsaMatrix
+    # scoreboard players operation #mhdp_reus_leg_damage AsaMatrix *= #mhdp_const_temp AsaMatrix
+    # execute store result score #mhdp_reus_leg_damage_max AsaMatrix run scoreboard players operation #mhdp_reus_leg_damage AsaMatrix /= #asam_const_100 AsaMatrix
+    # scoreboard players set #mhdp_const_temp AsaMatrix 1
+    # scoreboard players operation #mhdp_reus_stun_damage AsaMatrix = #mhdp_reus_health AsaMatrix
+    # scoreboard players operation #mhdp_reus_stun_damage AsaMatrix *= #mhdp_const_temp AsaMatrix
+    # execute store result score #mhdp_reus_stun_damage_max AsaMatrix run scoreboard players operation #mhdp_reus_stun_damage AsaMatrix /= #asam_const_100 AsaMatrix
+    # scoreboard players set #mhdp_const_temp AsaMatrix 1
+    # scoreboard players operation #mhdp_reus_flying_damage AsaMatrix = #mhdp_reus_health AsaMatrix
+    # scoreboard players operation #mhdp_reus_flying_damage AsaMatrix *= #mhdp_const_temp AsaMatrix
+    # execute store result score #mhdp_reus_flying_damage_max AsaMatrix run scoreboard players operation #mhdp_reus_flying_damage AsaMatrix /= #asam_const_100 AsaMatrix
 
 # 終了
     scoreboard players reset #mhdp_const_temp
