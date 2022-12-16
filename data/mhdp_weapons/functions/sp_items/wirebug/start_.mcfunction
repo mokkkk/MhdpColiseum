@@ -21,3 +21,6 @@
     scoreboard players operation @e[type=marker,tag=WirebugStand,tag=Start] MhdpPlayerUid = @s MhdpPlayerUid
     execute if entity @s[tag=!ItmCoolWirebug] as @e[type=marker,tag=WirebugStand,tag=Start] run tp @s ~ ~ ~ ~ ~
     tag @e[type=marker,tag=WirebugStand,tag=Start] remove Start
+
+# 武器の使用禁止時間リセット
+    scoreboard players set @s MhdpWeaponDeactivateTimer 0

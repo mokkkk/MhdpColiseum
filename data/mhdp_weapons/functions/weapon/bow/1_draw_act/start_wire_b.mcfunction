@@ -85,7 +85,9 @@
     summon area_effect_cloud ~ ~ ~ {Duration:6,Age:4,Effects:[{Id:25,Amplifier:16b,Duration:4,ShowParticles:0b}]}
 # 射撃数初期化
     scoreboard players set @s MhdpWeaponCountBow 0
-# 最も近くのパーツを見る
+# 最も近くのモンスターパーツを見る
     execute at @s facing entity @e[type=slime,tag=MonsterParts,limit=1,sort=nearest] feet run tp @s ~ ~ ~ ~ ~
+# クールタイム設定
+    scoreboard players set @s MhdpTItmWirebugCooltime 800
 
 say 鉄蟲糸技：飛翔にらみ撃ち

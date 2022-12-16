@@ -38,5 +38,4 @@
     tag @s remove MnsTarget
 
 # 各モンスターのターゲットタグ消去
-    tag @s remove ReusTarget
-    tag @s remove ReusAttackTarget
+    function asa_animator:general/reset_target
