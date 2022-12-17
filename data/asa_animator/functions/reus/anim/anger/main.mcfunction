@@ -21,6 +21,7 @@ function asa_animator:reus/model
     execute if entity @s[scores={AsaMatrix=1..20}] run function asa_animator:reus/manager/4_general/rotate
 
 # 演出
+    execute if entity @s[scores={AsaMatrix=1}] run function asa_animator:reus/manager/5_extra/change_to_normal
     execute if entity @s[scores={AsaMatrix=1}] run playsound entity.ender_dragon.flap master @a ~ ~ ~ 2 0.7
     execute if entity @s[scores={AsaMatrix=68}] run playsound entity.ender_dragon.flap master @a ~ ~ ~ 2 0.7
     execute if entity @s[scores={AsaMatrix=22}] run playsound entity.ender_dragon.growl master @a[distance=..48] ~ ~ ~ 1 0.5 1

@@ -45,6 +45,7 @@
     tag @s remove AnmDLegR
     tag @s remove AnmDStun
     tag @s remove AnmFlyDamage
+    tag @s remove AnmFStun
     tag @s remove AnmAfter
     tag @s remove AnmAfterS
     tag @s remove AnmTurnL

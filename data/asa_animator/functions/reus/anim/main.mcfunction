@@ -126,6 +126,8 @@
     execute if entity @s[tag=AnmDStun] run function asa_animator:reus/anim/damage_stun/main
 # 飛行時ひるみ（落下）
     execute if entity @s[tag=AnmFlyDamage] run function asa_animator:reus/anim/flying_damage/main
+# 飛行時ひるみ（スタン）
+    execute if entity @s[tag=AnmFStun] run function asa_animator:reus/anim/flying_stun/main
 
 # 攻撃後後隙
     execute if entity @s[tag=AnmAfter] run function asa_animator:reus/anim/after_attack/main

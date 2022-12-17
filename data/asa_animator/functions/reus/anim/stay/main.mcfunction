@@ -17,7 +17,7 @@ function asa_animator:reus/model
 
 # 遷移
     execute if entity @s[tag=IsAnger] if entity @e[tag=ReusAttackTarget] run function asa_animator:reus/anim/stay/events/change
-    execute if entity @s[scores={AsaMatrix=10}] if score #mhdp_reus_actcount AsaMatrix matches 1.. run function asa_animator:reus/anim/stay/events/change
+    execute if entity @s[scores={AsaMatrix=10}] if score #mhdp_reus_actcount AsaMatrix matches 1.. if entity @e[tag=MnsTarget] run function asa_animator:reus/anim/stay/events/change
     execute if entity @s[scores={AsaMatrix=11}] run playsound block.grass.step master @a ~ ~ ~ 2 0.7
 
 # 高度調整

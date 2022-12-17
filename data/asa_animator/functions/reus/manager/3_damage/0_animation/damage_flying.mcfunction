@@ -5,7 +5,6 @@
 # アニメーション遷移
     scoreboard players set @s AsaMatrix 0
     function asa_animator:reus/manager/4_general/remove_animation_tag
-    tag @s remove IsFlying
     tag @s add AnmFlyDamage
 
 # スコアリセット

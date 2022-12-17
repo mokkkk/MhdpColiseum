@@ -12,7 +12,7 @@
     function asa_animator:reus/manager/1_change/target
 
 # 強制
-    # tag @s add AnmBjb
+    # tag @s add AnmFStun
     # function asa_animator:reus/manager/1_change/1_animations/fbreath
 
 # 行動
