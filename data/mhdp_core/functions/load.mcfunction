@@ -41,6 +41,7 @@
 
     # 武器処理用
         scoreboard objectives add MhdpStamina dummy
+        scoreboard objectives add MhdpStaminaSpeed dummy
         scoreboard objectives add MhdpTStaminaPenalty dummy
         scoreboard objectives add MhdpWeaponCharge dummy
         scoreboard objectives add MhdpWeaponTimer dummy

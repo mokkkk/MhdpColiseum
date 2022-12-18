@@ -22,6 +22,9 @@
 # 移動速度リセット
     effect clear @s speed
 
+# スタミナ消費
+    scoreboard players remove @s MhdpStamina 150
+
 # 終了
     tag @e[type=marker,tag=SneakAvoidStand0,tag=Start] remove Start
     scoreboard players reset #mhdp_temp_success MhdpCore

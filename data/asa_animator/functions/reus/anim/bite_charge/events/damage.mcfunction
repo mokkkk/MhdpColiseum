@@ -5,7 +5,7 @@
 # 属性なし・属性やられなし
 
 # ダメージ設定
-    data modify storage mhdp_core:temp Temp.Damage set value {Damage:0.0f,Knockback:2,Guard:8,Type:1,Blight:1b}
+    data modify storage mhdp_core:temp Temp.Damage set value {Damage:0.0f,Knockback:3,Guard:8,Type:1,Blight:1b}
     # クエストランクノーマル
         execute if data storage mh_dp:settings Custom{QuestRank:0} run data modify storage mhdp_core:temp Temp.Damage.Damage set value 16.0f
     # クエストランクハード
