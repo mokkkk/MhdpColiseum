@@ -2,50 +2,51 @@
 scoreboard players add @s AsaMatrix 1
 execute if entity @s[scores={AsaMatrix=1}] run function asa_animator:reus/anim/flying_breath_charge/start
 execute if entity @s[scores={AsaMatrix=1}] run function asa_animator:reus/anim/flying_breath_charge/keyframes/0
-execute if entity @s[scores={AsaMatrix=1..10}] run tp @s ^-0.05 ^0.3 ^-0.3
-execute if entity @s[scores={AsaMatrix=11}] run function asa_animator:reus/anim/flying_breath_charge/keyframes/1
-execute if entity @s[scores={AsaMatrix=11..15}] run tp @s ^-0.08 ^0.2 ^-0.05 ~-15 ~
-execute if entity @s[scores={AsaMatrix=16..20}] run tp @s ^-0.08 ^0.2 ^-0.05 ~ ~
-execute if entity @s[scores={AsaMatrix=21}] run function asa_animator:reus/anim/flying_breath_charge/keyframes/2
-execute if entity @s[scores={AsaMatrix=21..28}] run tp @s ^0 ^0.01249999 ^0
-execute if entity @s[scores={AsaMatrix=29}] run function asa_animator:reus/anim/flying_breath_charge/keyframes/3
-execute if entity @s[scores={AsaMatrix=29..36}] run tp @s ^0 ^-0.01249999 ^0
-execute if entity @s[scores={AsaMatrix=37}] run function asa_animator:reus/anim/flying_breath_charge/keyframes/4
-execute if entity @s[scores={AsaMatrix=37..44}] run tp @s ^0 ^0.01249999 ^0
-execute if entity @s[scores={AsaMatrix=45}] run function asa_animator:reus/anim/flying_breath_charge/keyframes/5
-execute if entity @s[scores={AsaMatrix=45..52}] run tp @s ^0 ^0.05000001 ^-0.0625
-execute if entity @s[scores={AsaMatrix=53}] run function asa_animator:reus/anim/flying_breath_charge/keyframes/6
-execute if entity @s[scores={AsaMatrix=53..59}] run tp @s ^0.1142857 ^0.07142857 ^-0.1428571 ~0.5 ~
-execute if entity @s[scores={AsaMatrix=60}] run function asa_animator:reus/anim/flying_breath_charge/keyframes/7
+execute if entity @s[scores={AsaMatrix=1..7}] run tp @s ^-0.07142857 ^0.1428571 ^-0.1428571
+execute if entity @s[scores={AsaMatrix=8}] run function asa_animator:reus/anim/flying_breath_charge/keyframes/1
+execute if entity @s[scores={AsaMatrix=8..10}] run tp @s ^-0.09999999 ^0.125 ^-0.0625
+execute if entity @s[scores={AsaMatrix=11..15}] run tp @s ^-0.09999999 ^0.125 ^-0.0625 ~-15 ~
+execute if entity @s[scores={AsaMatrix=16}] run function asa_animator:reus/anim/flying_breath_charge/keyframes/2
+execute if entity @s[scores={AsaMatrix=16..21}] run tp @s ^0 ^0.07 ^0
+execute if entity @s[scores={AsaMatrix=22}] run function asa_animator:reus/anim/flying_breath_charge/keyframes/3
+execute if entity @s[scores={AsaMatrix=22..27}] run tp @s ^0 ^-0.07 ^0
+execute if entity @s[scores={AsaMatrix=28}] run function asa_animator:reus/anim/flying_breath_charge/keyframes/4
+execute if entity @s[scores={AsaMatrix=28..33}] run tp @s ^0 ^0.07 ^0
+execute if entity @s[scores={AsaMatrix=34}] run function asa_animator:reus/anim/flying_breath_charge/keyframes/5
+execute if entity @s[scores={AsaMatrix=34..39}] run tp @s ^0 ^-0.07 ^0
+execute if entity @s[scores={AsaMatrix=40}] run function asa_animator:reus/anim/flying_breath_charge/keyframes/6
+execute if entity @s[scores={AsaMatrix=40..45}] run tp @s ^0 ^0.07 ^0
+execute if entity @s[scores={AsaMatrix=46}] run function asa_animator:reus/anim/flying_breath_charge/keyframes/7
+execute if entity @s[scores={AsaMatrix=46..52}] run tp @s ^0 ^-0.0142857 ^-0.07142857 ~-0.5 ~
+execute if entity @s[scores={AsaMatrix=53}] run function asa_animator:reus/anim/flying_breath_charge/keyframes/8
+execute if entity @s[scores={AsaMatrix=53..59}] run tp @s ^0.1142857 ^0.07142857 ^-0.1428571
+execute if entity @s[scores={AsaMatrix=60}] run function asa_animator:reus/anim/flying_breath_charge/keyframes/9
 execute if entity @s[scores={AsaMatrix=60..69}] run tp @s ^0.05 ^-0.15 ^-0.1
-execute if entity @s[scores={AsaMatrix=70}] run function asa_animator:reus/anim/flying_breath_charge/keyframes/8
-execute if entity @s[scores={AsaMatrix=70..79}] run tp @s ^0 ^0.05 ^-0.08000002
-execute if entity @s[scores={AsaMatrix=80}] run function asa_animator:reus/anim/flying_breath_charge/keyframes/9
-execute if entity @s[scores={AsaMatrix=80..86}] run tp @s ^0 ^0 ^-0.2142857
-execute if entity @s[scores={AsaMatrix=87}] run function asa_animator:reus/anim/flying_breath_charge/keyframes/10
-execute if entity @s[scores={AsaMatrix=87..92}] run tp @s ^0 ^0 ^0
-execute if entity @s[scores={AsaMatrix=93}] run function asa_animator:reus/anim/flying_breath_charge/keyframes/11
-execute if entity @s[scores={AsaMatrix=93..95}] run tp @s ^0 ^0 ^0
-execute if entity @s[scores={AsaMatrix=96}] run function asa_animator:reus/anim/flying_breath_charge/keyframes/12
-execute if entity @s[scores={AsaMatrix=96..106}] run tp @s ^0 ^0.01818182 ^0
-execute if entity @s[scores={AsaMatrix=107..}] run function asa_animator:reus/anim/flying_breath_charge/end
+execute if entity @s[scores={AsaMatrix=70}] run function asa_animator:reus/anim/flying_breath_charge/keyframes/10
+execute if entity @s[scores={AsaMatrix=70..79}] run tp @s ^0 ^-0.15 ^-0.08000002
+execute if entity @s[scores={AsaMatrix=80..}] run function asa_animator:reus/anim/flying_breath_charge/end
 execute as @e[type=armor_stand,tag=ReusParts] run function #asa_matrix:animate
 function asa_animator:reus/model
 
-execute if entity @s[scores={AsaMatrix=1..10}] run function asa_animator:reus/manager/rotate
-execute if entity @s[scores={AsaMatrix=44..52}] run function asa_animator:reus/manager/rotate_fast
+# 移動
+    execute if entity @s[scores={AsaMatrix=1..10}] run function asa_animator:reus/manager/4_general/rotate
+    execute if entity @s[scores={AsaMatrix=44..52}] run function asa_animator:reus/manager/4_general/rotate_fast
 
-execute if entity @s[scores={AsaMatrix=1}] run playsound entity.player.breath master @a ~ ~ ~ 2 0.8
-execute if entity @s[scores={AsaMatrix=18}] run playsound entity.ender_dragon.flap master @a ~ ~ ~ 2 0.7
-execute if entity @s[scores={AsaMatrix=34}] run playsound entity.ender_dragon.flap master @a ~ ~ ~ 2 0.7
-execute if entity @s[scores={AsaMatrix=50}] run playsound entity.ender_dragon.flap master @a ~ ~ ~ 2 0.7
+# 演出
+    execute if entity @s[scores={AsaMatrix=1..29}] as @e[type=armor_stand,tag=ReusParts,tag=HeadU,distance=0..12] at @s positioned ^ ^1.3 ^0.8 run particle flame ~ ~ ~ 0.2 0.2 0.2 0.1 3
+    execute if entity @s[scores={AsaMatrix=1}] run playsound entity.player.breath master @a ~ ~ ~ 2 0.8
+    execute if entity @s[scores={AsaMatrix=15}] run playsound entity.ender_dragon.flap master @a ~ ~ ~ 2 0.7
+    execute if entity @s[scores={AsaMatrix=27}] run playsound entity.ender_dragon.flap master @a ~ ~ ~ 2 0.7
+    execute if entity @s[scores={AsaMatrix=39}] run playsound entity.ender_dragon.flap master @a ~ ~ ~ 2 0.7
+    execute if entity @s[scores={AsaMatrix=52}] run playsound entity.ender_dragon.flap master @a ~ ~ ~ 2 0.7
 
-execute if entity @s[scores={AsaMatrix=20}] as @e[type=armor_stand,tag=ReusParts,tag=HeadU,distance=0..7] at @s run function asa_animator:reus/anim/flying_breath_charge/events/attack_start
-
-execute if entity @s[scores={AsaMatrix=21..44}] as @e[type=marker,tag=ReusChargeFPos,distance=0..7] at @s run function asa_animator:reus/anim/flying_breath_charge/events/attack
-execute if entity @s[scores={AsaMatrix=42}] as @e[type=marker,tag=ReusChargeFPos] at @s facing entity @e[tag=ReusAttackTarget] eyes run tp @s ~ ~ ~ ~ 90
-execute if entity @s[scores={AsaMatrix=45..56}] as @e[type=marker,tag=ReusChargeFPos,distance=0..7] at @s run function asa_animator:reus/anim/flying_breath_charge/events/attack_rotate
-execute if entity @s[scores={AsaMatrix=57}] run kill @e[type=marker,tag=ReusChargeFPos]
-
-execute if entity @s[scores={AsaMatrix=79}] run function asa_animator:reus/anim/flying_breath_charge/events/set_pos
-execute if entity @s[scores={AsaMatrix=80..92}] run function asa_animator:reus/anim/end_fly/events/offset
+# 攻撃
+    # 攻撃用Marker召喚
+        execute if entity @s[scores={AsaMatrix=15}] as @e[type=armor_stand,tag=ReusParts,tag=HeadU,distance=0..7] at @s run function asa_animator:reus/anim/flying_breath_charge/events/attack_start
+    # 予備動作（判定あり）
+        execute if entity @s[scores={AsaMatrix=16..45}] as @e[type=marker,tag=ReusChargeFPos,distance=0..7] at @s run function asa_animator:reus/anim/flying_breath_charge/events/attack
+    # 攻撃
+        execute if entity @s[scores={AsaMatrix=43}] as @e[type=marker,tag=ReusChargeFPos] facing entity @e[tag=ReusAttackTarget] eyes run tp @s ~ ~ ~ ~ 90
+        execute if entity @s[scores={AsaMatrix=46..58}] as @e[type=marker,tag=ReusChargeFPos,distance=0..7] at @s run function asa_animator:reus/anim/flying_breath_charge/events/attack_rotate
+    # 終了
+        execute if entity @s[scores={AsaMatrix=59}] run kill @e[type=marker,tag=ReusChargeFPos]

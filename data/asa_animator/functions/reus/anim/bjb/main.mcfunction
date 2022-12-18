@@ -4,27 +4,32 @@ execute if entity @s[scores={AsaMatrix=1}] run function asa_animator:reus/anim/b
 execute if entity @s[scores={AsaMatrix=1}] run function asa_animator:reus/anim/bjb/keyframes/0
 execute if entity @s[scores={AsaMatrix=1..5}] run tp @s ^0 ^0 ^-0.02
 execute if entity @s[scores={AsaMatrix=6}] run function asa_animator:reus/anim/bjb/keyframes/1
-execute if entity @s[scores={AsaMatrix=6..15}] run tp @s ^0 ^0 ^0
-execute if entity @s[scores={AsaMatrix=16}] run function asa_animator:reus/anim/bjb/keyframes/2
-execute if entity @s[scores={AsaMatrix=16..25}] run tp @s ^0 ^0.5 ^-0.59
-execute if entity @s[scores={AsaMatrix=26}] run function asa_animator:reus/anim/bjb/keyframes/3
-execute if entity @s[scores={AsaMatrix=26..35}] run tp @s ^0 ^-0.25 ^-0.05
-execute if entity @s[scores={AsaMatrix=36..}] run function asa_animator:reus/anim/bjb/end
+execute if entity @s[scores={AsaMatrix=6..10}] run tp @s ^0 ^0 ^0 ~0.5 ~
+execute if entity @s[scores={AsaMatrix=11}] run function asa_animator:reus/anim/bjb/keyframes/2
+execute if entity @s[scores={AsaMatrix=11..20}] run tp @s ^0 ^0.5 ^-0.59 ~-0.25 ~
+execute if entity @s[scores={AsaMatrix=21}] run function asa_animator:reus/anim/bjb/keyframes/3
+execute if entity @s[scores={AsaMatrix=21..30}] run tp @s ^0 ^-0.25 ^-0.05
+execute if entity @s[scores={AsaMatrix=31..}] run function asa_animator:reus/anim/bjb/end
 execute as @e[type=armor_stand,tag=ReusParts] run function #asa_matrix:animate
 function asa_animator:reus/model
 
-execute if entity @s[scores={AsaMatrix=1}] run function asa_animator:reus/manager/model/change_to_fly
+# 移動
+    execute if entity @s[scores={AsaMatrix=1..5}] run function asa_animator:reus/manager/4_general/rotate
+    execute if entity @s[scores={AsaMatrix=1}] run function asa_animator:reus/manager/5_extra/change_to_fly
 
-# 敵を向く
-execute if entity @s[scores={AsaMatrix=1..12}] run function asa_animator:reus/manager/rotate
+# 演出
+    execute if entity @s[scores={AsaMatrix=11}] run particle block grass_block ~ ~0.1 ~ 1 0.1 1 0 10
+    execute if entity @s[scores={AsaMatrix=11}] run playsound block.grass.step master @a ~ ~ ~ 2 0.7
+    execute if entity @s[scores={AsaMatrix=1}] run playsound entity.ender_dragon.flap master @a ~ ~ ~ 2 0.7
+    execute if entity @s[scores={AsaMatrix=20}] run playsound entity.ender_dragon.flap master @a ~ ~ ~ 2 0.7
+    execute if entity @s[scores={AsaMatrix=10}] run function asa_animator:reus/manager/5_extra/change_to_fly
 
 # 発射位置決定
-execute if entity @s[scores={AsaMatrix=13}] run summon marker ^ ^0.7 ^8 {Tags:["ReusBreathTarget"]}
-execute if entity @s[scores={AsaMatrix=13}] unless entity @e[tag=ReusAttackTarget,distance=0..8] at @e[tag=ReusAttackTarget,limit=1] run tp @e[type=marker,tag=ReusBreathTarget] ~ ~ ~
+    execute if entity @s[scores={AsaMatrix=10}] run summon marker ^ ^0.7 ^8 {Tags:["ReusBreathTarget"]}
 
 # ブレス発射
-execute if entity @s[scores={AsaMatrix=16}] positioned ^ ^ ^3 as @a[distance=0..5] run function mhdp_core:player/damage/knockback/wind/1
-execute if entity @s[scores={AsaMatrix=16}] positioned ^ ^ ^3 as @a[distance=5.1..8] run function mhdp_core:player/damage/knockback/wind/0
+    execute if entity @s[scores={AsaMatrix=15}] positioned ^ ^3 ^5 facing entity @e[type=marker,tag=ReusBreathTarget,limit=1] feet run function asa_animator:reus/anim/breath/events/shot
 
-execute if entity @s[scores={AsaMatrix=18}] positioned ^ ^4 ^3 facing entity @e[type=marker,tag=ReusBreathTarget,limit=1] feet run function asa_animator:reus/anim/breath/events/shot
-execute if entity @s[scores={AsaMatrix=23}] run playsound entity.ender_dragon.flap master @a ~ ~ ~ 2 0.7
+# 風圧
+    execute if entity @s[scores={AsaMatrix=11}] as @a[distance=0..5] run function mhdp_core:player/damage/knockback/wind/1
+    execute if entity @s[scores={AsaMatrix=11}] as @a[distance=5.1..8] run function mhdp_core:player/damage/knockback/wind/0

@@ -7,9 +7,10 @@
           "type": "minecraft:group",
           "children": [
             {
+              "##comment":"突進",
               "type": "minecraft:item",
               "name": "minecraft:paper",
-              "weight": 60,
+              "weight": 5,
               "functions": [
                 {
                 "function": "minecraft:set_nbt",
@@ -18,9 +19,10 @@
               ]
             },
             {
+              "##comment":"ブレス",
               "type": "minecraft:item",
               "name": "minecraft:paper",
-              "weight": 40,
+              "weight": 6,
               "functions": [
                 {
                 "function": "minecraft:set_nbt",
@@ -29,33 +31,14 @@
               ]
             },
             {
+              "##comment":"移動",
               "type": "minecraft:item",
               "name": "minecraft:paper",
-              "weight": 35,
+              "weight": 6,
               "functions": [
                 {
                 "function": "minecraft:set_nbt",
                 "tag": "{ActPaper:1,Act:3}"
-                }
-              ],
-              "conditions": [
-                {
-                  "condition": "minecraft:entity_properties",
-                  "entity": "this",
-                  "predicate": {
-                    "nbt": "{Tags:[\"IsHard\"]}"
-                  }
-                }
-              ]
-            },
-            {
-              "type": "minecraft:item",
-              "name": "minecraft:paper",
-              "weight": 35,
-              "functions": [
-                {
-                "function": "minecraft:set_nbt",
-                "tag": "{ActPaper:1,Act:4}"
                 }
               ]
             }

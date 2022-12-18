@@ -13,12 +13,15 @@ execute if entity @s[scores={AsaMatrix=81..}] run function asa_animator:reus/ani
 execute as @e[type=armor_stand,tag=ReusParts] run function #asa_matrix:animate
 function asa_animator:reus/model
 
-execute if entity @s[scores={AsaMatrix=1}] run function asa_animator:reus/manager/model/change_to_normal
-execute if entity @s[scores={AsaMatrix=12}] run function asa_animator:reus/anim/flying_damage/events/set_pos
-execute if entity @s[scores={AsaMatrix=13..20}] run function asa_animator:reus/anim/flying_damage/events/offset
+# モデル変更
+    execute unless entity @s[tag=DestroyHead] if entity @s[scores={AsaMatrix=21}] run data modify entity @e[type=armor_stand,tag=ReusParts,tag=HeadU,limit=1] ArmorItems[3].tag.CustomModelData set value 10038
+    execute if entity @s[tag=DestroyHead] if entity @s[scores={AsaMatrix=21}] run data modify entity @e[type=armor_stand,tag=ReusParts,tag=HeadU,limit=1] ArmorItems[3].tag.CustomModelData set value 10120
 
-execute if entity @s[scores={AsaMatrix=21}] run playsound block.grass.step master @a ~ ~ ~ 2 0.7
-execute if entity @s[scores={AsaMatrix=21}] run particle block grass_block ~ ~1 ~ 1.5 0.1 1.5 0 30
+# 移動
+    execute if entity @s[scores={AsaMatrix=12}] run function asa_animator:reus/anim/flying_damage/events/set_pos
+    execute if entity @s[scores={AsaMatrix=13..20}] run function asa_animator:reus/anim/flying_damage/events/offset
 
-execute unless entity @s[tag=DestroyHead] if entity @s[scores={AsaMatrix=21}] run data modify entity @e[type=armor_stand,tag=ReusParts,tag=HeadU,limit=1] ArmorItems[3].tag.CustomModelData set value 10038
-execute if entity @s[tag=DestroyHead] if entity @s[scores={AsaMatrix=21}] run data modify entity @e[type=armor_stand,tag=ReusParts,tag=HeadU,limit=1] ArmorItems[3].tag.CustomModelData set value 10120
+# 演出
+    execute if entity @s[scores={AsaMatrix=1}] run function asa_animator:reus/manager/5_extra/change_to_normal
+    execute if entity @s[scores={AsaMatrix=21}] run playsound block.grass.step master @a ~ ~ ~ 2 0.7
+    execute if entity @s[scores={AsaMatrix=21}] run particle block grass_block ~ ~1 ~ 1.5 0.1 1.5 0 30

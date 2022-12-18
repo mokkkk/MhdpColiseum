@@ -2,9 +2,10 @@
 #
 # Phase4_クエストクリア モンスター消去処理
 
-execute if entity @s[tag=ReusRoot] run function asa_animator:reus/manager/despawn
+# 火竜
+    execute if entity @s[tag=ReusRoot] run function asa_animator:reus/manager/4_general/kill
 
-execute if entity @s[tag=DiablosRoot] run function asa_animator:diablos/manager/despawn
+# execute if entity @s[tag=DiablosRoot] run function asa_animator:diablos/manager/despawn
 
 execute if entity @s[tag=ZinogreRoot] run function asa_animator:zinogre/manager/despawn
 

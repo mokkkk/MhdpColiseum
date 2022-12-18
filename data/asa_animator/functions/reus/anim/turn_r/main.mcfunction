@@ -2,19 +2,22 @@
 scoreboard players add @s AsaMatrix 1
 execute if entity @s[scores={AsaMatrix=1}] run function asa_animator:reus/anim/turn_r/start
 execute if entity @s[scores={AsaMatrix=1}] run function asa_animator:reus/anim/turn_r/keyframes/0
-execute if entity @s[scores={AsaMatrix=1..4}] run tp @s ^0 ^0.025 ^0
-execute if entity @s[scores={AsaMatrix=5}] run function asa_animator:reus/anim/turn_r/keyframes/1
-execute if entity @s[scores={AsaMatrix=5..8}] run tp @s ^0 ^-0.05 ^0
-execute if entity @s[scores={AsaMatrix=9}] run function asa_animator:reus/anim/turn_r/keyframes/2
-execute if entity @s[scores={AsaMatrix=9..12}] run tp @s ^0 ^0.05 ^0
-execute if entity @s[scores={AsaMatrix=13}] run function asa_animator:reus/anim/turn_r/keyframes/3
-execute if entity @s[scores={AsaMatrix=13..16}] run tp @s ^0 ^-0.05 ^0
-execute if entity @s[scores={AsaMatrix=17}] run function asa_animator:reus/anim/turn_r/keyframes/4
-execute if entity @s[scores={AsaMatrix=17..20}] run tp @s ^0 ^0.025 ^0
-execute if entity @s[scores={AsaMatrix=21..}] run function asa_animator:reus/anim/turn_r/end
+execute if entity @s[scores={AsaMatrix=1..5}] run tp @s ^0 ^0.02 ^0
+execute if entity @s[scores={AsaMatrix=6}] run function asa_animator:reus/anim/turn_r/keyframes/1
+execute if entity @s[scores={AsaMatrix=6..10}] run tp @s ^0 ^-0.04 ^0
+execute if entity @s[scores={AsaMatrix=11}] run function asa_animator:reus/anim/turn_r/keyframes/2
+execute if entity @s[scores={AsaMatrix=11..15}] run tp @s ^0 ^0.04 ^0
+execute if entity @s[scores={AsaMatrix=16}] run function asa_animator:reus/anim/turn_r/keyframes/3
+execute if entity @s[scores={AsaMatrix=16..20}] run tp @s ^0 ^-0.04 ^0
+execute if entity @s[scores={AsaMatrix=21}] run function asa_animator:reus/anim/turn_r/keyframes/4
+execute if entity @s[scores={AsaMatrix=21..23}] run tp @s ^0 ^0.01666667 ^0
+execute if entity @s[scores={AsaMatrix=23..}] run function asa_animator:reus/anim/turn_r/end
 execute as @e[type=armor_stand,tag=ReusParts] run function #asa_matrix:animate
 function asa_animator:reus/model
 
-function asa_animator:reus/manager/rotate
-execute if entity @s[scores={AsaMatrix=4}] run playsound entity.iron_golem.step master @a ~ ~ ~ 2 0.8
-execute if entity @s[scores={AsaMatrix=12}] run playsound entity.iron_golem.step master @a ~ ~ ~ 2 0.8
+# 移動
+    function asa_animator:reus/manager/4_general/rotate
+
+# 演出
+    execute if entity @s[scores={AsaMatrix=10}] run playsound entity.hoglin.step master @a ~ ~ ~ 2 0.7
+    execute if entity @s[scores={AsaMatrix=20}] run playsound entity.hoglin.step master @a ~ ~ ~ 2 0.7

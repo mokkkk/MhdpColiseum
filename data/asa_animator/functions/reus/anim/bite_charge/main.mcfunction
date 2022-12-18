@@ -6,9 +6,9 @@ execute if entity @s[scores={AsaMatrix=1..5}] run tp @s ^0 ^0 ^0
 execute if entity @s[scores={AsaMatrix=6}] run function asa_animator:reus/anim/bite_charge/keyframes/1
 execute if entity @s[scores={AsaMatrix=6..12}] run tp @s ^0 ^0 ^0
 execute if entity @s[scores={AsaMatrix=13}] run function asa_animator:reus/anim/bite_charge/keyframes/2
-execute if entity @s[scores={AsaMatrix=13..23}] run tp @s ^0 ^0 ^0 ~1 ~
+execute if entity @s[scores={AsaMatrix=13..23}] run tp @s ^0 ^0 ^0
 execute if entity @s[scores={AsaMatrix=24}] run function asa_animator:reus/anim/bite_charge/keyframes/3
-execute if entity @s[scores={AsaMatrix=24..30}] run tp @s ^0 ^0 ^0.02857143 ~-1 ~
+execute if entity @s[scores={AsaMatrix=24..30}] run tp @s ^0 ^0 ^0.02857143
 execute if entity @s[scores={AsaMatrix=31}] run function asa_animator:reus/anim/bite_charge/keyframes/4
 execute if entity @s[scores={AsaMatrix=31..37}] run tp @s ^0 ^0 ^0.1142857
 execute if entity @s[scores={AsaMatrix=38}] run function asa_animator:reus/anim/bite_charge/keyframes/5
@@ -19,14 +19,20 @@ execute if entity @s[scores={AsaMatrix=61..}] run function asa_animator:reus/ani
 execute as @e[type=armor_stand,tag=ReusParts] run function #asa_matrix:animate
 function asa_animator:reus/model
 
-execute if entity @s[scores={AsaMatrix=1}] run playsound block.grass.step master @a ~ ~ ~ 2 0.7
-execute if entity @s[scores={AsaMatrix=1..12}] if entity @e[tag=ReusAttackTarget,distance=..6] at @s run tp @s ^ ^ ^-0.4
-execute if entity @s[scores={AsaMatrix=1..23}] unless entity @e[tag=ReusAttackTarget,distance=..2] run function asa_animator:reus/manager/rotate
+# 移動
+    execute if entity @s[scores={AsaMatrix=1..12}] if entity @e[tag=ReusAttackTarget,distance=..6] at @s run tp @s ^ ^ ^-0.4
+    execute if entity @s[scores={AsaMatrix=1..25}] unless entity @e[tag=ReusAttackTarget,distance=..2] run function asa_animator:reus/manager/4_general/rotate
+    execute if entity @s[scores={AsaMatrix=23..37}] unless entity @e[tag=ReusAttackTarget,distance=..6] at @s run tp @s ^ ^ ^0.7
 
-execute if entity @s[scores={AsaMatrix=12}] run playsound item.firecharge.use master @a ~ ~ ~ 2 0.7
-execute if entity @s[scores={AsaMatrix=12..23}] as @e[type=armor_stand,tag=ReusParts,tag=HeadU,distance=0..5] at @s positioned ^ ^0.65 ^0.3 run particle flame ~ ~ ~ 0.1 0.1 0.1 0.05 10
+# 演出
+    execute if entity @s[scores={AsaMatrix=1}] run playsound block.grass.step master @a ~ ~ ~ 2 0.7
+    execute if entity @s[scores={AsaMatrix=12}] run playsound item.firecharge.use master @a ~ ~ ~ 2 0.7
+    execute if entity @s[scores={AsaMatrix=12..23}] as @e[type=armor_stand,tag=ReusParts,tag=HeadU,distance=0..5] at @s positioned ^ ^0.65 ^0.3 run particle flame ~ ~ ~ 0.1 0.1 0.1 0.05 10
+    execute if entity @s[scores={AsaMatrix=23..37}] as @e[type=armor_stand,tag=ReusParts,tag=HeadU,distance=0..5] at @s positioned ^ ^0.65 ^0.3 run particle lava ~ ~ ~ 0.1 0.1 0.1 0.05 3
 
-execute if entity @s[scores={AsaMatrix=23..37}] as @e[type=armor_stand,tag=ReusParts,tag=HeadU,distance=0..5] at @s positioned ^ ^0.65 ^0.3 run particle lava ~ ~ ~ 0.1 0.1 0.1 0.05 3
-execute if entity @s[scores={AsaMatrix=23..37}] unless entity @e[tag=ReusAttackTarget,distance=..6] at @s run tp @s ^ ^ ^0.6
-execute if entity @s[scores={AsaMatrix=36}] positioned ^ ^1 ^5 run function asa_animator:reus/anim/bite/events/damage
-execute if entity @s[scores={AsaMatrix=48}] positioned ^ ^1 ^5 run function asa_animator:reus/anim/bite_charge/events/damage
+# 攻撃
+    execute if entity @s[scores={AsaMatrix=36}] run function asa_animator:reus/anim/bite_charge/events/damage
+
+# 高度調整
+    execute at @s if block ~ ~-0.2 ~ #asa_animator:no_collision at @s run function asa_animator:general/check_ground
+    execute at @s unless block ~ ~ ~ #asa_animator:no_collision at @s run tp @s ~ ~0.1 ~ ~ ~

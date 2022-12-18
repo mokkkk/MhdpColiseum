@@ -17,14 +17,21 @@ execute if entity @s[scores={AsaMatrix=71..}] run function asa_animator:reus/ani
 execute as @e[type=armor_stand,tag=ReusParts] run function #asa_matrix:animate
 function asa_animator:reus/model
 
-execute if entity @s[scores={AsaMatrix=1..20}] run function asa_animator:reus/manager/rotate
-execute if entity @s[scores={AsaMatrix=1}] run playsound entity.ender_dragon.flap master @a ~ ~ ~ 2 0.7
-execute if entity @s[scores={AsaMatrix=68}] run playsound entity.ender_dragon.flap master @a ~ ~ ~ 2 0.7
-execute if entity @s[scores={AsaMatrix=22}] run playsound entity.ender_dragon.growl master @a[distance=..48] ~ ~ ~ 1 0.5 1
-execute if entity @s[scores={AsaMatrix=27..55}] run playsound entity.ravager.attack master @a[distance=..48] ~ ~ ~ 1 0.7 1
-execute if entity @s[scores={AsaMatrix=27..50}] at @e[type=armor_stand,tag=ReusParts,tag=HeadU,distance=0..20] positioned ^ ^1.1 ^0.7 run particle flash ~ ~ ~ 0 0 0 0 1
-execute if entity @s[scores={AsaMatrix=27..50}] positioned ^ ^ ^6 run particle block grass_block ~ ~ ~ 2 0.1 2 0 5
-execute if entity @s[scores={AsaMatrix=27}] run function asa_animator:reus/anim/voice/events/damage
+# 移動
+    execute if entity @s[scores={AsaMatrix=1..20}] run function asa_animator:reus/manager/4_general/rotate
 
-execute at @s if block ~ ~-0.2 ~ #asa_animator:no_collision at @s run function asa_animator:general/check_ground
-execute at @s unless block ~ ~ ~ #asa_animator:no_collision at @s run tp @s ~ ~0.1 ~ ~ ~
+# 演出
+    execute if entity @s[scores={AsaMatrix=1}] run function asa_animator:reus/manager/5_extra/change_to_normal
+    execute if entity @s[scores={AsaMatrix=1}] run playsound entity.ender_dragon.flap master @a ~ ~ ~ 2 0.7
+    execute if entity @s[scores={AsaMatrix=68}] run playsound entity.ender_dragon.flap master @a ~ ~ ~ 2 0.7
+    execute if entity @s[scores={AsaMatrix=22}] run playsound entity.ender_dragon.growl master @a[distance=..48] ~ ~ ~ 1 0.5 1
+    execute if entity @s[scores={AsaMatrix=27..55}] run playsound entity.ravager.attack master @a[distance=..48] ~ ~ ~ 1 0.7 1
+    execute if entity @s[scores={AsaMatrix=27..50}] at @e[type=armor_stand,tag=ReusParts,tag=HeadU,distance=0..20] positioned ^ ^1.1 ^0.7 run particle flash ~ ~ ~ 0 0 0 0 1
+    execute if entity @s[scores={AsaMatrix=27..50}] positioned ^ ^ ^6 run particle block grass_block ~ ~ ~ 2 0.1 2 0 5
+
+# 咆哮怯み
+    execute if entity @s[scores={AsaMatrix=27}] run function asa_animator:reus/anim/voice/events/damage
+
+# 高度調整
+    execute at @s if block ~ ~-0.2 ~ #asa_animator:no_collision at @s run function asa_animator:general/check_ground
+    execute at @s unless block ~ ~ ~ #asa_animator:no_collision at @s run tp @s ~ ~0.1 ~ ~ ~

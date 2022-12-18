@@ -2,36 +2,44 @@
 scoreboard players add @s AsaMatrix 1
 execute if entity @s[scores={AsaMatrix=1}] run function asa_animator:reus/anim/flying_jump/start
 execute if entity @s[scores={AsaMatrix=1}] run function asa_animator:reus/anim/flying_jump/keyframes/0
-execute if entity @s[scores={AsaMatrix=1..5}] run tp @s ^0 ^0.02 ^0
-execute if entity @s[scores={AsaMatrix=6}] run function asa_animator:reus/anim/flying_jump/keyframes/1
-execute if entity @s[scores={AsaMatrix=6..10}] run tp @s ^0 ^0 ^0
-execute if entity @s[scores={AsaMatrix=11}] run function asa_animator:reus/anim/flying_jump/keyframes/2
-execute if entity @s[scores={AsaMatrix=11..30}] run tp @s ^0 ^0 ^0
-execute if entity @s[scores={AsaMatrix=31}] run function asa_animator:reus/anim/flying_jump/keyframes/3
-execute if entity @s[scores={AsaMatrix=31..35}] run tp @s ^0 ^-0.1 ^0
-execute if entity @s[scores={AsaMatrix=36}] run function asa_animator:reus/anim/flying_jump/keyframes/4
-execute if entity @s[scores={AsaMatrix=36..40}] run tp @s ^0 ^1.48 ^-0.04
-execute if entity @s[scores={AsaMatrix=41}] run function asa_animator:reus/anim/flying_jump/keyframes/5
-execute if entity @s[scores={AsaMatrix=41..50}] run tp @s ^0 ^0.05 ^-0.03
-execute if entity @s[scores={AsaMatrix=51}] run function asa_animator:reus/anim/flying_jump/keyframes/6
-execute if entity @s[scores={AsaMatrix=51..55}] run tp @s ^0 ^-1.58 ^0.1
-execute if entity @s[scores={AsaMatrix=56}] run function asa_animator:reus/anim/flying_jump/keyframes/7
-execute if entity @s[scores={AsaMatrix=56..63}] run tp @s ^0 ^0 ^0 ~-0.5 ~
-execute if entity @s[scores={AsaMatrix=64}] run function asa_animator:reus/anim/flying_jump/keyframes/8
-execute if entity @s[scores={AsaMatrix=64..75}] run tp @s ^0 ^0.03333334 ^0
-execute if entity @s[scores={AsaMatrix=76..}] run function asa_animator:reus/anim/flying_jump/end
+execute if entity @s[scores={AsaMatrix=1..6}] run tp @s ^0 ^1.2 ^-0.1
+execute if entity @s[scores={AsaMatrix=7}] run function asa_animator:reus/anim/flying_jump/keyframes/1
+execute if entity @s[scores={AsaMatrix=7..11}] run tp @s ^0 ^0.8 ^0.04
+execute if entity @s[scores={AsaMatrix=12}] run function asa_animator:reus/anim/flying_jump/keyframes/2
+execute if entity @s[scores={AsaMatrix=12..17}] run tp @s ^0 ^0.4 ^0.03333334
+execute if entity @s[scores={AsaMatrix=18}] run function asa_animator:reus/anim/flying_jump/keyframes/3
+execute if entity @s[scores={AsaMatrix=18..23}] run tp @s ^0 ^0.2 ^0
+execute if entity @s[scores={AsaMatrix=24..39}] run tp @s ^0 ^0 ^0
+execute if entity @s[scores={AsaMatrix=40}] run function asa_animator:reus/anim/flying_jump/keyframes/4
+execute if entity @s[scores={AsaMatrix=40..44}] run tp @s ^0 ^0 ^0
+execute if entity @s[scores={AsaMatrix=45}] run function asa_animator:reus/anim/flying_jump/keyframes/5
+execute if entity @s[scores={AsaMatrix=45..67}] run tp @s ^0 ^0 ^0
+execute if entity @s[scores={AsaMatrix=68}] run function asa_animator:reus/anim/flying_jump/keyframes/6
+execute if entity @s[scores={AsaMatrix=68..76}] run tp @s ^0 ^0.02222222 ^0
+execute if entity @s[scores={AsaMatrix=77}] run function asa_animator:reus/anim/flying_jump/keyframes/7
+execute if entity @s[scores={AsaMatrix=77..83}] run tp @s ^0 ^0.01428571 ^0
+execute if entity @s[scores={AsaMatrix=84}] run function asa_animator:reus/anim/flying_jump/keyframes/8
+execute if entity @s[scores={AsaMatrix=84..97}] run tp @s ^0 ^0.003571429 ^0
+execute if entity @s[scores={AsaMatrix=98}] run function asa_animator:reus/anim/flying_jump/keyframes/9
+execute if entity @s[scores={AsaMatrix=98..110}] run tp @s ^0 ^0.003846154 ^0
+execute if entity @s[scores={AsaMatrix=111..}] run function asa_animator:reus/anim/flying_jump/end
 execute as @e[type=armor_stand,tag=ReusParts] run function #asa_matrix:animate
 function asa_animator:reus/model
 
-# 敵の方向を向く
-execute if entity @s[scores={AsaMatrix=1..34}] at @s run function asa_animator:reus/manager/rotate
-execute if entity @s[scores={AsaMatrix=28}] run function asa_animator:reus/anim/flying_jump/events/set_pos
-execute if entity @s[scores={AsaMatrix=36..55}] at @s run function asa_animator:reus/anim/flying_jump/events/offset
+# 移動
+    execute if entity @s[scores={AsaMatrix=1..20}] run function asa_animator:reus/manager/4_general/rotate
+    execute if entity @s[scores={AsaMatrix=24}] run function asa_animator:reus/anim/flying_jump/events/pos/set_pos
+    execute if entity @s[scores={AsaMatrix=34..44}] run function asa_animator:reus/anim/flying_jump/events/pos/offset
 
-execute if entity @s[scores={AsaMatrix=1}] run playsound entity.ender_dragon.flap master @a ~ ~ ~ 2 0.7
-execute if entity @s[scores={AsaMatrix=35}] run playsound entity.ender_dragon.flap master @a ~ ~ ~ 2 0.7
+# 演出
+    execute if entity @s[scores={AsaMatrix=6}] run playsound entity.ender_dragon.flap master @a ~ ~ ~ 2 0.7
+    execute if entity @s[scores={AsaMatrix=17}] run playsound entity.ender_dragon.flap master @a ~ ~ ~ 2 0.7
+    execute if entity @s[scores={AsaMatrix=76}] run playsound block.grass.step master @a ~ ~ ~ 2 0.7
+    execute if entity @s[scores={AsaMatrix=76}] run function asa_animator:reus/manager/5_extra/change_to_normal
 
-execute if entity @s[scores={AsaMatrix=56}] positioned ^ ^ ^1 run function asa_animator:reus/anim/jump/events/damage
+# 攻撃
+    execute if entity @s[scores={AsaMatrix=44}] positioned ^ ^ ^1 run function asa_animator:reus/anim/jump/events/damage
 
-execute if entity @s[scores={AsaMatrix=56..}] at @s if block ~ ~-0.2 ~ #asa_animator:no_collision at @s run function asa_animator:general/check_ground
-execute if entity @s[scores={AsaMatrix=56..}] at @s unless block ~ ~ ~ #asa_animator:no_collision at @s run tp @s ~ ~0.1 ~ ~ ~
+# 高度調整
+    execute if entity @s[scores={AsaMatrix=83..}] at @s if block ~ ~-0.2 ~ #asa_animator:no_collision at @s run function asa_animator:general/check_ground
+    execute if entity @s[scores={AsaMatrix=83..}] at @s unless block ~ ~ ~ #asa_animator:no_collision at @s run tp @s ~ ~0.1 ~ ~ ~

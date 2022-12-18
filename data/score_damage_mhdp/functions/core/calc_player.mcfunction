@@ -41,22 +41,23 @@
         # LV2
 
 # ガード成功時，ガード値に応じてダメージ軽減
-    execute if entity @s[tag=PlyGuardSuccess] if score $MhdpGuard ScoreDamageCore matches ..9 run scoreboard players set $CalcGuard ScoreDamageCore 90
-    execute if entity @s[tag=PlyGuardSuccess] if score $MhdpGuard ScoreDamageCore matches 10..19 run scoreboard players set $CalcGuard ScoreDamageCore 60
-    execute if entity @s[tag=PlyGuardSuccess] if score $MhdpGuard ScoreDamageCore matches 20..29 run scoreboard players set $CalcGuard ScoreDamageCore 30
-    execute if entity @s[tag=PlyGuardSuccess] if score $MhdpGuard ScoreDamageCore matches 30.. run scoreboard players set $CalcGuard ScoreDamageCore 10
+    execute if entity @s[tag=PlyGuardSuccess] if score $MhdpAttackGuard ScoreDamageCore matches 4 run scoreboard players set $CalcGuard ScoreDamageCore 60
+    execute if entity @s[tag=PlyGuardSuccess] if score $MhdpAttackGuard ScoreDamageCore matches 3 run scoreboard players set $CalcGuard ScoreDamageCore 50
+    execute if entity @s[tag=PlyGuardSuccess] if score $MhdpAttackGuard ScoreDamageCore matches 2 run scoreboard players set $CalcGuard ScoreDamageCore 40
+    execute if entity @s[tag=PlyGuardSuccess] if score $MhdpAttackGuard ScoreDamageCore matches 1 run scoreboard players set $CalcGuard ScoreDamageCore 20
+    execute if entity @s[tag=PlyGuardSuccess] if score $MhdpAttackGuard ScoreDamageCore matches ..0 run scoreboard players set $CalcGuard ScoreDamageCore 0
     execute if entity @s[tag=PlyGuardSuccess] run scoreboard players operation $Damage ScoreDamageCore *= $CalcGuard ScoreDamageCore
     execute if entity @s[tag=PlyGuardSuccess] run scoreboard players operation $Damage ScoreDamageCore /= $100 ScoreDamageCore
 
 # 不動の装衣によるダメージ軽減
-    scoreboard players set $CalcGuard ScoreDamageCore 70
+    scoreboard players set $CalcGuard ScoreDamageCore 50
     execute if entity @s[tag=ItmUseImmovable] run scoreboard players operation $Damage ScoreDamageCore *= $CalcGuard ScoreDamageCore
     execute if entity @s[tag=ItmUseImmovable] run scoreboard players operation $Damage ScoreDamageCore /= $100 ScoreDamageCore
 
 # 効果音再生
-    execute if entity @s[tag=!PlyArmorHyper,tag=!PlyGuardSuccess] at @s run playsound entity.player.hurt master @s ~ ~ ~ 1 1
-    execute if entity @s[tag=!PlyArmorHyper,tag=!PlyGuardSuccess,tag=ItmUseImmovable] at @s run playsound block.chain.break master @s ~ ~ ~ 1 0.6
-    execute if entity @s[tag=!PlyArmorHyper,tag=!PlyGuardSuccess,tag=ItmUseImmovable] at @s run playsound block.chain.break master @s ~ ~ ~ 1 0.5
+    execute if entity @s[tag=!PlyArmorHyper,tag=!PlyGuardSuccess,tag=!ItmUseImmovable] at @s run playsound entity.player.hurt master @s ~ ~ ~ 1 1
+    execute if entity @s[tag=!PlyArmorHyper,tag=!PlyGuardSuccess,tag=ItmUseImmovable] at @s run playsound block.chain.break master @s ~ ~ ~ 3 0.6
+    execute if entity @s[tag=!PlyArmorHyper,tag=!PlyGuardSuccess,tag=ItmUseImmovable] at @s run playsound block.chain.break master @s ~ ~ ~ 3 0.5
     execute if entity @s[tag=!PlyArmorHyper,tag=PlyGuardSuccess] at @s run playsound item.shield.block master @s ~ ~ ~ 1 1
 
 # Reset

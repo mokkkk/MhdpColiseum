@@ -64,13 +64,16 @@
 # ダメージログ表示
     # 肉質に応じて色を設定
         scoreboard players set $Color Temporary 0
-        execute if score #mhdp_temp_def MhdpCore matches 70.. run scoreboard players set $Color Temporary 1
+        execute if score #mhdp_temp_def MhdpCore matches 45.. run scoreboard players set $Color Temporary 1
     # 表示
         scoreboard players operation $Fluctuation Lib = #mhdp_temp_damage MhdpCore
         execute positioned as @e[tag=Victim] positioned ~ ~1.65 ~ facing entity @e[type=slime,tag=Victim] feet positioned ^ ^ ^1.5 run function lib:status_log/show_health
 
 # ヒットエフェクト表示
     execute positioned as @e[tag=Victim] run function mhdp_weapons:core/attack/effect/
+
+# モンスター側ダメージ処理実行
+    execute as @e[tag=Victim] at @s run function asa_animator:general/damage
 
 # 終了
 # モンスターの物理肉質のみ，後の処理で使う可能性があるので残しておく
@@ -84,7 +87,6 @@
     scoreboard players reset #mhdp_temp_atk_damage
     scoreboard players reset #mhdp_temp_element_type
     scoreboard players reset #mhdp_temp_element_damage
-    # scoreboard players reset #mhdp_temp_def
     scoreboard players reset #mhdp_temp_element_def
     scoreboard players reset #mhdp_temp_rand
     scoreboard players reset #mhdp_temp_crit

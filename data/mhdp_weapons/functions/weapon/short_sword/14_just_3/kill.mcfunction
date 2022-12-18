@@ -13,3 +13,6 @@
     tp @e[tag=WpnSswordKnockback,tag=KillTarget] ~ ~-1000 ~
     kill @e[tag=WpnSswordKnockback,tag=KillTarget]
     scoreboard players add #mhdp_global_knockback_kill_id MhdpCore 1
+
+# バグ対策
+    execute if score #mhdp_global_knockback_id MhdpCore < #mhdp_global_knockback_kill_id MhdpCore run scoreboard players operation #mhdp_global_knockback_kill_id MhdpCore = #mhdp_global_knockback_id MhdpCore

@@ -1,0 +1,62 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:group",
+          "children": [
+            {
+              "##comment":"3連ブレス",
+              "type": "minecraft:item",
+              "name": "minecraft:paper",
+              "weight": 6,
+              "functions": [
+                {
+                "function": "minecraft:set_nbt",
+                "tag": "{ActPaper:1,Act:1}"
+                }
+              ]
+            },
+            {
+              "##comment":"地上強襲",
+              "type": "minecraft:item",
+              "name": "minecraft:paper",
+              "weight": 5,
+              "functions": [
+                {
+                "function": "minecraft:set_nbt",
+                "tag": "{ActPaper:1,Act:2}"
+                }
+              ]
+            },
+            {
+              "##comment":"回り込み着地",
+              "type": "minecraft:item",
+              "name": "minecraft:paper",
+              "weight": 5,
+              "functions": [
+                {
+                "function": "minecraft:set_nbt",
+                "tag": "{ActPaper:1,Act:3}"
+                }
+              ]
+            },
+            {
+              "##comment":"縦なぎ払い火炎放射",
+              "type": "minecraft:item",
+              "name": "minecraft:paper",
+              "weight": 6,
+              "functions": [
+                {
+                "function": "minecraft:set_nbt",
+                "tag": "{ActPaper:1,Act:4}"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

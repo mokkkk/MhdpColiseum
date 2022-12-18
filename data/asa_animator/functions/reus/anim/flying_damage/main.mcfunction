@@ -17,11 +17,16 @@ execute if entity @s[scores={AsaMatrix=71..}] run function asa_animator:reus/ani
 execute as @e[type=armor_stand,tag=ReusParts] run function #asa_matrix:animate
 function asa_animator:reus/model
 
-execute if entity @s[scores={AsaMatrix=1}] run function asa_animator:reus/manager/model/change_to_normal
+# 移動
+    execute if entity @s[scores={AsaMatrix=12}] run function asa_animator:reus/anim/flying_damage/events/set_pos
+    execute if entity @s[scores={AsaMatrix=13..20}] run function asa_animator:reus/anim/flying_damage/events/offset
 
-execute if entity @s[scores={AsaMatrix=12}] run function asa_animator:reus/anim/flying_damage/events/set_pos
-execute if entity @s[scores={AsaMatrix=13..20}] run function asa_animator:reus/anim/flying_damage/events/offset
+# 演出
+    execute if entity @s[scores={AsaMatrix=1}] run function asa_animator:reus/manager/5_extra/change_to_normal
+    execute if entity @s[scores={AsaMatrix=21}] run tag @s remove IsFlying
+    execute if entity @s[scores={AsaMatrix=21}] run playsound block.grass.step master @a ~ ~ ~ 2 0.7
+    execute if entity @s[scores={AsaMatrix=21}] run particle block grass_block ~ ~1 ~ 1.5 0.1 1.5 0 30
 
-execute if entity @s[scores={AsaMatrix=21}] run tag @s remove IsFlying
-execute if entity @s[scores={AsaMatrix=21}] run playsound block.grass.step master @a ~ ~ ~ 2 0.7
-execute if entity @s[scores={AsaMatrix=21}] run particle block grass_block ~ ~1 ~ 1.5 0.1 1.5 0 30
+# 高度調整
+    execute if entity @s[scores={AsaMatrix=56..}] at @s if block ~ ~-0.2 ~ #asa_animator:no_collision at @s run function asa_animator:general/check_ground
+    execute if entity @s[scores={AsaMatrix=56..}] at @s unless block ~ ~ ~ #asa_animator:no_collision at @s run tp @s ~ ~0.1 ~ ~ ~

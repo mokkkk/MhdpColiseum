@@ -36,3 +36,6 @@
 
 # ターゲットタグ消去
     tag @s remove MnsTarget
+
+# 各モンスターのターゲットタグ消去
+    function asa_animator:general/reset_target

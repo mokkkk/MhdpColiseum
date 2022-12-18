@@ -6,7 +6,7 @@
     tag @s add PlySneakAvoidFunc
 
 # 処理用スコア設定
-    scoreboard players set @s MhdpFuncSneakAvoid 25
+    scoreboard players set @s MhdpFuncSneakAvoid 20
 
 # 無敵時間設定
     scoreboard players set @s MhdpTAvoid 5
