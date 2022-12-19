@@ -1,25 +1,25 @@
-#> asa_animator:reus/manager/4_general/kill
+#> asa_animator:zinogre/manager/4_general/kill
 #
-# 火竜 消去処理
+# 雷狼竜 消去処理
 
 # タグ消去
-tag @e[tag=ReusTarget] remove ReusTarget
-tag @e[tag=ReusAttackTarget] remove ReusAttackTarget
+    tag @e[tag=ZinogreTarget] remove ZinogreTarget
+    tag @e[tag=ZinogreAttackTarget] remove ZinogreAttackTarget
 
 # marker消去
-kill @e[type=marker,tag=ReusBreathTarget]
-kill @e[type=marker,tag=ReusChargeFPos]
-kill @e[type=marker,tag=ReusChargeTarget]
-kill @e[type=marker,tag=ReusChargeAttack]
+    # kill @e[type=marker,tag=ZinogreBreathTarget]
+    # kill @e[type=marker,tag=ZinogreChargeFPos]
+    # kill @e[type=marker,tag=ZinogreChargeTarget]
+    # kill @e[type=marker,tag=ZinogreChargeAttack]
 
 # パーティクル
-execute at @e[type=armor_stand,tag=ReusParts] run particle poof ~ ~1 ~ 1 1 1 0 30
+    execute at @e[type=armor_stand,tag=ZinogreParts] run particle poof ~ ~1 ~ 1 1 1 0 30
 
 # 当たり判定削除
-function asa_animator:reus/manager/4_general/kill_health
+    function asa_animator:zinogre/manager/4_general/kill_health
 
 # ボスバー削除
-bossbar remove asa_animator:reus_health
+    bossbar remove asa_animator:zinogre_health
 
 # パーツ削除
-function asa_animator:reus/kill
+    function asa_animator:zinogre/kill

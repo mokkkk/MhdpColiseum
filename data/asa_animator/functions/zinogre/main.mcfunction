@@ -1,6 +1,6 @@
 #> asa_animator:zinogre/main
 #
-# 火竜メイン処理
+# 雷狼竜メイン処理
 
 # 地面埋まり対策
     execute unless block ~ ~ ~ #asa_animator:no_collision unless block ~ ~1 ~ #asa_animator:no_collision unless block ~ ~2 ~ #asa_animator:no_collision unless block ~ ~3 ~ #asa_animator:no_collision at @s run function asa_animator:general/back

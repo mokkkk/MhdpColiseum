@@ -1,6 +1,6 @@
-#> asa_animator:reus/manager/4_general/remove_animation_tag
+#> asa_animator:zinogre/manager/4_general/remove_animation_tag
 #
-# 火竜 アニメーション中断
+# 雷狼竜 アニメーション中断
 
 # タグ消去
     tag @s remove AnmMove
@@ -53,7 +53,7 @@
     tag @s remove IsTurn
 
 # 処理用マーカー消去
-    kill @e[type=marker,tag=ReusBreathTarget]
-    kill @e[type=marker,tag=ReusChargeFPos]
-    kill @e[type=marker,tag=ReusChargeTarget]
-    kill @e[type=marker,tag=ReusChargeAttack]
+    kill @e[type=marker,tag=ZinogreBreathTarget]
+    kill @e[type=marker,tag=ZinogreChargeFPos]
+    kill @e[type=marker,tag=ZinogreChargeTarget]
+    kill @e[type=marker,tag=ZinogreChargeAttack]
