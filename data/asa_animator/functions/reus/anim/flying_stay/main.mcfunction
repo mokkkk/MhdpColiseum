@@ -14,8 +14,8 @@ execute as @e[type=armor_stand,tag=ReusParts] run function #asa_matrix:animate
 function asa_animator:reus/model
 
 # 遷移
-    execute if entity @s[scores={AsaMatrix=24}] if entity @e[tag=ReusTarget] run function asa_animator:reus/anim/stay/events/change
-    execute if entity @s[scores={AsaMatrix=24}] if entity @e[tag=MnsTarget] run function asa_animator:reus/anim/stay/events/change
+    execute if entity @s[scores={AsaMatrix=1}] if entity @e[tag=ReusTarget] run function asa_animator:reus/anim/stay/events/change
+    execute if entity @s[scores={AsaMatrix=1}] if entity @e[tag=MnsTarget] run function asa_animator:reus/anim/stay/events/change
 
 # 演出
     execute if entity @s[scores={AsaMatrix=10}] run playsound entity.ender_dragon.flap master @a ~ ~ ~ 2 0.7
