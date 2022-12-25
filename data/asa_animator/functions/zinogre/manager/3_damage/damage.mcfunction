@@ -11,14 +11,16 @@
     playsound minecraft:entity.player.hurt master @a ~ ~ ~ 2 1
 
 # 部位ダメージ適用
-    # execute if entity @s[tag=HeadParts] run scoreboard players operation #mhdp_zinogre_head_damage AsaMatrix += #zinogre_damage AsaMatrix
-    # execute if entity @s[tag=BodyParts] run scoreboard players operation #mhdp_zinogre_body_damage AsaMatrix += #zinogre_damage AsaMatrix
-    # execute if entity @s[tag=TailParts] run scoreboard players operation #mhdp_zinogre_tail_damage AsaMatrix += #zinogre_damage AsaMatrix
-    # execute if entity @s[tag=LegParts] run scoreboard players operation #mhdp_zinogre_leg_damage AsaMatrix += #zinogre_damage AsaMatrix
-    # execute if entity @s[tag=HeadParts] if score #mhdp_zinogre_head_damage AsaMatrix matches ..0 as @e[type=armor_stand,tag=ZinogreRoot,distance=0..15,tag=!AnmDLegL,tag=!AnmDLegR,tag=!AnmDStun,tag=!AnmFStun] run function asa_animator:zinogre/manager/3_damage/0_animation/damage_head
-    # execute if entity @s[tag=BodyParts] if score #mhdp_zinogre_body_damage AsaMatrix matches ..0 as @e[type=armor_stand,tag=ZinogreRoot,distance=0..15,tag=!AnmDLegL,tag=!AnmDLegR,tag=!AnmDStun,tag=!AnmFStun] run function asa_animator:zinogre/manager/3_damage/0_animation/damage_body
-    # execute if entity @s[tag=TailParts] if data storage mhdp_core:temp Temp.WeaponDamage{Type:1} if score #mhdp_zinogre_tail_damage AsaMatrix matches ..0 as @e[type=armor_stand,tag=ZinogreRoot,distance=0..15,tag=!AnmDLegL,tag=!AnmDLegR,tag=!AnmDStun,tag=!AnmFStun] run function asa_animator:zinogre/manager/3_damage/0_animation/damage_tail
-    # execute if entity @s[tag=LegParts] if score #mhdp_zinogre_leg_damage AsaMatrix matches ..0 as @e[type=armor_stand,tag=ZinogreRoot,distance=0..15,tag=!AnmDLegL,tag=!AnmDLegR,tag=!AnmDStun,tag=!AnmFStun] run function asa_animator:zinogre/manager/3_damage/0_animation/damage_leg
+    execute if entity @s[tag=HeadParts] run scoreboard players operation #mhdp_zinogre_head_damage AsaMatrix += #zinogre_damage AsaMatrix
+    execute if entity @s[tag=BodyParts] run scoreboard players operation #mhdp_zinogre_body_damage AsaMatrix += #zinogre_damage AsaMatrix
+    execute if entity @s[tag=ArmLParts] run scoreboard players operation #mhdp_zinogre_arml_damage AsaMatrix += #zinogre_damage AsaMatrix
+    execute if entity @s[tag=ArmRParts] run scoreboard players operation #mhdp_zinogre_armr_damage AsaMatrix += #zinogre_damage AsaMatrix
+    execute if entity @s[tag=TailParts] run scoreboard players operation #mhdp_zinogre_tail_damage AsaMatrix += #zinogre_damage AsaMatrix
+    execute if entity @s[tag=HeadParts] if score #mhdp_zinogre_head_damage AsaMatrix matches ..0 as @e[type=armor_stand,tag=ZinogreRoot,distance=0..15,tag=!AnmDArmL,tag=!AnmDArmR,tag=!AnmDStun,tag=!AnmFStun] run function asa_animator:zinogre/manager/3_damage/0_animation/damage_head
+    execute if entity @s[tag=BodyParts] if score #mhdp_zinogre_body_damage AsaMatrix matches ..0 as @e[type=armor_stand,tag=ZinogreRoot,distance=0..15,tag=!AnmDArmL,tag=!AnmDArmR,tag=!AnmDStun,tag=!AnmFStun] run function asa_animator:zinogre/manager/3_damage/0_animation/damage_body
+    execute if entity @s[tag=ArmLParts] if score #mhdp_zinogre_arml_damage AsaMatrix matches ..0 as @e[type=armor_stand,tag=ZinogreRoot,distance=0..15,tag=!AnmDArmL,tag=!AnmDArmR,tag=!AnmDStun,tag=!AnmFStun] run function asa_animator:zinogre/manager/3_damage/0_animation/damage_arml
+    execute if entity @s[tag=ArmRParts] if score #mhdp_zinogre_armr_damage AsaMatrix matches ..0 as @e[type=armor_stand,tag=ZinogreRoot,distance=0..15,tag=!AnmDArmL,tag=!AnmDArmR,tag=!AnmDStun,tag=!AnmFStun] run function asa_animator:zinogre/manager/3_damage/0_animation/damage_armr
+    execute if entity @s[tag=TailParts] if data storage mhdp_core:temp Temp.WeaponDamage{Type:1} if score #mhdp_zinogre_tail_damage AsaMatrix matches ..0 as @e[type=armor_stand,tag=ZinogreRoot,distance=0..15,tag=!AnmDArmL,tag=!AnmDArmR,tag=!AnmDStun,tag=!AnmFStun] run function asa_animator:zinogre/manager/3_damage/0_animation/damage_tail
 
 # スタンダメージ適用
     execute if entity @s[tag=HeadParts] if data storage mhdp_core:temp Temp.WeaponDamage{Type:2} run scoreboard players operation #mhdp_zinogre_stun_damage AsaMatrix += #zinogre_damage AsaMatrix

@@ -6,13 +6,13 @@
     tag @s add PlySneakAvoidFunc
 
 # 処理用スコア設定
-    scoreboard players set @s MhdpFuncSneakAvoid 20
+    scoreboard players set @s MhdpFuncSneakAvoid 0
 
 # 無敵時間設定
-    scoreboard players set @s MhdpTAvoid 5
+    scoreboard players set @s MhdpTAvoid 3
     # スキル処理
         # 回避本能
-            execute if entity @s[tag=CharmNarga,scores={MhdpHealth=..6}] run scoreboard players set @s MhdpTAvoid 7
+            execute if entity @s[tag=CharmNarga,scores={MhdpHealth=..6}] run scoreboard players set @s MhdpTAvoid 4
     # 属性やられ処理
         # 火属性やられ
             execute if entity @s[tag=BlightFire] run scoreboard players remove @s MhdpBlightFire 100
@@ -29,6 +29,7 @@
         execute as @e[type=marker,tag=SneakAvoidStand0,tag=Start] run data modify entity @s Pos set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].PlayerData.Pos.Pre
         execute as @e[type=marker,tag=SneakAvoidStand0,tag=Start] at @s run tp @s ~ ~ ~
     # 移動先
+        tp @s @s
         execute as @e[type=marker,tag=SneakAvoidStand1,tag=Start] run tp @s ~ ~ ~
     # 移動方向検知
         execute as @e[type=marker,tag=SneakAvoidStand0,tag=Start] at @s facing entity @e[type=marker,tag=SneakAvoidStand1,tag=Start] feet rotated ~ 0 run tp @s ~ ~ ~ ~ ~
