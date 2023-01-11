@@ -5,7 +5,7 @@ data modify storage asa_temp: Data[0].Rotation set from storage asa_temp: Temp.R
 data modify storage asa_temp: Data[0].Pose.Head set value [33.82353f,108.4706f,0f]
 scoreboard players set #asa_child_pos_x AsaMatrix -2595
 scoreboard players set #asa_child_pos_y AsaMatrix 8
-scoreboard players set #asa_child_pos_z AsaMatrix 3687
+scoreboard players set #asa_child_pos_z AsaMatrix 2687
 function #asa_matrix:rotate_world
 function #asa_matrix:get_child_pos
 execute store result storage asa_temp: Data[0].Pos[0] double 0.001 run scoreboard players get #asa_child_pos_x AsaMatrix
@@ -15,7 +15,7 @@ data modify storage asa_temp: Data[1].Rotation set from storage asa_temp: Temp.R
 data modify storage asa_temp: Data[1].Pose.Head set value [33.82353f,108.4706f,0f]
 scoreboard players set #asa_child_pos_x AsaMatrix -2991
 scoreboard players set #asa_child_pos_y AsaMatrix -176
-scoreboard players set #asa_child_pos_z AsaMatrix 3555
+scoreboard players set #asa_child_pos_z AsaMatrix 2555
 function #asa_matrix:rotate_world
 function #asa_matrix:get_child_pos
 execute store result storage asa_temp: Data[1].Pos[0] double 0.001 run scoreboard players get #asa_child_pos_x AsaMatrix
@@ -25,7 +25,7 @@ data modify storage asa_temp: Data[2].Rotation set from storage asa_temp: Temp.R
 data modify storage asa_temp: Data[2].Pose.Head set value [33.82353f,78.47059f,0f]
 scoreboard players set #asa_child_pos_x AsaMatrix -2120
 scoreboard players set #asa_child_pos_y AsaMatrix 453
-scoreboard players set #asa_child_pos_z AsaMatrix 3590
+scoreboard players set #asa_child_pos_z AsaMatrix 2590
 function #asa_matrix:rotate_world
 function #asa_matrix:get_child_pos
 execute store result storage asa_temp: Data[2].Pos[0] double 0.001 run scoreboard players get #asa_child_pos_x AsaMatrix
@@ -35,7 +35,7 @@ data modify storage asa_temp: Data[3].Rotation set from storage asa_temp: Temp.R
 data modify storage asa_temp: Data[3].Pose.Head set value [28.82353f,58.47059f,0f]
 scoreboard players set #asa_child_pos_x AsaMatrix -1614
 scoreboard players set #asa_child_pos_y AsaMatrix 723
-scoreboard players set #asa_child_pos_z AsaMatrix 3280
+scoreboard players set #asa_child_pos_z AsaMatrix 2280
 function #asa_matrix:rotate_world
 function #asa_matrix:get_child_pos
 execute store result storage asa_temp: Data[3].Pos[0] double 0.001 run scoreboard players get #asa_child_pos_x AsaMatrix
@@ -45,7 +45,7 @@ data modify storage asa_temp: Data[4].Rotation set from storage asa_temp: Temp.R
 data modify storage asa_temp: Data[4].Pose.Head set value [23.82353f,48.47059f,0f]
 scoreboard players set #asa_child_pos_x AsaMatrix -1184
 scoreboard players set #asa_child_pos_y AsaMatrix 1031
-scoreboard players set #asa_child_pos_z AsaMatrix 2899
+scoreboard players set #asa_child_pos_z AsaMatrix 1899
 function #asa_matrix:rotate_world
 function #asa_matrix:get_child_pos
 execute store result storage asa_temp: Data[4].Pos[0] double 0.001 run scoreboard players get #asa_child_pos_x AsaMatrix
@@ -55,7 +55,7 @@ data modify storage asa_temp: Data[5].Rotation set from storage asa_temp: Temp.R
 data modify storage asa_temp: Data[5].Pose.Head set value [10f,38.47059f,0f]
 scoreboard players set #asa_child_pos_x AsaMatrix -276
 scoreboard players set #asa_child_pos_y AsaMatrix 1390
-scoreboard players set #asa_child_pos_z AsaMatrix 1756
+scoreboard players set #asa_child_pos_z AsaMatrix 756
 function #asa_matrix:rotate_world
 function #asa_matrix:get_child_pos
 execute store result storage asa_temp: Data[5].Pos[0] double 0.001 run scoreboard players get #asa_child_pos_x AsaMatrix
@@ -65,7 +65,7 @@ data modify storage asa_temp: Data[6].Rotation set from storage asa_temp: Temp.R
 data modify storage asa_temp: Data[6].Pose.Head set value [-10f,20f,0f]
 scoreboard players set #asa_child_pos_x AsaMatrix 0
 scoreboard players set #asa_child_pos_y AsaMatrix 1350
-scoreboard players set #asa_child_pos_z AsaMatrix 1000
+scoreboard players set #asa_child_pos_z AsaMatrix 0
 function #asa_matrix:rotate_world
 function #asa_matrix:get_child_pos
 execute store result storage asa_temp: Data[6].Pos[0] double 0.001 run scoreboard players get #asa_child_pos_x AsaMatrix
@@ -75,7 +75,7 @@ data modify storage asa_temp: Data[7].Rotation set from storage asa_temp: Temp.R
 data modify storage asa_temp: Data[7].Pose.Head set value [-10f,20f,0f]
 scoreboard players set #asa_child_pos_x AsaMatrix 710
 scoreboard players set #asa_child_pos_y AsaMatrix 660
-scoreboard players set #asa_child_pos_z AsaMatrix 1387
+scoreboard players set #asa_child_pos_z AsaMatrix 387
 function #asa_matrix:rotate_world
 function #asa_matrix:get_child_pos
 execute store result storage asa_temp: Data[7].Pos[0] double 0.001 run scoreboard players get #asa_child_pos_x AsaMatrix
@@ -85,7 +85,7 @@ data modify storage asa_temp: Data[8].Rotation set from storage asa_temp: Temp.R
 data modify storage asa_temp: Data[8].Pose.Head set value [-10f,50f,0f]
 scoreboard players set #asa_child_pos_x AsaMatrix -794
 scoreboard players set #asa_child_pos_y AsaMatrix 660
-scoreboard players set #asa_child_pos_z AsaMatrix 840
+scoreboard players set #asa_child_pos_z AsaMatrix -160
 function #asa_matrix:rotate_world
 function #asa_matrix:get_child_pos
 execute store result storage asa_temp: Data[8].Pos[0] double 0.001 run scoreboard players get #asa_child_pos_x AsaMatrix
@@ -95,7 +95,7 @@ data modify storage asa_temp: Data[9].Rotation set from storage asa_temp: Temp.R
 data modify storage asa_temp: Data[9].Pose.Head set value [5f,20f,0f]
 scoreboard players set #asa_child_pos_x AsaMatrix 662
 scoreboard players set #asa_child_pos_y AsaMatrix -128
-scoreboard players set #asa_child_pos_z AsaMatrix 1518
+scoreboard players set #asa_child_pos_z AsaMatrix 518
 function #asa_matrix:rotate_world
 function #asa_matrix:get_child_pos
 execute store result storage asa_temp: Data[9].Pos[0] double 0.001 run scoreboard players get #asa_child_pos_x AsaMatrix
@@ -105,7 +105,7 @@ data modify storage asa_temp: Data[10].Rotation set from storage asa_temp: Temp.
 data modify storage asa_temp: Data[10].Pose.Head set value [5f,50f,0f]
 scoreboard players set #asa_child_pos_x AsaMatrix -900
 scoreboard players set #asa_child_pos_y AsaMatrix -128
-scoreboard players set #asa_child_pos_z AsaMatrix 929
+scoreboard players set #asa_child_pos_z AsaMatrix -71
 function #asa_matrix:rotate_world
 function #asa_matrix:get_child_pos
 execute store result storage asa_temp: Data[10].Pos[0] double 0.001 run scoreboard players get #asa_child_pos_x AsaMatrix
@@ -115,7 +115,7 @@ data modify storage asa_temp: Data[11].Rotation set from storage asa_temp: Temp.
 data modify storage asa_temp: Data[11].Pose.Head set value [5f,20f,0f]
 scoreboard players set #asa_child_pos_x AsaMatrix 870
 scoreboard players set #asa_child_pos_y AsaMatrix -175
-scoreboard players set #asa_child_pos_z AsaMatrix 948
+scoreboard players set #asa_child_pos_z AsaMatrix -52
 function #asa_matrix:rotate_world
 function #asa_matrix:get_child_pos
 execute store result storage asa_temp: Data[11].Pos[0] double 0.001 run scoreboard players get #asa_child_pos_x AsaMatrix
@@ -125,7 +125,7 @@ data modify storage asa_temp: Data[12].Rotation set from storage asa_temp: Temp.
 data modify storage asa_temp: Data[12].Pose.Head set value [5f,50f,0f]
 scoreboard players set #asa_child_pos_x AsaMatrix -436
 scoreboard players set #asa_child_pos_y AsaMatrix -175
-scoreboard players set #asa_child_pos_z AsaMatrix 540
+scoreboard players set #asa_child_pos_z AsaMatrix -460
 function #asa_matrix:rotate_world
 function #asa_matrix:get_child_pos
 execute store result storage asa_temp: Data[12].Pos[0] double 0.001 run scoreboard players get #asa_child_pos_x AsaMatrix
@@ -135,7 +135,7 @@ data modify storage asa_temp: Data[13].Rotation set from storage asa_temp: Temp.
 data modify storage asa_temp: Data[13].Pose.Head set value [-2.352941f,36.17647f,0f]
 scoreboard players set #asa_child_pos_x AsaMatrix 431
 scoreboard players set #asa_child_pos_y AsaMatrix 1025
-scoreboard players set #asa_child_pos_z AsaMatrix -187
+scoreboard players set #asa_child_pos_z AsaMatrix -1187
 function #asa_matrix:rotate_world
 function #asa_matrix:get_child_pos
 execute store result storage asa_temp: Data[13].Pos[0] double 0.001 run scoreboard players get #asa_child_pos_x AsaMatrix
@@ -145,7 +145,7 @@ data modify storage asa_temp: Data[14].Rotation set from storage asa_temp: Temp.
 data modify storage asa_temp: Data[14].Pose.Head set value [4.117649f,52.35294f,0f]
 scoreboard players set #asa_child_pos_x AsaMatrix 1316
 scoreboard players set #asa_child_pos_y AsaMatrix 964
-scoreboard players set #asa_child_pos_z AsaMatrix -1397
+scoreboard players set #asa_child_pos_z AsaMatrix -2397
 function #asa_matrix:rotate_world
 function #asa_matrix:get_child_pos
 execute store result storage asa_temp: Data[14].Pos[0] double 0.001 run scoreboard players get #asa_child_pos_x AsaMatrix
@@ -155,7 +155,7 @@ data modify storage asa_temp: Data[15].Rotation set from storage asa_temp: Temp.
 data modify storage asa_temp: Data[15].Pose.Head set value [6.764709f,56.17647f,0f]
 scoreboard players set #asa_child_pos_x AsaMatrix 2738
 scoreboard players set #asa_child_pos_y AsaMatrix 1093
-scoreboard players set #asa_child_pos_z AsaMatrix -2494
+scoreboard players set #asa_child_pos_z AsaMatrix -3494
 function #asa_matrix:rotate_world
 function #asa_matrix:get_child_pos
 execute store result storage asa_temp: Data[15].Pos[0] double 0.001 run scoreboard players get #asa_child_pos_x AsaMatrix
@@ -165,7 +165,7 @@ data modify storage asa_temp: Data[16].Rotation set from storage asa_temp: Temp.
 data modify storage asa_temp: Data[16].Pose.Head set value [95f,38.47059f,16.17647f]
 scoreboard players set #asa_child_pos_x AsaMatrix -201
 scoreboard players set #asa_child_pos_y AsaMatrix 1234
-scoreboard players set #asa_child_pos_z AsaMatrix 2948
+scoreboard players set #asa_child_pos_z AsaMatrix 1948
 function #asa_matrix:rotate_world
 function #asa_matrix:get_child_pos
 execute store result storage asa_temp: Data[16].Pos[0] double 0.001 run scoreboard players get #asa_child_pos_x AsaMatrix
@@ -175,7 +175,7 @@ data modify storage asa_temp: Data[17].Rotation set from storage asa_temp: Temp.
 data modify storage asa_temp: Data[17].Pose.Head set value [75f,38.47059f,-16.17647f]
 scoreboard players set #asa_child_pos_x AsaMatrix -1454
 scoreboard players set #asa_child_pos_y AsaMatrix 1234
-scoreboard players set #asa_child_pos_z AsaMatrix 1952
+scoreboard players set #asa_child_pos_z AsaMatrix 952
 function #asa_matrix:rotate_world
 function #asa_matrix:get_child_pos
 execute store result storage asa_temp: Data[17].Pos[0] double 0.001 run scoreboard players get #asa_child_pos_x AsaMatrix
@@ -185,7 +185,7 @@ data modify storage asa_temp: Data[18].Rotation set from storage asa_temp: Temp.
 data modify storage asa_temp: Data[18].Pose.Head set value [95f,36.82353f,16.17647f]
 scoreboard players set #asa_child_pos_x AsaMatrix 1222
 scoreboard players set #asa_child_pos_y AsaMatrix 815
-scoreboard players set #asa_child_pos_z AsaMatrix 4215
+scoreboard players set #asa_child_pos_z AsaMatrix 3215
 function #asa_matrix:rotate_world
 function #asa_matrix:get_child_pos
 execute store result storage asa_temp: Data[18].Pos[0] double 0.001 run scoreboard players get #asa_child_pos_x AsaMatrix
@@ -195,7 +195,7 @@ data modify storage asa_temp: Data[19].Rotation set from storage asa_temp: Temp.
 data modify storage asa_temp: Data[19].Pose.Head set value [75f,40.82353f,-16.17647f]
 scoreboard players set #asa_child_pos_x AsaMatrix -2965
 scoreboard players set #asa_child_pos_y AsaMatrix 814
-scoreboard players set #asa_child_pos_z AsaMatrix 792
+scoreboard players set #asa_child_pos_z AsaMatrix -208
 function #asa_matrix:rotate_world
 function #asa_matrix:get_child_pos
 execute store result storage asa_temp: Data[19].Pos[0] double 0.001 run scoreboard players get #asa_child_pos_x AsaMatrix
@@ -205,7 +205,7 @@ data modify storage asa_temp: Data[20].Rotation set from storage asa_temp: Temp.
 data modify storage asa_temp: Data[20].Pose.Head set value [95f,36.82353f,16.17647f]
 scoreboard players set #asa_child_pos_x AsaMatrix 881
 scoreboard players set #asa_child_pos_y AsaMatrix 768
-scoreboard players set #asa_child_pos_z AsaMatrix 5971
+scoreboard players set #asa_child_pos_z AsaMatrix 4971
 function #asa_matrix:rotate_world
 function #asa_matrix:get_child_pos
 execute store result storage asa_temp: Data[20].Pos[0] double 0.001 run scoreboard players get #asa_child_pos_x AsaMatrix
@@ -215,7 +215,7 @@ data modify storage asa_temp: Data[21].Rotation set from storage asa_temp: Temp.
 data modify storage asa_temp: Data[21].Pose.Head set value [75f,40.82353f,-16.17647f]
 scoreboard players set #asa_child_pos_x AsaMatrix -4632
 scoreboard players set #asa_child_pos_y AsaMatrix 762
-scoreboard players set #asa_child_pos_z AsaMatrix 1439
+scoreboard players set #asa_child_pos_z AsaMatrix 439
 function #asa_matrix:rotate_world
 function #asa_matrix:get_child_pos
 execute store result storage asa_temp: Data[21].Pos[0] double 0.001 run scoreboard players get #asa_child_pos_x AsaMatrix

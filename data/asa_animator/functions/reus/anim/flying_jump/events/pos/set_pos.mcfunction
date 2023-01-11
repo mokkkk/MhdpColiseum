@@ -3,7 +3,7 @@
 summon marker ^ ^ ^4 {Tags:["ReusMovePos"]}
 execute rotated ~ 0 positioned as @e[tag=ReusAttackTarget] positioned ^ ^ ^-3 run tp @e[type=marker,tag=ReusMovePos] ~ ~ ~
 execute as @e[type=marker,tag=ReusMovePos] at @s run function asa_animator:general/check_ground
-execute as @e[type=marker,tag=ReusMovePos] at @s run tp @s ~ ~0.4 ~
+execute as @e[type=marker,tag=ReusMovePos] at @s run tp @s ~ ~0.3 ~
 
 # ポジション差分取得
 data merge storage mhdp: {PosTemp:[], MarkerPosTemp:[]}
