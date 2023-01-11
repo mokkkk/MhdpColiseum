@@ -11,7 +11,7 @@
 # 移動禁止
     execute if entity @s[tag=!PlyJumpping,scores={MhdpWeaponTimer=..10}] run tp @s @s
     execute if entity @s[scores={MhdpWeaponTimer=1..10,MhdpJump=1..}] run tp @s @s
-    effect give @s slowness 1 10 true
+    effect give @s slowness 1 1 true
 
 # 一定スコア毎に溜め段階増加
     execute if entity @s[tag=!WpnGswordCharge1,scores={MhdpWeaponCharge=200..300}] run function mhdp_weapons:weapon/great_sword/2_charge/charge_1
