@@ -5,5 +5,5 @@
 # 火竜
     execute if entity @s[tag=ReusRoot] run function asa_animator:reus/main
 
-# 角竜
-    execute if entity @s[tag=DiablosRoot] run function asa_animator:diablos/main
+# 雷狼竜
+    execute if entity @s[tag=ZinogreRoot] run function asa_animator:zinogre/main

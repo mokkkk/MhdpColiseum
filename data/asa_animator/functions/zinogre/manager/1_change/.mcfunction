@@ -1,6 +1,6 @@
 #> asa_animator:zinogre/manager/1_change/
 #
-# 火竜 アニメーション遷移処理
+# 雷狼竜 アニメーション遷移処理
 
 # アニメーションタイマーリセット
     scoreboard players set @s AsaMatrix 0
@@ -12,8 +12,8 @@
     function asa_animator:zinogre/manager/1_change/target
 
 # 強制
-    # tag @s add AnmFStun
-    # function asa_animator:zinogre/manager/1_change/1_animations/fbreath
+    tag @s add AnmHead
+    # function asa_animator:zinogre/manager/1_change/1_animations/turn
 
 # 行動
     # execute if entity @a[tag=ZinogreAttackTarget] run function asa_animator:zinogre/manager/1_change/act

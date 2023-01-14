@@ -7,7 +7,8 @@
 
 # execute if entity @s[tag=DiablosRoot] run function asa_animator:diablos/manager/despawn
 
-execute if entity @s[tag=ZinogreRoot] run function asa_animator:zinogre/manager/despawn
+# 雷狼竜
+    execute if entity @s[tag=ZinogreRoot] run function asa_animator:zinogre/manager/4_general/kill
 
 execute if entity @s[tag=ReiaRoot] run function asa_animator:reia/manager/despawn
 

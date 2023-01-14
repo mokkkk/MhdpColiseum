@@ -25,7 +25,7 @@
 
 ## 2：雷狼竜
 # ノーマル・大闘技場・[雷狼竜]・999分・HP10000%・報酬3Z・ムービー無
-    data modify storage mh_dp:quests List append value {Index:1,Level:0,Visible:1b,Started:0b,Cleared:0b,QuestRank:0,Field:1,Monsters:[{Name:"Zinogre",Condition:0,Target:-1}],MonsterCount:1,Timer:999,HpMult:10000,Reward:3,RewardItems:[{Name:"Zinogre",Count:8,Min:4}],Movie:0b,MovieId:-1,display:{Name:'[{"text":"雷狼竜","italic":false},{"interpret":true,"nbt":"Temp.Flag","storage":"mhdp_core:temp"}]',Lore:['{"text":"目標："}','{"text":"・雷狼竜の討伐","italic":false}']},NameNew:'{"text":"雷狼竜(NEW)","italic":false}',NameClear:'{"text":"雷狼竜(CLEAR)","italic":false}'}
+    data modify storage mh_dp:quests List append value {Index:2,Level:0,Visible:1b,Started:0b,Cleared:0b,QuestRank:0,Field:1,Monsters:[{Name:"Zinogre",Condition:0,Target:-1}],MonsterCount:1,Timer:999,HpMult:10000,Reward:3,RewardItems:[{Name:"Zinogre",Count:8,Min:4}],Movie:0b,MovieId:-1,display:{Name:'[{"text":"雷狼竜","italic":false},{"interpret":true,"nbt":"Temp.Flag","storage":"mhdp_core:temp"}]',Lore:['{"text":"目標："}','{"text":"・雷狼竜の討伐","italic":false}']},NameNew:'{"text":"雷狼竜(NEW)","italic":false}',NameClear:'{"text":"雷狼竜(CLEAR)","italic":false}'}
 
 ## 1：角竜
 # ノーマル・大闘技場・[角竜]・15分・HP100%・報酬3Z・ムービー無
