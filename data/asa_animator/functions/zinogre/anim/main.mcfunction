@@ -4,6 +4,18 @@
 # ヘッドバット
     execute if entity @s[tag=AnmHead] run function asa_animator:zinogre/anim/head/main
 
+# 尻尾たたきつけ（前方）
+    execute if entity @s[tag=AnmTailF] run function asa_animator:zinogre/anim/tail_forward/main
+
+# ボディプレス
+    execute if entity @s[tag=AnmPress] run function asa_animator:zinogre/anim/press/main
+
+# ショルダータックル
+
+# サマーソルト
+    execute if entity @s[tag=AnmSaultL] run function asa_animator:zinogre/anim/sault_l/main
+    execute if entity @s[tag=AnmSaultR] run function asa_animator:zinogre/anim/sault_r/main
+
 ### その他
 
 # 地上時討伐

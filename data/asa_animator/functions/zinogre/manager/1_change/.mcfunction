@@ -12,8 +12,8 @@
     function asa_animator:zinogre/manager/1_change/target
 
 # 強制
-    tag @s add AnmHead
-    # function asa_animator:zinogre/manager/1_change/1_animations/turn
+    tag @s add AnmTackleL
+    # function asa_animator:zinogre/manager/1_change/1_animations/sault
 
 # 行動
     # execute if entity @a[tag=ZinogreAttackTarget] run function asa_animator:zinogre/manager/1_change/act
