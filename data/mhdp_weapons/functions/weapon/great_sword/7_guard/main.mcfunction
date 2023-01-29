@@ -19,5 +19,5 @@ scoreboard players add @s MhdpWeaponTimer 1
     # スタミナが尽きたとき，終了
         execute if entity @s[scores={MhdpStamina=..0}] run function mhdp_weapons:weapon/great_sword/7_guard/change_end
     # ジャンプ時，ステップ回避に移行
-        execute if entity @s[scores={MhdpJump=1..}] run function mhdp_core:player/sneak/avoid/start_
+        # execute if entity @s[scores={MhdpJump=1..}] run function mhdp_core:player/sneak/avoid/start_
     

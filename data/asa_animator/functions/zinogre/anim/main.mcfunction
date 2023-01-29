@@ -11,6 +11,8 @@
     execute if entity @s[tag=AnmPress] run function asa_animator:zinogre/anim/press/main
 
 # ショルダータックル
+    execute if entity @s[tag=AnmTackleL] run function asa_animator:zinogre/anim/tackle_l/main
+    execute if entity @s[tag=AnmTackleR] run function asa_animator:zinogre/anim/tackle_r/main
 
 # サマーソルト
     execute if entity @s[tag=AnmSaultL] run function asa_animator:zinogre/anim/sault_l/main

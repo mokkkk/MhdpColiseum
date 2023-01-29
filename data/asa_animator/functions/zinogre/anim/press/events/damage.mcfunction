@@ -1,12 +1,12 @@
-# サマーソルト
+# ボディプレス
 # Normal：9（18 * 0.5）
 # Hard：13（38 * 0.34）
-# Guard：3（大剣ガード可能）
+# Guard：4（ガード性能必要）
 # 帯電時雷属性
 
 # ダメージ設定
-    execute if entity @s[tag=!IsThunder] run data modify storage mhdp_core:temp Temp.Damage set value {Damage:0.0f,Knockback:2,Guard:3,Type:0,Blight:0b}
-    execute if entity @s[tag=IsThunder] run data modify storage mhdp_core:temp Temp.Damage set value {Damage:0.0f,Knockback:2,Guard:3,Type:3,Blight:1b}
+    execute if entity @s[tag=!IsThunder] run data modify storage mhdp_core:temp Temp.Damage set value {Damage:0.0f,Knockback:2,Guard:4,Type:0,Blight:0b}
+    execute if entity @s[tag=IsThunder] run data modify storage mhdp_core:temp Temp.Damage set value {Damage:0.0f,Knockback:2,Guard:4,Type:3,Blight:1b}
     # クエストランクノーマル
         execute if data storage mh_dp:settings Custom{QuestRank:0} run data modify storage mhdp_core:temp Temp.Damage.Damage set value 18.0f
         execute if entity @s[tag=IsThunder] if data storage mh_dp:settings Custom{QuestRank:0} run data modify storage mhdp_core:temp Temp.Damage.Damage set value 19.8f
@@ -20,7 +20,7 @@
     execute positioned ^ ^ ^2 run tag @e[type=!armor_stand,type=!area_effect_cloud,type=!marker,tag=!ZinogreParts,tag=!Target,distance=0..5.5] add Target
 
 # 攻撃処理
-    execute positioned as @s as @e[tag=Target] run function asa_animator:zinogre/anim/tail_forward/events/damage_sub
+    execute positioned as @s as @e[tag=Target] run function asa_animator:zinogre/anim/press/events/damage_sub
     tag @e[tag=Target] remove Target
 
 # 演出

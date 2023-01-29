@@ -4,13 +4,37 @@ scoreboard players add @s AsaMatrix 1
 execute if entity @s[scores={AsaMatrix=1..8}] run tp @s ^-0.01 ^-0.01 ^0.00
 execute if entity @s[scores={AsaMatrix=9..14}] run tp @s ^-0.12 ^0.00 ^0.00
 execute if entity @s[scores={AsaMatrix=15..28}] run tp @s ^-0.01 ^0.00 ^0.00
-execute if entity @s[scores={AsaMatrix=29..33}] run tp @s ^0.10 ^-0.06 ^0.00
-execute if entity @s[scores={AsaMatrix=34..37}] run tp @s ^0.04 ^0.03 ^0.00
-execute if entity @s[scores={AsaMatrix=38..40}] run tp @s ^0.11 ^0.07 ^0.00
-execute if entity @s[scores={AsaMatrix=41..55}] run tp @s ^0.00 ^0.00 ^0.00
+execute if entity @s[scores={AsaMatrix=29..30}] run tp @s ^0.8 ^-0.06 ^0
+execute if entity @s[scores={AsaMatrix=31..33}] run tp @s ^1.8 ^-0.06 ^0
+execute if entity @s[scores={AsaMatrix=34..37}] run tp @s ^1.4 ^0.025 ^0
+execute if entity @s[scores={AsaMatrix=38..40}] run tp @s ^0.5 ^0.06666667 ^0 ~1 ~
+execute if entity @s[scores={AsaMatrix=41..55}] run tp @s ^0.1 ^0 ^0 ~0.1 ~
 execute if entity @s[scores={AsaMatrix=56..65}] run tp @s ^0.00 ^0.01 ^0.00
 execute if entity @s[scores={AsaMatrix=66..75}] run tp @s ^0.00 ^0.00 ^0.00
 execute if entity @s[scores={AsaMatrix=76..85}] run tp @s ^0.00 ^0.00 ^0.00
+
+# 移動
+    execute if entity @s[scores={AsaMatrix=1..18}] run function asa_animator:zinogre/anim/tackle_l/events/rotate
+    execute if entity @s[scores={AsaMatrix=1..14}] if entity @e[tag=ZinogreAttackTarget,distance=0..8] at @s run tp @s ^-0.3 ^ ^
+
+# 高度調整
+    execute if entity @s[scores={AsaMatrix=66..}] at @s if block ~ ~-0.1 ~ #asa_animator:no_collision run function asa_animator:general/check_ground
+    execute if entity @s[scores={AsaMatrix=66..}] at @s unless block ~ ~0.1 ~ #asa_animator:no_collision run tp @s ~ ~0.1 ~ ~ ~
+
+# 演出
+    execute if entity @s[scores={AsaMatrix=1}] run playsound block.grass.step master @a ~ ~ ~ 3 0.7
+    execute if entity @s[scores={AsaMatrix=16}] run playsound entity.hoglin.step master @a ~ ~ ~ 2 0.7
+    execute if entity @s[scores={AsaMatrix=29..40}] run function asa_animator:zinogre/manager/5_extra/step
+    execute if entity @s[tag=IsThunder,scores={AsaMatrix=30}] run playsound entity.lightning_bolt.thunder master @a ~ ~ ~ 3 0.5
+    execute if entity @s[tag=IsThunder,scores={AsaMatrix=30}] run playsound entity.lightning_bolt.impact master @a ~ ~ ~ 2 0.5
+    execute if entity @s[scores={AsaMatrix=32}] run playsound entity.hoglin.step master @a ~ ~ ~ 2 0.7
+    execute if entity @s[tag=IsThunder,scores={AsaMatrix=31..33}] run particle flash ^ ^3 ^ 2 1 2 0 3
+
+# 攻撃
+    execute if entity @s[scores={AsaMatrix=31..40}] run function asa_animator:zinogre/anim/tackle_l/events/damage
+
+# 移行
+    # execute if entity @s[tag=IsThunder,scores={AsaMatrix=41}] run function asa_animator:zinogre/anim/tackle_l/events/change
 
 # Keyframe Functions
 function asa_animator:zinogre/get_data

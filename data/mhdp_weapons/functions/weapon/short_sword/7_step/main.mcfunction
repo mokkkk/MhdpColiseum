@@ -38,7 +38,6 @@
     # ジャンプ時，派生をキャンセル
         execute if entity @s[scores={MhdpJump=1..,MhdpWeaponTimer=2..}] run function mhdp_weapons:weapon/short_sword/7_step/end
     # 無操作時，突進斬りに移行
-        # execute if entity @s[tag=!PlyUsingEyeCurrent,tag=!WpnSswordCharged,scores={MhdpWeaponTimer=16..}] run function mhdp_weapons:weapon/short_sword/7_step/change_dash
         execute if entity @s[tag=!PlyUsingEyeCurrent,scores={MhdpWeaponTimer=16..,MhdpWeaponCharge=..0}] run function mhdp_weapons:weapon/short_sword/7_step/change_dash
     # 右クリック時，ジャストラッシュに移行
         execute if entity @s[tag=!PlyUsingEyeCurrent,scores={MhdpWeaponTimer=16..,MhdpWeaponCharge=1..44}] run function mhdp_weapons:weapon/short_sword/7_step/change_just

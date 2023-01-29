@@ -12,7 +12,7 @@
     function asa_animator:zinogre/manager/1_change/target
 
 # 強制
-    tag @s add AnmTackleL
+    tag @s add AnmTackleR
     # function asa_animator:zinogre/manager/1_change/1_animations/sault
 
 # 行動
