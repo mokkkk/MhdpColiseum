@@ -1,11 +1,23 @@
 
 ### 地上時行動
 
+# お手
+    # 開始・バックステップ
+        execute if entity @s[tag=AnmHandLSB] run function asa_animator:zinogre/anim/hand_l_start/main
+        execute if entity @s[tag=AnmHandRSB] run function asa_animator:zinogre/anim/hand_r_start/main
+    # 開始・前方ステップ
+        execute if entity @s[tag=AnmHandLSF] run function asa_animator:zinogre/anim/hand_l_start_step/main
+        execute if entity @s[tag=AnmHandRSF] run function asa_animator:zinogre/anim/hand_r_start_step/main
+    # 中段
+        execute if entity @s[tag=AnmHandL2R] run function asa_animator:zinogre/anim/hand_l_to_r/main
+        execute if entity @s[tag=AnmHandR2L] run function asa_animator:zinogre/anim/hand_r_to_l/main
+    # 終段
+        execute if entity @s[tag=AnmHandLE] run function asa_animator:zinogre/anim/hand_l_end/main
+        execute if entity @s[tag=AnmHandRE] run function asa_animator:zinogre/anim/hand_r_end/main
+    # キャンセルチャージお手
+
 # ヘッドバット
     execute if entity @s[tag=AnmHead] run function asa_animator:zinogre/anim/head/main
-
-# 尻尾たたきつけ（前方）
-    execute if entity @s[tag=AnmTailF] run function asa_animator:zinogre/anim/tail_forward/main
 
 # ボディプレス
     execute if entity @s[tag=AnmPress] run function asa_animator:zinogre/anim/press/main
@@ -17,6 +29,13 @@
 # サマーソルト
     execute if entity @s[tag=AnmSaultL] run function asa_animator:zinogre/anim/sault_l/main
     execute if entity @s[tag=AnmSaultR] run function asa_animator:zinogre/anim/sault_r/main
+
+# 尻尾たたきつけ（前方）
+    execute if entity @s[tag=AnmTailF] run function asa_animator:zinogre/anim/tail_forward/main
+
+# 尻尾なぎはらい（後方）
+    execute if entity @s[tag=AnmTailBL] run function asa_animator:zinogre/anim/tail_whip_l/main
+    execute if entity @s[tag=AnmTailBR] run function asa_animator:zinogre/anim/tail_whip_r/main
 
 ### その他
 
