@@ -15,6 +15,8 @@
         execute if entity @s[tag=AnmHandLE] run function asa_animator:zinogre/anim/hand_l_end/main
         execute if entity @s[tag=AnmHandRE] run function asa_animator:zinogre/anim/hand_r_end/main
     # キャンセルチャージお手
+        execute if entity @s[tag=AnmHandL2CR] run function asa_animator:zinogre/anim/hand_l_to_chargehand_r/main
+        execute if entity @s[tag=AnmHandR2CL] run function asa_animator:zinogre/anim/hand_r_to_chargehand_l/main
 
 # ヘッドバット
     execute if entity @s[tag=AnmHead] run function asa_animator:zinogre/anim/head/main

@@ -28,6 +28,13 @@
         "condition": "minecraft:entity_properties",
         "entity": "this",
         "predicate": {
+          "nbt": "{Tags:[\"AnmHandL2CR\"]}"
+        }
+      },
+      {
+        "condition": "minecraft:entity_properties",
+        "entity": "this",
+        "predicate": {
           "nbt": "{Tags:[\"AnmHandLE\"]}"
         }
       },
@@ -50,6 +57,13 @@
         "entity": "this",
         "predicate": {
           "nbt": "{Tags:[\"AnmHandR2L\"]}"
+        }
+      },
+      {
+        "condition": "minecraft:entity_properties",
+        "entity": "this",
+        "predicate": {
+          "nbt": "{Tags:[\"AnmHandR2CL\"]}"
         }
       },
       {
