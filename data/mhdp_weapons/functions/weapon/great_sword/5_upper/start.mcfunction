@@ -14,6 +14,9 @@
 # ステップ回避ロック開始
     tag @s add PlySneakAvoidLock
 
+# 移動禁止解除
+    effect clear @s slowness
+
 # 演出
     playsound item.armor.equip_chain master @a ~ ~ ~ 1 1
 

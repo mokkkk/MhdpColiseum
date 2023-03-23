@@ -10,9 +10,6 @@
     execute if entity @s[scores={MhdpWeaponTimer=10..12}] run function mhdp_weapons:weapon/short_sword/10_fall/animation_1
     execute if entity @s[scores={MhdpWeaponTimer=13..}] run function mhdp_weapons:weapon/short_sword/10_fall/animation_2
 
-# 移動速度低下
-    execute if entity @s[scores={MhdpWeaponTimer=1..3}] run effect give @s slowness 1 4 true
-
 # 移動
     execute if entity @s[scores={MhdpWeaponTimer=1..9}] run tp @s @s
     execute if entity @s[scores={MhdpWeaponTimer=10}] run function mhdp_weapons:weapon/short_sword/10_fall/move

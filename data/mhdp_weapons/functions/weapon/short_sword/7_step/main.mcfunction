@@ -18,7 +18,7 @@
     execute if entity @s[scores={MhdpWeaponTimer=1..}] run effect give @s slowness 1 6 true
 # 移動
     execute if entity @s[scores={MhdpWeaponTimer=1}] run tp @s ~ ~ ~ ~ ~5
-    execute if entity @s[scores={MhdpWeaponTimer=..7}] rotated as @e[type=marker,tag=SneakAvoidStand0,tag=Rotator] rotated ~ 0 run function mhdp_core:player/sneak/avoid/main_move
+    execute if entity @s[scores={MhdpWeaponTimer=..7}] rotated as @e[type=marker,tag=SneakAvoidStand0,tag=Rotator] rotated ~ 0 run function mhdp_weapons:weapon/short_sword/7_step/move
     execute if entity @s[scores={MhdpWeaponTimer=8..10}] run tp @s ~ ~ ~ ~ ~-1
     execute if entity @s[scores={MhdpWeaponTimer=11}] run tp @s ~ ~ ~ ~ ~-2
 # 演出
@@ -38,7 +38,6 @@
     # ジャンプ時，派生をキャンセル
         execute if entity @s[scores={MhdpJump=1..,MhdpWeaponTimer=2..}] run function mhdp_weapons:weapon/short_sword/7_step/end
     # 無操作時，突進斬りに移行
-        # execute if entity @s[tag=!PlyUsingEyeCurrent,tag=!WpnSswordCharged,scores={MhdpWeaponTimer=16..}] run function mhdp_weapons:weapon/short_sword/7_step/change_dash
         execute if entity @s[tag=!PlyUsingEyeCurrent,scores={MhdpWeaponTimer=16..,MhdpWeaponCharge=..0}] run function mhdp_weapons:weapon/short_sword/7_step/change_dash
     # 右クリック時，ジャストラッシュに移行
         execute if entity @s[tag=!PlyUsingEyeCurrent,scores={MhdpWeaponTimer=16..,MhdpWeaponCharge=1..44}] run function mhdp_weapons:weapon/short_sword/7_step/change_just

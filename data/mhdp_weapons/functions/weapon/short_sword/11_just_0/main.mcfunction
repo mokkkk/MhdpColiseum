@@ -22,7 +22,7 @@
     execute if entity @s[scores={MhdpWeaponTimer=1..}] run effect give @s slowness 1 5 true
 # 移動
     execute if entity @s[scores={MhdpWeaponTimer=1}] run tp @s ~ ~ ~ ~ ~-5
-    execute if entity @s[scores={MhdpWeaponTimer=..7}] rotated as @e[type=marker,tag=SneakAvoidStand0,tag=Rotator] rotated ~ 0 run function mhdp_core:player/sneak/avoid/main_move
+    execute if entity @s[scores={MhdpWeaponTimer=..7}] rotated as @e[type=marker,tag=SneakAvoidStand0,tag=Rotator] rotated ~ 0 run function mhdp_weapons:weapon/short_sword/7_step/move
     execute if entity @s[scores={MhdpWeaponTimer=8..10}] run tp @s ~ ~ ~ ~ ~4
     execute if entity @s[scores={MhdpWeaponTimer=13..15}] run tp @s ~ ~ ~ ~ ~-2
 # 演出
