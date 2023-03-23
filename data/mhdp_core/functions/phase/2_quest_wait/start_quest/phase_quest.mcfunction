@@ -30,6 +30,9 @@
     # 大闘技場
         execute if data storage mh_dp:status GameStatus.Quest{Field:1} run function mhdp_core:phase/2_quest_wait/start_quest/setup/map/coliseum
 
+# 訓練開始時処理
+    execute if score #mhdp_quest_id MhdpCore matches 0 run function mhdp_core:phase/2_quest_wait/start_quest/quests/tutorial
+
 # MhdpWeapons処理用タグ付与
     tag @a add PlyQuest
 

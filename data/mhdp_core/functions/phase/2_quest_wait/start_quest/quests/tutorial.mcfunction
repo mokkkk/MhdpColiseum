@@ -3,6 +3,7 @@
 # Phase1_クエスト受注 クエストデータ割り当て
 
 # 教官配置
+    # positioned -36 66 95
 
 # メッセージ用タイマー初期化
     scoreboard players set #mhdp_temp_tutorial_timer MhdpCore 0
