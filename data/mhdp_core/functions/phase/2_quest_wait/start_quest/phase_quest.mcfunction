@@ -42,7 +42,7 @@
     data modify storage mh_dp:status GameStatus.Phase set value 3
 
 # 制限時間表示・tickに変更
-    tellraw @a [{"text": "【制限時間は "},{"score":{"name":"#mhdp_quest_timer","objective":"MhdpCore"}},{"text": "分 です】"}]
+    execute unless score #mhdp_quest_id MhdpCore matches 0 run tellraw @a [{"text": "【制限時間は "},{"score":{"name":"#mhdp_quest_timer","objective":"MhdpCore"}},{"text": "分 です】"}]
     scoreboard players set #mhdp_sec_temp MhdpCore 1200
     scoreboard players operation #mhdp_quest_timer MhdpCore *= #mhdp_sec_temp MhdpCore
     scoreboard players reset #mhdp_sec_temp

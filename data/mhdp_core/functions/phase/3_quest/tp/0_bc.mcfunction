@@ -1,12 +1,12 @@
-#> mhdp_core:phase/3_quest/tp/1_colliseum
+#> mhdp_core:phase/3_quest/tp/0_bc
 #
 # Phase3_クエスト中待機 エリア移動
 
 # 移動
-    tp @s -20 66 87
+    tp @s 196 66 144
 
 # 1秒間だけダメージを軽減する
     effect give @s resistance 1 3 true
 
-# モンスターターゲット用タグを付ける
-    tag @s add MnsTarget
+# モンスターターゲット用タグ消去
+    tag @s remove MnsTarget
