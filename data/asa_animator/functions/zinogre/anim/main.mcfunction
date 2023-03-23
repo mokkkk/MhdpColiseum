@@ -17,6 +17,9 @@
     # キャンセルチャージお手
         execute if entity @s[tag=AnmHandL2CR] run function asa_animator:zinogre/anim/hand_l_to_chargehand_r/main
         execute if entity @s[tag=AnmHandR2CL] run function asa_animator:zinogre/anim/hand_r_to_chargehand_l/main
+    # キャンセル帯電
+        execute if entity @s[tag=AnmHandL2Charge] run function asa_animator:zinogre/anim/hand_l_to_charge/main
+        execute if entity @s[tag=AnmHandR2Charge] run function asa_animator:zinogre/anim/hand_r_to_charge/main
 
 # ヘッドバット
     execute if entity @s[tag=AnmHead] run function asa_animator:zinogre/anim/head/main
@@ -27,6 +30,11 @@
 # ショルダータックル
     execute if entity @s[tag=AnmTackleL] run function asa_animator:zinogre/anim/tackle_l/main
     execute if entity @s[tag=AnmTackleR] run function asa_animator:zinogre/anim/tackle_r/main
+
+# 飛び掛かり
+    execute if entity @s[tag=AnmJump] run function asa_animator:zinogre/anim/jump/main
+    # 連続飛び掛かり
+        execute if entity @s[tag=AnmJump2Jump] run function asa_animator:zinogre/anim/jump_to_jump/main
 
 # サマーソルト
     execute if entity @s[tag=AnmSaultL] run function asa_animator:zinogre/anim/sault_l/main
